@@ -1,0 +1,6 @@
+echo setting fpgadata environement variable;
+setenv fpgadata 0x02500000;
+
+fatload mmc 0:1 $fpgadata socfpga.rbf;
+fpga load 0 $fpgadata $filesize;
+bridge enable;
