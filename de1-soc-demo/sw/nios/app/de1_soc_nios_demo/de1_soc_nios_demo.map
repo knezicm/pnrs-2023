@@ -185,7 +185,7 @@ LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x0000000004000224                PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
                 0x0000000004000020                PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
 
-.text           0x0000000004000224     0x2534
+.text           0x0000000004000224     0x2530
                 [!provide]                        PROVIDE (stext = ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -232,121 +232,121 @@ LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000004000224       0x3c C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/obj/HAL/src/crt0.o
                 0x0000000004000224                _start
- .text          0x0000000004000260       0xd0 obj/default/nios.o
+ .text          0x0000000004000260       0xcc obj/default/nios.o
                 0x0000000004000260                rotate_leds
-                0x0000000004000304                main
- .text          0x0000000004000330       0xec C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
-                0x0000000004000398                alt_load
- .text          0x000000000400041c       0x7c C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
-                0x000000000400041c                alt_main
- .text          0x0000000004000498       0x30 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
-                0x0000000004000498                usleep
- .text          0x00000000040004c8       0xbc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
-                0x00000000040004fc                alt_irq_init
-                0x0000000004000538                alt_sys_init
- .text          0x0000000004000584      0x164 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
-                0x0000000004000584                altera_avalon_jtag_uart_read_fd
-                0x00000000040005e4                altera_avalon_jtag_uart_write_fd
-                0x0000000004000644                altera_avalon_jtag_uart_close_fd
-                0x0000000004000694                altera_avalon_jtag_uart_ioctl_fd
- .text          0x00000000040006e8      0x3d4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
-                0x00000000040006e8                altera_avalon_jtag_uart_init
-                0x0000000004000a54                altera_avalon_jtag_uart_close
- .text          0x0000000004000abc       0xf4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
-                0x0000000004000abc                altera_avalon_jtag_uart_ioctl
- .text          0x0000000004000bb0      0x220 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
-                0x0000000004000bb0                altera_avalon_jtag_uart_read
- .text          0x0000000004000dd0      0x228 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x0000000004000dd0                altera_avalon_jtag_uart_write
- .text          0x0000000004000ff8      0x134 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
-                0x0000000004000ff8                alt_alarm_start
- .text          0x000000000400112c      0x158 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
-                0x000000000400112c                alt_busy_sleep
- .text          0x0000000004001284      0x118 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
-                0x00000000040012c0                close
- .text          0x000000000400139c       0x20 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x000000000400139c                alt_dcache_flush_all
- .text          0x00000000040013bc       0x2c C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
- .text          0x00000000040013e8       0xe4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
-                0x0000000004001424                alt_dev_llist_insert
- .text          0x00000000040014cc       0x64 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
-                0x00000000040014cc                _do_ctors
- .text          0x0000000004001530       0x64 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
-                0x0000000004001530                _do_dtors
- .text          0x0000000004001594        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
- .text          0x0000000004001594       0x20 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
-                0x0000000004001594                alt_icache_flush_all
- .text          0x00000000040015b4      0x1b0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
-                0x00000000040015b4                alt_ic_isr_register
-                0x0000000004001604                alt_ic_irq_enable
-                0x000000000400168c                alt_ic_irq_disable
-                0x0000000004001718                alt_ic_irq_enabled
- .text          0x0000000004001764       0xe8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
-                0x0000000004001764                alt_iic_isr_register
- .text          0x000000000400184c      0x150 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
-                0x0000000004001920                alt_io_redirect
- .text          0x000000000400199c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
- .text          0x000000000400199c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
- .text          0x000000000400199c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
- .text          0x000000000400199c      0x278 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
-                0x0000000004001ab4                open
- .text          0x0000000004001c14       0x70 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
-                0x0000000004001c14                alt_release_fd
- .text          0x0000000004001c84      0x1ac C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
-                0x0000000004001c84                alt_alarm_stop
-                0x0000000004001d28                alt_tick
- .text          0x0000000004001e30       0x24 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000004001e30                altera_nios2_gen2_irq_init
- .text          0x0000000004001e54        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
- .text          0x0000000004001e54       0x90 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
-                0x0000000004001e54                alt_find_dev
- .text          0x0000000004001ee4      0x108 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
-                0x0000000004001ee4                alt_find_file
- .text          0x0000000004001fec       0xb8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
-                0x0000000004001fec                alt_get_fd
- .text          0x00000000040020a4       0x98 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x00000000040020a4                alt_exception_cause_generated_bad_addr
- .text          0x000000000400213c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
- .text.atexit   0x000000000400213c       0x14 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
-                0x000000000400213c                atexit
- .text          0x0000000004002150        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
- .text.exit     0x0000000004002150       0x34 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
-                0x0000000004002150                exit
- .text          0x0000000004002184        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
- .text          0x0000000004002184        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
- .text          0x0000000004002184        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
- .text.memcmp   0x0000000004002184       0x78 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
-                0x0000000004002184                memcmp
- .text          0x00000000040021fc        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
- .text.memcpy   0x00000000040021fc      0x100 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
-                0x00000000040021fc                memcpy
- .text          0x00000000040022fc        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
- .text.strlen   0x00000000040022fc       0x98 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
-                0x00000000040022fc                strlen
- .text          0x0000000004002394        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                0x0000000004000300                main
+ .text          0x000000000400032c       0xec C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
+                0x0000000004000394                alt_load
+ .text          0x0000000004000418       0x7c C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
+                0x0000000004000418                alt_main
+ .text          0x0000000004000494       0x30 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
+                0x0000000004000494                usleep
+ .text          0x00000000040004c4       0xbc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
+                0x00000000040004f8                alt_irq_init
+                0x0000000004000534                alt_sys_init
+ .text          0x0000000004000580      0x164 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x0000000004000580                altera_avalon_jtag_uart_read_fd
+                0x00000000040005e0                altera_avalon_jtag_uart_write_fd
+                0x0000000004000640                altera_avalon_jtag_uart_close_fd
+                0x0000000004000690                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x00000000040006e4      0x3d4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x00000000040006e4                altera_avalon_jtag_uart_init
+                0x0000000004000a50                altera_avalon_jtag_uart_close
+ .text          0x0000000004000ab8       0xf4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x0000000004000ab8                altera_avalon_jtag_uart_ioctl
+ .text          0x0000000004000bac      0x220 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x0000000004000bac                altera_avalon_jtag_uart_read
+ .text          0x0000000004000dcc      0x228 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000004000dcc                altera_avalon_jtag_uart_write
+ .text          0x0000000004000ff4      0x134 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
+                0x0000000004000ff4                alt_alarm_start
+ .text          0x0000000004001128      0x158 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
+                0x0000000004001128                alt_busy_sleep
+ .text          0x0000000004001280      0x118 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
+                0x00000000040012bc                close
+ .text          0x0000000004001398       0x20 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000004001398                alt_dcache_flush_all
+ .text          0x00000000040013b8       0x2c C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
+ .text          0x00000000040013e4       0xe4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x0000000004001420                alt_dev_llist_insert
+ .text          0x00000000040014c8       0x64 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
+                0x00000000040014c8                _do_ctors
+ .text          0x000000000400152c       0x64 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
+                0x000000000400152c                _do_dtors
+ .text          0x0000000004001590        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
+ .text          0x0000000004001590       0x20 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000004001590                alt_icache_flush_all
+ .text          0x00000000040015b0      0x1b0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
+                0x00000000040015b0                alt_ic_isr_register
+                0x0000000004001600                alt_ic_irq_enable
+                0x0000000004001688                alt_ic_irq_disable
+                0x0000000004001714                alt_ic_irq_enabled
+ .text          0x0000000004001760       0xe8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
+                0x0000000004001760                alt_iic_isr_register
+ .text          0x0000000004001848      0x150 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
+                0x000000000400191c                alt_io_redirect
+ .text          0x0000000004001998        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000004001998        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000004001998        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000004001998      0x278 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
+                0x0000000004001ab0                open
+ .text          0x0000000004001c10       0x70 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
+                0x0000000004001c10                alt_release_fd
+ .text          0x0000000004001c80      0x1ac C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
+                0x0000000004001c80                alt_alarm_stop
+                0x0000000004001d24                alt_tick
+ .text          0x0000000004001e2c       0x24 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000004001e2c                altera_nios2_gen2_irq_init
+ .text          0x0000000004001e50        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000004001e50       0x90 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
+                0x0000000004001e50                alt_find_dev
+ .text          0x0000000004001ee0      0x108 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
+                0x0000000004001ee0                alt_find_file
+ .text          0x0000000004001fe8       0xb8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
+                0x0000000004001fe8                alt_get_fd
+ .text          0x00000000040020a0       0x98 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x00000000040020a0                alt_exception_cause_generated_bad_addr
+ .text          0x0000000004002138        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .text.atexit   0x0000000004002138       0x14 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+                0x0000000004002138                atexit
+ .text          0x000000000400214c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .text.exit     0x000000000400214c       0x34 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+                0x000000000400214c                exit
+ .text          0x0000000004002180        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .text          0x0000000004002180        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .text          0x0000000004002180        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .text.memcmp   0x0000000004002180       0x78 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+                0x0000000004002180                memcmp
+ .text          0x00000000040021f8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .text.memcpy   0x00000000040021f8      0x100 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+                0x00000000040021f8                memcpy
+ .text          0x00000000040022f8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .text.strlen   0x00000000040022f8       0x98 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+                0x00000000040022f8                strlen
+ .text          0x0000000004002390        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
  .text.__register_exitproc
-                0x0000000004002394       0x90 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
-                0x0000000004002394                __register_exitproc
- .text          0x0000000004002424        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                0x0000000004002390       0x90 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                0x0000000004002390                __register_exitproc
+ .text          0x0000000004002420        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
  .text.__call_exitprocs
-                0x0000000004002424      0x120 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
-                0x0000000004002424                __call_exitprocs
- .text          0x0000000004002544      0x1b4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
-                0x0000000004002544                __divsi3
-                0x00000000040025c4                __modsi3
-                0x0000000004002638                __udivsi3
-                0x000000000400269c                __umodsi3
- .text          0x00000000040026f8       0x28 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
-                0x00000000040026f8                __mulsi3
- .text          0x0000000004002720       0x38 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
-                0x0000000004002720                _exit
+                0x0000000004002420      0x120 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                0x0000000004002420                __call_exitprocs
+ .text          0x0000000004002540      0x1b4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x0000000004002540                __divsi3
+                0x00000000040025c0                __modsi3
+                0x0000000004002634                __udivsi3
+                0x0000000004002698                __umodsi3
+ .text          0x00000000040026f4       0x28 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x00000000040026f4                __mulsi3
+ .text          0x000000000400271c       0x38 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
+                0x000000000400271c                _exit
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext = ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000004002758                . = ALIGN (0x4)
+                0x0000000004002754                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
@@ -359,206 +359,206 @@ LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(.eh_frame)
  *(.gcc_except_table .gcc_except_table.*)
  *(.dynamic)
-                0x0000000004002758                PROVIDE (__CTOR_LIST__ = ABSOLUTE (.))
+                0x0000000004002754                PROVIDE (__CTOR_LIST__ = ABSOLUTE (.))
  *(.ctors)
  *(SORT_BY_NAME(.ctors.*))
-                0x0000000004002758                PROVIDE (__CTOR_END__ = ABSOLUTE (.))
-                0x0000000004002758                PROVIDE (__DTOR_LIST__ = ABSOLUTE (.))
+                0x0000000004002754                PROVIDE (__CTOR_END__ = ABSOLUTE (.))
+                0x0000000004002754                PROVIDE (__DTOR_LIST__ = ABSOLUTE (.))
  *(.dtors)
  *(SORT_BY_NAME(.dtors.*))
-                0x0000000004002758                PROVIDE (__DTOR_END__ = ABSOLUTE (.))
+                0x0000000004002754                PROVIDE (__DTOR_END__ = ABSOLUTE (.))
  *(.jcr)
-                0x0000000004002758                . = ALIGN (0x4)
+                0x0000000004002754                . = ALIGN (0x4)
 
-.rodata         0x0000000004002758       0x34
-                0x0000000004002758                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
-                0x0000000004002758                . = ALIGN (0x4)
+.rodata         0x0000000004002754       0x34
+                0x0000000004002754                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
+                0x0000000004002754                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000000004002758       0x11 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
- *fill*         0x0000000004002769        0x3 
- .rodata        0x000000000400276c       0x11 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
- *fill*         0x000000000400277d        0x3 
- .rodata        0x0000000004002780        0xa C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
+ .rodata        0x0000000004002754       0x11 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
+ *fill*         0x0000000004002765        0x3 
+ .rodata        0x0000000004002768       0x11 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
+ *fill*         0x0000000004002779        0x3 
+ .rodata        0x000000000400277c        0xa C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
  *(.rodata1)
-                0x000000000400278c                . = ALIGN (0x4)
- *fill*         0x000000000400278a        0x2 
-                0x000000000400278c                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
-                0x0000000004002758                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+                0x0000000004002788                . = ALIGN (0x4)
+ *fill*         0x0000000004002786        0x2 
+                0x0000000004002788                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
+                0x0000000004002754                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
 
-.rwdata         0x000000000400278c     0x1658 load address 0x0000000004003de4
-                0x000000000400278c                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
-                0x000000000400278c                . = ALIGN (0x4)
+.rwdata         0x0000000004002788     0x1658 load address 0x0000000004003de0
+                0x0000000004002788                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
+                0x0000000004002788                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x000000000400278c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/obj/HAL/src/crt0.o
- .data          0x000000000400278c        0x0 obj/default/nios.o
- .data          0x000000000400278c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
- .data          0x000000000400278c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
- .data          0x000000000400278c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
- .data          0x000000000400278c     0x1060 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
- .data          0x00000000040037ec        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x00000000040037ec      0x1a8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
-                0x00000000040037ec                alt_dev_null
-                0x0000000004003814                alt_fd_list
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
- .data          0x0000000004003994        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
- .data          0x0000000004003994        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
- .data          0x0000000004003994        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
- .data          0x0000000004003994        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .data          0x0000000004002788        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/obj/HAL/src/crt0.o
+ .data          0x0000000004002788        0x0 obj/default/nios.o
+ .data          0x0000000004002788        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
+ .data          0x0000000004002788        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
+ .data          0x0000000004002788        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
+ .data          0x0000000004002788     0x1060 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
+ .data          0x00000000040037e8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00000000040037e8      0x1a8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
+                0x00000000040037e8                alt_dev_null
+                0x0000000004003810                alt_fd_list
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
+ .data          0x0000000004003990        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x0000000004003990        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .data          0x0000000004003990        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .data          0x0000000004003990        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
  .data.impure_data
-                0x0000000004003994      0x424 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .data          0x0000000004003db8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
- .data          0x0000000004003db8        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
-                0x000000000400bdb8                _gp = ABSOLUTE ((. + 0x8000))
+                0x0000000004003990      0x424 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x0000000004003db4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .data          0x0000000004003db4        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
+                0x000000000400bdb4                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp = _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0000000004003db8       0x14 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
-                0x0000000004003db8                alt_fs_list
-                0x0000000004003dc0                alt_dev_list
-                0x0000000004003dc8                alt_max_fd
- .sdata         0x0000000004003dcc        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
-                0x0000000004003dcc                alt_errno
- .sdata         0x0000000004003dd0        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
-                0x0000000004003dd0                alt_priority_mask
- .sdata         0x0000000004003dd4        0x8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
-                0x0000000004003dd4                alt_alarm_list
+ .sdata         0x0000000004003db4       0x14 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
+                0x0000000004003db4                alt_fs_list
+                0x0000000004003dbc                alt_dev_list
+                0x0000000004003dc4                alt_max_fd
+ .sdata         0x0000000004003dc8        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
+                0x0000000004003dc8                alt_errno
+ .sdata         0x0000000004003dcc        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
+                0x0000000004003dcc                alt_priority_mask
+ .sdata         0x0000000004003dd0        0x8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
+                0x0000000004003dd0                alt_alarm_list
  .sdata._global_impure_ptr
-                0x0000000004003ddc        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
-                0x0000000004003ddc                _global_impure_ptr
+                0x0000000004003dd8        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                0x0000000004003dd8                _global_impure_ptr
  .sdata._impure_ptr
-                0x0000000004003de0        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
-                0x0000000004003de0                _impure_ptr
+                0x0000000004003ddc        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                0x0000000004003ddc                _impure_ptr
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0000000004003de4                . = ALIGN (0x4)
-                0x0000000004003de4                _edata = ABSOLUTE (.)
+                0x0000000004003de0                . = ALIGN (0x4)
+                0x0000000004003de0                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata = ABSOLUTE (.))
-                0x0000000004003de4                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
-                0x0000000004003de4                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+                0x0000000004003de0                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
+                0x0000000004003de0                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
 
-.bss            0x000000000400543c      0x120
-                0x000000000400543c                __bss_start = ABSOLUTE (.)
+.bss            0x0000000004005438      0x120
+                0x0000000004005438                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x000000000400543c        0xc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
-                0x000000000400543c                alt_argc
-                0x0000000004005440                alt_argv
-                0x0000000004005444                alt_envp
- .sbss          0x0000000004005448        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
-                0x0000000004005448                alt_irq_active
- .sbss          0x000000000400544c        0x8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
-                0x000000000400544c                _alt_tick_rate
-                0x0000000004005450                _alt_nticks
- .sbss          0x0000000004005454        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000004005454                alt_instruction_exception_handler
- .sbss          0x0000000004005458        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
-                0x0000000004005458                errno
+ .sbss          0x0000000004005438        0xc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
+                0x0000000004005438                alt_argc
+                0x000000000400543c                alt_argv
+                0x0000000004005440                alt_envp
+ .sbss          0x0000000004005444        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
+                0x0000000004005444                alt_irq_active
+ .sbss          0x0000000004005448        0x8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
+                0x0000000004005448                _alt_tick_rate
+                0x000000000400544c                _alt_nticks
+ .sbss          0x0000000004005450        0x4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000004005450                alt_instruction_exception_handler
+ .sbss          0x0000000004005454        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+                0x0000000004005454                errno
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end = ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end = ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/obj/HAL/src/crt0.o
- .bss           0x000000000400545c        0x0 obj/default/nios.o
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .bss           0x000000000400545c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
- .bss           0x000000000400545c        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/obj/HAL/src/crt0.o
+ .bss           0x0000000004005458        0x0 obj/default/nios.o
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x0000000004005458        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x0000000004005458        0x0 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
  *(COMMON)
- COMMON         0x000000000400545c      0x100 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
-                0x000000000400545c                alt_irq
-                0x000000000400555c                . = ALIGN (0x4)
-                0x000000000400555c                __bss_end = ABSOLUTE (.)
+ COMMON         0x0000000004005458      0x100 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
+                0x0000000004005458                alt_irq
+                0x0000000004005558                . = ALIGN (0x4)
+                0x0000000004005558                __bss_end = ABSOLUTE (.)
 
 .sdram_controller_0
-                0x000000000400555c        0x0
+                0x0000000004005558        0x0
                 [!provide]                        PROVIDE (_alt_partition_sdram_controller_0_start = ABSOLUTE (.))
  *(.sdram_controller_0 .sdram_controller_0. sdram_controller_0.*)
-                0x000000000400555c                . = ALIGN (0x4)
+                0x0000000004005558                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_sdram_controller_0_end = ABSOLUTE (.))
-                0x000000000400555c                _end = ABSOLUTE (.)
-                0x000000000400555c                end = ABSOLUTE (.)
-                0x000000000400555c                __alt_stack_base = ABSOLUTE (.)
+                0x0000000004005558                _end = ABSOLUTE (.)
+                0x0000000004005558                end = ABSOLUTE (.)
+                0x0000000004005558                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_sdram_controller_0_load_addr = LOADADDR (.sdram_controller_0))
 
 .stab
@@ -844,56 +844,56 @@ LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .debug_abbrev  0x000000000000554b       0x7d c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
  .debug_abbrev  0x00000000000055c8      0x24d C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
 
-.debug_line     0x0000000000000000     0x5790
+.debug_line     0x0000000000000000     0x578b
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066      0x24b obj/default/nios.o
- .debug_line    0x00000000000002b1      0x1d2 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
- .debug_line    0x0000000000000483      0x2bc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
- .debug_line    0x000000000000073f       0xbf C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
- .debug_line    0x00000000000007fe      0x226 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x0000000000000a24      0x149 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .debug_line    0x0000000000000b6d      0x390 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .debug_line    0x0000000000000efd      0x289 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .debug_line    0x0000000000001186      0x306 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .debug_line    0x000000000000148c      0x30b C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_line    0x0000000000001797      0x218 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
- .debug_line    0x00000000000019af      0x1b6 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
- .debug_line    0x0000000000001b65      0x23e C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
- .debug_line    0x0000000000001da3      0x17f C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000001f22      0x285 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
- .debug_line    0x00000000000021a7      0x1e6 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_line    0x000000000000238d       0x66 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
- .debug_line    0x00000000000023f3       0x66 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
- .debug_line    0x0000000000002459      0x131 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
- .debug_line    0x000000000000258a      0x17d C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x0000000000002707      0x203 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
- .debug_line    0x000000000000290a      0x1dc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x0000000000002ae6      0x2ad C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
- .debug_line    0x0000000000002d93       0x6b C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x0000000000002dfe      0x1b4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x0000000000002fb2       0x50 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x0000000000003002      0x281 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
- .debug_line    0x0000000000003283       0xb6 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
- .debug_line    0x0000000000003339      0x240 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
- .debug_line    0x0000000000003579      0x137 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_line    0x00000000000036b0       0xb3 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x0000000000003763      0x1aa C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
- .debug_line    0x000000000000390d      0x1d8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
- .debug_line    0x0000000000003ae5      0x1db C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
- .debug_line    0x0000000000003cc0       0xd3 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x0000000000003d93      0x201 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
- .debug_line    0x0000000000003f94      0x229 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
- .debug_line    0x00000000000041bd      0x166 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
- .debug_line    0x0000000000004323      0x1d8 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
- .debug_line    0x00000000000044fb      0x26d c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
- .debug_line    0x0000000000004768      0x328 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
- .debug_line    0x0000000000004a90      0x262 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
- .debug_line    0x0000000000004cf2      0x289 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
- .debug_line    0x0000000000004f7b      0x301 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
- .debug_line    0x000000000000527c      0x2f9 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_line    0x0000000000005575       0xb6 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
- .debug_line    0x000000000000562b      0x165 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
+ .debug_line    0x0000000000000066      0x246 obj/default/nios.o
+ .debug_line    0x00000000000002ac      0x1d2 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_load.o)
+ .debug_line    0x000000000000047e      0x2bc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000073a       0xbf C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x00000000000007f9      0x226 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000000000000a1f      0x149 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x0000000000000b68      0x390 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_line    0x0000000000000ef8      0x289 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_line    0x0000000000001181      0x306 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x0000000000001487      0x30b C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000001792      0x218 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_alarm_start.o)
+ .debug_line    0x00000000000019aa      0x1b6 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x0000000000001b60      0x23e C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_close.o)
+ .debug_line    0x0000000000001d9e      0x17f C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000001f1d      0x285 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x00000000000021a2      0x1e6 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x0000000000002388       0x66 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x00000000000023ee       0x66 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x0000000000002454      0x131 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x0000000000002585      0x17d C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000002702      0x203 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x0000000000002905      0x1dc C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000002ae1      0x2ad C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x0000000000002d8e       0x6b C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000002df9      0x1b4 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000002fad       0x50 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000002ffd      0x281 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_open.o)
+ .debug_line    0x000000000000327e       0xb6 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x0000000000003334      0x240 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_tick.o)
+ .debug_line    0x0000000000003574      0x137 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x00000000000036ab       0xb3 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x000000000000375e      0x1aa C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x0000000000003908      0x1d8 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x0000000000003ae0      0x1db C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x0000000000003cbb       0xd3 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000000000003d8e      0x201 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_line    0x0000000000003f8f      0x229 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_line    0x00000000000041b8      0x166 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_line    0x000000000000431e      0x1d8 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_line    0x00000000000044f6      0x26d c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000004763      0x328 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000004a8b      0x262 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000004ced      0x289 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000004f76      0x301 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000005277      0x2f9 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x0000000000005570       0xb6 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x0000000000005626      0x165 C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp\libhal_bsp.a(alt_exit.o)
 
 .debug_frame    0x0000000000000000      0xb40
  *(.debug_frame)

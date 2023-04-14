@@ -17,7 +17,7 @@
 
 void rotate_leds()
 {
-	int leds_mask = 0x01;
+	int leds_mask = 0b0000000001;
 
 	/* 0/1 = left/right direction */
 	int led_direction = 0;
@@ -25,7 +25,7 @@ void rotate_leds()
 	while (true)
 	{
 		uint32_t switches_value = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_0_BASE);
-		uint32_t leds_value = ~leds_mask;
+		uint32_t leds_value = leds_mask;
 
 		/* Only turns on leds which have their corresponding switch enabled */
 		IOWR_ALTERA_AVALON_PIO_DATA(LEDS_0_BASE, leds_value & switches_value);
