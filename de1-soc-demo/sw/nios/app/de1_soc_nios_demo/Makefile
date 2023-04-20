@@ -124,7 +124,7 @@ CRT0 :=
 SYS_LIB :=
 
 # Define path to the root of the BSP.
-BSP_ROOT_DIR := C:/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/
+BSP_ROOT_DIR := /home/nikola/PNRS/pnrs-2023/de1-soc-demo/sw/nios/app/de1_soc_nios_demo_bsp/
 
 # List of application specific include directories, library directories and library names
 APP_INCLUDE_DIRS :=
@@ -135,7 +135,7 @@ APP_LIBRARY_NAMES :=
 BUILD_PRE_PROCESS :=
 BUILD_POST_PROCESS :=
 
-QUARTUS_PROJECT_DIR := C:/pnrs-2023/de1-soc-demo/hw/quartus/
+QUARTUS_PROJECT_DIR := /home/nikola/PNRS/pnrs-2023/de1-soc-demo/hw/quartus
 
 
 #END GENERATED

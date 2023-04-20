@@ -101,7 +101,7 @@ ACDS_VERSION := 20.1
 # BUILD_NUMBER: 720
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := c:/pnrs-2023/de1-soc-demo/hw/quartus/soc_system.sopcinfo
+SOPC_FILE := /home/nikola/PNRS/pnrs-2023/de1-soc-demo/hw/quartus/soc_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
