@@ -180,7 +180,8 @@ architecture rtl of de1_soc_top is
         sdram_controller_0_wire_dqm           : out   std_logic_vector(1 downto 0);                     -- dqm
         sdram_controller_0_wire_ras_n         : out   std_logic;                                        -- ras_n
         sdram_controller_0_wire_we_n          : out   std_logic;                                        -- we_n
-        leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     -- export
+        leds_0_external_connection_export     : out   std_logic_vector(4 downto 0);                     -- export
+		  leds_1_external_connection_export     : out   std_logic_vector(4 downto 0);                     -- export
         switches_0_external_connection_export : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
         hps_0_ddr_mem_a                       : out   std_logic_vector(14 downto 0);                    -- mem_a
         hps_0_ddr_mem_ba                      : out   std_logic_vector(2 downto 0);                     -- mem_ba
@@ -250,7 +251,8 @@ u0 : component soc_system
             sdram_controller_0_wire_dqm(0)     		=> DRAM_LDQM,
             sdram_controller_0_wire_ras_n         	=> DRAM_RAS_N,
             sdram_controller_0_wire_we_n           => DRAM_WE_N,
-            leds_0_external_connection_export     	=> LEDR,
+            leds_0_external_connection_export     	=> LEDR(9 downto 5),
+				leds_1_external_connection_export     	=> LEDR(4 downto 0),
             switches_0_external_connection_export 	=> SW,
             hps_0_ddr_mem_a                       	=> HPS_DDR3_ADDR,
             hps_0_ddr_mem_ba                      	=> HPS_DDR3_BA,

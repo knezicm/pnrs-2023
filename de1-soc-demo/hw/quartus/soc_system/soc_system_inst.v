@@ -1,18 +1,12 @@
 	soc_system u0 (
+		.buttons_0_external_connection_export  (<connected-to-buttons_0_external_connection_export>),  //  buttons_0_external_connection.export
 		.clk_clk                               (<connected-to-clk_clk>),                               //                            clk.clk
-		.leds_0_external_connection_export     (<connected-to-leds_0_external_connection_export>),     //     leds_0_external_connection.export
-		.pll_0_sdram_clk                       (<connected-to-pll_0_sdram_clk>),                       //                    pll_0_sdram.clk
-		.reset_reset_n                         (<connected-to-reset_reset_n>),                         //                          reset.reset_n
-		.sdram_controller_0_wire_addr          (<connected-to-sdram_controller_0_wire_addr>),          //        sdram_controller_0_wire.addr
-		.sdram_controller_0_wire_ba            (<connected-to-sdram_controller_0_wire_ba>),            //                               .ba
-		.sdram_controller_0_wire_cas_n         (<connected-to-sdram_controller_0_wire_cas_n>),         //                               .cas_n
-		.sdram_controller_0_wire_cke           (<connected-to-sdram_controller_0_wire_cke>),           //                               .cke
-		.sdram_controller_0_wire_cs_n          (<connected-to-sdram_controller_0_wire_cs_n>),          //                               .cs_n
-		.sdram_controller_0_wire_dq            (<connected-to-sdram_controller_0_wire_dq>),            //                               .dq
-		.sdram_controller_0_wire_dqm           (<connected-to-sdram_controller_0_wire_dqm>),           //                               .dqm
-		.sdram_controller_0_wire_ras_n         (<connected-to-sdram_controller_0_wire_ras_n>),         //                               .ras_n
-		.sdram_controller_0_wire_we_n          (<connected-to-sdram_controller_0_wire_we_n>),          //                               .we_n
-		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>), // switches_0_external_connection.export
+		.hex_0_external_connection_export      (<connected-to-hex_0_external_connection_export>),      //      hex_0_external_connection.export
+		.hex_1_external_connection_export      (<connected-to-hex_1_external_connection_export>),      //      hex_1_external_connection.export
+		.hex_2_external_connection_export      (<connected-to-hex_2_external_connection_export>),      //      hex_2_external_connection.export
+		.hex_3_external_connection_export      (<connected-to-hex_3_external_connection_export>),      //      hex_3_external_connection.export
+		.hex_4_external_connection_export      (<connected-to-hex_4_external_connection_export>),      //      hex_4_external_connection.export
+		.hex_5_external_connection_export      (<connected-to-hex_5_external_connection_export>),      //      hex_5_external_connection.export
 		.hps_0_ddr_mem_a                       (<connected-to-hps_0_ddr_mem_a>),                       //                      hps_0_ddr.mem_a
 		.hps_0_ddr_mem_ba                      (<connected-to-hps_0_ddr_mem_ba>),                      //                               .mem_ba
 		.hps_0_ddr_mem_ck                      (<connected-to-hps_0_ddr_mem_ck>),                      //                               .mem_ck
@@ -54,12 +48,19 @@
 		.hps_0_io_hps_io_gpio_inst_GPIO35      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO35>),      //                               .hps_io_gpio_inst_GPIO35
 		.hps_0_io_hps_io_gpio_inst_GPIO53      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO53>),      //                               .hps_io_gpio_inst_GPIO53
 		.hps_0_io_hps_io_gpio_inst_GPIO54      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO54>),      //                               .hps_io_gpio_inst_GPIO54
-		.buttons_0_external_connection_export  (<connected-to-buttons_0_external_connection_export>),  //  buttons_0_external_connection.export
-		.hex_0_external_connection_export      (<connected-to-hex_0_external_connection_export>),      //      hex_0_external_connection.export
-		.hex_1_external_connection_export      (<connected-to-hex_1_external_connection_export>),      //      hex_1_external_connection.export
-		.hex_2_external_connection_export      (<connected-to-hex_2_external_connection_export>),      //      hex_2_external_connection.export
-		.hex_3_external_connection_export      (<connected-to-hex_3_external_connection_export>),      //      hex_3_external_connection.export
-		.hex_4_external_connection_export      (<connected-to-hex_4_external_connection_export>),      //      hex_4_external_connection.export
-		.hex_5_external_connection_export      (<connected-to-hex_5_external_connection_export>)       //      hex_5_external_connection.export
+		.leds_0_external_connection_export     (<connected-to-leds_0_external_connection_export>),     //     leds_0_external_connection.export
+		.pll_0_sdram_clk                       (<connected-to-pll_0_sdram_clk>),                       //                    pll_0_sdram.clk
+		.reset_reset_n                         (<connected-to-reset_reset_n>),                         //                          reset.reset_n
+		.sdram_controller_0_wire_addr          (<connected-to-sdram_controller_0_wire_addr>),          //        sdram_controller_0_wire.addr
+		.sdram_controller_0_wire_ba            (<connected-to-sdram_controller_0_wire_ba>),            //                               .ba
+		.sdram_controller_0_wire_cas_n         (<connected-to-sdram_controller_0_wire_cas_n>),         //                               .cas_n
+		.sdram_controller_0_wire_cke           (<connected-to-sdram_controller_0_wire_cke>),           //                               .cke
+		.sdram_controller_0_wire_cs_n          (<connected-to-sdram_controller_0_wire_cs_n>),          //                               .cs_n
+		.sdram_controller_0_wire_dq            (<connected-to-sdram_controller_0_wire_dq>),            //                               .dq
+		.sdram_controller_0_wire_dqm           (<connected-to-sdram_controller_0_wire_dqm>),           //                               .dqm
+		.sdram_controller_0_wire_ras_n         (<connected-to-sdram_controller_0_wire_ras_n>),         //                               .ras_n
+		.sdram_controller_0_wire_we_n          (<connected-to-sdram_controller_0_wire_we_n>),          //                               .we_n
+		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>), // switches_0_external_connection.export
+		.leds_1_external_connection_export     (<connected-to-leds_1_external_connection_export>)      //     leds_1_external_connection.export
 	);
 
