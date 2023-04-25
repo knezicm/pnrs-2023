@@ -1,6 +1,29 @@
 
 module soc_system (
+	buttons_0_external_connection_export,
 	clk_clk,
+	hex_0_external_connection_export,
+	hex_1_external_connection_export,
+	hex_2_external_connection_export,
+	hex_3_external_connection_export,
+	hex_4_external_connection_export,
+	hex_5_external_connection_export,
+	hps_0_ddr_mem_a,
+	hps_0_ddr_mem_ba,
+	hps_0_ddr_mem_ck,
+	hps_0_ddr_mem_ck_n,
+	hps_0_ddr_mem_cke,
+	hps_0_ddr_mem_cs_n,
+	hps_0_ddr_mem_ras_n,
+	hps_0_ddr_mem_cas_n,
+	hps_0_ddr_mem_we_n,
+	hps_0_ddr_mem_reset_n,
+	hps_0_ddr_mem_dq,
+	hps_0_ddr_mem_dqs,
+	hps_0_ddr_mem_dqs_n,
+	hps_0_ddr_mem_odt,
+	hps_0_ddr_mem_dm,
+	hps_0_ddr_oct_rzqin,
 	hps_0_io_hps_io_emac1_inst_TX_CLK,
 	hps_0_io_hps_io_emac1_inst_TXD0,
 	hps_0_io_hps_io_emac1_inst_TXD1,
@@ -27,22 +50,6 @@ module soc_system (
 	hps_0_io_hps_io_gpio_inst_GPIO53,
 	hps_0_io_hps_io_gpio_inst_GPIO54,
 	leds_0_external_connection_export,
-	hps_0_ddr_mem_a,
-	hps_0_ddr_mem_ba,
-	hps_0_ddr_mem_ck,
-	hps_0_ddr_mem_ck_n,
-	hps_0_ddr_mem_cke,
-	hps_0_ddr_mem_cs_n,
-	hps_0_ddr_mem_ras_n,
-	hps_0_ddr_mem_cas_n,
-	hps_0_ddr_mem_we_n,
-	hps_0_ddr_mem_reset_n,
-	hps_0_ddr_mem_dq,
-	hps_0_ddr_mem_dqs,
-	hps_0_ddr_mem_dqs_n,
-	hps_0_ddr_mem_odt,
-	hps_0_ddr_mem_dm,
-	hps_0_ddr_oct_rzqin,
 	pll_0_sdram_clk,
 	reset_reset_n,
 	sdram_controller_0_wire_addr,
@@ -55,15 +62,32 @@ module soc_system (
 	sdram_controller_0_wire_ras_n,
 	sdram_controller_0_wire_we_n,
 	switches_0_external_connection_export,
-	hex_4_external_connection_export,
-	hex_3_external_connection_export,
-	hex_2_external_connection_export,
-	hex_1_external_connection_export,
-	hex_0_external_connection_export,
-	buttons_0_external_connection_export,
-	hex_5_external_connection_export);	
+	leds_1_external_connection_export);	
 
+	input	[3:0]	buttons_0_external_connection_export;
 	input		clk_clk;
+	output	[6:0]	hex_0_external_connection_export;
+	output	[6:0]	hex_1_external_connection_export;
+	output	[6:0]	hex_2_external_connection_export;
+	output	[6:0]	hex_3_external_connection_export;
+	output	[6:0]	hex_4_external_connection_export;
+	output	[6:0]	hex_5_external_connection_export;
+	output	[14:0]	hps_0_ddr_mem_a;
+	output	[2:0]	hps_0_ddr_mem_ba;
+	output		hps_0_ddr_mem_ck;
+	output		hps_0_ddr_mem_ck_n;
+	output		hps_0_ddr_mem_cke;
+	output		hps_0_ddr_mem_cs_n;
+	output		hps_0_ddr_mem_ras_n;
+	output		hps_0_ddr_mem_cas_n;
+	output		hps_0_ddr_mem_we_n;
+	output		hps_0_ddr_mem_reset_n;
+	inout	[31:0]	hps_0_ddr_mem_dq;
+	inout	[3:0]	hps_0_ddr_mem_dqs;
+	inout	[3:0]	hps_0_ddr_mem_dqs_n;
+	output		hps_0_ddr_mem_odt;
+	output	[3:0]	hps_0_ddr_mem_dm;
+	input		hps_0_ddr_oct_rzqin;
 	output		hps_0_io_hps_io_emac1_inst_TX_CLK;
 	output		hps_0_io_hps_io_emac1_inst_TXD0;
 	output		hps_0_io_hps_io_emac1_inst_TXD1;
@@ -89,23 +113,7 @@ module soc_system (
 	inout		hps_0_io_hps_io_gpio_inst_GPIO35;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO54;
-	output	[9:0]	leds_0_external_connection_export;
-	output	[14:0]	hps_0_ddr_mem_a;
-	output	[2:0]	hps_0_ddr_mem_ba;
-	output		hps_0_ddr_mem_ck;
-	output		hps_0_ddr_mem_ck_n;
-	output		hps_0_ddr_mem_cke;
-	output		hps_0_ddr_mem_cs_n;
-	output		hps_0_ddr_mem_ras_n;
-	output		hps_0_ddr_mem_cas_n;
-	output		hps_0_ddr_mem_we_n;
-	output		hps_0_ddr_mem_reset_n;
-	inout	[31:0]	hps_0_ddr_mem_dq;
-	inout	[3:0]	hps_0_ddr_mem_dqs;
-	inout	[3:0]	hps_0_ddr_mem_dqs_n;
-	output		hps_0_ddr_mem_odt;
-	output	[3:0]	hps_0_ddr_mem_dm;
-	input		hps_0_ddr_oct_rzqin;
+	output	[4:0]	leds_0_external_connection_export;
 	output		pll_0_sdram_clk;
 	input		reset_reset_n;
 	output	[12:0]	sdram_controller_0_wire_addr;
@@ -118,11 +126,5 @@ module soc_system (
 	output		sdram_controller_0_wire_ras_n;
 	output		sdram_controller_0_wire_we_n;
 	input	[9:0]	switches_0_external_connection_export;
-	output	[6:0]	hex_4_external_connection_export;
-	output	[6:0]	hex_3_external_connection_export;
-	output	[6:0]	hex_2_external_connection_export;
-	output	[6:0]	hex_1_external_connection_export;
-	output	[6:0]	hex_0_external_connection_export;
-	input	[3:0]	buttons_0_external_connection_export;
-	output	[6:0]	hex_5_external_connection_export;
+	output	[4:0]	leds_1_external_connection_export;
 endmodule

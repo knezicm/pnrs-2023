@@ -5,7 +5,7 @@
 			<provider copy-of="extension" id="org.eclipse.cdt.ui.UserLanguageSettingsProvider"/>
 			<provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
 			<provider-reference id="org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider" ref="shared-provider"/>
-			<provider class="com.arm.managedbuilder.gcc.langsettings.ArmGCCLinuxLanguageSettingsProvider" console="false" env-hash="-750706739391699461" id="com.arm.managedbuilder.langsettingsprovider.arm.gcc.linux" keep-relative-paths="false" name="Arm GCC Built-in Compiler Settings Linux" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true" store-entries-with-project="true">
+			<provider class="com.arm.managedbuilder.gcc.langsettings.ArmGCCLinuxLanguageSettingsProvider" console="false" env-hash="921265893412649711" id="com.arm.managedbuilder.langsettingsprovider.arm.gcc.linux" keep-relative-paths="false" name="Arm GCC Built-in Compiler Settings Linux" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true" store-entries-with-project="true">
 				<language-scope id="org.eclipse.cdt.core.gcc"/>
 				<language-scope id="org.eclipse.cdt.core.g++"/>
 				<language id="org.eclipse.cdt.core.gcc">
@@ -2791,7 +2791,7 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider copy-of="extension" id="org.eclipse.cdt.ui.UserLanguageSettingsProvider"/>
 			<provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
-			<provider class="com.arm.managedbuilder.gcc.langsettings.ArmGCCBaremetalLanguageSettingsProvider" console="false" env-hash="-61225434645102142" id="com.arm.managedbuilder.langsettingsprovider.arm.gcc.baremetal" keep-relative-paths="false" name="Arm GCC Built-in Compiler Settings Baremetal" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true">
+			<provider class="com.arm.managedbuilder.gcc.langsettings.ArmGCCBaremetalLanguageSettingsProvider" console="false" env-hash="115909894989341814" id="com.arm.managedbuilder.langsettingsprovider.arm.gcc.baremetal" keep-relative-paths="false" name="Arm GCC Built-in Compiler Settings Baremetal" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true">
 				<language-scope id="org.eclipse.cdt.core.gcc"/>
 				<language-scope id="org.eclipse.cdt.core.g++"/>
 			</provider>
