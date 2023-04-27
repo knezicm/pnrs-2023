@@ -1,4 +1,5 @@
 	soc_system u0 (
+		.buttons_0_external_connection_export  (<connected-to-buttons_0_external_connection_export>),  //  buttons_0_external_connection.export
 		.clk_clk                               (<connected-to-clk_clk>),                               //                            clk.clk
 		.hex_0_external_connection_export      (<connected-to-hex_0_external_connection_export>),      //      hex_0_external_connection.export
 		.hex_1_external_connection_export      (<connected-to-hex_1_external_connection_export>),      //      hex_1_external_connection.export
@@ -60,6 +61,6 @@
 		.sdram_controller_0_wire_ras_n         (<connected-to-sdram_controller_0_wire_ras_n>),         //                               .ras_n
 		.sdram_controller_0_wire_we_n          (<connected-to-sdram_controller_0_wire_we_n>),          //                               .we_n
 		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>), // switches_0_external_connection.export
-		.buttons_0_external_connection_export  (<connected-to-buttons_0_external_connection_export>)   //  buttons_0_external_connection.export
+		.leds_1_external_connection_export     (<connected-to-leds_1_external_connection_export>)      //     leds_1_external_connection.export
 	);
 
