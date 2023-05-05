@@ -180,9 +180,6 @@ architecture rtl of de1_soc_top is
         sdram_controller_0_wire_dqm           : out   std_logic_vector(1 downto 0);                     -- dqm
         sdram_controller_0_wire_ras_n         : out   std_logic;                                        -- ras_n
         sdram_controller_0_wire_we_n          : out   std_logic;                                        -- we_n
-        leds_0_external_connection_export     : out   std_logic_vector(4 downto 0);                     -- export
-		  leds_1_external_connection_export     : out   std_logic_vector(4 downto 0);                     -- export
-        switches_0_external_connection_export : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
         hps_0_ddr_mem_a                       : out   std_logic_vector(14 downto 0);                    -- mem_a
         hps_0_ddr_mem_ba                      : out   std_logic_vector(2 downto 0);                     -- mem_ba
         hps_0_ddr_mem_ck                      : out   std_logic;                                        -- mem_ck
@@ -223,14 +220,7 @@ architecture rtl of de1_soc_top is
         hps_0_io_hps_io_uart0_inst_TX         : out   std_logic;                                        -- hps_io_uart0_inst_TX
         hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
         hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
-        hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
-        buttons_0_external_connection_export  : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
-        hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
-        hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
-        hex_2_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
-        hex_3_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
-        hex_4_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
-        hex_5_external_connection_export      : out   std_logic_vector(6 downto 0)                      -- export
+        hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X'             -- hps_io_gpio_inst_GPIO54
     );
 end component soc_system;
 
@@ -251,9 +241,6 @@ u0 : component soc_system
             sdram_controller_0_wire_dqm(0)     		=> DRAM_LDQM,
             sdram_controller_0_wire_ras_n         	=> DRAM_RAS_N,
             sdram_controller_0_wire_we_n           => DRAM_WE_N,
-            leds_0_external_connection_export     	=> LEDR(9 downto 5),
-				leds_1_external_connection_export     	=> LEDR(4 downto 0),
-            switches_0_external_connection_export 	=> SW,
             hps_0_ddr_mem_a                       	=> HPS_DDR3_ADDR,
             hps_0_ddr_mem_ba                      	=> HPS_DDR3_BA,
             hps_0_ddr_mem_ck                      	=> HPS_DDR3_CK_P,
@@ -294,14 +281,7 @@ u0 : component soc_system
             hps_0_io_hps_io_uart0_inst_TX         	=> HPS_UART_TX,
             hps_0_io_hps_io_gpio_inst_GPIO35      	=> HPS_ENET_INT_N,
             hps_0_io_hps_io_gpio_inst_GPIO53      	=> HPS_LED,
-            hps_0_io_hps_io_gpio_inst_GPIO54      	=> HPS_KEY_N,
-            buttons_0_external_connection_export  	=> KEY_N,
-            hex_0_external_connection_export      	=> HEX0_N,
-            hex_1_external_connection_export      	=> HEX1_N,
-            hex_2_external_connection_export      	=> HEX2_N,
-            hex_3_external_connection_export      	=> HEX3_N,
-            hex_4_external_connection_export      	=> HEX4_N,
-            hex_5_external_connection_export      	=> HEX5_N
+            hps_0_io_hps_io_gpio_inst_GPIO54      	=> HPS_KEY_N
         );
 
 end;
