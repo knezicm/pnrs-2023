@@ -163,11 +163,6 @@ module soc_system_mm_interconnect_0_router_007
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     soc_system_mm_interconnect_0_router_007_default_decode the_default_decode(
@@ -193,7 +188,7 @@ module soc_system_mm_interconnect_0_router_007
             src_channel = 13'b01;
         end
 
-        if (destid == 1  && read_transaction) begin
+        if (destid == 4 ) begin
             src_channel = 13'b10;
         end
 

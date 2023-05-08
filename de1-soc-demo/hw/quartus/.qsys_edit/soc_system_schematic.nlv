@@ -1,14 +1,16 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst soc_system.sysid -pg 1 -lvl 4 -y 630
-preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 200
+preplace inst soc_system.sysid -pg 1 -lvl 4 -y 1080
+preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 390
 preplace inst soc_system.hps_0.clk_0 -pg 1
 preplace inst soc_system.nios2_gen2_0.cpu -pg 1
-preplace inst soc_system.pll_0 -pg 1 -lvl 2 -y 200
-preplace inst soc_system.buttons_0 -pg 1 -lvl 3 -y 40
-preplace inst soc_system.leds_0 -pg 1 -lvl 4 -y 710
+preplace inst soc_system.pll_0 -pg 1 -lvl 2 -y 390
 preplace inst soc_system.hps_0.axi_sdram -pg 1
+preplace inst soc_system.mailbox_0 -pg 1 -lvl 4 -y 700
 preplace inst soc_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst soc_system.nios2_gen2_1.reset_bridge -pg 1
+preplace inst soc_system.mailbox_1 -pg 1 -lvl 4 -y 800
+preplace inst soc_system.nios2_gen2_2.clock_bridge -pg 1
 preplace inst soc_system.nios2_gen2_0.reset_bridge -pg 1
 preplace inst soc_system.hps_0.timer0 -pg 1
 preplace inst soc_system.hps_0.timer1 -pg 1
@@ -20,6 +22,7 @@ preplace inst soc_system.hps_0.timer3 -pg 1
 preplace inst soc_system.hps_0.wd_timer1 -pg 1
 preplace inst soc_system.hps_0.i2c2 -pg 1
 preplace inst soc_system.hps_0.qspi -pg 1
+preplace inst soc_system.nios2_gen2_1.cpu -pg 1
 preplace inst soc_system.hps_0.gpio0 -pg 1
 preplace inst soc_system.hps_0.i2c3 -pg 1
 preplace inst soc_system.hps_0.clkmgr -pg 1
@@ -28,6 +31,7 @@ preplace inst soc_system.hps_0.arm_a9_0 -pg 1
 preplace inst soc_system.hps_0.L2 -pg 1
 preplace inst soc_system.hps_0.gpio2 -pg 1
 preplace inst soc_system.hps_0.arm_a9_1 -pg 1
+preplace inst soc_system.nios2_gen2_1.clock_bridge -pg 1
 preplace inst soc_system.hps_0.uart0 -pg 1
 preplace inst soc_system.hps_0.uart1 -pg 1
 preplace inst soc_system.hps_0.spim0 -pg 1
@@ -39,59 +43,49 @@ preplace inst soc_system.hps_0.l3regs -pg 1
 preplace inst soc_system.hps_0.sdmmc -pg 1
 preplace inst soc_system.hps_0.axi_ocram -pg 1
 preplace inst soc_system.nios2_gen2_0.clock_bridge -pg 1
-preplace inst soc_system.nios2_gen2_0 -pg 1 -lvl 3 -y 390
-preplace inst soc_system.sdram_controller_0 -pg 1 -lvl 4 -y 260
+preplace inst soc_system.nios2_gen2_0 -pg 1 -lvl 3 -y 580
+preplace inst soc_system.nios2_gen2_1 -pg 1 -lvl 4 -y 50
+preplace inst soc_system.sdram_controller_0 -pg 1 -lvl 4 -y 400
+preplace inst soc_system.nios2_gen2_2 -pg 1 -lvl 4 -y 250
 preplace inst soc_system.hps_0.arm_gic_0 -pg 1
 preplace inst soc_system.hps_0.rstmgr -pg 1
 preplace inst soc_system.hps_0.usb0 -pg 1
 preplace inst soc_system.hps_0.scu -pg 1
 preplace inst soc_system.hps_0.usb1 -pg 1
-preplace inst soc_system.hex_0 -pg 1 -lvl 3 -y 610
 preplace inst soc_system.hps_0.hps_io -pg 1
-preplace inst soc_system.hex_1 -pg 1 -lvl 3 -y 750
-preplace inst soc_system.hex_2 -pg 1 -lvl 3 -y 850
 preplace inst soc_system.hps_0.nand0 -pg 1
-preplace inst soc_system.hex_3 -pg 1 -lvl 3 -y 1150
-preplace inst soc_system.jtag_uart_0 -pg 1 -lvl 4 -y 430
-preplace inst soc_system.hex_4 -pg 1 -lvl 3 -y 950
-preplace inst soc_system.hex_5 -pg 1 -lvl 3 -y 1050
+preplace inst soc_system.nios2_gen2_2.reset_bridge -pg 1
+preplace inst soc_system.jtag_uart_0 -pg 1 -lvl 4 -y 600
 preplace inst soc_system.hps_0.gmac0 -pg 1
-preplace inst soc_system.hps_0 -pg 1 -lvl 1 -y 100
+preplace inst soc_system.hps_0 -pg 1 -lvl 1 -y 180
 preplace inst soc_system.hps_0.hps_io.border -pg 1
 preplace inst soc_system.hps_0.gmac1 -pg 1
 preplace inst soc_system.hps_0.eosc1 -pg 1
 preplace inst soc_system.hps_0.fpgamgr -pg 1
+preplace inst soc_system.nios2_gen2_2.cpu -pg 1
 preplace inst soc_system.hps_0.dcan0 -pg 1
 preplace inst soc_system.hps_0.eosc2 -pg 1
 preplace inst soc_system.hps_0.fpga_interfaces -pg 1
 preplace inst soc_system.hps_0.dcan1 -pg 1
 preplace inst soc_system.hps_0.f2s_sdram_ref_clk -pg 1
-preplace inst soc_system.switches_0 -pg 1 -lvl 4 -y 530
 preplace inst soc_system.hps_0.dma -pg 1
 preplace inst soc_system.hps_0.sdrctl -pg 1
+preplace inst soc_system.mutex_0 -pg 1 -lvl 4 -y 990
 preplace inst soc_system.hps_0.bridges -pg 1
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq) 1 3 1 N
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)hex_1.clk,(SLAVE)buttons_0.clk,(MASTER)pll_0.outclk0,(SLAVE)hex_5.clk,(SLAVE)leds_0.clk,(SLAVE)switches_0.clk,(SLAVE)sysid.clk,(SLAVE)hex_4.clk,(SLAVE)hex_3.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)hex_2.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)hex_0.clk) 1 0 4 230 60 NJ 90 760 720 1200
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_2_external_connection,(SLAVE)hex_2.external_connection) 1 0 3 NJ 880 NJ 880 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hex_3.external_connection,(SLAVE)soc_system.hex_3_external_connection) 1 0 3 NJ 1180 NJ 1180 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)jtag_uart_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)sdram_controller_0.reset,(SLAVE)leds_0.reset,(SLAVE)sysid.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)switches_0.reset,(SLAVE)pll_0.reset) 1 1 3 560 190 740 290 1160
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hex_1.external_connection,(SLAVE)soc_system.hex_1_external_connection) 1 0 3 NJ 780 NJ 780 NJ
+preplace inst soc_system.mutex_1 -pg 1 -lvl 4 -y 520
+preplace inst soc_system.mutex_2 -pg 1 -lvl 4 -y 900
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)soc_system.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)soc_system.clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)pll_0.outclk1,(SLAVE)sdram_controller_0.clk) 1 2 2 690 750 NJ
 preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)clk_0.clk,(SLAVE)pll_0.refclk) 1 1 1 N
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.memory,(SLAVE)soc_system.hps_0_ddr) 1 0 1 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_5_external_connection,(SLAVE)hex_5.external_connection) 1 0 3 NJ 1080 NJ 1080 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_4_external_connection,(SLAVE)hex_4.external_connection) 1 0 3 NJ 980 NJ 980 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.switches_0_external_connection,(SLAVE)switches_0.external_connection) 1 0 4 NJ 560 NJ 560 NJ 560 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)hex_1.reset,(MASTER)hps_0.h2f_reset,(SLAVE)hex_0.reset,(SLAVE)hex_2.reset,(SLAVE)hex_3.reset,(SLAVE)hex_5.reset,(SLAVE)buttons_0.reset,(SLAVE)hex_4.reset) 1 1 2 NJ 130 780
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)sysid.control_slave,(MASTER)nios2_gen2_0.data_master,(SLAVE)switches_0.s1,(SLAVE)sdram_controller_0.s1,(SLAVE)leds_0.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave) 1 2 2 800 530 1180
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)sdram_controller_0.clk,(MASTER)pll_0.outclk1) 1 2 2 NJ 230 1160
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)leds_0.external_connection,(SLAVE)soc_system.leds_0_external_connection) 1 0 4 NJ 740 NJ 740 NJ 740 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_0_external_connection,(SLAVE)hex_0.external_connection) 1 0 3 NJ 640 NJ 640 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.sdram_controller_0_wire,(SLAVE)sdram_controller_0.wire) 1 0 4 NJ 330 NJ 330 NJ 330 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)buttons_0.external_connection,(SLAVE)soc_system.buttons_0_external_connection) 1 0 3 NJ 40 NJ 70 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.hps_io,(SLAVE)soc_system.hps_0_io) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)hex_0.s1,(SLAVE)hex_2.s1,(SLAVE)hex_3.s1,(SLAVE)hex_5.s1,(SLAVE)hex_1.s1,(SLAVE)buttons_0.s1,(SLAVE)hex_4.s1) 1 1 2 NJ 110 720
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.pll_0_sdram,(MASTER)pll_0.outclk2) 1 2 3 NJ 250 NJ 250 NJ
-levelinfo -pg 1 0 200 1510
-levelinfo -hier soc_system 210 350 590 920 1260 1410
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)mutex_1.s1,(MASTER)nios2_gen2_1.instruction_master,(SLAVE)sysid.control_slave,(SLAVE)mailbox_0.avmm_msg_receiver,(MASTER)nios2_gen2_0.data_master,(MASTER)nios2_gen2_2.data_master,(MASTER)nios2_gen2_1.data_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)mutex_0.s1,(SLAVE)sdram_controller_0.s1,(MASTER)nios2_gen2_0.instruction_master,(MASTER)nios2_gen2_2.instruction_master,(SLAVE)nios2_gen2_1.debug_mem_slave,(SLAVE)mutex_2.s1,(SLAVE)nios2_gen2_2.debug_mem_slave,(SLAVE)mailbox_1.avmm_msg_sender) 1 2 3 750 720 1130 210 1650
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.sdram_controller_0_wire,(SLAVE)sdram_controller_0.wire) 1 0 4 NJ 280 NJ 280 NJ 280 NJ
+preplace netloc FAN_IN<net_container>soc_system</net_container>(MASTER)nios2_gen2_1.irq,(MASTER)nios2_gen2_0.irq,(MASTER)nios2_gen2_2.irq,(SLAVE)jtag_uart_0.irq) 1 3 2 1250 510 1630
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_io,(SLAVE)hps_0.hps_io) 1 0 1 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.pll_0_sdram,(MASTER)pll_0.outclk2) 1 2 3 NJ 440 NJ 390 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)mailbox_0.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)nios2_gen2_0.clk,(SLAVE)mailbox_1.clk,(MASTER)pll_0.outclk0,(SLAVE)nios2_gen2_2.clk,(SLAVE)mutex_2.clk,(SLAVE)mutex_0.clk,(SLAVE)mutex_1.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)nios2_gen2_1.clk,(SLAVE)sysid.clk) 1 0 4 180 460 NJ 380 710 530 1230
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)clk_0.clk_reset,(MASTER)nios2_gen2_2.debug_reset_request,(SLAVE)nios2_gen2_0.reset,(SLAVE)nios2_gen2_1.reset,(SLAVE)sysid.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)sdram_controller_0.reset,(SLAVE)mailbox_0.rst_n,(SLAVE)mutex_0.reset,(SLAVE)nios2_gen2_2.reset,(MASTER)nios2_gen2_1.debug_reset_request,(SLAVE)mutex_1.reset,(SLAVE)pll_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)mailbox_1.rst_n,(SLAVE)mutex_2.reset) 1 1 4 510 500 730 500 1150 190 1610
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)mailbox_1.avmm_msg_receiver,(SLAVE)mailbox_0.avmm_msg_sender) 1 1 3 NJ 480 NJ 480 1170
+levelinfo -pg 1 0 150 1770
+levelinfo -hier soc_system 160 300 560 870 1370 1670
