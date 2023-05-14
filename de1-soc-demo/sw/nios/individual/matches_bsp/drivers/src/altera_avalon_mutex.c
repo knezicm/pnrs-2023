@@ -54,8 +54,7 @@ ALT_LLIST_HEAD(alt_mutex_list);
  */
 static int alt_mutex_trylock( alt_mutex_dev* dev, alt_u32 value )
 {
-  alt_u32 id= 0;
-  alt_u32 data, check;
+  alt_u32 id = 0, data, check;
   int ret_code = -1;
 
   //NIOS2_READ_CPUID(id);
@@ -186,8 +185,7 @@ void altera_avalon_mutex_unlock( alt_mutex_dev* dev )
  */
 int altera_avalon_mutex_is_mine( alt_mutex_dev* dev )
 {
-  alt_u32 id = 0;
-  alt_u32 data, owner, value;
+  alt_u32 id = 0, data, owner, value;
   int ret_code = 0;
 
   //NIOS2_READ_CPUID(id);

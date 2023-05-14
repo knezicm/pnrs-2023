@@ -6566,9 +6566,8 @@ static int alt_mutex_trylock( alt_mutex_dev* dev, alt_u32 value )
  60048c4:	df000604 	addi	fp,sp,24
  60048c8:	e13ffb15 	stw	r4,-20(fp)
  60048cc:	e17ffa15 	stw	r5,-24(fp)
-  alt_u32 id= 0;
+  alt_u32 id = 0, data, check;
  60048d0:	e03ffe15 	stw	zero,-8(fp)
-  alt_u32 data, check;
   int ret_code = -1;
  60048d4:	00bfffc4 	movi	r2,-1
  60048d8:	e0bfff15 	stw	r2,-4(fp)
@@ -6795,9 +6794,8 @@ int altera_avalon_mutex_is_mine( alt_mutex_dev* dev )
  6004a88:	df000615 	stw	fp,24(sp)
  6004a8c:	df000604 	addi	fp,sp,24
  6004a90:	e13ffa15 	stw	r4,-24(fp)
-  alt_u32 id = 0;
+  alt_u32 id = 0, data, owner, value;
  6004a94:	e03ffe15 	stw	zero,-8(fp)
-  alt_u32 data, owner, value;
   int ret_code = 0;
  6004a98:	e03fff15 	stw	zero,-4(fp)
 
