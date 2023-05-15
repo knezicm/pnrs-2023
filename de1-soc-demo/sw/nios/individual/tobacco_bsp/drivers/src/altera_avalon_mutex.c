@@ -186,10 +186,11 @@ void altera_avalon_mutex_unlock( alt_mutex_dev* dev )
  */
 int altera_avalon_mutex_is_mine( alt_mutex_dev* dev )
 {
-  alt_u32 id, data, owner, value;
+  alt_u32 id = 2;
+  alt_u32 data, owner, value;
   int ret_code = 0;
 
-  NIOS2_READ_CPUID(id);
+  //NIOS2_READ_CPUID(id);
 
   /* retrieve the contents of the mutex */
   data = IORD_ALTERA_AVALON_MUTEX_MUTEX(dev->mutex_base);

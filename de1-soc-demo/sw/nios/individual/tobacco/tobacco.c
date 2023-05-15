@@ -13,15 +13,13 @@
 #include "altera_avalon_mutex.h"
 #include <unistd.h>
 
-alt_mutex_dev* agent_mutex;
 alt_mutex_dev* paper_mutex;
 alt_mutex_dev* matches_mutex;
+alt_mutex_dev* agent_mutex;
 
-
-
-static int my_mutex_trylock( alt_mutex_dev* dev, alt_u32 value )
+static int resource_mutex_trylock( alt_mutex_dev* dev, alt_u32 value ,alt_u32 id)
 {
-  alt_u32 id=124, data, check;
+  alt_u32 data, check;
   int ret_code = -1;
 
   /* the data we want the mutex to hold */
@@ -40,7 +38,7 @@ static int my_mutex_trylock( alt_mutex_dev* dev, alt_u32 value )
   return ret_code;
 }
 
-void my_mutex_lock( alt_mutex_dev* dev, alt_u32 value )
+void resource_mutex_lock( alt_mutex_dev* dev, alt_u32 value )
 {
   /*
    * When running in a multi threaded environment, obtain the "lock"
@@ -48,40 +46,71 @@ void my_mutex_lock( alt_mutex_dev* dev, alt_u32 value )
    */
 
   //ALT_SEM_PEND (dev->lock, 0);
+  alt_u32 agent_id = 3;
+  while ( resource_mutex_trylock( dev, value, agent_id ) != 0);
+}
 
-  while ( my_mutex_trylock( dev, value ) != 0);
+
+
+void release_resources(){
+	// unlock taken resource
+	altera_avalon_mutex_unlock( paper_mutex );
+	altera_avalon_mutex_unlock( matches_mutex );
+	// lock resource from agent perspectives
+	resource_mutex_lock(paper_mutex,1);
+	resource_mutex_lock(matches_mutex,1);
+}
+
+
+void notify_mutex_unlock( alt_mutex_dev* dev, alt_u32 value )
+{
+	  alt_u32 id = 124;
+
+	  /*
+	  * This Mutex has been claimed and released since Reset so clear the Reset bit
+	  * This MUST happen before we release the MUTEX
+	  */
+	  IOWR_ALTERA_AVALON_MUTEX_RESET(dev->mutex_base,
+	                                  ALTERA_AVALON_MUTEX_RESET_RESET_MSK);
+	  IOWR_ALTERA_AVALON_MUTEX_MUTEX(dev->mutex_base,
+	                                  id << ALTERA_AVALON_MUTEX_MUTEX_OWNER_OFST);
+
+	  /*
+	  * Now that access to the hardware Mutex is complete, release the thread lock
+	  */
+	  //ALT_SEM_POST (dev->lock);
+}
+
+void notify_agent(alt_mutex_dev* dev ){
+
+	notify_mutex_unlock(agent_mutex,0);
 }
 
 int main(void)
 {
 
+
 	// get hardware mutex handle
-	agent_mutex = altera_avalon_mutex_open(TOBACCO_MUTEX_NAME);
 	paper_mutex = altera_avalon_mutex_open(PAPER_MUTEX_NAME);
 	matches_mutex = altera_avalon_mutex_open(MATCHES_MUTEX_NAME);
-	// now just loop and blink some lights
-	int state=0;
+	agent_mutex = altera_avalon_mutex_open(FINISHED_MUTEX_NAME);
+
 	while(1)
 	{
 			// acquire the mutex, setting the value to one
-			altera_avalon_mutex_lock(agent_mutex, 1);
-			printf("Agent is placing resources on table!\n");
-			// unlock and then lock it as different owner in this case userID=124
-			altera_avalon_mutex_unlock(agent_mutex);
-			my_mutex_lock(agent_mutex,1);
-//
-//			// lock resources
-			altera_avalon_mutex_lock(paper_mutex,1);
-			altera_avalon_mutex_lock(matches_mutex,1);
-			if(state==0){
-				state=1;
-				altera_avalon_mutex_unlock(matches_mutex);
-				usleep(100000);
+			altera_avalon_mutex_lock(paper_mutex, 1);
+			if(altera_avalon_mutex_trylock(matches_mutex,1) == 0){
+				printf("Smoker with TOBACCO!\n");
+				usleep(500000);
+				release_resources();
+				notify_agent(agent_mutex);
+				usleep(500000);
 			}
 			else{
-				state=0;
+				/* release locked mutex */
 				altera_avalon_mutex_unlock(paper_mutex);
-				usleep(100000);
+				usleep(1000);
 			}
+
 	}
 }

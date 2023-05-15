@@ -28,7 +28,7 @@
 #include "altera_avalon_mutex.h"
 
 static int alt_mutex_trylock(void *dev, uint32_t value) {
-	uint32_t id = 2;
+	uint32_t id = 3;
 	uint32_t data, check;
 	int ret_code = -1;
 
@@ -70,7 +70,7 @@ void altera_avalon_mutex_reset(void* dev){
  */
 void altera_avalon_mutex_unlock( void* dev )
 {
-  uint32_t id = 2;
+  uint32_t id = 3;
   //NIOS2_READ_CPUID(id);
 
   /*

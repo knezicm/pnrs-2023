@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 15, 2023 1:01:48 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1684105308748</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 15, 2023 10:20:41 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1684182041120</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/nikola/PNRS/pnrs-2023/de1-soc-demo/sw/nios/individual/paper_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>/home/nikola/PNRS/pnrs-2023/de1-soc-demo/hw/quartus/soc_system.sopcinfo</SopcDesignFile>

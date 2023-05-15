@@ -4,6 +4,7 @@
  *  Created on: Apr 28, 2021
  *      Author: mknezic
  */
+
 #include <stdio.h>
 #include "system.h"
 #include "sys/alt_irq.h"
@@ -12,7 +13,8 @@
 #include "altera_avalon_mutex.h"
 #include <unistd.h>
 
-alt_mutex_dev* mutex;
+alt_mutex_dev* tobacco_mutex;
+alt_mutex_dev* matches_mutex;
 alt_mutex_dev* agent_mutex;
 
 static int resource_mutex_trylock( alt_mutex_dev* dev, alt_u32 value ,alt_u32 id)
@@ -44,7 +46,7 @@ void resource_mutex_lock( alt_mutex_dev* dev, alt_u32 value )
    */
 
   //ALT_SEM_PEND (dev->lock, 0);
-  alt_u32 agent_id = 2;
+  alt_u32 agent_id = 3;
   while ( resource_mutex_trylock( dev, value, agent_id ) != 0);
 }
 
@@ -52,9 +54,11 @@ void resource_mutex_lock( alt_mutex_dev* dev, alt_u32 value )
 
 void release_resources(){
 	// unlock taken resource
-	altera_avalon_mutex_unlock( mutex );
-	// lock resource from agent perspective
-	resource_mutex_lock(mutex,1);
+	altera_avalon_mutex_unlock( tobacco_mutex );
+	altera_avalon_mutex_unlock( matches_mutex );
+	// lock resource from agent perspectives
+	resource_mutex_lock(tobacco_mutex,1);
+	resource_mutex_lock(matches_mutex,1);
 }
 
 
@@ -74,7 +78,7 @@ void notify_mutex_unlock( alt_mutex_dev* dev, alt_u32 value )
 	  /*
 	  * Now that access to the hardware Mutex is complete, release the thread lock
 	  */
-	  ALT_SEM_POST (dev->lock);
+	  //ALT_SEM_POST (dev->lock);
 }
 
 void notify_agent(alt_mutex_dev* dev ){
@@ -87,18 +91,26 @@ int main(void)
 
 
 	// get hardware mutex handle
-	mutex = altera_avalon_mutex_open(PAPER_MUTEX_NAME);
-	agent_mutex = altera_avalon_mutex_open(TOBACCO_MUTEX_NAME);
+	tobacco_mutex = altera_avalon_mutex_open(TOBACCO_MUTEX_NAME);
+	matches_mutex = altera_avalon_mutex_open(MATCHES_MUTEX_NAME);
+	agent_mutex = altera_avalon_mutex_open(FINISHED_MUTEX_NAME);
 
-	// now just loop and blink some lights
 	while(1)
 	{
 			// acquire the mutex, setting the value to one
-			altera_avalon_mutex_lock(mutex, 1);
-			printf("Smoker with PAPER!\n");
-			usleep(500000);
-			release_resources();
-			notify_agent(agent_mutex);
-			usleep(500000);
+			altera_avalon_mutex_lock(tobacco_mutex, 1);
+			if(altera_avalon_mutex_trylock(matches_mutex,1) == 0){
+				printf("Smoker with PAPER!\n");
+				usleep(500000);
+				release_resources();
+				notify_agent(agent_mutex);
+				usleep(500000);
+			}
+			else{
+				/* release locked mutex */
+				altera_avalon_mutex_unlock(tobacco_mutex);
+				usleep(1000);
+			}
+
 	}
 }

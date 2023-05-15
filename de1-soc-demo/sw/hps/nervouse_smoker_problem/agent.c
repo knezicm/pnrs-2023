@@ -20,6 +20,7 @@
 #include "socal/alt_gpio.h"
 #include "socal/socal.h"
 #include "../hps_soc_system.h"
+#include "altera_avalon_mutex.h"
 
 void open_physical_memory_device() {
 	fd_dev_mem = open("/dev/mem", O_RDWR | O_SYNC);
@@ -86,22 +87,31 @@ int main() {
 	int state = 0;
 	while (true) {
 		// acquire the mutex, setting the value to one
-		altera_avalon_mutex_lock(tobacco_mutex, 1);
+		altera_avalon_mutex_lock(finished_mutex, 1);
 		printf("Agent is placing resources on table!\n");
 		// unlock and then lock it as different owner in this case userID=124
-		altera_avalon_mutex_unlock(tobacco_mutex);
-		my_mutex_lock(tobacco_mutex, 1);
+		altera_avalon_mutex_unlock(finished_mutex);
+		my_mutex_lock(finished_mutex, 1);
 //
 //			// lock resources
-		altera_avalon_mutex_lock(paper_mutex, 1);
 		altera_avalon_mutex_lock(matches_mutex, 1);
+		altera_avalon_mutex_lock(paper_mutex, 1);
+		altera_avalon_mutex_lock(tobacco_mutex, 1);
+		state = rand()%3;
 		if (state == 0) {
 			state = 1;
 			altera_avalon_mutex_unlock(matches_mutex);
+			altera_avalon_mutex_unlock(paper_mutex);
 			usleep(100000);
-		} else {
+		} else if(state == 1) {
+			state = 0;
+			altera_avalon_mutex_unlock(matches_mutex);
+			altera_avalon_mutex_unlock(tobacco_mutex);
+			usleep(100000);
+		}else if(state == 2) {
 			state = 0;
 			altera_avalon_mutex_unlock(paper_mutex);
+			altera_avalon_mutex_unlock(tobacco_mutex);
 			usleep(100000);
 		}
 	}

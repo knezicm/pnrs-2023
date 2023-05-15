@@ -13,7 +13,8 @@
 #include "altera_avalon_mutex.h"
 #include <unistd.h>
 
-alt_mutex_dev* mutex;
+alt_mutex_dev* tobacco_mutex;
+alt_mutex_dev* paper_mutex;
 alt_mutex_dev* agent_mutex;
 
 static int resource_mutex_trylock( alt_mutex_dev* dev, alt_u32 value ,alt_u32 id)
@@ -45,7 +46,7 @@ void resource_mutex_lock( alt_mutex_dev* dev, alt_u32 value )
    */
 
   //ALT_SEM_PEND (dev->lock, 0);
-  alt_u32 agent_id = 2;
+  alt_u32 agent_id = 3;
   while ( resource_mutex_trylock( dev, value, agent_id ) != 0);
 }
 
@@ -53,9 +54,11 @@ void resource_mutex_lock( alt_mutex_dev* dev, alt_u32 value )
 
 void release_resources(){
 	// unlock taken resource
-	altera_avalon_mutex_unlock( mutex );
+	altera_avalon_mutex_unlock( tobacco_mutex );
+	altera_avalon_mutex_unlock( paper_mutex );
 	// lock resource from agent perspective
-	resource_mutex_lock(mutex,1);
+	resource_mutex_lock(tobacco_mutex,1);
+	resource_mutex_lock(paper_mutex,1);
 }
 
 
@@ -88,17 +91,26 @@ int main(void)
 
 
 	// get hardware mutex handle
-	mutex = altera_avalon_mutex_open(MATCHES_MUTEX_NAME);
-	agent_mutex = altera_avalon_mutex_open(TOBACCO_MUTEX_NAME);
+	tobacco_mutex = altera_avalon_mutex_open(TOBACCO_MUTEX_NAME);
+	paper_mutex = altera_avalon_mutex_open(PAPER_MUTEX_NAME);
+	agent_mutex = altera_avalon_mutex_open(FINISHED_MUTEX_NAME);
 
 	while(1)
 	{
 			// acquire the mutex, setting the value to one
-			altera_avalon_mutex_lock(mutex, 1);
-			printf("Smoker with MATCHES!\n");
-			usleep(500000);
-			release_resources();
-			notify_agent(agent_mutex);
-			usleep(500000);
+			altera_avalon_mutex_lock(tobacco_mutex, 1);
+			if(altera_avalon_mutex_trylock(paper_mutex,1) == 0){
+				printf("Smoker with MATCHES!\n");
+				usleep(500000);
+				release_resources();
+				notify_agent(agent_mutex);
+				usleep(500000);
+			}
+			else{
+				/* release locked mutex */
+				altera_avalon_mutex_unlock(tobacco_mutex);
+				usleep(1000);
+			}
+
 	}
 }
