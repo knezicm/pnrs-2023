@@ -185,11 +185,7 @@ module soc_system_mm_interconnect_0_router_007
 
 
         if (destid == 0 ) begin
-            src_channel = 13'b01;
-        end
-
-        if (destid == 4 ) begin
-            src_channel = 13'b10;
+            src_channel = 13'b1;
         end
 
 

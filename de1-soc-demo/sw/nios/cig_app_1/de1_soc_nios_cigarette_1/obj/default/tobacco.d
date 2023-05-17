@@ -15,7 +15,8 @@ obj/default/tobacco.o: tobacco.c \
  d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\hal\inc\os\alt_sem.h \
  d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\hal\inc\priv\alt_no_error.h \
  d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\drivers\inc\altera_avalon_mailbox_simple.h \
- d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\hal\inc\priv\alt_file.h
+ d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\hal\inc\priv\alt_file.h \
+ d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\drivers\inc\altera_avalon_mailbox_simple_regs.h
 d\:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/sw/nios/cig_app_1/de1_soc_nios_cigarette_1_bsp/system.h:
 d\:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/sw/nios/cig_app_1/de1_soc_nios_cigarette_1_bsp/linker.h:
 d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\hal\inc\sys\alt_irq.h:
@@ -33,3 +34,4 @@ d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\
 d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\hal\inc\priv\alt_no_error.h:
 d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\drivers\inc\altera_avalon_mailbox_simple.h:
 d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\hal\inc\priv\alt_file.h:
+d\:\fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_1\de1_soc_nios_cigarette_1_bsp\drivers\inc\altera_avalon_mailbox_simple_regs.h:

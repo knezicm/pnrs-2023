@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>08.05.2023. 21.52.18</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1683575538280</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 13, 2023 1:58:41 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1683979121723</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_0\de1_soc_nios_cigarette_0_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\hw\quartus\soc_system.sopcinfo</SopcDesignFile>
@@ -905,7 +905,7 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>mailbox_1</slaveDescriptor>
+                <slaveDescriptor>mailbox_4</slaveDescriptor>
                 <addressRange>0x08001000 - 0x0800100F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>

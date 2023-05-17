@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2023.05.08.21:50:37</td>
+    <td class="l">2023.05.13.13:34:43</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -104,6 +104,12 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </a> altera_avalon_mailbox_simple 20.1
      <br/>&#160;&#160;
      <a href="#module_mailbox_1"><b>mailbox_1</b>
+     </a> altera_avalon_mailbox_simple 20.1
+     <br/>&#160;&#160;
+     <a href="#module_mailbox_2"><b>mailbox_2</b>
+     </a> altera_avalon_mailbox_simple 20.1
+     <br/>&#160;&#160;
+     <a href="#module_mailbox_4"><b>mailbox_4</b>
      </a> altera_avalon_mailbox_simple 20.1
      <br/>&#160;&#160;
      <a href="#module_mutex_0"><b>mutex_0</b>
@@ -1436,6 +1442,90 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slavem">avmm_msg_sender&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00000030</td>
+    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>ff200030</td>
+    <td class="addr"><span style="color:#989898">0x</span>ff200030</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavem">avmm_msg_receiver&#160;</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>08001010</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_mailbox_1"><b>mailbox_1</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavem">avmm_msg_sender&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>00000020</td>
+    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>ff200020</td>
+    <td class="addr"><span style="color:#989898">0x</span>ff200020</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavem">avmm_msg_receiver&#160;</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>00001000</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_mailbox_2"><b>mailbox_2</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavem">avmm_msg_sender&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
     <td class="empty"></td>
     <td class="addr"><span style="color:#989898">0x</span>ff200000</td>
@@ -1453,16 +1543,16 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>08001010</td>
     <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>08001010</td>
     <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>08001010</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>00001000</td>
     <td class="empty"></td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
-     <a href="#module_mailbox_1"><b>mailbox_1</b>
+     <a href="#module_mailbox_4"><b>mailbox_4</b>
      </a>
     </td>
     <td class="empty"></td>
@@ -20858,7 +20948,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_hps_0_clk_0">hps_0_clk_0</a>
       </td>
       <td class="from">clk_reset&#160;&#160;</td>
-      <td class="main" rowspan="18">hps_0_bridges</td>
+      <td class="main" rowspan="24">hps_0_bridges</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset_sink</td>
@@ -20910,7 +21000,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">h2f_lw&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_mailbox_1">mailbox_1</a>
+       <a href="#module_mailbox_4">mailbox_4</a>
       </td>
      </tr>
      <tr>
@@ -20927,6 +21017,38 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">h2f_lw&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_mailbox_0">mailbox_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avmm_msg_sender</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">h2f_lw&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_mailbox_1">mailbox_1</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avmm_msg_sender</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">h2f_lw&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_mailbox_2">mailbox_2</a>
       </td>
      </tr>
      <tr>
@@ -28330,46 +28452,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_nios2_gen2_1">nios2_gen2_1</a>
-      </td>
-      <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="23">mailbox_0</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;avmm_msg_receiver</td>
-     </tr>
-     <tr>
-      <td class="from">debug_reset_request&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;rst_n</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_nios2_gen2_2">nios2_gen2_2</a>
-      </td>
-      <td class="from">data_master&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;avmm_msg_receiver</td>
-     </tr>
-     <tr>
-      <td class="from">debug_reset_request&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;rst_n</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="4">
        <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="13">mailbox_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avmm_msg_receiver</td>
@@ -28469,10 +28555,216 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="4">
+       <a href="#module_nios2_gen2_1">nios2_gen2_1</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="13">mailbox_1</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avmm_msg_receiver</td>
+     </tr>
+     <tr>
+      <td class="from">debug_reset_request&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;rst_n</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_hps_0_bridges">hps_0_bridges</a>
+      </td>
+      <td class="from">h2f_lw&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avmm_msg_sender</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_pll_0">pll_0</a>
+      </td>
+      <td class="from">outclk0&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_clk_0">clk_0</a>
+      </td>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;rst_n</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">DWIDTH</td>
+        <td class="parametervalue">32</td>
+       </tr>
+       <tr>
+        <td class="parametername">AWIDTH</td>
+        <td class="parametervalue">2</td>
+       </tr>
+       <tr>
+        <td class="parametername">MSG_ARRIVAL_NOTIFY</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">MSG_SPACE_NOTIFY</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_mailbox_2"> </a>
+  <div>
+   <hr/>
+   <h2>mailbox_2</h2>altera_avalon_mailbox_simple v20.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_nios2_gen2_2">nios2_gen2_2</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="13">mailbox_2</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avmm_msg_receiver</td>
+     </tr>
+     <tr>
+      <td class="from">debug_reset_request&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;rst_n</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_hps_0_bridges">hps_0_bridges</a>
+      </td>
+      <td class="from">h2f_lw&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avmm_msg_sender</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_pll_0">pll_0</a>
+      </td>
+      <td class="from">outclk0&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_clk_0">clk_0</a>
+      </td>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;rst_n</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">DWIDTH</td>
+        <td class="parametervalue">32</td>
+       </tr>
+       <tr>
+        <td class="parametername">AWIDTH</td>
+        <td class="parametervalue">2</td>
+       </tr>
+       <tr>
+        <td class="parametername">MSG_ARRIVAL_NOTIFY</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">MSG_SPACE_NOTIFY</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_mailbox_4"> </a>
+  <div>
+   <hr/>
+   <h2>mailbox_4</h2>altera_avalon_mailbox_simple v20.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="4">
        <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="23">mailbox_1</td>
+      <td class="main" rowspan="23">mailbox_4</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avmm_msg_sender</td>
@@ -29109,7 +29401,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_mailbox_1">mailbox_1</a>
+       <a href="#module_mailbox_4">mailbox_4</a>
       </td>
      </tr>
      <tr>
@@ -29966,7 +30258,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x8000800' end='0x8001000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='mailbox_1.avmm_msg_sender' start='0x8001000' end='0x8001010' type='altera_avalon_mailbox_simple.avmm_msg_sender' /&gt;&lt;slave name='mailbox_0.avmm_msg_receiver' start='0x8001010' end='0x8001020' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /&gt;&lt;slave name='mutex_2.s1' start='0x8001020' end='0x8001028' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_1.s1' start='0x8001028' end='0x8001030' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_0.s1' start='0x8001030' end='0x8001038' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x8001038' end='0x8001040' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x8001040' end='0x8001048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x8000800' end='0x8001000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='mailbox_4.avmm_msg_sender' start='0x8001000' end='0x8001010' type='altera_avalon_mailbox_simple.avmm_msg_sender' /&gt;&lt;slave name='mailbox_0.avmm_msg_receiver' start='0x8001010' end='0x8001020' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /&gt;&lt;slave name='mutex_2.s1' start='0x8001020' end='0x8001028' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_1.s1' start='0x8001028' end='0x8001030' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_0.s1' start='0x8001030' end='0x8001038' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x8001038' end='0x8001040' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x8001040' end='0x8001048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -30260,7 +30552,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_mailbox_0">mailbox_0</a>
+       <a href="#module_mailbox_1">mailbox_1</a>
       </td>
      </tr>
      <tr>
@@ -30286,7 +30578,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_mailbox_1">mailbox_1</a>
+       <a href="#module_mailbox_4">mailbox_4</a>
       </td>
      </tr>
      <tr>
@@ -31133,7 +31425,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='mailbox_1.avmm_msg_sender' start='0x8001000' end='0x8001010' type='altera_avalon_mailbox_simple.avmm_msg_sender' /&gt;&lt;slave name='mailbox_0.avmm_msg_receiver' start='0x8001010' end='0x8001020' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /&gt;&lt;slave name='mutex_2.s1' start='0x8001020' end='0x8001028' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_1.s1' start='0x8001028' end='0x8001030' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_0.s1' start='0x8001030' end='0x8001038' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x8001038' end='0x8001040' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x8001040' end='0x8001048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='mailbox_1.avmm_msg_receiver' start='0x1000' end='0x1010' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /&gt;&lt;slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='mailbox_4.avmm_msg_sender' start='0x8001000' end='0x8001010' type='altera_avalon_mailbox_simple.avmm_msg_sender' /&gt;&lt;slave name='mutex_2.s1' start='0x8001020' end='0x8001028' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_1.s1' start='0x8001028' end='0x8001030' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_0.s1' start='0x8001030' end='0x8001038' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x8001038' end='0x8001040' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x8001040' end='0x8001048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -31427,7 +31719,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_mailbox_0">mailbox_0</a>
+       <a href="#module_mailbox_2">mailbox_2</a>
       </td>
      </tr>
      <tr>
@@ -31453,7 +31745,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_mailbox_1">mailbox_1</a>
+       <a href="#module_mailbox_4">mailbox_4</a>
       </td>
      </tr>
      <tr>
@@ -32300,7 +32592,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_gen2_2.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='mailbox_1.avmm_msg_sender' start='0x8001000' end='0x8001010' type='altera_avalon_mailbox_simple.avmm_msg_sender' /&gt;&lt;slave name='mailbox_0.avmm_msg_receiver' start='0x8001010' end='0x8001020' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /&gt;&lt;slave name='mutex_2.s1' start='0x8001020' end='0x8001028' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_1.s1' start='0x8001028' end='0x8001030' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_0.s1' start='0x8001030' end='0x8001038' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x8001038' end='0x8001040' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x8001040' end='0x8001048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='nios2_gen2_2.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='mailbox_2.avmm_msg_receiver' start='0x1000' end='0x1010' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /&gt;&lt;slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='mailbox_4.avmm_msg_sender' start='0x8001000' end='0x8001010' type='altera_avalon_mailbox_simple.avmm_msg_sender' /&gt;&lt;slave name='mutex_2.s1' start='0x8001020' end='0x8001028' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_1.s1' start='0x8001028' end='0x8001030' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='mutex_0.s1' start='0x8001030' end='0x8001038' type='altera_avalon_mutex.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x8001038' end='0x8001040' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x8001040' end='0x8001048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -32536,7 +32828,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_0">clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="39">pll_0</td>
+      <td class="main" rowspan="45">pll_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;refclk</td>
@@ -32697,6 +32989,38 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">outclk0&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_mutex_2">mutex_2</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">outclk0&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_mailbox_2">mailbox_2</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">outclk0&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_mailbox_4">mailbox_4</a>
       </td>
      </tr>
      <tr>
@@ -35074,7 +35398,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1683575435</td>
+        <td class="parametervalue">1683977681</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -35099,7 +35423,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1683575435</td>
+        <td class="parametervalue">1683977681</td>
        </tr>
       </table>
      </td>
@@ -35108,8 +35432,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.02 seconds</td>
-    <td class="r">rendering took 0.61 seconds</td>
+    <td class="l">generation took 0.01 seconds</td>
+    <td class="r">rendering took 0.29 seconds</td>
    </tr>
   </table>
  </body>

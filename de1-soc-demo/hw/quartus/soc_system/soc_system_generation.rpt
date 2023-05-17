@@ -12,6 +12,10 @@ Progress: Adding mailbox_0 [altera_avalon_mailbox_simple 20.1]
 Progress: Parameterizing module mailbox_0
 Progress: Adding mailbox_1 [altera_avalon_mailbox_simple 20.1]
 Progress: Parameterizing module mailbox_1
+Progress: Adding mailbox_2 [altera_avalon_mailbox_simple 20.1]
+Progress: Parameterizing module mailbox_2
+Progress: Adding mailbox_4 [altera_avalon_mailbox_simple 20.1]
+Progress: Parameterizing module mailbox_4
 Progress: Adding mutex_0 [altera_avalon_mutex 20.1]
 Progress: Parameterizing module mutex_0
 Progress: Adding mutex_1 [altera_avalon_mutex 20.1]
@@ -49,14 +53,14 @@ Info: soc_system.sysid: System ID is not assigned automatically. Edit the System
 Info: soc_system.sysid: Time stamp will be automatically updated when this component is generated.
 Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
 Info: Inserting clock-crossing logic between cmd_demux.src5 and cmd_mux_005.sink0
-Info: Inserting clock-crossing logic between cmd_demux_001.src4 and cmd_mux_005.sink1
-Info: Inserting clock-crossing logic between cmd_demux_002.src4 and cmd_mux_005.sink2
+Info: Inserting clock-crossing logic between cmd_demux_001.src3 and cmd_mux_005.sink1
+Info: Inserting clock-crossing logic between cmd_demux_002.src3 and cmd_mux_005.sink2
 Info: Inserting clock-crossing logic between cmd_demux_003.src0 and cmd_mux_005.sink3
 Info: Inserting clock-crossing logic between cmd_demux_004.src1 and cmd_mux_005.sink4
 Info: Inserting clock-crossing logic between cmd_demux_005.src0 and cmd_mux_005.sink5
 Info: Inserting clock-crossing logic between rsp_demux_005.src0 and rsp_mux.sink5
-Info: Inserting clock-crossing logic between rsp_demux_005.src1 and rsp_mux_001.sink4
-Info: Inserting clock-crossing logic between rsp_demux_005.src2 and rsp_mux_002.sink4
+Info: Inserting clock-crossing logic between rsp_demux_005.src1 and rsp_mux_001.sink3
+Info: Inserting clock-crossing logic between rsp_demux_005.src2 and rsp_mux_002.sink3
 Info: Inserting clock-crossing logic between rsp_demux_005.src3 and rsp_mux_003.sink0
 Info: Inserting clock-crossing logic between rsp_demux_005.src4 and rsp_mux_004.sink1
 Info: Inserting clock-crossing logic between rsp_demux_005.src5 and rsp_mux_005.sink0
@@ -67,12 +71,12 @@ Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_
 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
 Info: jtag_uart_0: Starting RTL generation for module 'soc_system_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart_0 --dir=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0002_jtag_uart_0_gen//soc_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart_0 --dir=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0053_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0053_jtag_uart_0_gen//soc_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'soc_system_jtag_uart_0'
 Info: jtag_uart_0: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: mailbox_0: "soc_system" instantiated altera_avalon_mailbox_simple "mailbox_0"
 Info: mutex_0: Starting RTL generation for module 'soc_system_mutex_0'
-Info: mutex_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_mutex -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_mutex/generate_rtl.pl --name=soc_system_mutex_0 --dir=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0004_mutex_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0004_mutex_0_gen//soc_system_mutex_0_component_configuration.pl  --do_build_sim=0  ]
+Info: mutex_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_mutex -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_mutex/generate_rtl.pl --name=soc_system_mutex_0 --dir=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0055_mutex_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0055_mutex_0_gen//soc_system_mutex_0_component_configuration.pl  --do_build_sim=0  ]
 Info: mutex_0: Done RTL generation for module 'soc_system_mutex_0'
 Info: mutex_0: "soc_system" instantiated altera_avalon_mutex "mutex_0"
 Info: nios2_gen2_0: "soc_system" instantiated altera_nios2_gen2 "nios2_gen2_0"
@@ -80,7 +84,7 @@ Info: nios2_gen2_1: "soc_system" instantiated altera_nios2_gen2 "nios2_gen2_1"
 Info: nios2_gen2_2: "soc_system" instantiated altera_nios2_gen2 "nios2_gen2_2"
 Info: pll_0: "soc_system" instantiated altera_pll "pll_0"
 Info: sdram_controller_0: Starting RTL generation for module 'soc_system_sdram_controller_0'
-Info: sdram_controller_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=soc_system_sdram_controller_0 --dir=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0006_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0006_sdram_controller_0_gen//soc_system_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram_controller_0:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=soc_system_sdram_controller_0 --dir=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0057_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0057_sdram_controller_0_gen//soc_system_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
 Info: sdram_controller_0: Done RTL generation for module 'soc_system_sdram_controller_0'
 Info: sdram_controller_0: "soc_system" instantiated altera_avalon_new_sdram_controller "sdram_controller_0"
 Info: sysid: "soc_system" instantiated altera_avalon_sysid_qsys "sysid"
@@ -95,42 +99,46 @@ Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
 Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
 Info: cpu: Starting RTL generation for module 'soc_system_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_0_cpu --dir=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0011_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0011_cpu_gen//soc_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2023.05.08 21:51:08 (*) Starting Nios II generation
-Info: cpu: # 2023.05.08 21:51:08 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2023.05.08 21:51:08 (*)   Creating all objects for CPU
-Info: cpu: # 2023.05.08 21:51:08 (*)   Generating RTL from CPU objects
-Info: cpu: # 2023.05.08 21:51:08 (*)   Creating plain-text RTL
-Info: cpu: # 2023.05.08 21:51:09 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_0_cpu --dir=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0062_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0062_cpu_gen//soc_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.05.13 13:35:17 (*) Starting Nios II generation
+Info: cpu: # 2023.05.13 13:35:17 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.05.13 13:35:17 (*)   Creating all objects for CPU
+Info: cpu: # 2023.05.13 13:35:18 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.05.13 13:35:18 (*)   Creating plain-text RTL
+Info: cpu: # 2023.05.13 13:35:19 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'soc_system_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: cpu: Starting RTL generation for module 'soc_system_nios2_gen2_1_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_1_cpu --dir=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0012_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0012_cpu_gen//soc_system_nios2_gen2_1_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2023.05.08 21:51:09 (*) Starting Nios II generation
-Info: cpu: # 2023.05.08 21:51:09 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2023.05.08 21:51:09 (*)   Creating all objects for CPU
-Info: cpu: # 2023.05.08 21:51:10 (*)   Generating RTL from CPU objects
-Info: cpu: # 2023.05.08 21:51:10 (*)   Creating plain-text RTL
-Info: cpu: # 2023.05.08 21:51:10 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_1_cpu --dir=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0063_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0063_cpu_gen//soc_system_nios2_gen2_1_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.05.13 13:35:19 (*) Starting Nios II generation
+Info: cpu: # 2023.05.13 13:35:19 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.05.13 13:35:19 (*)   Creating all objects for CPU
+Info: cpu: # 2023.05.13 13:35:20 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.05.13 13:35:20 (*)   Creating plain-text RTL
+Info: cpu: # 2023.05.13 13:35:20 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'soc_system_nios2_gen2_1_cpu'
 Info: cpu: "nios2_gen2_1" instantiated altera_nios2_gen2_unit "cpu"
 Info: cpu: Starting RTL generation for module 'soc_system_nios2_gen2_2_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_2_cpu --dir=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0013_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9485_4041006913914916989.dir/0013_cpu_gen//soc_system_nios2_gen2_2_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2023.05.08 21:51:11 (*) Starting Nios II generation
-Info: cpu: # 2023.05.08 21:51:11 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2023.05.08 21:51:11 (*)   Creating all objects for CPU
-Info: cpu: # 2023.05.08 21:51:12 (*)   Generating RTL from CPU objects
-Info: cpu: # 2023.05.08 21:51:12 (*)   Creating plain-text RTL
-Info: cpu: # 2023.05.08 21:51:12 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_2_cpu --dir=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0064_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/W10/AppData/Local/Temp/alt9490_1941477143500389358.dir/0064_cpu_gen//soc_system_nios2_gen2_2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.05.13 13:35:21 (*) Starting Nios II generation
+Info: cpu: # 2023.05.13 13:35:21 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.05.13 13:35:21 (*)   Creating all objects for CPU
+Info: cpu: # 2023.05.13 13:35:21 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.05.13 13:35:21 (*)   Creating plain-text RTL
+Info: cpu: # 2023.05.13 13:35:22 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'soc_system_nios2_gen2_2_cpu'
 Info: cpu: "nios2_gen2_2" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -145,19 +153,25 @@ Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
 Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
 Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
 Info: router_010: "mm_interconnect_0" instantiated altera_merlin_router "router_010"
 Info: router_011: "mm_interconnect_0" instantiated altera_merlin_router "router_011"
 Info: router_015: "mm_interconnect_0" instantiated altera_merlin_router "router_015"
 Info: router_016: "mm_interconnect_0" instantiated altera_merlin_router "router_016"
+Info: router_017: "mm_interconnect_0" instantiated altera_merlin_router "router_017"
+Info: router_018: "mm_interconnect_0" instantiated altera_merlin_router "router_018"
 Info: sdram_controller_0_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "sdram_controller_0_s1_burst_adapter"
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/hw/quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
 Info: Reusing file D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/hw/quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_005: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_005"
 Info: Reusing file D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/hw/quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
 Info: rsp_demux_005: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_005"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
 Info: Reusing file D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/hw/quartus/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
@@ -186,6 +200,6 @@ Info: Reusing file D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-202
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
-Info: soc_system: Done "soc_system" with 61 modules, 151 files
+Info: soc_system: Done "soc_system" with 66 modules, 156 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

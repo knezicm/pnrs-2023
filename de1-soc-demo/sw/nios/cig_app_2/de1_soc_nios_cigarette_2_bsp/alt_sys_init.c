@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_2' in SOPC Builder design 'soc_system'
  * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Mon May 08 21:43:38 CEST 2023
+ * Generated: Sat May 13 13:55:32 CEST 2023
  */
 
 /*
@@ -70,8 +70,8 @@
 
 ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( NIOS2_GEN2_2, nios2_gen2_2);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART_0, jtag_uart_0);
-ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_0, mailbox_0);
-ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_1, mailbox_1);
+ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_2, mailbox_2);
+ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_4, mailbox_4);
 ALTERA_AVALON_MUTEX_INSTANCE ( MUTEX_0, mutex_0);
 ALTERA_AVALON_MUTEX_INSTANCE ( MUTEX_1, mutex_1);
 ALTERA_AVALON_MUTEX_INSTANCE ( MUTEX_2, mutex_2);
@@ -99,8 +99,8 @@ void alt_irq_init ( const void* base )
 void alt_sys_init( void )
 {
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART_0, jtag_uart_0);
-    ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_0, mailbox_0);
-    ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_1, mailbox_1);
+    ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_2, mailbox_2);
+    ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_4, mailbox_4);
     ALTERA_AVALON_MUTEX_INIT ( MUTEX_0, mutex_0);
     ALTERA_AVALON_MUTEX_INIT ( MUTEX_1, mutex_1);
     ALTERA_AVALON_MUTEX_INIT ( MUTEX_2, mutex_2);

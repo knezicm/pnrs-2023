@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>08.05.2023. 22.01.30</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1683576090587</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>13.05.2023. 14.11.28</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1683979888234</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\sw\nios\cig_app_2\de1_soc_nios_cigarette_2_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-demo\hw\quartus\soc_system.sopcinfo</SopcDesignFile>
@@ -899,20 +899,20 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
+                <slaveDescriptor>mailbox_2</slaveDescriptor>
+                <addressRange>0x00001000 - 0x0000100F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sdram_controller_0</slaveDescriptor>
                 <addressRange>0x04000000 - 0x07FFFFFF</addressRange>
                 <addressSpan>67108864</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>mailbox_1</slaveDescriptor>
+                <slaveDescriptor>mailbox_4</slaveDescriptor>
                 <addressRange>0x08001000 - 0x0800100F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>mailbox_0</slaveDescriptor>
-                <addressRange>0x08001010 - 0x0800101F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_1' in SOPC Builder design 'soc_system'
  * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-demo/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Mon May 08 21:58:13 CEST 2023
+ * Generated: Sat May 13 13:57:43 CEST 2023
  */
 
 /*
@@ -207,31 +207,31 @@
 
 
 /*
- * mailbox_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_mailbox_0 altera_avalon_mailbox_simple
-#define MAILBOX_0_BASE 0x8001010
-#define MAILBOX_0_IRQ -1
-#define MAILBOX_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define MAILBOX_0_NAME "/dev/mailbox_0"
-#define MAILBOX_0_SPAN 16
-#define MAILBOX_0_TYPE "altera_avalon_mailbox_simple"
-
-
-/*
  * mailbox_1 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_mailbox_1 altera_avalon_mailbox_simple
-#define MAILBOX_1_BASE 0x8001000
+#define MAILBOX_1_BASE 0x1000
 #define MAILBOX_1_IRQ -1
 #define MAILBOX_1_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MAILBOX_1_NAME "/dev/mailbox_1"
 #define MAILBOX_1_SPAN 16
 #define MAILBOX_1_TYPE "altera_avalon_mailbox_simple"
+
+
+/*
+ * mailbox_4 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_mailbox_4 altera_avalon_mailbox_simple
+#define MAILBOX_4_BASE 0x8001000
+#define MAILBOX_4_IRQ -1
+#define MAILBOX_4_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MAILBOX_4_NAME "/dev/mailbox_4"
+#define MAILBOX_4_SPAN 16
+#define MAILBOX_4_TYPE "altera_avalon_mailbox_simple"
 
 
 /*
@@ -339,7 +339,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1683575435
+#define SYSID_TIMESTAMP 1683977681
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */
