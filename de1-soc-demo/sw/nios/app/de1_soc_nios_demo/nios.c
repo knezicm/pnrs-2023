@@ -57,7 +57,3 @@ int main()
 	rotate_leds();
 	return 0;
 }
-
-
-
-

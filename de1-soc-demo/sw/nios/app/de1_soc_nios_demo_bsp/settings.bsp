@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 30, 2023 9:39:05 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1680161945862</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 19, 2023 11:37:56 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1684489076606</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Public\de1-soc-demo\sw\nios\app\de1_soc_nios_demo_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\Public\de1-soc-demo\hw\quartus\soc_system.sopcinfo</SopcDesignFile>
@@ -917,16 +917,16 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sysid</slaveDescriptor>
+                <slaveDescriptor>jtag_uart_0</slaveDescriptor>
                 <addressRange>0x08001020 - 0x08001027</addressRange>
                 <addressSpan>8</addressSpan>
-                <attributes/>
+                <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>jtag_uart_0</slaveDescriptor>
+                <slaveDescriptor>sysid</slaveDescriptor>
                 <addressRange>0x08001028 - 0x0800102F</addressRange>
                 <addressSpan>8</addressSpan>
-                <attributes>printable</attributes>
+                <attributes/>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>

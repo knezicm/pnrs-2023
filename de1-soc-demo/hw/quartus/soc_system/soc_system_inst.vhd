@@ -1,7 +1,6 @@
 	component soc_system is
 		port (
 			clk_clk                               : in    std_logic                     := 'X';             -- clk
-			leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     -- export
 			pll_0_sdram_clk                       : out   std_logic;                                        -- clk
 			reset_reset_n                         : in    std_logic                     := 'X';             -- reset_n
 			sdram_controller_0_wire_addr          : out   std_logic_vector(12 downto 0);                    -- addr
@@ -13,6 +12,7 @@
 			sdram_controller_0_wire_dqm           : out   std_logic_vector(1 downto 0);                     -- dqm
 			sdram_controller_0_wire_ras_n         : out   std_logic;                                        -- ras_n
 			sdram_controller_0_wire_we_n          : out   std_logic;                                        -- we_n
+			leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     -- export
 			switches_0_external_connection_export : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
 			hps_0_ddr_mem_a                       : out   std_logic_vector(14 downto 0);                    -- mem_a
 			hps_0_ddr_mem_ba                      : out   std_logic_vector(2 downto 0);                     -- mem_ba
@@ -68,7 +68,6 @@
 	u0 : component soc_system
 		port map (
 			clk_clk                               => CONNECTED_TO_clk_clk,                               --                            clk.clk
-			leds_0_external_connection_export     => CONNECTED_TO_leds_0_external_connection_export,     --     leds_0_external_connection.export
 			pll_0_sdram_clk                       => CONNECTED_TO_pll_0_sdram_clk,                       --                    pll_0_sdram.clk
 			reset_reset_n                         => CONNECTED_TO_reset_reset_n,                         --                          reset.reset_n
 			sdram_controller_0_wire_addr          => CONNECTED_TO_sdram_controller_0_wire_addr,          --        sdram_controller_0_wire.addr
@@ -80,6 +79,7 @@
 			sdram_controller_0_wire_dqm           => CONNECTED_TO_sdram_controller_0_wire_dqm,           --                               .dqm
 			sdram_controller_0_wire_ras_n         => CONNECTED_TO_sdram_controller_0_wire_ras_n,         --                               .ras_n
 			sdram_controller_0_wire_we_n          => CONNECTED_TO_sdram_controller_0_wire_we_n,          --                               .we_n
+			leds_0_external_connection_export     => CONNECTED_TO_leds_0_external_connection_export,     --     leds_0_external_connection.export
 			switches_0_external_connection_export => CONNECTED_TO_switches_0_external_connection_export, -- switches_0_external_connection.export
 			hps_0_ddr_mem_a                       => CONNECTED_TO_hps_0_ddr_mem_a,                       --                      hps_0_ddr.mem_a
 			hps_0_ddr_mem_ba                      => CONNECTED_TO_hps_0_ddr_mem_ba,                      --                               .mem_ba

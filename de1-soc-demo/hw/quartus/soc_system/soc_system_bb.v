@@ -1,7 +1,6 @@
 
 module soc_system (
 	clk_clk,
-	leds_0_external_connection_export,
 	pll_0_sdram_clk,
 	reset_reset_n,
 	sdram_controller_0_wire_addr,
@@ -13,6 +12,7 @@ module soc_system (
 	sdram_controller_0_wire_dqm,
 	sdram_controller_0_wire_ras_n,
 	sdram_controller_0_wire_we_n,
+	leds_0_external_connection_export,
 	switches_0_external_connection_export,
 	hps_0_ddr_mem_a,
 	hps_0_ddr_mem_ba,
@@ -64,7 +64,6 @@ module soc_system (
 	hex_5_external_connection_export);	
 
 	input		clk_clk;
-	output	[9:0]	leds_0_external_connection_export;
 	output		pll_0_sdram_clk;
 	input		reset_reset_n;
 	output	[12:0]	sdram_controller_0_wire_addr;
@@ -76,6 +75,7 @@ module soc_system (
 	output	[1:0]	sdram_controller_0_wire_dqm;
 	output		sdram_controller_0_wire_ras_n;
 	output		sdram_controller_0_wire_we_n;
+	output	[9:0]	leds_0_external_connection_export;
 	input	[9:0]	switches_0_external_connection_export;
 	output	[14:0]	hps_0_ddr_mem_a;
 	output	[2:0]	hps_0_ddr_mem_ba;
