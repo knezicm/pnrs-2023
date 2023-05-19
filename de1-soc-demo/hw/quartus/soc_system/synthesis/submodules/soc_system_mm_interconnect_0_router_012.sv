@@ -47,23 +47,23 @@ module soc_system_mm_interconnect_0_router_012_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 0 
+               DEFAULT_DESTID = 1 
    )
-  (output [92 - 89 : 0] default_destination_id,
-   output [12-1 : 0] default_wr_channel,
-   output [12-1 : 0] default_rd_channel,
-   output [12-1 : 0] default_src_channel
+  (output [100 - 97 : 0] default_destination_id,
+   output [13-1 : 0] default_wr_channel,
+   output [13-1 : 0] default_rd_channel,
+   output [13-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[92 - 89 : 0];
+    DEFAULT_DESTID[100 - 97 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 12'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 13'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module soc_system_mm_interconnect_0_router_012_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 12'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 12'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 13'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 13'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -93,7 +93,7 @@ module soc_system_mm_interconnect_0_router_012
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [106-1 : 0]    sink_data,
+    input  [125-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,8 +102,8 @@ module soc_system_mm_interconnect_0_router_012
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [106-1    : 0] src_data,
-    output reg [12-1 : 0] src_channel,
+    output reg [125-1    : 0] src_data,
+    output reg [13-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -114,12 +114,12 @@ module soc_system_mm_interconnect_0_router_012
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 63;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 92;
-    localparam PKT_DEST_ID_L = 89;
-    localparam PKT_PROTECTION_H = 96;
-    localparam PKT_PROTECTION_L = 94;
-    localparam ST_DATA_W = 106;
-    localparam ST_CHANNEL_W = 12;
+    localparam PKT_DEST_ID_H = 100;
+    localparam PKT_DEST_ID_L = 97;
+    localparam PKT_PROTECTION_H = 115;
+    localparam PKT_PROTECTION_L = 113;
+    localparam ST_DATA_W = 125;
+    localparam ST_CHANNEL_W = 13;
     localparam DECODER_TYPE = 1;
 
     localparam PKT_TRANS_WRITE = 66;
@@ -158,11 +158,16 @@ module soc_system_mm_interconnect_0_router_012
     assign src_valid         = sink_valid;
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
-    wire [12-1 : 0] default_src_channel;
+    wire [13-1 : 0] default_src_channel;
 
 
 
 
+    // -------------------------------------------------------
+    // Write and read transaction signals
+    // -------------------------------------------------------
+    wire read_transaction;
+    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     soc_system_mm_interconnect_0_router_012_default_decode the_default_decode(
@@ -184,8 +189,12 @@ module soc_system_mm_interconnect_0_router_012
 
 
 
-        if (destid == 0 ) begin
-            src_channel = 12'b1;
+        if (destid == 1 ) begin
+            src_channel = 13'b01;
+        end
+
+        if (destid == 2  && read_transaction) begin
+            src_channel = 13'b10;
         end
 
 
