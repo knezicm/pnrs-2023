@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>spl</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 20, 2023 9:36:30 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1682019390806</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 20, 2023 3:23:41 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1684589021531</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>.\</BspGeneratedLocation>
         <BspSettingsFile>D:\de1-soc-demo\sw\hps\preloader\settings.bsp</BspSettingsFile>
         <HpsSettingsPath>..\..\..\hw\quartus\hps_isw_handoff\soc_system_hps_0</HpsSettingsPath>
