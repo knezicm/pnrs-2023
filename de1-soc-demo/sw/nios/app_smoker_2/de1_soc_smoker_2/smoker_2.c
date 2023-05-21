@@ -52,7 +52,7 @@ int main()
 			altera_avalon_mutex_trylock(tobacco_mutex, 1);
 			altera_avalon_mutex_trylock(matches_mutex, 1);
 
-			printf("Smoker 0: Acquired ingredients, rolling the cigarette!\n");
+			printf("Smoker 2: Acquired ingredients, rolling the cigarette!\n");
 
 			// Simulate rolling the cigarette by delaying between 1 and 5 seconds
 			usleep((rand() % 5 + 1) * 1000000);
