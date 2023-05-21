@@ -1,12 +1,11 @@
 /*
- * smoker_1.c
+ *smoker_1.c
  *
- *  Created on: May 19, 2023
- *      Author: popovict
+ *Created on: May 19, 2023
+ *     Author: popovict
  *
- *  This smoker has tobacco.
+ *This smoker has tobacco.
  */
-
 #include "stdio.h"
 #include "stdlib.h"
 #include "unistd.h"
@@ -24,15 +23,14 @@ alt_mutex_dev* tobacco_mutex;
 altera_avalon_mailbox_dev* message_rx;
 altera_avalon_mailbox_dev* message_tx;
 
-
 int main()
 {
 	alt_u32 message = 0;
-    alt_u32 smoking_is_done = 1;
+	alt_u32 smoking_is_done = 1;
 	// Get hardware mutex handle for tobacco and matches
 	tobacco_mutex = altera_avalon_mutex_open(MUTEX_1_NAME);
 	paper_mutex = altera_avalon_mutex_open(MUTEX_2_NAME);
-    matches_mutex = altera_avalon_mutex_open(MUTEX_0_NAME);
+	matches_mutex = altera_avalon_mutex_open(MUTEX_0_NAME);
 
 	// Init the mailbox hps to fpga
 	message_rx = altera_avalon_mailbox_open(MAILBOX_1_NAME, NULL, NULL);
@@ -43,9 +41,9 @@ int main()
 	// This smoker has tobacco
 	altera_avalon_mutex_trylock(tobacco_mutex, 1);
 
-	while(1)
+	while (1)
 	{
-		if(altera_avalon_mailbox_retrieve_poll(message_rx, &message, 100))
+		if (altera_avalon_mailbox_retrieve_poll(message_rx, &message, 100))
 		{
 			// Acquire the mutex, setting the value to one
 			altera_avalon_mutex_trylock(matches_mutex, 1);
@@ -54,7 +52,7 @@ int main()
 			printf("Smoker 1: Acquired ingredients, rolling the cigarette!\n");
 
 			// Simulate rolling the cigarette by delaying between 1 and 5 seconds
-			usleep((rand() % 5 + 1) * 1000000);
+			usleep((rand() % 5 + 1) *1000000);
 
 			// Release the mutex
 			altera_avalon_mutex_unlock(tobacco_mutex);
@@ -63,10 +61,6 @@ int main()
 
 			// Signal the agent smoking is done
 			altera_avalon_mailbox_send(message_tx, &smoking_is_done, 0, POLL);
-
 		}
-
 	}
-
-
 }
