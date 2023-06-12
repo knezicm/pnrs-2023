@@ -1,0 +1,865 @@
+Archive member included to satisfy reference by file (symbol)
+
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o (alt_load)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o (alt_main)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_mailbox_simple_init)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_avalon_timer_sc_init)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o) (close)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_list)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o) (_do_ctors)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o) (_do_dtors)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o) (alt_errno)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o) (alt_find_dev)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o) (alt_irq_register)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o) (alt_irq_active)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o) (alt_release_fd)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o) (_alt_tick_rate)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o) (alt_irq_entry)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o) (alt_irq)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o) (atexit)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o) (exit)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                              c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o) (errno)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o) (memcmp)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+                              d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o) (strlen)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                              c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o) (__register_exitproc)
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                              c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o) (__call_exitprocs)
+d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+                              c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o) (_exit)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+sdram_controller_0_BEFORE_RESET 0x0000000004000000 0x0000000000100000
+reset            0x0000000004100000 0x0000000000000020
+sdram_controller_0 0x0000000004100020 0x0000000003efffe0
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/audio_processing.o
+LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a
+LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/mno-hw-mul\libgcc.a
+LOAD d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a
+LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+END GROUP
+LOAD c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/mno-hw-mul\libgcc.a
+                0x0000000004000000                __alt_mem_sdram_controller_0 = 0x4000000
+
+.entry          0x0000000004100000       0x20
+ *(.entry)
+ .entry         0x0000000004100000       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+                0x0000000004100000                __reset
+
+.exceptions     0x0000000004100020      0x208
+                0x0000000004100020                PROVIDE (__ram_exceptions_start = ABSOLUTE (.))
+                0x0000000004100020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000004100020        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                0x0000000004100020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000004100020        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                0x0000000004100020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000004100020       0x54 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000004100074       0x10 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000004100084        0x4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000004100088        0x4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000410008c        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000410008c        0x8 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000004100094       0x14 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00000000041000a8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00000000041000a8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00000000041000a8       0x54 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000041000fc       0xcc d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x00000000041000fc                alt_irq_handler
+ .exceptions    0x00000000041001c8       0x60 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x00000000041001c8                alt_instruction_exception_entry
+                0x0000000004100228                PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
+                0x0000000004100020                PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
+
+.text           0x0000000004100228     0x181c
+                [!provide]                        PROVIDE (stext = ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000004100228       0x3c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+                0x0000000004100228                _start
+ .text          0x0000000004100264       0x20 obj/default/audio_processing.o
+                0x0000000004100264                main
+ .text          0x0000000004100284       0xec d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+                0x00000000041002ec                alt_load
+ .text          0x0000000004100370       0x60 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000004100370                alt_main
+ .text          0x00000000041003d0       0xe4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000004100404                alt_irq_init
+                0x0000000004100440                alt_sys_init
+ .text          0x00000000041004b4      0x93c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+                0x00000000041007a8                altera_avalon_mailbox_simple_init
+                0x0000000004100820                altera_avalon_mailbox_open
+                0x00000000041009e4                altera_avalon_mailbox_close
+                0x0000000004100aec                altera_avalon_mailbox_status
+                0x0000000004100b64                altera_avalon_mailbox_send
+                0x0000000004100cb4                altera_avalon_mailbox_retrieve_poll
+ .text          0x0000000004100df0       0xfc d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                0x0000000004100e70                alt_avalon_timer_sc_init
+ .text          0x0000000004100eec      0x118 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+                0x0000000004100f28                close
+ .text          0x0000000004101004       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000004101004                alt_dcache_flush_all
+ .text          0x0000000004101024       0x2c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x0000000004101050       0xe4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x000000000410108c                alt_dev_llist_insert
+ .text          0x0000000004101134       0x64 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                0x0000000004101134                _do_ctors
+ .text          0x0000000004101198       0x64 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                0x0000000004101198                _do_dtors
+ .text          0x00000000041011fc        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x00000000041011fc       0x90 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+                0x00000000041011fc                alt_find_dev
+ .text          0x000000000410128c       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x000000000410128c                alt_icache_flush_all
+ .text          0x00000000041012ac      0x180 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+                0x00000000041012ac                alt_irq_register
+ .text          0x000000000410142c        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x000000000410142c       0x70 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+                0x000000000410142c                alt_release_fd
+ .text          0x000000000410149c      0x1ac d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+                0x000000000410149c                alt_alarm_stop
+                0x0000000004101540                alt_tick
+ .text          0x0000000004101648       0x24 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000004101648                altera_nios2_gen2_irq_init
+ .text          0x000000000410166c        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x000000000410166c        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x000000000410166c        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x000000000410166c       0x98 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000410166c                alt_exception_cause_generated_bad_addr
+ .text          0x0000000004101704        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .text.atexit   0x0000000004101704       0x14 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+                0x0000000004101704                atexit
+ .text          0x0000000004101718        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .text.exit     0x0000000004101718       0x34 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+                0x0000000004101718                exit
+ .text          0x000000000410174c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .text          0x000000000410174c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .text          0x000000000410174c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .text.memcmp   0x000000000410174c       0x78 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+                0x000000000410174c                memcmp
+ .text          0x00000000041017c4        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .text.strlen   0x00000000041017c4       0x98 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+                0x00000000041017c4                strlen
+ .text          0x000000000410185c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x000000000410185c       0x90 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                0x000000000410185c                __register_exitproc
+ .text          0x00000000041018ec        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000041018ec      0x120 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                0x00000000041018ec                __call_exitprocs
+ .text          0x0000000004101a0c       0x38 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+                0x0000000004101a0c                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext = ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x0000000004101a44                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start = ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start = ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                0x0000000004101a44                PROVIDE (__CTOR_LIST__ = ABSOLUTE (.))
+ *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+                0x0000000004101a44                PROVIDE (__CTOR_END__ = ABSOLUTE (.))
+                0x0000000004101a44                PROVIDE (__DTOR_LIST__ = ABSOLUTE (.))
+ *(.dtors)
+ *(SORT_BY_NAME(.dtors.*))
+                0x0000000004101a44                PROVIDE (__DTOR_END__ = ABSOLUTE (.))
+ *(.jcr)
+                0x0000000004101a44                . = ALIGN (0x4)
+
+.rodata         0x0000000004101a44       0x3c
+                0x0000000004101a44                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
+                0x0000000004101a44                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000004101a44       0x2d d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ *fill*         0x0000000004101a71        0x3 
+ .rodata        0x0000000004101a74        0xa d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ *(.rodata1)
+                0x0000000004101a80                . = ALIGN (0x4)
+ *fill*         0x0000000004101a7e        0x2 
+                0x0000000004101a80                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
+                0x0000000004101a44                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+
+.rwdata         0x0000000004101a80      0x6c0 load address 0x0000000004102140
+                0x0000000004101a80                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
+                0x0000000004101a80                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000004101a80        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000004101a80        0x0 obj/default/audio_processing.o
+ .data          0x0000000004101a80        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x0000000004101a80        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x0000000004101a80       0xc0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000004101b40        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .data          0x0000000004101b40        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x0000000004101b40        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .data          0x0000000004101b40        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000004101b40      0x1a8 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+                0x0000000004101b40                alt_dev_null
+                0x0000000004101b68                alt_fd_list
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000004101ce8        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x0000000004101ce8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .data          0x0000000004101ce8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .data          0x0000000004101ce8        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .data.impure_data
+                0x0000000004101ce8      0x424 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .data          0x000000000410210c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .data          0x000000000410210c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .data          0x000000000410210c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .data          0x000000000410210c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .data          0x000000000410210c        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .data          0x000000000410210c        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+                0x000000000410a10c                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp = _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000000000410210c        0x8 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+                0x000000000410210c                alt_mailbox_simple_list
+ .sdata         0x0000000004102114       0x14 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+                0x0000000004102114                alt_fs_list
+                0x000000000410211c                alt_dev_list
+                0x0000000004102124                alt_max_fd
+ .sdata         0x0000000004102128        0x4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+                0x0000000004102128                alt_errno
+ .sdata         0x000000000410212c        0x4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x000000000410212c                alt_priority_mask
+ .sdata         0x0000000004102130        0x8 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+                0x0000000004102130                alt_alarm_list
+ .sdata._global_impure_ptr
+                0x0000000004102138        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                0x0000000004102138                _global_impure_ptr
+ .sdata._impure_ptr
+                0x000000000410213c        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                0x000000000410213c                _impure_ptr
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x0000000004102140                . = ALIGN (0x4)
+                0x0000000004102140                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata = ABSOLUTE (.))
+                0x0000000004102140                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
+                0x0000000004102140                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+
+.bss            0x0000000004102800      0x120
+                0x0000000004102800                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000000004102800        0xc d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000004102800                alt_argc
+                0x0000000004102804                alt_argv
+                0x0000000004102808                alt_envp
+ .sbss          0x000000000410280c        0x4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x000000000410280c                alt_irq_active
+ .sbss          0x0000000004102810        0x8 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+                0x0000000004102810                _alt_tick_rate
+                0x0000000004102814                _alt_nticks
+ .sbss          0x0000000004102818        0x4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000004102818                alt_instruction_exception_handler
+ .sbss.errno    0x000000000410281c        0x4 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+                0x000000000410281c                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end = ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000004102820        0x0 obj/default/audio_processing.o
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000004102820        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000004102820      0x100 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x0000000004102820                alt_irq
+ .bss           0x0000000004102920        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000004102920        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .bss           0x0000000004102920        0x0 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000004102920        0x0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+ *(COMMON)
+                0x0000000004102920                . = ALIGN (0x4)
+                0x0000000004102920                __bss_end = ABSOLUTE (.)
+
+.sdram_controller_0
+                0x0000000004102920        0x0
+                [!provide]                        PROVIDE (_alt_partition_sdram_controller_0_start = ABSOLUTE (.))
+ *(.sdram_controller_0 .sdram_controller_0. sdram_controller_0.*)
+                0x0000000004102920                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_sdram_controller_0_end = ABSOLUTE (.))
+                0x0000000004102920                _end = ABSOLUTE (.)
+                0x0000000004102920                end = ABSOLUTE (.)
+                0x0000000004102920                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_sdram_controller_0_load_addr = LOADADDR (.sdram_controller_0))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x2d
+ *(.comment)
+ .comment       0x0000000000000000       0x2d obj/default/audio_processing.o
+                                         0x2e (size before relaxing)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .comment       0x000000000000002d       0x2e c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .comment       0x000000000000002d       0x2e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x458
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x20 obj/default/audio_processing.o
+ .debug_aranges
+                0x0000000000000048       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x0000000000000068       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x0000000000000088       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000000000000a8       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .debug_aranges
+                0x00000000000000c8       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_aranges
+                0x00000000000000e8       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_aranges
+                0x0000000000000108       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x0000000000000128       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x0000000000000148       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x0000000000000168       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_aranges
+                0x0000000000000188       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_aranges
+                0x00000000000001a8       0x18 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x00000000000001e0       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x0000000000000200       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .debug_aranges
+                0x0000000000000220       0x18 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000238       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x0000000000000258       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x0000000000000278       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x0000000000000298       0x30 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x00000000000002c8       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x00000000000002e8       0x38 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x0000000000000320       0x28 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_aranges
+                0x0000000000000348       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x0000000000000368       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000388       0x18 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_aranges
+                0x00000000000003a0       0x18 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_aranges
+                0x00000000000003b8       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x00000000000003d8       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x00000000000003f8       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x0000000000000418       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x0000000000000438       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x59c9
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x22 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000022       0x43 obj/default/audio_processing.o
+ .debug_info    0x0000000000000065      0x14d d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x00000000000001b2       0xef d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000000000002a1      0x4db d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x000000000000077c      0x855 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .debug_info    0x0000000000000fd1      0x1e3 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x00000000000011b4      0x32c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_info    0x00000000000014e0       0x8c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x000000000000156c      0x57d d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x0000000000001ae9      0x1b0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000000000001c99       0x88 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_info    0x0000000000001d21       0x88 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_info    0x0000000000001da9       0x9d d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x0000000000001e46      0x2ee d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x0000000000002134       0x8c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00000000000021c0      0x2f7 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .debug_info    0x00000000000024b7       0x8b d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000002542      0x2b9 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x00000000000027fb      0x2bd d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_info    0x0000000000002ab8       0x8c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000002b44       0x22 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000002b66      0x17a d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000002ce0       0x22 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000002d02      0x1f1 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000002ef3      0x100 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_info    0x0000000000002ff3      0x970 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_info    0x0000000000003963      0x931 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_info    0x0000000000004294       0x84 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_info    0x0000000000004318      0x138 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_info    0x0000000000004450       0xee c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_info    0x000000000000453e      0x9b1 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_info    0x0000000000004eef      0x9f9 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x00000000000058e8       0xe1 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x1fa7
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012       0x3b obj/default/audio_processing.o
+ .debug_abbrev  0x000000000000004d       0xab d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000000f8       0x86 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x000000000000017e      0x193 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000000000000311      0x2e8 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .debug_abbrev  0x00000000000005f9      0x14b d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x0000000000000744      0x133 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x0000000000000877       0x44 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000000000008bb      0x117 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x00000000000009d2      0x12a d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x0000000000000afc       0x81 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x0000000000000b7d       0x81 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x0000000000000bfe       0x5a d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x0000000000000c58       0xed d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x0000000000000d45       0x44 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000000d89      0x1b0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .debug_abbrev  0x0000000000000f39       0x44 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000000000000f7d       0xea d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x0000000000001067      0x17a d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x00000000000011e1       0x44 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000001225       0x12 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000001237      0x12d d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000000000001364       0x12 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000001376       0xea d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x0000000000001460       0xb7 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000001517      0x21d c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000001734      0x1c9 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_abbrev  0x00000000000018fd       0x39 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x0000000000001936       0x8d c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x00000000000019c3       0x8f c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000001a52      0x250 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000001ca2      0x259 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000001efb       0xac d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_line     0x0000000000000000     0x23e5
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x66 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000066       0x4a obj/default/audio_processing.o
+ .debug_line    0x00000000000000b0       0xa6 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000000000000156       0x7d d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000001d3      0x13c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000000000000030f      0x3f0 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .debug_line    0x00000000000006ff       0xff d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x00000000000007fe      0x1ad d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_line    0x00000000000009ab       0x53 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000000000009fe      0x19f d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x0000000000000b9d      0x106 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x0000000000000ca3       0x66 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x0000000000000d09       0x66 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x0000000000000d6f       0x51 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x0000000000000dc0       0xb8 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x0000000000000e78       0x51 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000000ec9      0x1ad d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .debug_line    0x0000000000001076       0x50 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x00000000000010c6       0xb6 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x000000000000117c      0x160 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_line    0x00000000000012dc       0x57 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000001333       0x6b d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x000000000000139e       0xd4 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000001472       0xb3 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000001525       0xd3 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x00000000000015f8       0xf7 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_line    0x00000000000016ef      0x22a c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_line    0x0000000000001919      0x167 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000001a80       0x61 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_line    0x0000000000001ae1      0x1e6 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000001cc7      0x1db c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000001ea2      0x21b c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_line    0x00000000000020bd      0x2a3 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000002360       0x85 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_frame    0x0000000000000000      0x7f0
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x34 obj/default/audio_processing.o
+ .debug_frame   0x0000000000000034       0x5c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x0000000000000090       0x2c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000000bc       0x88 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000144      0x194 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+ .debug_frame   0x00000000000002d8       0x60 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x0000000000000338       0x60 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_frame   0x0000000000000398       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000000000003cc       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x0000000000000400       0x60 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x0000000000000460       0x38 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x0000000000000498       0x38 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x00000000000004d0       0x38 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x0000000000000508       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x000000000000053c       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+ .debug_frame   0x0000000000000570       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x00000000000005a4       0x5c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x0000000000000600       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000634       0x38 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x000000000000066c       0x5c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x00000000000006c8       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00000000000006e8       0x28 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000710       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000730       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000750       0x20 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000770       0x54 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000000007c4       0x2c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_str      0x0000000000000000     0x1972
+ *(.debug_str)
+ .debug_str     0x0000000000000000       0x96 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .debug_str     0x0000000000000096       0xda obj/default/audio_processing.o
+                                         0xdf (size before relaxing)
+ .debug_str     0x0000000000000170      0x14d d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_load.o)
+                                        0x251 (size before relaxing)
+ .debug_str     0x00000000000002bd       0x44 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_main.o)
+                                        0x1ab (size before relaxing)
+ .debug_str     0x0000000000000301      0x1aa d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                        0x34e (size before relaxing)
+ .debug_str     0x00000000000004ab      0x236 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_mailbox_simple.o)
+                                        0x510 (size before relaxing)
+ .debug_str     0x00000000000006e1       0x8c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                                        0x24d (size before relaxing)
+ .debug_str     0x000000000000076d       0x44 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_close.o)
+                                        0x23d (size before relaxing)
+ .debug_str     0x00000000000007b1       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x194 (size before relaxing)
+ .debug_str     0x00000000000007e5      0x149 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev.o)
+                                        0x3a3 (size before relaxing)
+ .debug_str     0x000000000000092e       0x45 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                                        0x20b (size before relaxing)
+ .debug_str     0x0000000000000973       0x48 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                                        0x118 (size before relaxing)
+ .debug_str     0x00000000000009bb       0x4c d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                                        0x117 (size before relaxing)
+ .debug_str     0x0000000000000a07       0x14 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_errno.o)
+                                        0x17e (size before relaxing)
+ .debug_str     0x0000000000000a1b       0x24 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_find_dev.o)
+                                        0x21e (size before relaxing)
+ .debug_str     0x0000000000000a3f       0x34 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x194 (size before relaxing)
+ .debug_str     0x0000000000000a73       0x7f d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_register.o)
+                                        0x235 (size before relaxing)
+ .debug_str     0x0000000000000af2       0x29 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                                        0x182 (size before relaxing)
+ .debug_str     0x0000000000000b1b       0x28 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_release_fd.o)
+                                        0x20e (size before relaxing)
+ .debug_str     0x0000000000000b43       0x89 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_tick.o)
+                                        0x291 (size before relaxing)
+ .debug_str     0x0000000000000bcc       0x3b d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x19b (size before relaxing)
+ .debug_str     0x0000000000000c07       0x18 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                                         0x9f (size before relaxing)
+ .debug_str     0x0000000000000c1f       0x3a d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                                        0x1d6 (size before relaxing)
+ .debug_str     0x0000000000000c59       0x1e d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                                         0xa5 (size before relaxing)
+ .debug_str     0x0000000000000c77      0x48b d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                                        0x5e8 (size before relaxing)
+ .debug_str     0x0000000000001102      0x17c c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+                                        0x218 (size before relaxing)
+ .debug_str     0x000000000000127e      0x3d9 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+                                        0x5bf (size before relaxing)
+ .debug_str     0x0000000000001657       0xd9 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                                        0x5b6 (size before relaxing)
+ .debug_str     0x0000000000001730       0x41 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+                                        0x1d4 (size before relaxing)
+ .debug_str     0x0000000000001771       0xd6 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+                                        0x1db (size before relaxing)
+ .debug_str     0x0000000000001847       0x53 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+                                        0x1ee (size before relaxing)
+ .debug_str     0x000000000000189a       0x41 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                                        0x5f0 (size before relaxing)
+ .debug_str     0x00000000000018db       0x6d c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                                        0x5e9 (size before relaxing)
+ .debug_str     0x0000000000001948       0x2a d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exit.o)
+                                        0x190 (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x4e0
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0x32 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_loc     0x0000000000000032       0x22 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_loc     0x0000000000000054      0x158 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_loc     0x00000000000001ac       0x73 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_loc     0x000000000000021f       0xf7 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_loc     0x0000000000000316      0x1ca c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x10 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+                0x0000000008000000                __alt_data_end = 0x8000000
+                0x0000000008000000                PROVIDE (__alt_stack_pointer = __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit = __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start = end)
+                [!provide]                        PROVIDE (__alt_heap_limit = 0x8000000)
+OUTPUT(de1_soc_audio_processing.elf elf32-littlenios2)
+LOAD linker stubs
+
+.debug_ranges   0x0000000000000000      0x128
+ .debug_ranges  0x0000000000000000       0x20 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020       0x28 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x0000000000000048       0x10 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x0000000000000058       0x30 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x0000000000000088       0x18 d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_ranges  0x00000000000000a0       0x10 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_ranges  0x00000000000000b0       0x10 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_ranges  0x00000000000000c0       0x10 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_ranges  0x00000000000000d0       0x10 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_ranges  0x00000000000000e0       0x10 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_ranges  0x00000000000000f0       0x38 c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
