@@ -1,5 +1,12 @@
 	component soc_system is
 		port (
+			audio_0_external_interface_ADCDAT     : in    std_logic                     := 'X';             -- ADCDAT
+			audio_0_external_interface_ADCLRCK    : in    std_logic                     := 'X';             -- ADCLRCK
+			audio_0_external_interface_BCLK       : in    std_logic                     := 'X';             -- BCLK
+			audio_0_external_interface_DACDAT     : out   std_logic;                                        -- DACDAT
+			audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X';             -- DACLRCK
+			audio_i2c_config_SDAT                 : inout std_logic                     := 'X';             -- SDAT
+			audio_i2c_config_SCLK                 : out   std_logic;                                        -- SCLK
 			clk_clk                               : in    std_logic                     := 'X';             -- clk
 			hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
 			hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
@@ -44,6 +51,8 @@
 			hps_0_io_hps_io_sdio_inst_D3          : inout std_logic                     := 'X';             -- hps_io_sdio_inst_D3
 			hps_0_io_hps_io_uart0_inst_RX         : in    std_logic                     := 'X';             -- hps_io_uart0_inst_RX
 			hps_0_io_hps_io_uart0_inst_TX         : out   std_logic;                                        -- hps_io_uart0_inst_TX
+			hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SDA
+			hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SCL
 			hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
 			hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
@@ -65,6 +74,13 @@
 
 	u0 : component soc_system
 		port map (
+			audio_0_external_interface_ADCDAT     => CONNECTED_TO_audio_0_external_interface_ADCDAT,     --     audio_0_external_interface.ADCDAT
+			audio_0_external_interface_ADCLRCK    => CONNECTED_TO_audio_0_external_interface_ADCLRCK,    --                               .ADCLRCK
+			audio_0_external_interface_BCLK       => CONNECTED_TO_audio_0_external_interface_BCLK,       --                               .BCLK
+			audio_0_external_interface_DACDAT     => CONNECTED_TO_audio_0_external_interface_DACDAT,     --                               .DACDAT
+			audio_0_external_interface_DACLRCK    => CONNECTED_TO_audio_0_external_interface_DACLRCK,    --                               .DACLRCK
+			audio_i2c_config_SDAT                 => CONNECTED_TO_audio_i2c_config_SDAT,                 --               audio_i2c_config.SDAT
+			audio_i2c_config_SCLK                 => CONNECTED_TO_audio_i2c_config_SCLK,                 --                               .SCLK
 			clk_clk                               => CONNECTED_TO_clk_clk,                               --                            clk.clk
 			hex_0_external_connection_export      => CONNECTED_TO_hex_0_external_connection_export,      --      hex_0_external_connection.export
 			hex_1_external_connection_export      => CONNECTED_TO_hex_1_external_connection_export,      --      hex_1_external_connection.export
@@ -109,6 +125,8 @@
 			hps_0_io_hps_io_sdio_inst_D3          => CONNECTED_TO_hps_0_io_hps_io_sdio_inst_D3,          --                               .hps_io_sdio_inst_D3
 			hps_0_io_hps_io_uart0_inst_RX         => CONNECTED_TO_hps_0_io_hps_io_uart0_inst_RX,         --                               .hps_io_uart0_inst_RX
 			hps_0_io_hps_io_uart0_inst_TX         => CONNECTED_TO_hps_0_io_hps_io_uart0_inst_TX,         --                               .hps_io_uart0_inst_TX
+			hps_0_io_hps_io_i2c1_inst_SDA         => CONNECTED_TO_hps_0_io_hps_io_i2c1_inst_SDA,         --                               .hps_io_i2c1_inst_SDA
+			hps_0_io_hps_io_i2c1_inst_SCL         => CONNECTED_TO_hps_0_io_hps_io_i2c1_inst_SCL,         --                               .hps_io_i2c1_inst_SCL
 			hps_0_io_hps_io_gpio_inst_GPIO35      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO35,      --                               .hps_io_gpio_inst_GPIO35
 			hps_0_io_hps_io_gpio_inst_GPIO53      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO53,      --                               .hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO54,      --                               .hps_io_gpio_inst_GPIO54

@@ -101,7 +101,7 @@ ACDS_VERSION := 20.1
 # BUILD_NUMBER: 720
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+SOPC_FILE := D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
@@ -207,6 +207,13 @@ GENERATED_C_LIB_SRCS += alt_sys_init.c
 # to construct a list of objects. Pattern rules to build each object are then
 # used to build each file.
 #-------------------------------------------------------------------------------
+
+# avalon_audio_and_video_driver sources root 
+Avalon_Audio_and_Video_driver_SRCS_ROOT := drivers
+
+# avalon_audio_and_video_driver sources 
+Avalon_Audio_and_Video_driver_C_LIB_SRCS := \
+	$(Avalon_Audio_and_Video_driver_SRCS_ROOT)/src/altera_up_avalon_audio_and_video_config.c
 
 # avalon_audio_driver sources root 
 Avalon_Audio_driver_SRCS_ROOT := drivers
@@ -341,6 +348,7 @@ hal_C_LIB_SRCS := \
 
 # Assemble all component C source files 
 COMPONENT_C_LIB_SRCS += \
+	$(Avalon_Audio_and_Video_driver_C_LIB_SRCS) \
 	$(Avalon_Audio_driver_C_LIB_SRCS) \
 	$(altera_avalon_mailbox_simple_hal_driver_C_LIB_SRCS) \
 	$(altera_avalon_sysid_qsys_driver_C_LIB_SRCS) \

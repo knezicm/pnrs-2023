@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'nios2_gen2_1' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Mon Jun 12 19:38:48 CEST 2023
+ * Generated: Tue Jun 13 18:05:42 CEST 2023
  */
 
 /*
@@ -63,6 +63,7 @@
 #include "altera_avalon_sysid_qsys.h"
 #include "altera_avalon_timer.h"
 #include "altera_up_avalon_audio.h"
+#include "altera_up_avalon_audio_and_video_config.h"
 
 /*
  * Allocate the device storage
@@ -73,6 +74,7 @@ ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_0, mailbox_0);
 ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_1, mailbox_1);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_1, timer_1);
+ALTERA_UP_AVALON_AUDIO_AND_VIDEO_CONFIG_INSTANCE ( AUDIO_AND_VIDEO_CONFIG_0, audio_and_video_config_0);
 ALTERA_UP_AVALON_AUDIO_INSTANCE ( AUDIO_0, audio_0);
 
 /*
@@ -100,5 +102,6 @@ void alt_sys_init( void )
     ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_0, mailbox_0);
     ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_1, mailbox_1);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
+    ALTERA_UP_AVALON_AUDIO_AND_VIDEO_CONFIG_INIT ( AUDIO_AND_VIDEO_CONFIG_0, audio_and_video_config_0);
     ALTERA_UP_AVALON_AUDIO_INIT ( AUDIO_0, audio_0);
 }

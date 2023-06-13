@@ -1,5 +1,12 @@
 
 module soc_system (
+	audio_0_external_interface_ADCDAT,
+	audio_0_external_interface_ADCLRCK,
+	audio_0_external_interface_BCLK,
+	audio_0_external_interface_DACDAT,
+	audio_0_external_interface_DACLRCK,
+	audio_i2c_config_SDAT,
+	audio_i2c_config_SCLK,
 	clk_clk,
 	hex_0_external_connection_export,
 	hex_1_external_connection_export,
@@ -44,6 +51,8 @@ module soc_system (
 	hps_0_io_hps_io_sdio_inst_D3,
 	hps_0_io_hps_io_uart0_inst_RX,
 	hps_0_io_hps_io_uart0_inst_TX,
+	hps_0_io_hps_io_i2c1_inst_SDA,
+	hps_0_io_hps_io_i2c1_inst_SCL,
 	hps_0_io_hps_io_gpio_inst_GPIO35,
 	hps_0_io_hps_io_gpio_inst_GPIO53,
 	hps_0_io_hps_io_gpio_inst_GPIO54,
@@ -61,6 +70,13 @@ module soc_system (
 	sdram_controller_0_wire_we_n,
 	switches_0_external_connection_export);	
 
+	input		audio_0_external_interface_ADCDAT;
+	input		audio_0_external_interface_ADCLRCK;
+	input		audio_0_external_interface_BCLK;
+	output		audio_0_external_interface_DACDAT;
+	input		audio_0_external_interface_DACLRCK;
+	inout		audio_i2c_config_SDAT;
+	output		audio_i2c_config_SCLK;
 	input		clk_clk;
 	output	[6:0]	hex_0_external_connection_export;
 	output	[6:0]	hex_1_external_connection_export;
@@ -105,6 +121,8 @@ module soc_system (
 	inout		hps_0_io_hps_io_sdio_inst_D3;
 	input		hps_0_io_hps_io_uart0_inst_RX;
 	output		hps_0_io_hps_io_uart0_inst_TX;
+	inout		hps_0_io_hps_io_i2c1_inst_SDA;
+	inout		hps_0_io_hps_io_i2c1_inst_SCL;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO35;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO54;

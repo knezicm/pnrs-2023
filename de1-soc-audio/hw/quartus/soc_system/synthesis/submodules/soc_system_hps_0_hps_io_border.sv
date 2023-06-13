@@ -52,6 +52,8 @@ module soc_system_hps_0_hps_io_border(
  ,inout wire [1 - 1 : 0 ] hps_io_sdio_inst_D3
  ,input wire [1 - 1 : 0 ] hps_io_uart0_inst_RX
  ,output wire [1 - 1 : 0 ] hps_io_uart0_inst_TX
+ ,inout wire [1 - 1 : 0 ] hps_io_i2c1_inst_SDA
+ ,inout wire [1 - 1 : 0 ] hps_io_i2c1_inst_SCL
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO35
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO53
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO54
@@ -63,11 +65,13 @@ assign hps_io_sdio_inst_D0 = intermediate[5] ? intermediate[4] : 'z;
 assign hps_io_sdio_inst_D1 = intermediate[7] ? intermediate[6] : 'z;
 assign hps_io_sdio_inst_D2 = intermediate[9] ? intermediate[8] : 'z;
 assign hps_io_sdio_inst_D3 = intermediate[11] ? intermediate[10] : 'z;
-assign hps_io_gpio_inst_GPIO35 = intermediate[13] ? intermediate[12] : 'z;
-assign hps_io_gpio_inst_GPIO53 = intermediate[15] ? intermediate[14] : 'z;
-assign hps_io_gpio_inst_GPIO54 = intermediate[17] ? intermediate[16] : 'z;
+assign hps_io_i2c1_inst_SDA = intermediate[12] ? '0 : 'z;
+assign hps_io_i2c1_inst_SCL = intermediate[13] ? '0 : 'z;
+assign hps_io_gpio_inst_GPIO35 = intermediate[15] ? intermediate[14] : 'z;
+assign hps_io_gpio_inst_GPIO53 = intermediate[17] ? intermediate[16] : 'z;
+assign hps_io_gpio_inst_GPIO54 = intermediate[19] ? intermediate[18] : 'z;
 
-wire [18 - 1 : 0] intermediate;
+wire [20 - 1 : 0] intermediate;
 
 wire [69 - 1 : 0] floating;
 
@@ -155,6 +159,22 @@ cyclonev_hps_peripheral_uart uart0_inst(
 );
 
 
+cyclonev_hps_peripheral_i2c i2c1_inst(
+ .I2C_DATA({
+    hps_io_i2c1_inst_SDA[0:0] // 0:0
+  })
+,.I2C_CLK({
+    hps_io_i2c1_inst_SCL[0:0] // 0:0
+  })
+,.I2C_DATA_OE({
+    intermediate[12:12] // 0:0
+  })
+,.I2C_CLK_OE({
+    intermediate[13:13] // 0:0
+  })
+);
+
+
 cyclonev_hps_peripheral_gpio gpio_inst(
  .GPIO1_PORTA_I({
     hps_io_gpio_inst_GPIO54[0:0] // 25:25
@@ -164,17 +184,17 @@ cyclonev_hps_peripheral_gpio gpio_inst(
    ,floating[22:17] // 5:0
   })
 ,.GPIO1_PORTA_OE({
-    intermediate[17:17] // 25:25
-   ,intermediate[15:15] // 24:24
+    intermediate[19:19] // 25:25
+   ,intermediate[17:17] // 24:24
    ,floating[39:23] // 23:7
-   ,intermediate[13:13] // 6:6
+   ,intermediate[15:15] // 6:6
    ,floating[45:40] // 5:0
   })
 ,.GPIO1_PORTA_O({
-    intermediate[16:16] // 25:25
-   ,intermediate[14:14] // 24:24
+    intermediate[18:18] // 25:25
+   ,intermediate[16:16] // 24:24
    ,floating[62:46] // 23:7
-   ,intermediate[12:12] // 6:6
+   ,intermediate[14:14] // 6:6
    ,floating[68:63] // 5:0
   })
 );

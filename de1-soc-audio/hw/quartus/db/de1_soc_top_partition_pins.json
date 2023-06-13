@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_ADDR[0]",
 					"strict" : false
 				},
@@ -85,6 +89,10 @@
 				},
 				{
 					"name" : "DRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_I2C_SCLK",
 					"strict" : false
 				},
 				{
@@ -268,6 +276,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "AUD_ADCLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACLRCK",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_DQ[0]",
 					"strict" : false
 				},
@@ -329,6 +349,14 @@
 				},
 				{
 					"name" : "DRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_I2C_SDAT",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCDAT",
 					"strict" : false
 				},
 				{

@@ -1,4 +1,11 @@
 	soc_system u0 (
+		.audio_0_external_interface_ADCDAT     (<connected-to-audio_0_external_interface_ADCDAT>),     //     audio_0_external_interface.ADCDAT
+		.audio_0_external_interface_ADCLRCK    (<connected-to-audio_0_external_interface_ADCLRCK>),    //                               .ADCLRCK
+		.audio_0_external_interface_BCLK       (<connected-to-audio_0_external_interface_BCLK>),       //                               .BCLK
+		.audio_0_external_interface_DACDAT     (<connected-to-audio_0_external_interface_DACDAT>),     //                               .DACDAT
+		.audio_0_external_interface_DACLRCK    (<connected-to-audio_0_external_interface_DACLRCK>),    //                               .DACLRCK
+		.audio_i2c_config_SDAT                 (<connected-to-audio_i2c_config_SDAT>),                 //               audio_i2c_config.SDAT
+		.audio_i2c_config_SCLK                 (<connected-to-audio_i2c_config_SCLK>),                 //                               .SCLK
 		.clk_clk                               (<connected-to-clk_clk>),                               //                            clk.clk
 		.hex_0_external_connection_export      (<connected-to-hex_0_external_connection_export>),      //      hex_0_external_connection.export
 		.hex_1_external_connection_export      (<connected-to-hex_1_external_connection_export>),      //      hex_1_external_connection.export
@@ -43,6 +50,8 @@
 		.hps_0_io_hps_io_sdio_inst_D3          (<connected-to-hps_0_io_hps_io_sdio_inst_D3>),          //                               .hps_io_sdio_inst_D3
 		.hps_0_io_hps_io_uart0_inst_RX         (<connected-to-hps_0_io_hps_io_uart0_inst_RX>),         //                               .hps_io_uart0_inst_RX
 		.hps_0_io_hps_io_uart0_inst_TX         (<connected-to-hps_0_io_hps_io_uart0_inst_TX>),         //                               .hps_io_uart0_inst_TX
+		.hps_0_io_hps_io_i2c1_inst_SDA         (<connected-to-hps_0_io_hps_io_i2c1_inst_SDA>),         //                               .hps_io_i2c1_inst_SDA
+		.hps_0_io_hps_io_i2c1_inst_SCL         (<connected-to-hps_0_io_hps_io_i2c1_inst_SCL>),         //                               .hps_io_i2c1_inst_SCL
 		.hps_0_io_hps_io_gpio_inst_GPIO35      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO35>),      //                               .hps_io_gpio_inst_GPIO35
 		.hps_0_io_hps_io_gpio_inst_GPIO53      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO53>),      //                               .hps_io_gpio_inst_GPIO53
 		.hps_0_io_hps_io_gpio_inst_GPIO54      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO54>),      //                               .hps_io_gpio_inst_GPIO54

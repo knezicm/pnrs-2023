@@ -27,11 +27,11 @@ entity de1_soc_top is
 --        ADC_SCLK : out std_logic;
 
         -- Audio
---        AUD_ADCDAT  : in    std_logic;
---        AUD_ADCLRCK : inout std_logic;
---        AUD_BCLK    : inout std_logic;
---        AUD_DACDAT  : out   std_logic;
---        AUD_DACLRCK : inout std_logic;
+        AUD_ADCDAT  : in    std_logic;
+        AUD_ADCLRCK : inout std_logic;
+        AUD_BCLK    : inout std_logic;
+        AUD_DACDAT  : out   std_logic;
+        AUD_DACLRCK : inout std_logic;
 --        AUD_XCK     : out   std_logic;
 
         -- CLOCK
@@ -54,8 +54,8 @@ entity de1_soc_top is
         DRAM_WE_N  : out   std_logic;
 
         -- I2C for Audio and Video-In
---        FPGA_I2C_SCLK : out   std_logic;
---        FPGA_I2C_SDAT : inout std_logic;
+        FPGA_I2C_SCLK : out   std_logic;
+        FPGA_I2C_SDAT : inout std_logic;
 
         -- SEG7
         HEX0_N : out std_logic_vector(6 downto 0);
@@ -139,8 +139,8 @@ entity de1_soc_top is
 --        HPS_FLASH_NCSO   : out   std_logic;
 --        HPS_GSENSOR_INT  : inout std_logic;
 --        HPS_I2C_CONTROL  : inout std_logic;
---        HPS_I2C1_SCLK    : inout std_logic;
---        HPS_I2C1_SDAT    : inout std_logic;
+        HPS_I2C1_SCLK    : inout std_logic;
+        HPS_I2C1_SDAT    : inout std_logic;
 --        HPS_I2C2_SCLK    : inout std_logic;
 --        HPS_I2C2_SDAT    : inout std_logic;
         HPS_KEY_N        : inout std_logic;
@@ -222,8 +222,8 @@ architecture rtl of de1_soc_top is
         hps_0_io_hps_io_sdio_inst_D3          : inout std_logic                     := 'X';             -- hps_io_sdio_inst_D3
         hps_0_io_hps_io_uart0_inst_RX         : in    std_logic                     := 'X';             -- hps_io_uart0_inst_RX
         hps_0_io_hps_io_uart0_inst_TX         : out   std_logic;                                        -- hps_io_uart0_inst_TX
---        hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SDA
---		  hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SCL
+        hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SDA
+		  hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SCL
 		  hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
         hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
         hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
@@ -231,17 +231,22 @@ architecture rtl of de1_soc_top is
         hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
         hex_2_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
         hex_3_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
-        hex_4_external_connection_export      : out   std_logic_vector(6 downto 0)                     -- export
---		  audio_i2c_config_SDAT                 : inout std_logic                     := 'X';             -- SDAT
---		  audio_i2c_config_SCLK                 : out   std_logic                                        -- SCLK
+        hex_4_external_connection_export      : out   std_logic_vector(6 downto 0);                      -- export
+		  audio_i2c_config_SDAT                 : inout std_logic                     := 'X';             -- SDAT
+		  audio_i2c_config_SCLK                 : out   std_logic;                                        -- SCLK
+		  audio_0_external_interface_ADCDAT     : in    std_logic                     := 'X';             -- ADCDAT
+		  audio_0_external_interface_ADCLRCK    : in    std_logic                     := 'X';             -- ADCLRCK
+		  audio_0_external_interface_BCLK       : in    std_logic                     := 'X';             -- BCLK
+		  audio_0_external_interface_DACDAT     : out   std_logic;                                        -- DACDAT
+		  audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X'              -- DACLRCK
 
         );
     end component soc_system;
 
 begin
-	
---	  s_i2c_sda <= HPS_I2C1_SDAT;
---     s_i2c_scl <= HPS_I2C1_SCLK;
+--	
+--	  HPS_I2C1_SDAT <= FPGA_I2C_SDAT;
+--     FPGA_I2C_SCLK <= HPS_I2C1_SCLK;
 		
 
 		u0 : component soc_system
@@ -299,8 +304,8 @@ begin
             hps_0_io_hps_io_sdio_inst_D3          	=> HPS_SD_DATA(3),
             hps_0_io_hps_io_uart0_inst_RX         	=> HPS_UART_RX,
             hps_0_io_hps_io_uart0_inst_TX         	=> HPS_UART_TX,
---          hps_0_io_hps_io_i2c1_inst_SDA          => HPS_I2C1_SDAT,
---			   hps_0_io_hps_io_i2c1_inst_SCL          => HPS_I2C1_SCLK,
+            hps_0_io_hps_io_i2c1_inst_SDA          => HPS_I2C1_SDAT,
+			   hps_0_io_hps_io_i2c1_inst_SCL          => HPS_I2C1_SCLK,
 				hps_0_io_hps_io_gpio_inst_GPIO35      	=> HPS_ENET_INT_N,
             hps_0_io_hps_io_gpio_inst_GPIO53      	=> HPS_LED,
             hps_0_io_hps_io_gpio_inst_GPIO54      	=> HPS_KEY_N,
@@ -308,9 +313,14 @@ begin
             hex_1_external_connection_export      	=> HEX1_N,
             hex_2_external_connection_export      	=> HEX2_N,
             hex_3_external_connection_export      	=> HEX3_N,
-            hex_4_external_connection_export      	=> HEX4_N
---				audio_i2c_config_SDAT                  => s_i2c_sda,
---				audio_i2c_config_SCLK                  => s_i2c_scl 
+            hex_4_external_connection_export      	=> HEX4_N,
+				audio_i2c_config_SDAT                  => FPGA_I2C_SDAT,
+				audio_i2c_config_SCLK                  => FPGA_I2C_SCLK,
+            audio_0_external_interface_ADCDAT      => AUD_ADCDAT,     --     audio_0_external_interface.ADCDAT
+			   audio_0_external_interface_ADCLRCK     => AUD_ADCLRCK,    --                               .ADCLRCK
+			   audio_0_external_interface_BCLK        => AUD_BCLK,       --                               .BCLK
+			   audio_0_external_interface_DACDAT      => AUD_DACDAT,     --                               .DACDAT
+			   audio_0_external_interface_DACLRCK     => AUD_DACLRCK     --                               .DACLRCK 
 				
         );
 

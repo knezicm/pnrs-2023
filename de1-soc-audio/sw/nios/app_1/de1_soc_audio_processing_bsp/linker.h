@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'nios2_gen2_1' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Mon Jun 12 19:38:48 CEST 2023
+ * Generated: Tue Jun 13 18:05:42 CEST 2023
  */
 
 /*

@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'nios2_gen2_1' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Mon Jun 12 19:38:48 CEST 2023
+ * Generated: Tue Jun 13 18:05:42 CEST 2023
  */
 
 /*
@@ -140,6 +140,7 @@
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_GEN2
 #define __ALTERA_UP_AVALON_AUDIO
+#define __ALTERA_UP_AVALON_AUDIO_AND_VIDEO_CONFIG
 
 
 /*
@@ -178,12 +179,26 @@
  */
 
 #define ALT_MODULE_CLASS_audio_0 altera_up_avalon_audio
-#define AUDIO_0_BASE 0x1060
-#define AUDIO_0_IRQ 1
+#define AUDIO_0_BASE 0x1080
+#define AUDIO_0_IRQ 0
 #define AUDIO_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define AUDIO_0_NAME "/dev/audio_0"
 #define AUDIO_0_SPAN 16
 #define AUDIO_0_TYPE "altera_up_avalon_audio"
+
+
+/*
+ * audio_and_video_config_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_audio_and_video_config_0 altera_up_avalon_audio_and_video_config
+#define AUDIO_AND_VIDEO_CONFIG_0_BASE 0x1040
+#define AUDIO_AND_VIDEO_CONFIG_0_IRQ -1
+#define AUDIO_AND_VIDEO_CONFIG_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define AUDIO_AND_VIDEO_CONFIG_0_NAME "/dev/audio_and_video_config_0"
+#define AUDIO_AND_VIDEO_CONFIG_0_SPAN 16
+#define AUDIO_AND_VIDEO_CONFIG_0_TYPE "altera_up_avalon_audio_and_video_config"
 
 
 /*
@@ -203,7 +218,7 @@
  */
 
 #define ALT_MODULE_CLASS_leds_0 altera_avalon_pio
-#define LEDS_0_BASE 0x1040
+#define LEDS_0_BASE 0x1050
 #define LEDS_0_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDS_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDS_0_CAPTURE 0
@@ -230,7 +245,7 @@
  */
 
 #define ALT_MODULE_CLASS_mailbox_0 altera_avalon_mailbox_simple
-#define MAILBOX_0_BASE 0x1050
+#define MAILBOX_0_BASE 0x1070
 #define MAILBOX_0_IRQ -1
 #define MAILBOX_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MAILBOX_0_NAME "/dev/mailbox_0"
@@ -244,7 +259,7 @@
  */
 
 #define ALT_MODULE_CLASS_mailbox_1 altera_avalon_mailbox_simple
-#define MAILBOX_1_BASE 0x8001080
+#define MAILBOX_1_BASE 0x1060
 #define MAILBOX_1_IRQ -1
 #define MAILBOX_1_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MAILBOX_1_NAME "/dev/mailbox_1"
@@ -297,13 +312,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x80010a0
+#define SYSID_BASE 0x8001090
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1686590682
+#define SYSID_TIMESTAMP 1686669276
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -318,7 +333,7 @@
 #define TIMER_1_COUNTER_SIZE 32
 #define TIMER_1_FIXED_PERIOD 0
 #define TIMER_1_FREQ 50000000
-#define TIMER_1_IRQ 0
+#define TIMER_1_IRQ 1
 #define TIMER_1_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define TIMER_1_LOAD_VALUE 49999
 #define TIMER_1_MULT 0.001

@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Mon Jun 12 19:34:49 CEST 2023
+ * Generated: Tue Jun 13 18:04:47 CEST 2023
  */
 
 /*
@@ -158,19 +158,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x80010a8
+#define ALT_STDERR_BASE 0x8001098
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x80010a8
+#define ALT_STDIN_BASE 0x8001098
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x80010a8
+#define ALT_STDOUT_BASE 0x8001098
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -330,7 +330,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x80010a8
+#define JTAG_UART_0_BASE 0x8001098
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -348,7 +348,7 @@
  */
 
 #define ALT_MODULE_CLASS_mailbox_0 altera_avalon_mailbox_simple
-#define MAILBOX_0_BASE 0x8001090
+#define MAILBOX_0_BASE 0x8001080
 #define MAILBOX_0_IRQ -1
 #define MAILBOX_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MAILBOX_0_NAME "/dev/mailbox_0"
@@ -428,13 +428,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x80010a0
+#define SYSID_BASE 0x8001090
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1686590682
+#define SYSID_TIMESTAMP 1686669276
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

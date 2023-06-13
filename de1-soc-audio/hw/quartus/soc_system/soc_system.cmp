@@ -1,5 +1,12 @@
 	component soc_system is
 		port (
+			audio_0_external_interface_ADCDAT     : in    std_logic                     := 'X';             -- ADCDAT
+			audio_0_external_interface_ADCLRCK    : in    std_logic                     := 'X';             -- ADCLRCK
+			audio_0_external_interface_BCLK       : in    std_logic                     := 'X';             -- BCLK
+			audio_0_external_interface_DACDAT     : out   std_logic;                                        -- DACDAT
+			audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X';             -- DACLRCK
+			audio_i2c_config_SDAT                 : inout std_logic                     := 'X';             -- SDAT
+			audio_i2c_config_SCLK                 : out   std_logic;                                        -- SCLK
 			clk_clk                               : in    std_logic                     := 'X';             -- clk
 			hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
 			hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
@@ -44,6 +51,8 @@
 			hps_0_io_hps_io_sdio_inst_D3          : inout std_logic                     := 'X';             -- hps_io_sdio_inst_D3
 			hps_0_io_hps_io_uart0_inst_RX         : in    std_logic                     := 'X';             -- hps_io_uart0_inst_RX
 			hps_0_io_hps_io_uart0_inst_TX         : out   std_logic;                                        -- hps_io_uart0_inst_TX
+			hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SDA
+			hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SCL
 			hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
 			hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
