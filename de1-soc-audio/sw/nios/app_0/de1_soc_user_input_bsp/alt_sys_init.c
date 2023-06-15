@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'soc_system'
  * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Tue Jun 13 18:04:47 CEST 2023
+ * Generated: Thu Jun 15 18:10:06 CEST 2023
  */
 
 /*
@@ -71,6 +71,7 @@
 ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( NIOS2_GEN2_0, nios2_gen2_0);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART_0, jtag_uart_0);
 ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_0, mailbox_0);
+ALTERA_AVALON_MAILBOX_SIMPLE_INSTANCE ( MAILBOX_1, mailbox_1);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_0, timer_0);
 
@@ -98,5 +99,6 @@ void alt_sys_init( void )
     ALTERA_AVALON_TIMER_INIT ( TIMER_0, timer_0);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART_0, jtag_uart_0);
     ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_0, mailbox_0);
+    ALTERA_AVALON_MAILBOX_SIMPLE_INIT ( MAILBOX_1, mailbox_1);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
 }

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'soc_system'
  * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Tue Jun 13 18:04:47 CEST 2023
+ * Generated: Thu Jun 15 18:10:06 CEST 2023
  */
 
 /*
@@ -158,24 +158,51 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x8001098
+#define ALT_STDERR_BASE 0x80010b8
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x8001098
+#define ALT_STDIN_BASE 0x80010b8
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x8001098
+#define ALT_STDOUT_BASE 0x80010b8
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "soc_system"
+
+
+/*
+ * button_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_button_0 altera_avalon_pio
+#define BUTTON_0_BASE 0x8001020
+#define BUTTON_0_BIT_CLEARING_EDGE_REGISTER 0
+#define BUTTON_0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define BUTTON_0_CAPTURE 0
+#define BUTTON_0_DATA_WIDTH 4
+#define BUTTON_0_DO_TEST_BENCH_WIRING 0
+#define BUTTON_0_DRIVEN_SIM_VALUE 0
+#define BUTTON_0_EDGE_TYPE "NONE"
+#define BUTTON_0_FREQ 50000000
+#define BUTTON_0_HAS_IN 1
+#define BUTTON_0_HAS_OUT 0
+#define BUTTON_0_HAS_TRI 0
+#define BUTTON_0_IRQ -1
+#define BUTTON_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define BUTTON_0_IRQ_TYPE "NONE"
+#define BUTTON_0_NAME "/dev/button_0"
+#define BUTTON_0_RESET_VALUE 0
+#define BUTTON_0_SPAN 16
+#define BUTTON_0_TYPE "altera_avalon_pio"
 
 
 /*
@@ -195,7 +222,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_0 altera_avalon_pio
-#define HEX_0_BASE 0x8001020
+#define HEX_0_BASE 0x8001030
 #define HEX_0_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_0_CAPTURE 0
@@ -222,7 +249,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_1 altera_avalon_pio
-#define HEX_1_BASE 0x8001030
+#define HEX_1_BASE 0x8001040
 #define HEX_1_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_1_CAPTURE 0
@@ -249,7 +276,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_2 altera_avalon_pio
-#define HEX_2_BASE 0x8001040
+#define HEX_2_BASE 0x8001050
 #define HEX_2_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_2_CAPTURE 0
@@ -276,7 +303,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_3 altera_avalon_pio
-#define HEX_3_BASE 0x8001050
+#define HEX_3_BASE 0x8001060
 #define HEX_3_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_3_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_3_CAPTURE 0
@@ -303,7 +330,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_4 altera_avalon_pio
-#define HEX_4_BASE 0x8001060
+#define HEX_4_BASE 0x8001070
 #define HEX_4_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_4_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_4_CAPTURE 0
@@ -330,7 +357,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x8001098
+#define JTAG_UART_0_BASE 0x80010b8
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -348,12 +375,26 @@
  */
 
 #define ALT_MODULE_CLASS_mailbox_0 altera_avalon_mailbox_simple
-#define MAILBOX_0_BASE 0x8001080
+#define MAILBOX_0_BASE 0x80010a0
 #define MAILBOX_0_IRQ -1
 #define MAILBOX_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MAILBOX_0_NAME "/dev/mailbox_0"
 #define MAILBOX_0_SPAN 16
 #define MAILBOX_0_TYPE "altera_avalon_mailbox_simple"
+
+
+/*
+ * mailbox_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_mailbox_1 altera_avalon_mailbox_simple
+#define MAILBOX_1_BASE 0x8001090
+#define MAILBOX_1_IRQ -1
+#define MAILBOX_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MAILBOX_1_NAME "/dev/mailbox_1"
+#define MAILBOX_1_SPAN 16
+#define MAILBOX_1_TYPE "altera_avalon_mailbox_simple"
 
 
 /*
@@ -401,7 +442,7 @@
  */
 
 #define ALT_MODULE_CLASS_switches_0 altera_avalon_pio
-#define SWITCHES_0_BASE 0x8001070
+#define SWITCHES_0_BASE 0x8001080
 #define SWITCHES_0_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCHES_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCHES_0_CAPTURE 0
@@ -428,13 +469,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x8001090
+#define SYSID_BASE 0x80010b0
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1686669276
+#define SYSID_TIMESTAMP 1686841642
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

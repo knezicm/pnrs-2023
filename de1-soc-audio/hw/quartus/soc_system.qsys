@@ -13,7 +13,7 @@
    {
       datum _sortIndex
       {
-         value = "12";
+         value = "13";
          type = "int";
       }
    }
@@ -21,7 +21,7 @@
    {
       datum baseAddress
       {
-         value = "4224";
+         value = "4208";
          type = "String";
       }
    }
@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "20";
+         value = "21";
          type = "int";
       }
    }
@@ -37,7 +37,23 @@
    {
       datum baseAddress
       {
-         value = "4160";
+         value = "4192";
+         type = "String";
+      }
+   }
+   element button_0
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element button_0.s1
+   {
+      datum baseAddress
+      {
+         value = "134221856";
          type = "String";
       }
    }
@@ -61,7 +77,7 @@
    {
       datum baseAddress
       {
-         value = "134221856";
+         value = "134221872";
          type = "String";
       }
    }
@@ -77,7 +93,7 @@
    {
       datum baseAddress
       {
-         value = "134221872";
+         value = "134221888";
          type = "String";
       }
    }
@@ -93,7 +109,7 @@
    {
       datum baseAddress
       {
-         value = "134221888";
+         value = "134221904";
          type = "String";
       }
    }
@@ -109,7 +125,7 @@
    {
       datum baseAddress
       {
-         value = "134221904";
+         value = "134221920";
          type = "String";
       }
    }
@@ -125,7 +141,7 @@
    {
       datum baseAddress
       {
-         value = "134221920";
+         value = "134221936";
          type = "String";
       }
    }
@@ -133,7 +149,7 @@
    {
       datum _sortIndex
       {
-         value = "19";
+         value = "20";
          type = "int";
       }
    }
@@ -141,7 +157,7 @@
    {
       datum _sortIndex
       {
-         value = "16";
+         value = "17";
          type = "int";
       }
    }
@@ -149,7 +165,7 @@
    {
       datum baseAddress
       {
-         value = "134221976";
+         value = "134222008";
          type = "String";
       }
    }
@@ -157,7 +173,7 @@
    {
       datum _sortIndex
       {
-         value = "14";
+         value = "15";
          type = "int";
       }
    }
@@ -165,7 +181,7 @@
    {
       datum baseAddress
       {
-         value = "4176";
+         value = "4160";
          type = "String";
       }
    }
@@ -173,7 +189,7 @@
    {
       datum _sortIndex
       {
-         value = "17";
+         value = "18";
          type = "int";
       }
    }
@@ -181,7 +197,7 @@
    {
       datum baseAddress
       {
-         value = "4208";
+         value = "4176";
          type = "String";
       }
    }
@@ -189,7 +205,7 @@
    {
       datum baseAddress
       {
-         value = "134221952";
+         value = "134221984";
          type = "String";
       }
    }
@@ -197,7 +213,7 @@
    {
       datum _sortIndex
       {
-         value = "18";
+         value = "19";
          type = "int";
       }
    }
@@ -213,7 +229,7 @@
    {
       datum baseAddress
       {
-         value = "4192";
+         value = "134221968";
          type = "String";
       }
    }
@@ -237,7 +253,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "12";
          type = "int";
       }
    }
@@ -285,7 +301,7 @@
    {
       datum baseAddress
       {
-         value = "134221936";
+         value = "134221952";
          type = "String";
       }
    }
@@ -293,7 +309,7 @@
    {
       datum _sortIndex
       {
-         value = "15";
+         value = "16";
          type = "int";
       }
    }
@@ -301,7 +317,7 @@
    {
       datum baseAddress
       {
-         value = "134221968";
+         value = "134222000";
          type = "String";
       }
    }
@@ -325,7 +341,7 @@
    {
       datum _sortIndex
       {
-         value = "13";
+         value = "14";
          type = "int";
       }
    }
@@ -366,6 +382,11 @@
  <interface
    name="audio_i2c_config"
    internal="audio_and_video_config_0.external_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="button_0_external_connection"
+   internal="button_0.external_connection"
    type="conduit"
    dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -446,6 +467,20 @@
   <parameter name="mic_bypass" value="false" />
   <parameter name="sampling_rate" value="48 kHz" />
   <parameter name="video_format" value="NTSC" />
+ </module>
+ <module name="button_0" kind="altera_avalon_pio" version="20.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="4" />
  </module>
  <module name="clk_0" kind="clock_source" version="20.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
@@ -672,7 +707,7 @@
   <parameter name="FPGA_PERIPHERAL_OUTPUT_CLOCK_FREQ_SDIO_CCLK" value="100" />
   <parameter name="FPGA_PERIPHERAL_OUTPUT_CLOCK_FREQ_SPIM0_SCLK_OUT" value="100" />
   <parameter name="FPGA_PERIPHERAL_OUTPUT_CLOCK_FREQ_SPIM1_SCLK_OUT" value="100" />
-  <parameter name="GPIO_Enable">No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No</parameter>
+  <parameter name="GPIO_Enable">No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No</parameter>
   <parameter name="GP_Enable" value="false" />
   <parameter name="H2F_AXI_CLOCK_FREQ" value="100" />
   <parameter name="H2F_CTI_CLOCK_FREQ" value="100" />
@@ -1130,7 +1165,7 @@
   <parameter name="dataAddrWidth" value="28" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x8000800' end='0x8001000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x8001000' end='0x8001020' type='altera_avalon_timer.s1' /><slave name='hex_0.s1' start='0x8001020' end='0x8001030' type='altera_avalon_pio.s1' /><slave name='hex_1.s1' start='0x8001030' end='0x8001040' type='altera_avalon_pio.s1' /><slave name='hex_2.s1' start='0x8001040' end='0x8001050' type='altera_avalon_pio.s1' /><slave name='hex_3.s1' start='0x8001050' end='0x8001060' type='altera_avalon_pio.s1' /><slave name='hex_4.s1' start='0x8001060' end='0x8001070' type='altera_avalon_pio.s1' /><slave name='switches_0.s1' start='0x8001070' end='0x8001080' type='altera_avalon_pio.s1' /><slave name='mailbox_0.avmm_msg_sender' start='0x8001080' end='0x8001090' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='sysid.control_slave' start='0x8001090' end='0x8001098' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x8001098' end='0x80010A0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x8000800' end='0x8001000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x8001000' end='0x8001020' type='altera_avalon_timer.s1' /><slave name='button_0.s1' start='0x8001020' end='0x8001030' type='altera_avalon_pio.s1' /><slave name='hex_0.s1' start='0x8001030' end='0x8001040' type='altera_avalon_pio.s1' /><slave name='hex_1.s1' start='0x8001040' end='0x8001050' type='altera_avalon_pio.s1' /><slave name='hex_2.s1' start='0x8001050' end='0x8001060' type='altera_avalon_pio.s1' /><slave name='hex_3.s1' start='0x8001060' end='0x8001070' type='altera_avalon_pio.s1' /><slave name='hex_4.s1' start='0x8001070' end='0x8001080' type='altera_avalon_pio.s1' /><slave name='switches_0.s1' start='0x8001080' end='0x8001090' type='altera_avalon_pio.s1' /><slave name='mailbox_1.avmm_msg_sender' start='0x8001090' end='0x80010A0' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='mailbox_0.avmm_msg_sender' start='0x80010A0' end='0x80010B0' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='sysid.control_slave' start='0x80010B0' end='0x80010B8' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x80010B8' end='0x80010C0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -1312,7 +1347,7 @@
   <parameter name="dataAddrWidth" value="28" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_1.s1' start='0x1000' end='0x1020' type='altera_avalon_timer.s1' /><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x1040' end='0x1050' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='leds_0.s1' start='0x1050' end='0x1060' type='altera_avalon_pio.s1' /><slave name='mailbox_1.avmm_msg_sender' start='0x1060' end='0x1070' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='mailbox_0.avmm_msg_receiver' start='0x1070' end='0x1080' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /><slave name='audio_0.avalon_audio_slave' start='0x1080' end='0x1090' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='sysid.control_slave' start='0x8001090' end='0x8001098' type='altera_avalon_sysid_qsys.control_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_1.s1' start='0x1000' end='0x1020' type='altera_avalon_timer.s1' /><slave name='leds_0.s1' start='0x1040' end='0x1050' type='altera_avalon_pio.s1' /><slave name='mailbox_0.avmm_msg_receiver' start='0x1050' end='0x1060' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x1060' end='0x1070' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='audio_0.avalon_audio_slave' start='0x1070' end='0x1080' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='mailbox_1.avmm_msg_sender' start='0x8001090' end='0x80010A0' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='sysid.control_slave' start='0x80010B0' end='0x80010B8' type='altera_avalon_sysid_qsys.control_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -1351,7 +1386,7 @@
   <parameter name="icache_tagramBlockType" value="Automatic" />
   <parameter name="impl" value="Tiny" />
   <parameter name="instAddrWidth" value="27" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x1040' end='0x1050' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='audio_0.avalon_audio_slave' start='0x1080' end='0x1090' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x1060' end='0x1070' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='audio_0.avalon_audio_slave' start='0x1070' end='0x1080' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='sdram_controller_0.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
   <parameter name="instructionMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="instructionMasterHighPerformanceMapParam" value="" />
   <parameter name="instruction_master_high_performance_paddr_base" value="0" />
@@ -1753,7 +1788,7 @@
    start="nios2_gen2_1.data_master"
    end="audio_0.avalon_audio_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1080" />
+  <parameter name="baseAddress" value="0x1070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1762,7 +1797,7 @@
    start="nios2_gen2_1.data_master"
    end="audio_and_video_config_0.avalon_av_config_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1040" />
+  <parameter name="baseAddress" value="0x1060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1771,7 +1806,7 @@
    start="nios2_gen2_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001098" />
+  <parameter name="baseAddress" value="0x080010b8" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1780,7 +1815,7 @@
    start="nios2_gen2_1.data_master"
    end="mailbox_0.avmm_msg_receiver">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1070" />
+  <parameter name="baseAddress" value="0x1050" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1789,7 +1824,7 @@
    start="nios2_gen2_0.data_master"
    end="mailbox_0.avmm_msg_sender">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001080" />
+  <parameter name="baseAddress" value="0x080010a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1798,7 +1833,16 @@
    start="nios2_gen2_1.data_master"
    end="mailbox_1.avmm_msg_sender">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1060" />
+  <parameter name="baseAddress" value="0x08001090" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="20.1"
+   start="nios2_gen2_0.data_master"
+   end="mailbox_1.avmm_msg_sender">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x08001090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1807,7 +1851,7 @@
    start="nios2_gen2_0.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001090" />
+  <parameter name="baseAddress" value="0x080010b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1816,7 +1860,7 @@
    start="nios2_gen2_1.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001090" />
+  <parameter name="baseAddress" value="0x080010b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1852,7 +1896,7 @@
    start="nios2_gen2_0.data_master"
    end="switches_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001070" />
+  <parameter name="baseAddress" value="0x08001080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1888,7 +1932,7 @@
    start="nios2_gen2_1.data_master"
    end="leds_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1050" />
+  <parameter name="baseAddress" value="0x1040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1897,7 +1941,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_4.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001060" />
+  <parameter name="baseAddress" value="0x08001070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1906,7 +1950,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_3.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001050" />
+  <parameter name="baseAddress" value="0x08001060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1915,7 +1959,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_2.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001040" />
+  <parameter name="baseAddress" value="0x08001050" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1924,7 +1968,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x08001030" />
+  <parameter name="baseAddress" value="0x08001040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1932,6 +1976,15 @@
    version="20.1"
    start="nios2_gen2_0.data_master"
    end="hex_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x08001030" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="20.1"
+   start="nios2_gen2_0.data_master"
+   end="button_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x08001020" />
   <parameter name="defaultConnection" value="false" />
@@ -1951,7 +2004,7 @@
    start="nios2_gen2_1.instruction_master"
    end="audio_0.avalon_audio_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1080" />
+  <parameter name="baseAddress" value="0x1070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1960,7 +2013,7 @@
    start="nios2_gen2_1.instruction_master"
    end="audio_and_video_config_0.avalon_av_config_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1040" />
+  <parameter name="baseAddress" value="0x1060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2037,6 +2090,7 @@
    version="20.1"
    start="pll_0.outclk0"
    end="audio_and_video_config_0.clk" />
+ <connection kind="clock" version="20.1" start="pll_0.outclk0" end="button_0.clk" />
  <connection
    kind="clock"
    version="20.1"
@@ -2127,6 +2181,11 @@
    version="20.1"
    start="clk_0.clk_reset"
    end="audio_and_video_config_0.reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="clk_0.clk_reset"
+   end="button_0.reset" />
  <connection
    kind="reset"
    version="20.1"

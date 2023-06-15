@@ -7,6 +7,7 @@
 			audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X';             -- DACLRCK
 			audio_i2c_config_SDAT                 : inout std_logic                     := 'X';             -- SDAT
 			audio_i2c_config_SCLK                 : out   std_logic;                                        -- SCLK
+			button_0_external_connection_export   : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			clk_clk                               : in    std_logic                     := 'X';             -- clk
 			hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
 			hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
@@ -54,6 +55,7 @@
 			hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SDA
 			hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SCL
 			hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
+			hps_0_io_hps_io_gpio_inst_GPIO48      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO48
 			hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     -- export
@@ -81,6 +83,7 @@
 			audio_0_external_interface_DACLRCK    => CONNECTED_TO_audio_0_external_interface_DACLRCK,    --                               .DACLRCK
 			audio_i2c_config_SDAT                 => CONNECTED_TO_audio_i2c_config_SDAT,                 --               audio_i2c_config.SDAT
 			audio_i2c_config_SCLK                 => CONNECTED_TO_audio_i2c_config_SCLK,                 --                               .SCLK
+			button_0_external_connection_export   => CONNECTED_TO_button_0_external_connection_export,   --   button_0_external_connection.export
 			clk_clk                               => CONNECTED_TO_clk_clk,                               --                            clk.clk
 			hex_0_external_connection_export      => CONNECTED_TO_hex_0_external_connection_export,      --      hex_0_external_connection.export
 			hex_1_external_connection_export      => CONNECTED_TO_hex_1_external_connection_export,      --      hex_1_external_connection.export
@@ -128,6 +131,7 @@
 			hps_0_io_hps_io_i2c1_inst_SDA         => CONNECTED_TO_hps_0_io_hps_io_i2c1_inst_SDA,         --                               .hps_io_i2c1_inst_SDA
 			hps_0_io_hps_io_i2c1_inst_SCL         => CONNECTED_TO_hps_0_io_hps_io_i2c1_inst_SCL,         --                               .hps_io_i2c1_inst_SCL
 			hps_0_io_hps_io_gpio_inst_GPIO35      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO35,      --                               .hps_io_gpio_inst_GPIO35
+			hps_0_io_hps_io_gpio_inst_GPIO48      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO48,      --                               .hps_io_gpio_inst_GPIO48
 			hps_0_io_hps_io_gpio_inst_GPIO53      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO53,      --                               .hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO54,      --                               .hps_io_gpio_inst_GPIO54
 			leds_0_external_connection_export     => CONNECTED_TO_leds_0_external_connection_export,     --     leds_0_external_connection.export

@@ -15,6 +15,7 @@ entity soc_system is
 		audio_0_external_interface_DACLRCK    : in    std_logic                     := '0';             --                               .DACLRCK
 		audio_i2c_config_SDAT                 : inout std_logic                     := '0';             --               audio_i2c_config.SDAT
 		audio_i2c_config_SCLK                 : out   std_logic;                                        --                               .SCLK
+		button_0_external_connection_export   : in    std_logic_vector(3 downto 0)  := (others => '0'); --   button_0_external_connection.export
 		clk_clk                               : in    std_logic                     := '0';             --                            clk.clk
 		hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     --      hex_0_external_connection.export
 		hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     --      hex_1_external_connection.export
@@ -62,6 +63,7 @@ entity soc_system is
 		hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := '0';             --                               .hps_io_i2c1_inst_SDA
 		hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := '0';             --                               .hps_io_i2c1_inst_SCL
 		hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO35
+		hps_0_io_hps_io_gpio_inst_GPIO48      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO48
 		hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO53
 		hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO54
 		leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     --     leds_0_external_connection.export
@@ -115,6 +117,16 @@ architecture rtl of soc_system is
 			I2C_SCLK    : out   std_logic                                         -- export
 		);
 	end component soc_system_audio_and_video_config_0;
+
+	component soc_system_button_0 is
+		port (
+			clk      : in  std_logic                     := 'X';             -- clk
+			reset_n  : in  std_logic                     := 'X';             -- reset_n
+			address  : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			readdata : out std_logic_vector(31 downto 0);                    -- readdata
+			in_port  : in  std_logic_vector(3 downto 0)  := (others => 'X')  -- export
+		);
+	end component soc_system_button_0;
 
 	component soc_system_hex_0 is
 		port (
@@ -176,6 +188,7 @@ architecture rtl of soc_system is
 			hps_io_i2c1_inst_SDA     : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SDA
 			hps_io_i2c1_inst_SCL     : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SCL
 			hps_io_gpio_inst_GPIO35  : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
+			hps_io_gpio_inst_GPIO48  : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO48
 			hps_io_gpio_inst_GPIO53  : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_io_gpio_inst_GPIO54  : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			h2f_rst_n                : out   std_logic;                                        -- reset_n
@@ -448,6 +461,8 @@ architecture rtl of soc_system is
 			audio_and_video_config_0_avalon_av_config_slave_writedata   : out std_logic_vector(31 downto 0);                    -- writedata
 			audio_and_video_config_0_avalon_av_config_slave_byteenable  : out std_logic_vector(3 downto 0);                     -- byteenable
 			audio_and_video_config_0_avalon_av_config_slave_waitrequest : in  std_logic                     := 'X';             -- waitrequest
+			button_0_s1_address                                         : out std_logic_vector(1 downto 0);                     -- address
+			button_0_s1_readdata                                        : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			hex_0_s1_address                                            : out std_logic_vector(1 downto 0);                     -- address
 			hex_0_s1_write                                              : out std_logic;                                        -- write
 			hex_0_s1_readdata                                           : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
@@ -933,7 +948,7 @@ architecture rtl of soc_system is
 		);
 	end component soc_system_rst_controller_005;
 
-	signal pll_0_outclk0_clk                                                             : std_logic;                     -- pll_0:outclk_0 -> [audio_0:clk, audio_and_video_config_0:clk, hex_0:clk, hex_1:clk, hex_2:clk, hex_3:clk, hex_4:clk, hps_0:h2f_lw_axi_clk, irq_mapper:clk, irq_mapper_001:clk, jtag_uart_0:clk, leds_0:clk, mailbox_0:clk, mailbox_1:clk, mm_interconnect_0:pll_0_outclk0_clk, mm_interconnect_1:pll_0_outclk0_clk, nios2_gen2_0:clk, nios2_gen2_1:clk, rst_controller:clk, rst_controller_001:clk, rst_controller_002:clk, rst_controller_003:clk, rst_controller_005:clk, switches_0:clk, sysid:clock, timer_0:clk, timer_1:clk]
+	signal pll_0_outclk0_clk                                                             : std_logic;                     -- pll_0:outclk_0 -> [audio_0:clk, audio_and_video_config_0:clk, button_0:clk, hex_0:clk, hex_1:clk, hex_2:clk, hex_3:clk, hex_4:clk, hps_0:h2f_lw_axi_clk, irq_mapper:clk, irq_mapper_001:clk, jtag_uart_0:clk, leds_0:clk, mailbox_0:clk, mailbox_1:clk, mm_interconnect_0:pll_0_outclk0_clk, mm_interconnect_1:pll_0_outclk0_clk, nios2_gen2_0:clk, nios2_gen2_1:clk, rst_controller:clk, rst_controller_001:clk, rst_controller_002:clk, rst_controller_003:clk, rst_controller_005:clk, switches_0:clk, sysid:clock, timer_0:clk, timer_1:clk]
 	signal pll_0_outclk1_clk                                                             : std_logic;                     -- pll_0:outclk_1 -> [mm_interconnect_0:pll_0_outclk1_clk, rst_controller_004:clk, sdram_controller_0:clk]
 	signal nios2_gen2_0_debug_reset_request_reset                                        : std_logic;                     -- nios2_gen2_0:debug_reset_request -> [mm_interconnect_0:hex_4_reset_reset_bridge_in_reset_reset, nios2_gen2_0_debug_reset_request_reset:in, rst_controller_001:reset_in1, rst_controller_003:reset_in1, rst_controller_004:reset_in1]
 	signal nios2_gen2_1_data_master_readdata                                             : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2_gen2_1_data_master_readdata -> nios2_gen2_1:d_readdata
@@ -1066,6 +1081,8 @@ architecture rtl of soc_system is
 	signal mm_interconnect_0_hex_0_s1_address                                            : std_logic_vector(1 downto 0);  -- mm_interconnect_0:hex_0_s1_address -> hex_0:address
 	signal mm_interconnect_0_hex_0_s1_write                                              : std_logic;                     -- mm_interconnect_0:hex_0_s1_write -> mm_interconnect_0_hex_0_s1_write:in
 	signal mm_interconnect_0_hex_0_s1_writedata                                          : std_logic_vector(31 downto 0); -- mm_interconnect_0:hex_0_s1_writedata -> hex_0:writedata
+	signal mm_interconnect_0_button_0_s1_readdata                                        : std_logic_vector(31 downto 0); -- button_0:readdata -> mm_interconnect_0:button_0_s1_readdata
+	signal mm_interconnect_0_button_0_s1_address                                         : std_logic_vector(1 downto 0);  -- mm_interconnect_0:button_0_s1_address -> button_0:address
 	signal hps_0_h2f_lw_axi_master_awburst                                               : std_logic_vector(1 downto 0);  -- hps_0:h2f_lw_AWBURST -> mm_interconnect_1:hps_0_h2f_lw_axi_master_awburst
 	signal hps_0_h2f_lw_axi_master_arlen                                                 : std_logic_vector(3 downto 0);  -- hps_0:h2f_lw_ARLEN -> mm_interconnect_1:hps_0_h2f_lw_axi_master_arlen
 	signal hps_0_h2f_lw_axi_master_wstrb                                                 : std_logic_vector(3 downto 0);  -- hps_0:h2f_lw_WSTRB -> mm_interconnect_1:hps_0_h2f_lw_axi_master_wstrb
@@ -1138,7 +1155,7 @@ architecture rtl of soc_system is
 	signal mm_interconnect_0_hex_2_s1_write_ports_inv                                    : std_logic;                     -- mm_interconnect_0_hex_2_s1_write:inv -> hex_2:write_n
 	signal mm_interconnect_0_hex_1_s1_write_ports_inv                                    : std_logic;                     -- mm_interconnect_0_hex_1_s1_write:inv -> hex_1:write_n
 	signal mm_interconnect_0_hex_0_s1_write_ports_inv                                    : std_logic;                     -- mm_interconnect_0_hex_0_s1_write:inv -> hex_0:write_n
-	signal rst_controller_reset_out_reset_ports_inv                                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> nios2_gen2_1:reset_n
+	signal rst_controller_reset_out_reset_ports_inv                                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [button_0:reset_n, nios2_gen2_1:reset_n]
 	signal rst_controller_001_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [jtag_uart_0:rst_n, nios2_gen2_0:reset_n, switches_0:reset_n, timer_0:reset_n]
 	signal rst_controller_002_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_002_reset_out_reset:inv -> [leds_0:reset_n, mailbox_1:rst_n, timer_1:reset_n]
 	signal rst_controller_003_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_003_reset_out_reset:inv -> [mailbox_0:rst_n, sysid:reset_n]
@@ -1178,6 +1195,15 @@ begin
 			waitrequest => mm_interconnect_0_audio_and_video_config_0_avalon_av_config_slave_waitrequest, --                       .waitrequest
 			I2C_SDAT    => audio_i2c_config_SDAT,                                                         --     external_interface.export
 			I2C_SCLK    => audio_i2c_config_SCLK                                                          --                       .export
+		);
+
+	button_0 : component soc_system_button_0
+		port map (
+			clk      => pll_0_outclk0_clk,                        --                 clk.clk
+			reset_n  => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
+			address  => mm_interconnect_0_button_0_s1_address,    --                  s1.address
+			readdata => mm_interconnect_0_button_0_s1_readdata,   --                    .readdata
+			in_port  => button_0_external_connection_export       -- external_connection.export
 		);
 
 	hex_0 : component soc_system_hex_0
@@ -1287,6 +1313,7 @@ begin
 			hps_io_i2c1_inst_SDA     => hps_0_io_hps_io_i2c1_inst_SDA,     --                  .hps_io_i2c1_inst_SDA
 			hps_io_i2c1_inst_SCL     => hps_0_io_hps_io_i2c1_inst_SCL,     --                  .hps_io_i2c1_inst_SCL
 			hps_io_gpio_inst_GPIO35  => hps_0_io_hps_io_gpio_inst_GPIO35,  --                  .hps_io_gpio_inst_GPIO35
+			hps_io_gpio_inst_GPIO48  => hps_0_io_hps_io_gpio_inst_GPIO48,  --                  .hps_io_gpio_inst_GPIO48
 			hps_io_gpio_inst_GPIO53  => hps_0_io_hps_io_gpio_inst_GPIO53,  --                  .hps_io_gpio_inst_GPIO53
 			hps_io_gpio_inst_GPIO54  => hps_0_io_hps_io_gpio_inst_GPIO54,  --                  .hps_io_gpio_inst_GPIO54
 			h2f_rst_n                => hps_0_h2f_reset_reset,             --         h2f_reset.reset_n
@@ -1583,6 +1610,8 @@ begin
 			audio_and_video_config_0_avalon_av_config_slave_writedata   => mm_interconnect_0_audio_and_video_config_0_avalon_av_config_slave_writedata,   --                                                .writedata
 			audio_and_video_config_0_avalon_av_config_slave_byteenable  => mm_interconnect_0_audio_and_video_config_0_avalon_av_config_slave_byteenable,  --                                                .byteenable
 			audio_and_video_config_0_avalon_av_config_slave_waitrequest => mm_interconnect_0_audio_and_video_config_0_avalon_av_config_slave_waitrequest, --                                                .waitrequest
+			button_0_s1_address                                         => mm_interconnect_0_button_0_s1_address,                                         --                                     button_0_s1.address
+			button_0_s1_readdata                                        => mm_interconnect_0_button_0_s1_readdata,                                        --                                                .readdata
 			hex_0_s1_address                                            => mm_interconnect_0_hex_0_s1_address,                                            --                                        hex_0_s1.address
 			hex_0_s1_write                                              => mm_interconnect_0_hex_0_s1_write,                                              --                                                .write
 			hex_0_s1_readdata                                           => mm_interconnect_0_hex_0_s1_readdata,                                           --                                                .readdata

@@ -430,7 +430,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : B23       :        :                   :         : 7A        :                
 GND                          : B24       : gnd    :                   :         :           :                
 HPS_UART_RX                  : B25       : input  : 3.3-V LVTTL       :         : 7A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B26       :        :                   :         : 7A        :                
+HPS_I2C_CONTROL              : B26       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
 HPS_TDI                      : B27       :        :                   :         : 7A        :                
 HPS_TDO                      : B28       :        :                   :         : 7A        :                
 GND                          : B29       : gnd    :                   :         :           :                
@@ -561,7 +561,7 @@ GND                          : G3        : gnd    :                   :         
 GND                          : G4        : gnd    :                   :         :           :                
 nCE                          : G5        :        :                   :         : 9A        :                
 MSEL2                        : G6        :        :                   :         : 9A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 8A        :                
+AUD_XCK                      : G7        : output : 3.3-V LVTTL       :         : 8A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8A        :                
 VCCIO8A                      : G9        : power  :                   : 3.3V    : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8A        :                

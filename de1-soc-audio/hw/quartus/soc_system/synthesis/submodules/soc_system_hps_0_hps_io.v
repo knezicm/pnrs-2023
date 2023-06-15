@@ -48,6 +48,7 @@ module soc_system_hps_0_hps_io (
 		inout  wire        hps_io_i2c1_inst_SDA,     //       .hps_io_i2c1_inst_SDA
 		inout  wire        hps_io_i2c1_inst_SCL,     //       .hps_io_i2c1_inst_SCL
 		inout  wire        hps_io_gpio_inst_GPIO35,  //       .hps_io_gpio_inst_GPIO35
+		inout  wire        hps_io_gpio_inst_GPIO48,  //       .hps_io_gpio_inst_GPIO48
 		inout  wire        hps_io_gpio_inst_GPIO53,  //       .hps_io_gpio_inst_GPIO53
 		inout  wire        hps_io_gpio_inst_GPIO54   //       .hps_io_gpio_inst_GPIO54
 	);
@@ -94,6 +95,7 @@ module soc_system_hps_0_hps_io (
 		.hps_io_i2c1_inst_SDA     (hps_io_i2c1_inst_SDA),     //       .hps_io_i2c1_inst_SDA
 		.hps_io_i2c1_inst_SCL     (hps_io_i2c1_inst_SCL),     //       .hps_io_i2c1_inst_SCL
 		.hps_io_gpio_inst_GPIO35  (hps_io_gpio_inst_GPIO35),  //       .hps_io_gpio_inst_GPIO35
+		.hps_io_gpio_inst_GPIO48  (hps_io_gpio_inst_GPIO48),  //       .hps_io_gpio_inst_GPIO48
 		.hps_io_gpio_inst_GPIO53  (hps_io_gpio_inst_GPIO53),  //       .hps_io_gpio_inst_GPIO53
 		.hps_io_gpio_inst_GPIO54  (hps_io_gpio_inst_GPIO54)   //       .hps_io_gpio_inst_GPIO54
 	);

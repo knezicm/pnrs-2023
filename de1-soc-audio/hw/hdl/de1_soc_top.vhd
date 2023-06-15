@@ -32,7 +32,7 @@ entity de1_soc_top is
         AUD_BCLK    : inout std_logic;
         AUD_DACDAT  : out   std_logic;
         AUD_DACLRCK : inout std_logic;
---        AUD_XCK     : out   std_logic;
+        AUD_XCK     : out   std_logic;
 
         -- CLOCK
         CLOCK_50  : in std_logic;
@@ -138,7 +138,7 @@ entity de1_soc_top is
 --        HPS_FLASH_DCLK   : out   std_logic;
 --        HPS_FLASH_NCSO   : out   std_logic;
 --        HPS_GSENSOR_INT  : inout std_logic;
---        HPS_I2C_CONTROL  : inout std_logic;
+        HPS_I2C_CONTROL  : inout std_logic;
         HPS_I2C1_SCLK    : inout std_logic;
         HPS_I2C1_SDAT    : inout std_logic;
 --        HPS_I2C2_SCLK    : inout std_logic;
@@ -164,9 +164,6 @@ entity de1_soc_top is
 end entity de1_soc_top;
 
 architecture rtl of de1_soc_top is
-	
---	 signal s_i2c_sda : std_logic;
---	 signal s_i2c_scl : std_logic;
 
     component soc_system is
         port (
@@ -225,7 +222,8 @@ architecture rtl of de1_soc_top is
         hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SDA
 		  hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SCL
 		  hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
-        hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
+        hps_0_io_hps_io_gpio_inst_GPIO48      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO48
+		  hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
         hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
         hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
         hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
@@ -238,16 +236,14 @@ architecture rtl of de1_soc_top is
 		  audio_0_external_interface_ADCLRCK    : in    std_logic                     := 'X';             -- ADCLRCK
 		  audio_0_external_interface_BCLK       : in    std_logic                     := 'X';             -- BCLK
 		  audio_0_external_interface_DACDAT     : out   std_logic;                                        -- DACDAT
-		  audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X'              -- DACLRCK
-
+		  audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X';             -- DACLRCK
+		  button_0_external_connection_export   : in    std_logic_vector(3 downto 0)  := (others => 'X') -- export
         );
     end component soc_system;
 
 begin
---	
---	  HPS_I2C1_SDAT <= FPGA_I2C_SDAT;
---     FPGA_I2C_SCLK <= HPS_I2C1_SCLK;
-		
+
+		AUD_XCK <= CLOCK_50;
 
 		u0 : component soc_system
         port map (
@@ -307,7 +303,8 @@ begin
             hps_0_io_hps_io_i2c1_inst_SDA          => HPS_I2C1_SDAT,
 			   hps_0_io_hps_io_i2c1_inst_SCL          => HPS_I2C1_SCLK,
 				hps_0_io_hps_io_gpio_inst_GPIO35      	=> HPS_ENET_INT_N,
-            hps_0_io_hps_io_gpio_inst_GPIO53      	=> HPS_LED,
+            hps_0_io_hps_io_gpio_inst_GPIO48       => HPS_I2C_CONTROL,
+				hps_0_io_hps_io_gpio_inst_GPIO53      	=> HPS_LED,
             hps_0_io_hps_io_gpio_inst_GPIO54      	=> HPS_KEY_N,
             hex_0_external_connection_export      	=> HEX0_N,
             hex_1_external_connection_export      	=> HEX1_N,
@@ -320,8 +317,9 @@ begin
 			   audio_0_external_interface_ADCLRCK     => AUD_ADCLRCK,    --                               .ADCLRCK
 			   audio_0_external_interface_BCLK        => AUD_BCLK,       --                               .BCLK
 			   audio_0_external_interface_DACDAT      => AUD_DACDAT,     --                               .DACDAT
-			   audio_0_external_interface_DACLRCK     => AUD_DACLRCK     --                               .DACLRCK 
-				
+			   audio_0_external_interface_DACLRCK     => AUD_DACLRCK,     --                               .DACLRCK 
+				button_0_external_connection_export    => KEY_N   --   button_0_external_connection.export
+			  
         );
 
 end;

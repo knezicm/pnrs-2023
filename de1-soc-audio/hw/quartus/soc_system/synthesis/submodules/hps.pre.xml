@@ -132,6 +132,8 @@
     <pin_mux name='GENERALIO4' choice='I2C1_SCL' value='1' />
     <pin_mux name='MIXED1IO21' choice='GPIO/LoanIO' value='0' />
     <pin_mux name='GPLMUX35' choice='GPIO' value='1' />
+    <pin_mux name='GENERALIO0' choice='GPIO/LoanIO' value='0' />
+    <pin_mux name='GPLMUX48' choice='GPIO' value='1' />
     <pin_mux name='GENERALIO5' choice='GPIO/LoanIO' value='0' />
     <pin_mux name='GPLMUX53' choice='GPIO' value='1' />
     <pin_mux name='GENERALIO6' choice='GPIO/LoanIO' value='0' />
@@ -183,7 +185,6 @@
     <pin_mux name='GPLMUX45' choice='GPIO' value='1' />
     <pin_mux name='GPLMUX46' choice='GPIO' value='1' />
     <pin_mux name='GPLMUX47' choice='GPIO' value='1' />
-    <pin_mux name='GPLMUX48' choice='GPIO' value='1' />
     <pin_mux name='GPLMUX49' choice='GPIO' value='1' />
     <pin_mux name='GPLMUX50' choice='GPIO' value='1' />
     <pin_mux name='GPLMUX51' choice='GPIO' value='1' />

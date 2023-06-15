@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>13.06.2023. 18.05.42</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1686672342407</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>15.06.2023. 18.10.40</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1686845440934</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-audio\sw\nios\app_1\de1_soc_audio_processing_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-audio\hw\quartus\soc_system.sopcinfo</SopcDesignFile>
@@ -881,32 +881,26 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>audio_and_video_config_0</slaveDescriptor>
+                <slaveDescriptor>leds_0</slaveDescriptor>
                 <addressRange>0x00001040 - 0x0000104F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>leds_0</slaveDescriptor>
+                <slaveDescriptor>mailbox_0</slaveDescriptor>
                 <addressRange>0x00001050 - 0x0000105F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>mailbox_1</slaveDescriptor>
+                <slaveDescriptor>audio_and_video_config_0</slaveDescriptor>
                 <addressRange>0x00001060 - 0x0000106F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>mailbox_0</slaveDescriptor>
-                <addressRange>0x00001070 - 0x0000107F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>audio_0</slaveDescriptor>
-                <addressRange>0x00001080 - 0x0000108F</addressRange>
+                <addressRange>0x00001070 - 0x0000107F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
@@ -917,8 +911,14 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>mailbox_1</slaveDescriptor>
+                <addressRange>0x08001090 - 0x0800109F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x08001090 - 0x08001097</addressRange>
+                <addressRange>0x080010B0 - 0x080010B7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>13.06.2023. 18.04.47</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1686672287239</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>15.06.2023. 18.10.05</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1686845405985</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-audio\sw\nios\app_0\de1_soc_user_input_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-audio\hw\quartus\soc_system.sopcinfo</SopcDesignFile>
@@ -911,56 +911,68 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_0</slaveDescriptor>
+                <slaveDescriptor>button_0</slaveDescriptor>
                 <addressRange>0x08001020 - 0x0800102F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_1</slaveDescriptor>
+                <slaveDescriptor>hex_0</slaveDescriptor>
                 <addressRange>0x08001030 - 0x0800103F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_2</slaveDescriptor>
+                <slaveDescriptor>hex_1</slaveDescriptor>
                 <addressRange>0x08001040 - 0x0800104F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_3</slaveDescriptor>
+                <slaveDescriptor>hex_2</slaveDescriptor>
                 <addressRange>0x08001050 - 0x0800105F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_4</slaveDescriptor>
+                <slaveDescriptor>hex_3</slaveDescriptor>
                 <addressRange>0x08001060 - 0x0800106F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>switches_0</slaveDescriptor>
+                <slaveDescriptor>hex_4</slaveDescriptor>
                 <addressRange>0x08001070 - 0x0800107F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>mailbox_0</slaveDescriptor>
+                <slaveDescriptor>switches_0</slaveDescriptor>
                 <addressRange>0x08001080 - 0x0800108F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>mailbox_1</slaveDescriptor>
+                <addressRange>0x08001090 - 0x0800109F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>mailbox_0</slaveDescriptor>
+                <addressRange>0x080010A0 - 0x080010AF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x08001090 - 0x08001097</addressRange>
+                <addressRange>0x080010B0 - 0x080010B7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x08001098 - 0x0800109F</addressRange>
+                <addressRange>0x080010B8 - 0x080010BF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

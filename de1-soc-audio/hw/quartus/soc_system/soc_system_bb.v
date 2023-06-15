@@ -7,6 +7,7 @@ module soc_system (
 	audio_0_external_interface_DACLRCK,
 	audio_i2c_config_SDAT,
 	audio_i2c_config_SCLK,
+	button_0_external_connection_export,
 	clk_clk,
 	hex_0_external_connection_export,
 	hex_1_external_connection_export,
@@ -54,6 +55,7 @@ module soc_system (
 	hps_0_io_hps_io_i2c1_inst_SDA,
 	hps_0_io_hps_io_i2c1_inst_SCL,
 	hps_0_io_hps_io_gpio_inst_GPIO35,
+	hps_0_io_hps_io_gpio_inst_GPIO48,
 	hps_0_io_hps_io_gpio_inst_GPIO53,
 	hps_0_io_hps_io_gpio_inst_GPIO54,
 	leds_0_external_connection_export,
@@ -77,6 +79,7 @@ module soc_system (
 	input		audio_0_external_interface_DACLRCK;
 	inout		audio_i2c_config_SDAT;
 	output		audio_i2c_config_SCLK;
+	input	[3:0]	button_0_external_connection_export;
 	input		clk_clk;
 	output	[6:0]	hex_0_external_connection_export;
 	output	[6:0]	hex_1_external_connection_export;
@@ -124,6 +127,7 @@ module soc_system (
 	inout		hps_0_io_hps_io_i2c1_inst_SDA;
 	inout		hps_0_io_hps_io_i2c1_inst_SCL;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO35;
+	inout		hps_0_io_hps_io_gpio_inst_GPIO48;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO54;
 	output	[9:0]	leds_0_external_connection_export;

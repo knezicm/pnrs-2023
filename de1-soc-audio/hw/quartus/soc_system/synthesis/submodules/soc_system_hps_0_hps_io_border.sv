@@ -55,6 +55,7 @@ module soc_system_hps_0_hps_io_border(
  ,inout wire [1 - 1 : 0 ] hps_io_i2c1_inst_SDA
  ,inout wire [1 - 1 : 0 ] hps_io_i2c1_inst_SCL
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO35
+ ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO48
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO53
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO54
 );
@@ -68,12 +69,13 @@ assign hps_io_sdio_inst_D3 = intermediate[11] ? intermediate[10] : 'z;
 assign hps_io_i2c1_inst_SDA = intermediate[12] ? '0 : 'z;
 assign hps_io_i2c1_inst_SCL = intermediate[13] ? '0 : 'z;
 assign hps_io_gpio_inst_GPIO35 = intermediate[15] ? intermediate[14] : 'z;
-assign hps_io_gpio_inst_GPIO53 = intermediate[17] ? intermediate[16] : 'z;
-assign hps_io_gpio_inst_GPIO54 = intermediate[19] ? intermediate[18] : 'z;
+assign hps_io_gpio_inst_GPIO48 = intermediate[17] ? intermediate[16] : 'z;
+assign hps_io_gpio_inst_GPIO53 = intermediate[19] ? intermediate[18] : 'z;
+assign hps_io_gpio_inst_GPIO54 = intermediate[21] ? intermediate[20] : 'z;
 
-wire [20 - 1 : 0] intermediate;
+wire [22 - 1 : 0] intermediate;
 
-wire [69 - 1 : 0] floating;
+wire [66 - 1 : 0] floating;
 
 cyclonev_hps_peripheral_emac emac1_inst(
  .EMAC_GMII_MDO_I({
@@ -179,23 +181,29 @@ cyclonev_hps_peripheral_gpio gpio_inst(
  .GPIO1_PORTA_I({
     hps_io_gpio_inst_GPIO54[0:0] // 25:25
    ,hps_io_gpio_inst_GPIO53[0:0] // 24:24
-   ,floating[16:0] // 23:7
+   ,floating[3:0] // 23:20
+   ,hps_io_gpio_inst_GPIO48[0:0] // 19:19
+   ,floating[15:4] // 18:7
    ,hps_io_gpio_inst_GPIO35[0:0] // 6:6
-   ,floating[22:17] // 5:0
+   ,floating[21:16] // 5:0
   })
 ,.GPIO1_PORTA_OE({
-    intermediate[19:19] // 25:25
-   ,intermediate[17:17] // 24:24
-   ,floating[39:23] // 23:7
+    intermediate[21:21] // 25:25
+   ,intermediate[19:19] // 24:24
+   ,floating[25:22] // 23:20
+   ,intermediate[17:17] // 19:19
+   ,floating[37:26] // 18:7
    ,intermediate[15:15] // 6:6
-   ,floating[45:40] // 5:0
+   ,floating[43:38] // 5:0
   })
 ,.GPIO1_PORTA_O({
-    intermediate[18:18] // 25:25
-   ,intermediate[16:16] // 24:24
-   ,floating[62:46] // 23:7
+    intermediate[20:20] // 25:25
+   ,intermediate[18:18] // 24:24
+   ,floating[47:44] // 23:20
+   ,intermediate[16:16] // 19:19
+   ,floating[59:48] // 18:7
    ,intermediate[14:14] // 6:6
-   ,floating[68:63] // 5:0
+   ,floating[65:60] // 5:0
   })
 );
 
