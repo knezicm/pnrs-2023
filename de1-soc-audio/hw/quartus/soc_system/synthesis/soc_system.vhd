@@ -60,8 +60,8 @@ entity soc_system is
 		hps_0_io_hps_io_sdio_inst_D3          : inout std_logic                     := '0';             --                               .hps_io_sdio_inst_D3
 		hps_0_io_hps_io_uart0_inst_RX         : in    std_logic                     := '0';             --                               .hps_io_uart0_inst_RX
 		hps_0_io_hps_io_uart0_inst_TX         : out   std_logic;                                        --                               .hps_io_uart0_inst_TX
-		hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := '0';             --                               .hps_io_i2c1_inst_SDA
-		hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := '0';             --                               .hps_io_i2c1_inst_SCL
+		hps_0_io_hps_io_i2c0_inst_SDA         : inout std_logic                     := '0';             --                               .hps_io_i2c0_inst_SDA
+		hps_0_io_hps_io_i2c0_inst_SCL         : inout std_logic                     := '0';             --                               .hps_io_i2c0_inst_SCL
 		hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO35
 		hps_0_io_hps_io_gpio_inst_GPIO48      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO48
 		hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO53
@@ -185,8 +185,8 @@ architecture rtl of soc_system is
 			hps_io_sdio_inst_D3      : inout std_logic                     := 'X';             -- hps_io_sdio_inst_D3
 			hps_io_uart0_inst_RX     : in    std_logic                     := 'X';             -- hps_io_uart0_inst_RX
 			hps_io_uart0_inst_TX     : out   std_logic;                                        -- hps_io_uart0_inst_TX
-			hps_io_i2c1_inst_SDA     : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SDA
-			hps_io_i2c1_inst_SCL     : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SCL
+			hps_io_i2c0_inst_SDA     : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SDA
+			hps_io_i2c0_inst_SCL     : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SCL
 			hps_io_gpio_inst_GPIO35  : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
 			hps_io_gpio_inst_GPIO48  : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO48
 			hps_io_gpio_inst_GPIO53  : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
@@ -1310,8 +1310,8 @@ begin
 			hps_io_sdio_inst_D3      => hps_0_io_hps_io_sdio_inst_D3,      --                  .hps_io_sdio_inst_D3
 			hps_io_uart0_inst_RX     => hps_0_io_hps_io_uart0_inst_RX,     --                  .hps_io_uart0_inst_RX
 			hps_io_uart0_inst_TX     => hps_0_io_hps_io_uart0_inst_TX,     --                  .hps_io_uart0_inst_TX
-			hps_io_i2c1_inst_SDA     => hps_0_io_hps_io_i2c1_inst_SDA,     --                  .hps_io_i2c1_inst_SDA
-			hps_io_i2c1_inst_SCL     => hps_0_io_hps_io_i2c1_inst_SCL,     --                  .hps_io_i2c1_inst_SCL
+			hps_io_i2c0_inst_SDA     => hps_0_io_hps_io_i2c0_inst_SDA,     --                  .hps_io_i2c0_inst_SDA
+			hps_io_i2c0_inst_SCL     => hps_0_io_hps_io_i2c0_inst_SCL,     --                  .hps_io_i2c0_inst_SCL
 			hps_io_gpio_inst_GPIO35  => hps_0_io_hps_io_gpio_inst_GPIO35,  --                  .hps_io_gpio_inst_GPIO35
 			hps_io_gpio_inst_GPIO48  => hps_0_io_hps_io_gpio_inst_GPIO48,  --                  .hps_io_gpio_inst_GPIO48
 			hps_io_gpio_inst_GPIO53  => hps_0_io_hps_io_gpio_inst_GPIO53,  --                  .hps_io_gpio_inst_GPIO53

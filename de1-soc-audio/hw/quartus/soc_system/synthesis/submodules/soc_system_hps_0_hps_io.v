@@ -45,8 +45,8 @@ module soc_system_hps_0_hps_io (
 		inout  wire        hps_io_sdio_inst_D3,      //       .hps_io_sdio_inst_D3
 		input  wire        hps_io_uart0_inst_RX,     //       .hps_io_uart0_inst_RX
 		output wire        hps_io_uart0_inst_TX,     //       .hps_io_uart0_inst_TX
-		inout  wire        hps_io_i2c1_inst_SDA,     //       .hps_io_i2c1_inst_SDA
-		inout  wire        hps_io_i2c1_inst_SCL,     //       .hps_io_i2c1_inst_SCL
+		inout  wire        hps_io_i2c0_inst_SDA,     //       .hps_io_i2c0_inst_SDA
+		inout  wire        hps_io_i2c0_inst_SCL,     //       .hps_io_i2c0_inst_SCL
 		inout  wire        hps_io_gpio_inst_GPIO35,  //       .hps_io_gpio_inst_GPIO35
 		inout  wire        hps_io_gpio_inst_GPIO48,  //       .hps_io_gpio_inst_GPIO48
 		inout  wire        hps_io_gpio_inst_GPIO53,  //       .hps_io_gpio_inst_GPIO53
@@ -92,8 +92,8 @@ module soc_system_hps_0_hps_io (
 		.hps_io_sdio_inst_D3      (hps_io_sdio_inst_D3),      //       .hps_io_sdio_inst_D3
 		.hps_io_uart0_inst_RX     (hps_io_uart0_inst_RX),     //       .hps_io_uart0_inst_RX
 		.hps_io_uart0_inst_TX     (hps_io_uart0_inst_TX),     //       .hps_io_uart0_inst_TX
-		.hps_io_i2c1_inst_SDA     (hps_io_i2c1_inst_SDA),     //       .hps_io_i2c1_inst_SDA
-		.hps_io_i2c1_inst_SCL     (hps_io_i2c1_inst_SCL),     //       .hps_io_i2c1_inst_SCL
+		.hps_io_i2c0_inst_SDA     (hps_io_i2c0_inst_SDA),     //       .hps_io_i2c0_inst_SDA
+		.hps_io_i2c0_inst_SCL     (hps_io_i2c0_inst_SCL),     //       .hps_io_i2c0_inst_SCL
 		.hps_io_gpio_inst_GPIO35  (hps_io_gpio_inst_GPIO35),  //       .hps_io_gpio_inst_GPIO35
 		.hps_io_gpio_inst_GPIO48  (hps_io_gpio_inst_GPIO48),  //       .hps_io_gpio_inst_GPIO48
 		.hps_io_gpio_inst_GPIO53  (hps_io_gpio_inst_GPIO53),  //       .hps_io_gpio_inst_GPIO53

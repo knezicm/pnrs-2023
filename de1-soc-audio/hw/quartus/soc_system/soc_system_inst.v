@@ -51,8 +51,8 @@
 		.hps_0_io_hps_io_sdio_inst_D3          (<connected-to-hps_0_io_hps_io_sdio_inst_D3>),          //                               .hps_io_sdio_inst_D3
 		.hps_0_io_hps_io_uart0_inst_RX         (<connected-to-hps_0_io_hps_io_uart0_inst_RX>),         //                               .hps_io_uart0_inst_RX
 		.hps_0_io_hps_io_uart0_inst_TX         (<connected-to-hps_0_io_hps_io_uart0_inst_TX>),         //                               .hps_io_uart0_inst_TX
-		.hps_0_io_hps_io_i2c1_inst_SDA         (<connected-to-hps_0_io_hps_io_i2c1_inst_SDA>),         //                               .hps_io_i2c1_inst_SDA
-		.hps_0_io_hps_io_i2c1_inst_SCL         (<connected-to-hps_0_io_hps_io_i2c1_inst_SCL>),         //                               .hps_io_i2c1_inst_SCL
+		.hps_0_io_hps_io_i2c0_inst_SDA         (<connected-to-hps_0_io_hps_io_i2c0_inst_SDA>),         //                               .hps_io_i2c0_inst_SDA
+		.hps_0_io_hps_io_i2c0_inst_SCL         (<connected-to-hps_0_io_hps_io_i2c0_inst_SCL>),         //                               .hps_io_i2c0_inst_SCL
 		.hps_0_io_hps_io_gpio_inst_GPIO35      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO35>),      //                               .hps_io_gpio_inst_GPIO35
 		.hps_0_io_hps_io_gpio_inst_GPIO48      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO48>),      //                               .hps_io_gpio_inst_GPIO48
 		.hps_0_io_hps_io_gpio_inst_GPIO53      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO53>),      //                               .hps_io_gpio_inst_GPIO53

@@ -388,11 +388,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[3]",
+					"name" : "KEY_N[3]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY_N[3]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{

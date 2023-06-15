@@ -52,8 +52,8 @@ module soc_system_hps_0_hps_io_border(
  ,inout wire [1 - 1 : 0 ] hps_io_sdio_inst_D3
  ,input wire [1 - 1 : 0 ] hps_io_uart0_inst_RX
  ,output wire [1 - 1 : 0 ] hps_io_uart0_inst_TX
- ,inout wire [1 - 1 : 0 ] hps_io_i2c1_inst_SDA
- ,inout wire [1 - 1 : 0 ] hps_io_i2c1_inst_SCL
+ ,inout wire [1 - 1 : 0 ] hps_io_i2c0_inst_SDA
+ ,inout wire [1 - 1 : 0 ] hps_io_i2c0_inst_SCL
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO35
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO48
  ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO53
@@ -66,8 +66,8 @@ assign hps_io_sdio_inst_D0 = intermediate[5] ? intermediate[4] : 'z;
 assign hps_io_sdio_inst_D1 = intermediate[7] ? intermediate[6] : 'z;
 assign hps_io_sdio_inst_D2 = intermediate[9] ? intermediate[8] : 'z;
 assign hps_io_sdio_inst_D3 = intermediate[11] ? intermediate[10] : 'z;
-assign hps_io_i2c1_inst_SDA = intermediate[12] ? '0 : 'z;
-assign hps_io_i2c1_inst_SCL = intermediate[13] ? '0 : 'z;
+assign hps_io_i2c0_inst_SDA = intermediate[12] ? '0 : 'z;
+assign hps_io_i2c0_inst_SCL = intermediate[13] ? '0 : 'z;
 assign hps_io_gpio_inst_GPIO35 = intermediate[15] ? intermediate[14] : 'z;
 assign hps_io_gpio_inst_GPIO48 = intermediate[17] ? intermediate[16] : 'z;
 assign hps_io_gpio_inst_GPIO53 = intermediate[19] ? intermediate[18] : 'z;
@@ -161,12 +161,12 @@ cyclonev_hps_peripheral_uart uart0_inst(
 );
 
 
-cyclonev_hps_peripheral_i2c i2c1_inst(
+cyclonev_hps_peripheral_i2c i2c0_inst(
  .I2C_DATA({
-    hps_io_i2c1_inst_SDA[0:0] // 0:0
+    hps_io_i2c0_inst_SDA[0:0] // 0:0
   })
 ,.I2C_CLK({
-    hps_io_i2c1_inst_SCL[0:0] // 0:0
+    hps_io_i2c0_inst_SCL[0:0] // 0:0
   })
 ,.I2C_DATA_OE({
     intermediate[12:12] // 0:0

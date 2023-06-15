@@ -219,8 +219,8 @@ architecture rtl of de1_soc_top is
         hps_0_io_hps_io_sdio_inst_D3          : inout std_logic                     := 'X';             -- hps_io_sdio_inst_D3
         hps_0_io_hps_io_uart0_inst_RX         : in    std_logic                     := 'X';             -- hps_io_uart0_inst_RX
         hps_0_io_hps_io_uart0_inst_TX         : out   std_logic;                                        -- hps_io_uart0_inst_TX
-        hps_0_io_hps_io_i2c1_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SDA
-		  hps_0_io_hps_io_i2c1_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SCL
+        hps_0_io_hps_io_i2c0_inst_SDA         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SDA
+		  hps_0_io_hps_io_i2c0_inst_SCL         : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SCL
 		  hps_0_io_hps_io_gpio_inst_GPIO35      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO35
         hps_0_io_hps_io_gpio_inst_GPIO48      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO48
 		  hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
@@ -300,8 +300,8 @@ begin
             hps_0_io_hps_io_sdio_inst_D3          	=> HPS_SD_DATA(3),
             hps_0_io_hps_io_uart0_inst_RX         	=> HPS_UART_RX,
             hps_0_io_hps_io_uart0_inst_TX         	=> HPS_UART_TX,
-            hps_0_io_hps_io_i2c1_inst_SDA          => HPS_I2C1_SDAT,
-			   hps_0_io_hps_io_i2c1_inst_SCL          => HPS_I2C1_SCLK,
+            hps_0_io_hps_io_i2c0_inst_SDA          => HPS_I2C1_SDAT,
+			   hps_0_io_hps_io_i2c0_inst_SCL          => HPS_I2C1_SCLK,
 				hps_0_io_hps_io_gpio_inst_GPIO35      	=> HPS_ENET_INT_N,
             hps_0_io_hps_io_gpio_inst_GPIO48       => HPS_I2C_CONTROL,
 				hps_0_io_hps_io_gpio_inst_GPIO53      	=> HPS_LED,
