@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>15.06.2023. 18.10.40</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1686845440934</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-audio\sw\nios\app_1\de1_soc_audio_processing_bsp</BspGeneratedLocation>
-        <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>D:\Fax\projektovanje_namjenskih_racunarski_struktura\pnrs-2023\de1-soc-audio\hw\quartus\soc_system.sopcinfo</SopcDesignFile>
+        <BspGeneratedTimeStamp>Jun 16, 2023 3:57:51 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1686923871866</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\Medion\Desktop\4.godina\8.semestar\PNRS\Grupni_zadatak\pnrs-2023\de1-soc-audio\sw\nios\app_1\de1_soc_audio_processing_bsp</BspGeneratedLocation>
+        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <SopcDesignFile>C:\Users\Medion\Desktop\4.godina\8.semestar\PNRS\Grupni_zadatak\pnrs-2023\de1-soc-audio\hw\quartus\soc_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_1</Cpu>
         <SchemaVersion>1.9</SchemaVersion>

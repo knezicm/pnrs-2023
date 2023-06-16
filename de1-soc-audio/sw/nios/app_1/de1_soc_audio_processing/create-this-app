@@ -3,8 +3,8 @@
 # This script creates the blank_project application in this directory.
 
 
-BSP_DIR=D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/
-QUARTUS_PROJECT_DIR=D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/
+BSP_DIR=C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/
+QUARTUS_PROJECT_DIR=C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/
 NIOS2_APP_GEN_ARGS="--elf-name de1_soc_audio_processing.elf --no-src --set OBJDUMP_INCLUDE_SOURCE 1"
 
 # If script is launched from Windows through Windows Subsystem for Linux (WSL).  

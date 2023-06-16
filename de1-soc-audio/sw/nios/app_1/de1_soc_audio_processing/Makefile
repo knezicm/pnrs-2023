@@ -51,12 +51,9 @@ ifeq ($(findstring Microsoft,$(UNAME)),Microsoft)
 	WINDOWS_EXE = .exe
 endif
 
-eq = $(and $(findstring $(1),$(2)),$(findstring $(2),$(1)))
-
 ifdef WINDOWS_EXE 
 	adjust-path = $(if $1,$(shell wslpath "$1"),)
-	adjust-path-mixed = $(if $(call eq,$(shell echo $1 | head -c 5),/mnt/),$(shell echo $1 | sed 's/\/mnt\///g;s/\//:\//1'),$1)
-	
+	adjust-path-mixed = $(if $1,$(shell wslpath -m "$1"),)
 else # !WINDOWS_EXE
 	adjust-path = $1
 	adjust-path-mixed = $1
@@ -81,7 +78,7 @@ ACDS_VERSION := 20.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 720
+# BUILD_NUMBER: 711
 
 # Define path to the application ELF. 
 # It may be used by the makefile fragments so is defined before including them. 
@@ -89,7 +86,7 @@ ACDS_VERSION := 20.1
 ELF := de1_soc_audio_processing.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := audio_processing.c
+C_SRCS := de1_soc_audio_processing.c
 CXX_SRCS :=
 ASM_SRCS :=
 
@@ -124,7 +121,7 @@ CRT0 :=
 SYS_LIB :=
 
 # Define path to the root of the BSP.
-BSP_ROOT_DIR := D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/
+BSP_ROOT_DIR := C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing_bsp/
 
 # List of application specific include directories, library directories and library names
 APP_INCLUDE_DIRS :=
@@ -135,7 +132,7 @@ APP_LIBRARY_NAMES :=
 BUILD_PRE_PROCESS :=
 BUILD_POST_PROCESS :=
 
-QUARTUS_PROJECT_DIR := D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/
+QUARTUS_PROJECT_DIR := C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/
 
 
 #END GENERATED
