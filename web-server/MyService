@@ -1,0 +1,10 @@
+### BEGIN INIT INFO
+# Provides: MyService
+# Required-Start:    $all
+# Required-Stop: 
+# Default-Start:     5 
+# Default-Stop:      6 
+# Short-Description: Starts a web server
+### END INIT INFO
+
+/home/root/Startup.sh

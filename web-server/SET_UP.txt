@@ -1,0 +1,9 @@
+How to set up server.py to run when system boots
+
+chmod +x Startup.sh
+
+chmod +x MyService
+
+mv MyService /etc/init.d/
+
+update-rc.d MyService defaults
