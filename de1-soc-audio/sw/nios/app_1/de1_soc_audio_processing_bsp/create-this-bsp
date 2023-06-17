@@ -4,8 +4,8 @@
 
 BSP_TYPE=hal
 BSP_DIR=.
-SOPC_DIR=D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/
-SOPC_FILE=D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+SOPC_DIR=C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/
+SOPC_FILE=C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
 NIOS2_BSP_ARGS=""
 CPU_NAME=
 

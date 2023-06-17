@@ -82,11 +82,11 @@ ACDS_VERSION := 20.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 720
+# BUILD_NUMBER: 711
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+SOPCINFO_FILE := C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -157,9 +157,9 @@ SOPC_SYSID_FLAG += --sidp=0x80010b0
 ELF_PATCH_FLAG  += --sidp 0x80010b0
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1686841642
-SOPC_SYSID_FLAG += --timestamp=1686841642
-ELF_PATCH_FLAG  += --timestamp 1686841642
+# setting SOPC_TIMESTAMP is 1686846850
+SOPC_SYSID_FLAG += --timestamp=1686846850
+ELF_PATCH_FLAG  += --timestamp 1686846850
 
 # Build a custom version of newlib with the specified space-separated compiler 
 # flags. The custom newlib build will be placed in the <bsp root>/newlib 
