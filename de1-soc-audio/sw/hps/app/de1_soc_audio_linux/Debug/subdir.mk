@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../alt_generalpurpose_io.c \
+../audio.c \
 ../hps_linux.c 
 
 C_DEPS += \
 ./alt_generalpurpose_io.d \
+./audio.d \
 ./hps_linux.d 
 
 OBJS += \
 ./alt_generalpurpose_io.o \
+./audio.o \
 ./hps_linux.o 
 
 
@@ -28,7 +31,7 @@ OBJS += \
 clean: clean--2e-
 
 clean--2e-:
-	-$(RM) ./alt_generalpurpose_io.d ./alt_generalpurpose_io.o ./hps_linux.d ./hps_linux.o
+	-$(RM) ./alt_generalpurpose_io.d ./alt_generalpurpose_io.o ./audio.d ./audio.o ./hps_linux.d ./hps_linux.o
 
 .PHONY: clean--2e-
 
