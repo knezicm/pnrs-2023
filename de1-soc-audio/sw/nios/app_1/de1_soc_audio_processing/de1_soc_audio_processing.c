@@ -13,19 +13,32 @@
 #include "altera_avalon_mailbox_simple.h"
 #include "altera_up_avalon_audio.h"
 
-#define BUFF_MAX_VALUE 65536 // 2^16 --> audio data buff width 16 bit
+#define BUFF_MAX_VALUE 4294967296 // 2^32 --> audio data buff width 32 bit
 #define LEDS_NUM 10 // number of LEDs
 #define THD (BUFF_MAX_VALUE-1)/(LEDS_NUM+1) // LEDS_NUM+1 intervals
+
+#define LOOPBACK_STATE 1
+#define RECORD_STATE 2
+#define REC_STOP_STATE 3
+#define PLAY_STATE 4
+#define PAUSE_STATE 5
+#define IDLE 6
+
+/*#define PLAY_AUDIO 10
+#define SAVE_AUDIO 11
+*/
 
 altera_avalon_mailbox_dev* mailbox_0; // NIOSII_0 mailbox
 altera_avalon_mailbox_dev* mailbox_1; // HPS mailbox
 alt_up_audio_dev* audio_dev;
 
-alt_u16 blink = 0;
+alt_u8 blink = 0;
+alt_u8 signal = 0;
 
 /* Sheared memory*/
 uint32_t __attribute__((section (".l_buffer"))) l_buffer[262143];
 uint32_t __attribute__((section (".r_buffer"))) r_buffer[262143];
+int buff_inx = 0, left_right = 1;
 
 static void timer_isr(void* isr_context, alt_u32 id)
 {
@@ -50,7 +63,7 @@ void vometer(unsigned int value)
 
 void start_stop_timer(int start_stop) // 1 -> start, 0 -> stop
 {
-	IOWR_ALTERA_AVALON_PIO_DATA(LEDS_0_BASE, 0);
+	//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_0_BASE, 0);
 	switch(start_stop){
 		case 0:
 			IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_1_BASE, 8);
@@ -60,12 +73,19 @@ void start_stop_timer(int start_stop) // 1 -> start, 0 -> stop
 			break;
 	}
 }
+
+void reset_variables(){
+	buff_inx = 0;
+	signal = 0;
+}
+
 int main(void)
 {
 	unsigned int message[2];
-	unsigned int l_buf;
-	unsigned int r_buf;
-	int state = 1; // 1 -> loopback, 2 -> record, 3 -> play
+	unsigned int signal_hps[2] = {0x00001111, 0};
+	uint32_t l_buf;
+	uint32_t r_buf;
+	int state = 1; // 1 -> loopback, 2 -> record, 3 -> stop recording, 4 -> play, 5 -> pause
 
 	// one second period, 50e6 counts = 0x2FAF080
 	IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_1_BASE, 0xf080);
@@ -86,8 +106,9 @@ int main(void)
 			state = message[1];
 
 		switch(state){
-			case 1:
+			case LOOPBACK_STATE:
 				start_stop_timer(0); // stop timer
+				reset_variables();
 				if (alt_up_audio_read_fifo_avail(audio_dev, ALT_UP_AUDIO_RIGHT) > 0) // check if data is available
 				{
 					// read audio buffer
@@ -102,8 +123,13 @@ int main(void)
 					alt_up_audio_write_fifo(audio_dev, &(l_buf), 1, ALT_UP_AUDIO_LEFT);
 				}
 				break;
-			case 2:
+			case RECORD_STATE:
 				start_stop_timer(1); // start timer
+				if(signal == 0){
+					signal = 1;
+					signal_hps[1] = 11; // SAVE_AUDIO
+					altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+				}
 				if (alt_up_audio_read_fifo_avail(audio_dev, ALT_UP_AUDIO_RIGHT) > 0) // check if data is available
 				{
 					// read audio buffer
@@ -111,12 +137,51 @@ int main(void)
 					alt_up_audio_read_fifo(audio_dev, &(l_buf), 1, ALT_UP_AUDIO_LEFT);
 
 					// write to share memory
+					if(left_right)
+						r_buffer[buff_inx] = r_buf;
+					else
+						l_buffer[buff_inx] = r_buf;
 
-					// signalize HPS that buffer is ready (1 -> left buff, 2 -> right buff)
+					buff_inx++;
+					if(buff_inx == sizeof(r_buffer)){
+						buff_inx = 0;
+						if(left_right)
+							signal_hps[1] = 4;
+						else
+							signal_hps[1] = 3;
+
+						left_right = (left_right+1)%2;
+						// signalize HPS that buffer is ready (3 -> left buff, 4 -> right buff)
+						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+					}
 				}
 				break;
-			case 3:
+			case REC_STOP_STATE:
 				start_stop_timer(0); // stop timer
+				reset_variables();
+				signal_hps[1] = 2;
+				altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+				state = IDLE;
+				break;
+			case PLAY_STATE:
+				start_stop_timer(0); // stop timer
+				if(signal == 0){
+					signal = 1;
+					signal_hps[1] = 10; // PLAY_AUDIO
+					altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+				}
+
+				// code for playing recorded audio
+
+				break;
+			case PAUSE_STATE:
+				start_stop_timer(0); // stop timer
+				reset_variables();
+				signal_hps[1] = 5;
+				altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+				state = IDLE;
+				break;
+			default:
 				break;
 		}
 	}

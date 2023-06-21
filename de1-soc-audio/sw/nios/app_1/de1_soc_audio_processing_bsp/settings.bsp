@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 21, 2023 12:48:48 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1687344528425</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 21, 2023 5:26:55 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1687361215612</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Medion\Desktop\4.godina\8.semestar\PNRS\Grupni_zadatak\pnrs-2023\de1-soc-audio\sw\nios\app_1\de1_soc_audio_processing_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\Medion\Desktop\4.godina\8.semestar\PNRS\Grupni_zadatak\pnrs-2023\de1-soc-audio\hw\quartus\soc_system.sopcinfo</SopcDesignFile>

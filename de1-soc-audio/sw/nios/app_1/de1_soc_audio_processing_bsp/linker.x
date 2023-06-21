@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'nios2_gen2_1' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Wed Jun 21 12:48:48 CEST 2023
+ * Generated: Wed Jun 21 17:26:56 CEST 2023
  */
 
 /*
@@ -116,6 +116,21 @@ SECTIONS
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
+    .l_buffer :
+    {
+        PROVIDE (_alt_partition_l_buffer_start = ABSOLUTE(.));
+        *(.l_buffer .l_buffer.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_l_buffer_end = ABSOLUTE(.));
+    } > sdram_controller_0
+
+    .r_buffer :
+    {
+        PROVIDE (_alt_partition_r_buffer_start = ABSOLUTE(.));
+        *(.r_buffer .r_buffer.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_r_buffer_end = ABSOLUTE(.));
+    } > sdram_controller_0
 
     .text :
     {
@@ -359,23 +374,6 @@ SECTIONS
     .debug_funcnames 0 : { *(.debug_funcnames) }
     .debug_typenames 0 : { *(.debug_typenames) }
     .debug_varnames  0 : { *(.debug_varnames) }
-    
-    
-     .l_buffer 0x8600000:
-    {
-        PROVIDE (_alt_partition_l_buffer_start = ABSOLUTE(.));
-        *(.l_buffer .l_buffer.*)
-        . = ALIGN(4);
-        PROVIDE (_alt_partition_l_buffer_end = ABSOLUTE(.));
-    } > sdram_controller_0
-
-    .r_buffer 0x8800000:
-    {
-        PROVIDE (_alt_partition_r_buffer_start = ABSOLUTE(.));
-        *(.r_buffer .r_buffer.*)
-        . = ALIGN(4);
-        PROVIDE (_alt_partition_r_buffer_end = ABSOLUTE(.));
-    } > sdram_controller_0
 
     /* Altera debug extensions */
     .debug_alt_sim_info 0 : { *(.debug_alt_sim_info) }
