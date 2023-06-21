@@ -32,9 +32,11 @@ ifeq ($(findstring Microsoft,$(UNAME)),Microsoft)
 	WINDOWS_EXE = .exe
 endif
 
+eq = $(and $(findstring $(1),$(2)),$(findstring $(2),$(1)))
+
 ifdef WINDOWS_EXE 
 	adjust-path = $(if $1,$(shell wslpath "$1"),)
-	adjust-path-mixed = $(if $1,$(shell wslpath -m "$1"),)
+	adjust-path-mixed = $(if $(call eq,$(shell echo $1 | head -c 5),/mnt/),$(shell echo $1 | sed 's/\/mnt\///g;s/\//:\//1'),$1)
 else # !WINDOWS_EXE
 	adjust-path = $1
 	adjust-path-mixed = $1
@@ -96,10 +98,10 @@ ACDS_VERSION := 20.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 711
+# BUILD_NUMBER: 720
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+SOPC_FILE := D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
@@ -219,6 +221,17 @@ Avalon_Audio_driver_SRCS_ROOT := drivers
 # avalon_audio_driver sources 
 Avalon_Audio_driver_C_LIB_SRCS := \
 	$(Avalon_Audio_driver_SRCS_ROOT)/src/altera_up_avalon_audio.c
+
+# altera_avalon_jtag_uart_driver sources root 
+altera_avalon_jtag_uart_driver_SRCS_ROOT := drivers
+
+# altera_avalon_jtag_uart_driver sources 
+altera_avalon_jtag_uart_driver_C_LIB_SRCS := \
+	$(altera_avalon_jtag_uart_driver_SRCS_ROOT)/src/altera_avalon_jtag_uart_init.c \
+	$(altera_avalon_jtag_uart_driver_SRCS_ROOT)/src/altera_avalon_jtag_uart_read.c \
+	$(altera_avalon_jtag_uart_driver_SRCS_ROOT)/src/altera_avalon_jtag_uart_write.c \
+	$(altera_avalon_jtag_uart_driver_SRCS_ROOT)/src/altera_avalon_jtag_uart_ioctl.c \
+	$(altera_avalon_jtag_uart_driver_SRCS_ROOT)/src/altera_avalon_jtag_uart_fd.c
 
 # altera_avalon_mailbox_simple_hal_driver sources root 
 altera_avalon_mailbox_simple_hal_driver_SRCS_ROOT := drivers
@@ -348,6 +361,7 @@ hal_C_LIB_SRCS := \
 COMPONENT_C_LIB_SRCS += \
 	$(Avalon_Audio_and_Video_driver_C_LIB_SRCS) \
 	$(Avalon_Audio_driver_C_LIB_SRCS) \
+	$(altera_avalon_jtag_uart_driver_C_LIB_SRCS) \
 	$(altera_avalon_mailbox_simple_hal_driver_C_LIB_SRCS) \
 	$(altera_avalon_sysid_qsys_driver_C_LIB_SRCS) \
 	$(altera_avalon_timer_driver_C_LIB_SRCS) \

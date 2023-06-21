@@ -229,7 +229,8 @@ architecture rtl of de1_soc_top is
         hex_1_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
         hex_2_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
         hex_3_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
-        hex_4_external_connection_export      : out   std_logic_vector(6 downto 0);                      -- export
+        hex_4_external_connection_export      : out   std_logic_vector(6 downto 0); 
+		  hex_5_external_connection_export      : out   std_logic_vector(6 downto 0);       		  -- export
 		  audio_i2c_config_SDAT                 : inout std_logic                     := 'X';             -- SDAT
 		  audio_i2c_config_SCLK                 : out   std_logic;                                        -- SCLK
 		  audio_0_external_interface_ADCDAT     : in    std_logic                     := 'X';             -- ADCDAT
@@ -311,6 +312,7 @@ begin
             hex_2_external_connection_export      	=> HEX2_N,
             hex_3_external_connection_export      	=> HEX3_N,
             hex_4_external_connection_export      	=> HEX4_N,
+				hex_5_external_connection_export      	=> HEX5_N,
 				audio_i2c_config_SDAT                  => FPGA_I2C_SDAT,
 				audio_i2c_config_SCLK                  => FPGA_I2C_SCLK,
             audio_0_external_interface_ADCDAT      => AUD_ADCDAT,     --     audio_0_external_interface.ADCDAT

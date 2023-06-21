@@ -10,7 +10,8 @@
 
 /*
  * This file contains macros for module 'hps_0' and devices
- * connected to the following master:
+ * connected to the following masters:
+ *   h2f_axi_master
  *   h2f_lw_axi_master
  * 
  * Do not include this header file and another header file created for a
@@ -20,15 +21,65 @@
  */
 
 /*
+ * Macros for device 'mailbox_0', class 'altera_avalon_mailbox_simple'
+ * The macros are prefixed with 'MAILBOX_0_'.
+ * The prefix is the slave descriptor.
+ */
+#define MAILBOX_0_COMPONENT_TYPE altera_avalon_mailbox_simple
+#define MAILBOX_0_COMPONENT_NAME mailbox_0
+#define MAILBOX_0_BASE 0x0
+#define MAILBOX_0_SPAN 16
+#define MAILBOX_0_END 0xf
+
+/*
  * Macros for device 'mailbox_1', class 'altera_avalon_mailbox_simple'
  * The macros are prefixed with 'MAILBOX_1_'.
  * The prefix is the slave descriptor.
  */
 #define MAILBOX_1_COMPONENT_TYPE altera_avalon_mailbox_simple
 #define MAILBOX_1_COMPONENT_NAME mailbox_1
-#define MAILBOX_1_BASE 0x0
+#define MAILBOX_1_BASE 0x10
 #define MAILBOX_1_SPAN 16
-#define MAILBOX_1_END 0xf
+#define MAILBOX_1_END 0x1f
+
+/*
+ * Macros for device 'sdram_controller_0', class 'altera_avalon_new_sdram_controller'
+ * The macros are prefixed with 'SDRAM_CONTROLLER_0_'.
+ * The prefix is the slave descriptor.
+ */
+#define SDRAM_CONTROLLER_0_COMPONENT_TYPE altera_avalon_new_sdram_controller
+#define SDRAM_CONTROLLER_0_COMPONENT_NAME sdram_controller_0
+#define SDRAM_CONTROLLER_0_BASE 0x8000000
+#define SDRAM_CONTROLLER_0_SPAN 67108864
+#define SDRAM_CONTROLLER_0_END 0xbffffff
+#define SDRAM_CONTROLLER_0_CAS_LATENCY 3
+#define SDRAM_CONTROLLER_0_CONTENTS_INFO 
+#define SDRAM_CONTROLLER_0_INIT_NOP_DELAY 0.0
+#define SDRAM_CONTROLLER_0_INIT_REFRESH_COMMANDS 2
+#define SDRAM_CONTROLLER_0_IS_INITIALIZED 1
+#define SDRAM_CONTROLLER_0_POWERUP_DELAY 100.0
+#define SDRAM_CONTROLLER_0_REFRESH_PERIOD 7.8125
+#define SDRAM_CONTROLLER_0_REGISTER_DATA_IN 1
+#define SDRAM_CONTROLLER_0_SDRAM_ADDR_WIDTH 25
+#define SDRAM_CONTROLLER_0_SDRAM_BANK_WIDTH 2
+#define SDRAM_CONTROLLER_0_SDRAM_COL_WIDTH 10
+#define SDRAM_CONTROLLER_0_SDRAM_DATA_WIDTH 16
+#define SDRAM_CONTROLLER_0_SDRAM_NUM_BANKS 4
+#define SDRAM_CONTROLLER_0_SDRAM_NUM_CHIPSELECTS 1
+#define SDRAM_CONTROLLER_0_SDRAM_ROW_WIDTH 13
+#define SDRAM_CONTROLLER_0_SHARED_DATA 0
+#define SDRAM_CONTROLLER_0_SIM_MODEL_BASE 0
+#define SDRAM_CONTROLLER_0_STARVATION_INDICATOR 0
+#define SDRAM_CONTROLLER_0_TRISTATE_BRIDGE_SLAVE ""
+#define SDRAM_CONTROLLER_0_T_AC 5.4
+#define SDRAM_CONTROLLER_0_T_MRD 3
+#define SDRAM_CONTROLLER_0_T_RCD 15.0
+#define SDRAM_CONTROLLER_0_T_RFC 70.0
+#define SDRAM_CONTROLLER_0_T_RP 15.0
+#define SDRAM_CONTROLLER_0_T_WR 14.0
+#define SDRAM_CONTROLLER_0_MEMORY_INFO_DAT_SYM_INSTALL_DIR SIM_DIR
+#define SDRAM_CONTROLLER_0_MEMORY_INFO_GENERATE_DAT_SYM 1
+#define SDRAM_CONTROLLER_0_MEMORY_INFO_MEM_INIT_DATA_WIDTH 16
 
 
 #endif /* _ALTERA_HPS_SOC_SYSTEM_H_ */

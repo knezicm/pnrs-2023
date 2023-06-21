@@ -5,6 +5,7 @@
  *      Author: Nemanja
  */
 
+#include "stdint.h"
 #include "system.h"
 #include "sys/alt_irq.h"
 #include "altera_avalon_timer_regs.h"
@@ -21,6 +22,10 @@ altera_avalon_mailbox_dev* mailbox_1; // HPS mailbox
 alt_up_audio_dev* audio_dev;
 
 alt_u16 blink = 0;
+
+/* Sheared memory*/
+uint32_t __attribute__((section (".l_buffer"))) l_buffer[262143];
+uint32_t __attribute__((section (".r_buffer"))) r_buffer[262143];
 
 static void timer_isr(void* isr_context, alt_u32 id)
 {

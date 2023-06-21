@@ -6,17 +6,20 @@
 C_SRCS += \
 ../alt_generalpurpose_io.c \
 ../audio.c \
-../hps_linux.c 
+../hps_linux.c \
+../mailbox.c 
 
 C_DEPS += \
 ./alt_generalpurpose_io.d \
 ./audio.d \
-./hps_linux.d 
+./hps_linux.d \
+./mailbox.d 
 
 OBJS += \
 ./alt_generalpurpose_io.o \
 ./audio.o \
-./hps_linux.o 
+./hps_linux.o \
+./mailbox.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -31,7 +34,7 @@ OBJS += \
 clean: clean--2e-
 
 clean--2e-:
-	-$(RM) ./alt_generalpurpose_io.d ./alt_generalpurpose_io.o ./audio.d ./audio.o ./hps_linux.d ./hps_linux.o
+	-$(RM) ./alt_generalpurpose_io.d ./alt_generalpurpose_io.o ./audio.d ./audio.o ./hps_linux.d ./hps_linux.o ./mailbox.d ./mailbox.o
 
 .PHONY: clean--2e-
 

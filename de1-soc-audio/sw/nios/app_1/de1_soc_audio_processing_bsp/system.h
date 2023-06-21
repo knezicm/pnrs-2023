@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'nios2_gen2_1' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Fri Jun 16 15:57:53 CEST 2023
+ * Generated: Wed Jun 21 12:48:48 CEST 2023
  */
 
 /*
@@ -62,7 +62,7 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_gen2"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x00000820
+#define ALT_CPU_BREAK_ADDR 0x00001020
 #define ALT_CPU_CPU_ARCH_NIOS2_R1
 #define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
@@ -72,7 +72,7 @@
 #define ALT_CPU_DCACHE_LINE_SIZE 0
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_DCACHE_SIZE 0
-#define ALT_CPU_EXCEPTION_ADDR 0x04100020
+#define ALT_CPU_EXCEPTION_ADDR 0x08100020
 #define ALT_CPU_FLASH_ACCELERATOR_LINES 0
 #define ALT_CPU_FLASH_ACCELERATOR_LINE_SIZE 0
 #define ALT_CPU_FLUSHDA_SUPPORTED
@@ -87,10 +87,10 @@
 #define ALT_CPU_ICACHE_LINE_SIZE 0
 #define ALT_CPU_ICACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_ICACHE_SIZE 0
-#define ALT_CPU_INST_ADDR_WIDTH 0x1b
+#define ALT_CPU_INST_ADDR_WIDTH 0x1c
 #define ALT_CPU_NAME "nios2_gen2_1"
 #define ALT_CPU_OCI_VERSION 1
-#define ALT_CPU_RESET_ADDR 0x04100000
+#define ALT_CPU_RESET_ADDR 0x08100000
 
 
 /*
@@ -99,7 +99,7 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x00000820
+#define NIOS2_BREAK_ADDR 0x00001020
 #define NIOS2_CPU_ARCH_NIOS2_R1
 #define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
@@ -109,7 +109,7 @@
 #define NIOS2_DCACHE_LINE_SIZE 0
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 0
 #define NIOS2_DCACHE_SIZE 0
-#define NIOS2_EXCEPTION_ADDR 0x04100020
+#define NIOS2_EXCEPTION_ADDR 0x08100020
 #define NIOS2_FLASH_ACCELERATOR_LINES 0
 #define NIOS2_FLASH_ACCELERATOR_LINE_SIZE 0
 #define NIOS2_FLUSHDA_SUPPORTED
@@ -123,9 +123,9 @@
 #define NIOS2_ICACHE_LINE_SIZE 0
 #define NIOS2_ICACHE_LINE_SIZE_LOG2 0
 #define NIOS2_ICACHE_SIZE 0
-#define NIOS2_INST_ADDR_WIDTH 0x1b
+#define NIOS2_INST_ADDR_WIDTH 0x1c
 #define NIOS2_OCI_VERSION 1
-#define NIOS2_RESET_ADDR 0x04100000
+#define NIOS2_RESET_ADDR 0x08100000
 
 
 /*
@@ -133,6 +133,7 @@
  *
  */
 
+#define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_MAILBOX_SIMPLE
 #define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
 #define __ALTERA_AVALON_PIO
@@ -158,18 +159,24 @@
 #define ALT_NUM_EXTERNAL_INTERRUPT_CONTROLLERS 0
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
-#define ALT_STDERR "/dev/null"
-#define ALT_STDERR_BASE 0x0
-#define ALT_STDERR_DEV null
-#define ALT_STDERR_TYPE ""
-#define ALT_STDIN "/dev/null"
-#define ALT_STDIN_BASE 0x0
-#define ALT_STDIN_DEV null
-#define ALT_STDIN_TYPE ""
-#define ALT_STDOUT "/dev/null"
-#define ALT_STDOUT_BASE 0x0
-#define ALT_STDOUT_DEV null
-#define ALT_STDOUT_TYPE ""
+#define ALT_STDERR "/dev/jtag_uart_0"
+#define ALT_STDERR_BASE 0xc8
+#define ALT_STDERR_DEV jtag_uart_0
+#define ALT_STDERR_IS_JTAG_UART
+#define ALT_STDERR_PRESENT
+#define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
+#define ALT_STDIN "/dev/jtag_uart_0"
+#define ALT_STDIN_BASE 0xc8
+#define ALT_STDIN_DEV jtag_uart_0
+#define ALT_STDIN_IS_JTAG_UART
+#define ALT_STDIN_PRESENT
+#define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
+#define ALT_STDOUT "/dev/jtag_uart_0"
+#define ALT_STDOUT_BASE 0xc8
+#define ALT_STDOUT_DEV jtag_uart_0
+#define ALT_STDOUT_IS_JTAG_UART
+#define ALT_STDOUT_PRESENT
+#define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "soc_system"
 
 
@@ -179,7 +186,7 @@
  */
 
 #define ALT_MODULE_CLASS_audio_0 altera_up_avalon_audio
-#define AUDIO_0_BASE 0x1070
+#define AUDIO_0_BASE 0x70
 #define AUDIO_0_IRQ 0
 #define AUDIO_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define AUDIO_0_NAME "/dev/audio_0"
@@ -193,7 +200,7 @@
  */
 
 #define ALT_MODULE_CLASS_audio_and_video_config_0 altera_up_avalon_audio_and_video_config
-#define AUDIO_AND_VIDEO_CONFIG_0_BASE 0x1060
+#define AUDIO_AND_VIDEO_CONFIG_0_BASE 0x60
 #define AUDIO_AND_VIDEO_CONFIG_0_IRQ -1
 #define AUDIO_AND_VIDEO_CONFIG_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define AUDIO_AND_VIDEO_CONFIG_0_NAME "/dev/audio_and_video_config_0"
@@ -213,12 +220,30 @@
 
 
 /*
+ * jtag_uart_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
+#define JTAG_UART_0_BASE 0xc8
+#define JTAG_UART_0_IRQ 2
+#define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define JTAG_UART_0_NAME "/dev/jtag_uart_0"
+#define JTAG_UART_0_READ_DEPTH 64
+#define JTAG_UART_0_READ_THRESHOLD 8
+#define JTAG_UART_0_SPAN 8
+#define JTAG_UART_0_TYPE "altera_avalon_jtag_uart"
+#define JTAG_UART_0_WRITE_DEPTH 64
+#define JTAG_UART_0_WRITE_THRESHOLD 8
+
+
+/*
  * leds_0 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_leds_0 altera_avalon_pio
-#define LEDS_0_BASE 0x1040
+#define LEDS_0_BASE 0x40
 #define LEDS_0_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDS_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDS_0_CAPTURE 0
@@ -245,7 +270,7 @@
  */
 
 #define ALT_MODULE_CLASS_mailbox_0 altera_avalon_mailbox_simple
-#define MAILBOX_0_BASE 0x1050
+#define MAILBOX_0_BASE 0x50
 #define MAILBOX_0_IRQ -1
 #define MAILBOX_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MAILBOX_0_NAME "/dev/mailbox_0"
@@ -259,7 +284,7 @@
  */
 
 #define ALT_MODULE_CLASS_mailbox_1 altera_avalon_mailbox_simple
-#define MAILBOX_1_BASE 0x8001090
+#define MAILBOX_1_BASE 0xb0
 #define MAILBOX_1_IRQ -1
 #define MAILBOX_1_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MAILBOX_1_NAME "/dev/mailbox_1"
@@ -273,7 +298,7 @@
  */
 
 #define ALT_MODULE_CLASS_sdram_controller_0 altera_avalon_new_sdram_controller
-#define SDRAM_CONTROLLER_0_BASE 0x4000000
+#define SDRAM_CONTROLLER_0_BASE 0x8000000
 #define SDRAM_CONTROLLER_0_CAS_LATENCY 3
 #define SDRAM_CONTROLLER_0_CONTENTS_INFO
 #define SDRAM_CONTROLLER_0_INIT_NOP_DELAY 0.0
@@ -312,13 +337,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x80010b0
+#define SYSID_BASE 0xc0
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1686846850
+#define SYSID_TIMESTAMP 1687342902
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -329,7 +354,7 @@
 
 #define ALT_MODULE_CLASS_timer_1 altera_avalon_timer
 #define TIMER_1_ALWAYS_RUN 0
-#define TIMER_1_BASE 0x1000
+#define TIMER_1_BASE 0x0
 #define TIMER_1_COUNTER_SIZE 32
 #define TIMER_1_FIXED_PERIOD 0
 #define TIMER_1_FREQ 50000000

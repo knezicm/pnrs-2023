@@ -22,6 +22,7 @@
 #include "../hps_soc_system.h"
 
 #include "audio.h"
+#include "mailbox.h"
 
 void open_physical_memory_device()
 {
@@ -58,7 +59,23 @@ void mmap_fpga_peripherals()
 		exit(EXIT_FAILURE);
 	}
 
-	// TODO: map peripherals
+
+	h2f_axi_master = mmap( NULL, HW_FPGA_AXI_SPAN, ( PROT_READ | PROT_WRITE ), MAP_SHARED, fd_dev_mem,ALT_AXI_FPGASLVS_OFST );
+
+	if(h2f_axi_master == MAP_FAILED)
+	{
+		printf("ERROR: h2f_axi_master mmap() failed.\n");
+		printf("    errno = %s\n", strerror(errno));
+		close(fd_dev_mem);
+		exit(EXIT_FAILURE);
+	}
+
+	send_mailbox = h2f_lw_axi_master + MAILBOX_0_BASE;
+	rec_mailbox = h2f_lw_axi_master + MAILBOX_1_BASE;
+
+	l_buffer = h2f_axi_master + L_BUFFER_OFST;
+	r_buffer = h2f_axi_master + R_BUFFER_OFST;
+
 }
 
 void munmap_fpga_peripherals()
@@ -70,7 +87,17 @@ void munmap_fpga_peripherals()
 		exit(EXIT_FAILURE);
 	}
 
+	if(munmap(h2f_axi_master, HW_FPGA_AXI_SPAN) != 0){
+			printf("ERROR: h2f_lw_axi_master munmap() failed.\n");
+			printf("    errno = %s\n", strerror(errno));
+			close(fd_dev_mem);
+			exit(EXIT_FAILURE);
+		}
+
+	send_mailbox = NULL;
 	rec_mailbox = NULL;
+	l_buffer = NULL;
+	r_buffer = NULL;
 }
 
 void munmap_hps_peripherals()
@@ -105,19 +132,19 @@ void close_physical_memory_device()
 
 int main()
 {
-	uint32_t message;
+	uint32_t message[2];
 	open_physical_memory_device();
 	mmap_peripherals();
 
 	while(1)
 	{
-		message = alt_read_word(rec_mailbox);
+		receive_message(message, 0);
 
-		if(message == SAVE_AUDIO)
+		if(message[1] == SAVE_AUDIO)
 		{
 			hps_save_sampels();
 		}
-		else if (message == PLAY_AUDIO)
+		else if (message[1] == PLAY_AUDIO)
 		{
 			hps_read_sampels();
 		}

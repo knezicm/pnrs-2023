@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'nios2_gen2_1' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: C:/Users/Medion/Desktop/4.godina/8.semestar/PNRS/Grupni_zadatak/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Fri Jun 16 15:57:53 CEST 2023
+ * Generated: Wed Jun 21 12:48:48 CEST 2023
  */
 
 /*
@@ -50,13 +50,13 @@
 
 MEMORY
 {
-    sdram_controller_0_BEFORE_RESET : ORIGIN = 0x4000000, LENGTH = 1048576
-    reset : ORIGIN = 0x4100000, LENGTH = 32
-    sdram_controller_0 : ORIGIN = 0x4100020, LENGTH = 66060256
+    sdram_controller_0_BEFORE_RESET : ORIGIN = 0x8000000, LENGTH = 1048576
+    reset : ORIGIN = 0x8100000, LENGTH = 32
+    sdram_controller_0 : ORIGIN = 0x8100020, LENGTH = 66060256
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_sdram_controller_0 = 0x4000000;
+__alt_mem_sdram_controller_0 = 0x8000000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -115,6 +115,7 @@ SECTIONS
     } > sdram_controller_0
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
+
 
     .text :
     {
@@ -358,6 +359,23 @@ SECTIONS
     .debug_funcnames 0 : { *(.debug_funcnames) }
     .debug_typenames 0 : { *(.debug_typenames) }
     .debug_varnames  0 : { *(.debug_varnames) }
+    
+    
+     .l_buffer 0x8600000:
+    {
+        PROVIDE (_alt_partition_l_buffer_start = ABSOLUTE(.));
+        *(.l_buffer .l_buffer.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_l_buffer_end = ABSOLUTE(.));
+    } > sdram_controller_0
+
+    .r_buffer 0x8800000:
+    {
+        PROVIDE (_alt_partition_r_buffer_start = ABSOLUTE(.));
+        *(.r_buffer .r_buffer.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_r_buffer_end = ABSOLUTE(.));
+    } > sdram_controller_0
 
     /* Altera debug extensions */
     .debug_alt_sim_info 0 : { *(.debug_alt_sim_info) }
@@ -368,7 +386,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x8000000;
+__alt_data_end = 0xc000000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -384,4 +402,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x8000000 );
+PROVIDE( __alt_heap_limit    = 0xc000000 );

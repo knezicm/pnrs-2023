@@ -70,7 +70,8 @@ module soc_system (
 	sdram_controller_0_wire_dqm,
 	sdram_controller_0_wire_ras_n,
 	sdram_controller_0_wire_we_n,
-	switches_0_external_connection_export);	
+	switches_0_external_connection_export,
+	hex_5_external_connection_export);	
 
 	input		audio_0_external_interface_ADCDAT;
 	input		audio_0_external_interface_ADCLRCK;
@@ -143,4 +144,5 @@ module soc_system (
 	output		sdram_controller_0_wire_ras_n;
 	output		sdram_controller_0_wire_we_n;
 	input	[9:0]	switches_0_external_connection_export;
+	output	[6:0]	hex_5_external_connection_export;
 endmodule

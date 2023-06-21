@@ -69,6 +69,7 @@
 		.sdram_controller_0_wire_dqm           (<connected-to-sdram_controller_0_wire_dqm>),           //                               .dqm
 		.sdram_controller_0_wire_ras_n         (<connected-to-sdram_controller_0_wire_ras_n>),         //                               .ras_n
 		.sdram_controller_0_wire_we_n          (<connected-to-sdram_controller_0_wire_we_n>),          //                               .we_n
-		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>)  // switches_0_external_connection.export
+		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>), // switches_0_external_connection.export
+		.hex_5_external_connection_export      (<connected-to-hex_5_external_connection_export>)       //      hex_5_external_connection.export
 	);
 

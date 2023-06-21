@@ -37,9 +37,11 @@ ifeq ($(findstring Microsoft,$(UNAME)),Microsoft)
 	WINDOWS_EXE = .exe
 endif
 
+eq = $(and $(findstring $(1),$(2)),$(findstring $(2),$(1)))
+
 ifdef WINDOWS_EXE 
 	adjust-path = $(if $1,$(shell wslpath "$1"),)
-	adjust-path-mixed = $(if $1,$(shell wslpath -m "$1"),)
+	adjust-path-mixed = $(if $(call eq,$(shell echo $1 | head -c 5),/mnt/),$(shell echo $1 | sed 's/\/mnt\///g;s/\//:\//1'),$1)
 else # !WINDOWS_EXE
 	adjust-path = $1
 	adjust-path-mixed = $1
@@ -186,13 +188,13 @@ ACDS_VERSION := 20.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 711
+# BUILD_NUMBER: 720
 
 # Optimize for simulation
 SIM_OPTIMIZE ?= 0
 
 # The CPU reset address as needed by elf2flash
-RESET_ADDRESS ?= 0x04100000
+RESET_ADDRESS ?= 0x08100000
 
 # The specific Nios II ELF file format to use.
 NIOS2_ELF_FORMAT ?= elf32-littlenios2
@@ -208,8 +210,8 @@ DAT_FILES += $(HDL_SIM_DIR)/$(MEM_0).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_0).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).sym
-$(MEM_0)_START := 0x04000000
-$(MEM_0)_END := 0x07ffffff
+$(MEM_0)_START := 0x08000000
+$(MEM_0)_END := 0x0bffffff
 $(MEM_0)_SPAN := 0x04000000
 $(MEM_0)_HIERARCHICAL_PATH := sdram_controller_0
 $(MEM_0)_WIDTH := 16

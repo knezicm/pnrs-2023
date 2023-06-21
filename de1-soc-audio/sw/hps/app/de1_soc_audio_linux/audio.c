@@ -19,10 +19,10 @@
  */
 void hps_save_sampels()
 {
-	uint32_t *sampels_buff1; // WHAT ADDRESS?
-	uint32_t *sampels_buff2; // WHAT ADDRESS?
+	uint32_t *sampels_buff1 = (uint32_t*) l_buffer;
+	uint32_t *sampels_buff2 = (uint32_t*) r_buffer;
 	uint32_t left_chn, right_chn;
-	uint32_t message;
+	uint32_t message[2];
 	FILE *file = fopen(FILE_NAME, "w");
 
 	/* Can't create a recording*/
@@ -35,15 +35,15 @@ void hps_save_sampels()
 	while(1)
 	{
 		/* Read mailbox message*/
-		message = alt_read_word(rec_mailbox);
+		receive_message(message, 0);
 
-		if (message == STOP_RECORDING)
+		if (message[1] == STOP_RECORDING)
 		{
 			/* Closing the file and returning to normal state */
 			fclose(file);
 			return;
 		}
-		else if (message == READ_BUFF_1)
+		else if (message[1] == READ_BUFF_1)
 		{
 			for (int i = 0; i < BUFF_SIZE; i=+2)
 			{
@@ -54,7 +54,7 @@ void hps_save_sampels()
 				fprintf(file, "%d %d\n", left_chn, right_chn);
 			}
 		}
-		else if (message == READ_BUFF_2)
+		else if (message[1] == READ_BUFF_2)
 		{
 			for (int i = 0; i < BUFF_SIZE; i=+2)
 			{
@@ -71,10 +71,10 @@ void hps_save_sampels()
 
 void hps_read_sampels()
 {
-	uint32_t *sampels_buff1; // WHAT ADDRESS?
-	uint32_t *sampels_buff2; // WHAT ADDRESS?
+	uint32_t *sampels_buff1 = (uint32_t*) l_buffer;
+	uint32_t *sampels_buff2 = (uint32_t*) r_buffer;
 	uint32_t left_chn, right_chn;
-	uint32_t message;
+	uint32_t message[2];
 	FILE *file = fopen(FILE_NAME, "r");
 
 	/* No recording was found*/
@@ -87,15 +87,15 @@ void hps_read_sampels()
 	while(1)
 	{
 		/* Read mailbox message*/
-		message = alt_read_word(rec_mailbox);
+		receive_message(message, 0);
 
-		if (message == STOP_PLAYING_RECORDING)
+		if (message[1] == STOP_PLAYING_RECORDING)
 		{
 			/* Closing the file and returning to normal state */
 			fclose(file);
 			return;
 		}
-		else if (message == READ_BUFF_1)
+		else if (message[1] == READ_BUFF_1)
 		{
 			for (int i = 0; i < BUFF_SIZE; i=+2)
 			{
@@ -108,10 +108,12 @@ void hps_read_sampels()
 			}
 
 			// Informing NIOS(2) that the buffer is filled
-			message = BUFF_1_FILLED;
-			alt_write_word(send_mailbox, message);
+			message[0] = BUFF_2_FILLED;
+			message[1] = BUFF_2_FILLED;
+
+			mailbox_send(message, 0);
 		}
-		else if (message == READ_BUFF_2)
+		else if (message[1] == READ_BUFF_2)
 		{
 			for (int i = 0; i < BUFF_SIZE; i=+2)
 			{
@@ -123,8 +125,10 @@ void hps_read_sampels()
 			}
 
 			// Informing NIOS(2) that the buffer is filled
-			message = BUFF_2_FILLED;
-			alt_write_word(send_mailbox, message);
+			message[0] = BUFF_2_FILLED;
+			message[1] = BUFF_2_FILLED;
+
+			mailbox_send(message, 0);
 		}
 	}
 

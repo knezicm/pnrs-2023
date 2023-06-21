@@ -15,6 +15,8 @@
 
 #include "socal/socal.h"
 
+#include "mailbox.h"
+
 #define STOP_RECORDING 2
 #define READ_BUFF_1 3
 #define READ_BUFF_2 4
@@ -30,6 +32,8 @@
 
 extern void* rec_mailbox;
 extern void* send_mailbox;
+extern void* l_buffer;
+extern void* r_buffer;
 
 
 void hps_save_sampels();
