@@ -105,6 +105,7 @@ void display_mode(int mode)
 int main()
 {
 	unsigned short buttons;
+	unsigned int message[2] = {0x00001111, 0};
 
 	/* Inicijalizacija mailboxa. */
 	mailbox_0 = altera_avalon_mailbox_open(MAILBOX_0_NAME, NULL, NULL);
@@ -126,20 +127,23 @@ int main()
 		if(buttons == 0xE)
 		{
 			mode = 1;
+			message[1] = 1;
 		}
 		else if(buttons == 0xD)
 		{
 			mode = 2;
+			message[1] = 2;
 		}
 		else if(buttons == 0xB)
 		{
 			mode = 3;
+			message[1] = 3;
 		}
 
 		clear_display();
 		display_mode(mode);
 
 		/* Slanje moda rada na HPS. */
-		altera_avalon_mailbox_send(mailbox_0, mode, 0, POLL);
+		altera_avalon_mailbox_send(mailbox_0, message, 0, POLL);
 	}
 }
