@@ -86,6 +86,7 @@ int main(void)
 	uint32_t l_buf;
 	uint32_t r_buf;
 	int state = 1; // 1 -> loopback, 2 -> record, 3 -> stop recording, 4 -> play, 5 -> pause
+	int play_flag = 2;
 
 	// one second period, 50e6 counts = 0x2FAF080
 	IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_1_BASE, 0xf080);
@@ -122,6 +123,7 @@ int main(void)
 					alt_up_audio_write_fifo(audio_dev, &(r_buf), 1, ALT_UP_AUDIO_RIGHT);
 					alt_up_audio_write_fifo(audio_dev, &(l_buf), 1, ALT_UP_AUDIO_LEFT);
 				}
+				play_flag = 2;
 				break;
 			case RECORD_STATE:
 				start_stop_timer(1); // start timer
@@ -155,6 +157,7 @@ int main(void)
 						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 					}
 				}
+				play_flag = 2;
 				break;
 			case REC_STOP_STATE:
 				start_stop_timer(0); // stop timer
@@ -162,6 +165,7 @@ int main(void)
 				signal_hps[1] = 2;
 				altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 				state = IDLE;
+				play_flag = 2;
 				break;
 			case PLAY_STATE:
 				start_stop_timer(0); // stop timer
@@ -170,9 +174,49 @@ int main(void)
 					signal_hps[1] = 10; // PLAY_AUDIO
 					altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 				}
-
 				// code for playing recorded audio
 
+				/* Provjera koji buffer je spreman za preuzimanje podataka. */
+				altera_avalon_mailbox_retrieve_poll(mailbox_1, signal_hps, 100);
+
+				if(signal_hps[1] == 3) //Spreman lijevi bafer.
+				{
+					buff_inx = 0;
+					/* Blokiranje ponovnog citanja lijevog bafera ukoliko desni jos nije spreman */
+					if(play_flag != 1)
+					{
+						for(buff_inx = 0; buff_inx < sizeof(l_buffer); buff_inx++)
+						{
+							r_buf = l_buffer[buff_inx];
+
+							vometer(r_buf);
+
+							alt_up_audio_write_fifo(audio_dev, &(r_buf), 1, ALT_UP_AUDIO_RIGHT);
+							alt_up_audio_write_fifo(audio_dev, &(r_buf), 1, ALT_UP_AUDIO_LEFT);
+						}
+
+						play_flag = 1;
+					}
+				}
+				else if(signal_hps[1] == 4) //Spreman desni bafer.
+				{
+					buff_inx = 0;
+					/* Blokiranje ponovnog citanja desnog bafera ukoliko lijevi jos nije spreman. */
+					if(play_flag != 0)
+					{
+						for(buff_inx = 0; buff_inx < sizeof(r_buffer); buff_inx++)
+						{
+							r_buf = r_buffer[buff_inx];
+
+							vometer(r_buf);
+
+							alt_up_audio_write_fifo(audio_dev, &(r_buf), 1, ALT_UP_AUDIO_RIGHT);
+							alt_up_audio_write_fifo(audio_dev, &(r_buf), 1, ALT_UP_AUDIO_LEFT);
+						}
+
+						play_flag = 0;
+					}
+				}
 				break;
 			case PAUSE_STATE:
 				start_stop_timer(0); // stop timer
@@ -180,6 +224,7 @@ int main(void)
 				signal_hps[1] = 5;
 				altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 				state = IDLE;
+				play_flag = 2;
 				break;
 			default:
 				break;
