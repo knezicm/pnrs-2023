@@ -85,12 +85,45 @@ void display_loop()
 	IOWR(HEX_3_BASE, 0, 0x00000021);
 }
 
+void display_stop()
+{
+	/* Display Hex_0 letter S */
+	IOWR(HEX_0_BASE, 0, 0x00000012);
+
+	/* Display Hex_1 letter t */
+	IOWR(HEX_1_BASE, 0, 0x00000038);
+
+	/* Display Hex_2 letter O */
+	IOWR(HEX_2_BASE, 0, 0x00000040);
+
+	/* Display Hex_3 letter P */
+	IOWR(HEX_3_BASE, 0, 0x00000021);
+}
+
+void display_pause()
+{
+	/* Display Hex_0 letter P */
+	IOWR(HEX_0_BASE, 0, 0x00000021);
+
+	/* Display Hex_1 letter A */
+	IOWR(HEX_1_BASE, 0, 0x00000001);
+
+	/* Display Hex_2 letter U */
+	IOWR(HEX_2_BASE, 0, 0x00000048);
+
+	/* Display Hex_3 letter S */
+	IOWR(HEX_3_BASE, 0, 0x00000012);
+
+	/* Display Hex_4 letter E */
+	IOWR(HEX_4_BASE, 0, 0x00000030);
+}
+
 void display_mode(int mode)
 {
 	/* Mode: 1 - play, 2 - record, 3 - loopback. */
 	if(mode == 1)
 	{
-		display_play();
+		display_loop();
 	}
 	else if(mode == 2)
 	{
@@ -98,14 +131,27 @@ void display_mode(int mode)
 	}
 	else if(mode == 3)
 	{
-		display_loop();
+		display_stop();
+	}
+	else if(mode == 4)
+	{
+		display_play();
+	}
+	else if(mode == 5)
+	{
+		display_pause();
+	}
+	else
+	{
+		clear_display();
 	}
 }
 
 int main()
 {
 	unsigned short buttons;
-	unsigned int message[2] = {0x00001111, 0};
+	short key_1 = 0;
+	short key_2 = 0;
 
 	/* Inicijalizacija mailboxa. */
 	mailbox_0 = altera_avalon_mailbox_open(MAILBOX_0_NAME, NULL, NULL);
@@ -116,6 +162,8 @@ int main()
 
 	while(1)
 	{
+		clear_display();
+
 		/* Citanje vrijednosti buttona. */
 		buttons = IORD_ALTERA_AVALON_PIO_DATA(BUTTON_0_BASE);
 
@@ -127,23 +175,40 @@ int main()
 		if(buttons == 0xE)
 		{
 			mode = 1;
-			message[1] = 1;
 		}
 		else if(buttons == 0xD)
 		{
-			mode = 2;
-			message[1] = 2;
+			usleep(70000);
+			key_1++;
+			if(mode != 3 && key_1 > 0)
+			{
+				mode = 3;
+				key_1 = 0;
+			}
+			else if(mode == 3 && key_1 > 0)
+			{
+				mode = 2;
+				key_1 = 0;
+			}
 		}
 		else if(buttons == 0xB)
 		{
-			mode = 3;
-			message[1] = 3;
+			usleep(70000);
+			key_2++;
+			if(mode != 4 && key_2 > 0)
+			{
+				mode = 4;
+			}
+			else if(mode == 4 && key_2 > 0)
+			{
+				mode = 5;
+			}
 		}
 
 		clear_display();
 		display_mode(mode);
 
 		/* Slanje moda rada na HPS. */
-		altera_avalon_mailbox_send(mailbox_0, message, 0, POLL);
+		altera_avalon_mailbox_send(mailbox_0, mode, 0, POLL);
 	}
 }
