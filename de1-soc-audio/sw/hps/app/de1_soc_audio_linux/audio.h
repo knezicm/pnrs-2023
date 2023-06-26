@@ -20,14 +20,16 @@
 #define STOP_RECORDING 2
 #define READ_BUFF_1 3
 #define READ_BUFF_2 4
+#define CANT_SAVE_RECORDING 98
 
 #define STOP_PLAYING_RECORDING 5
 #define WRITE_BUFF_1 6
 #define WRITE_BUFF_2 7
 #define BUFF_1_FILLED 9
 #define BUFF_2_FILLED 10
+#define NO_RECORDING 99
 
-#define BUFF_SIZE 1024
+#define BUFF_SIZE 262143
 #define FILE_NAME "saved_samples.txt"
 
 extern void* rec_mailbox;

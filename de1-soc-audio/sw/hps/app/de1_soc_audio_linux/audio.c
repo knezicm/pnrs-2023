@@ -28,7 +28,12 @@ void hps_save_sampels()
 	/* Can't create a recording*/
 	if (file == NULL)
 	{
-		// TODO: Inform NIOS(2) that we can't save the recording
+		/* Inform NIOS(2) that we can't save the recording */
+		message[0] = CANT_SAVE_RECORDING;
+		message[1] = CANT_SAVE_RECORDING;
+
+		mailbox_send(message, 0);
+
 		return;
 	}
 
@@ -80,7 +85,11 @@ void hps_read_sampels()
 	/* No recording was found*/
 	if (file == NULL)
 	{
-		// TODO: Inform NIOS(2) that there is no recording
+		/* Inform NIOS(2) that there is no recording */
+		message[0] = NO_RECORDING;
+		message[1] = NO_RECORDING;
+
+		mailbox_send(message, 0);
 		return;
 	}
 
@@ -95,7 +104,7 @@ void hps_read_sampels()
 			fclose(file);
 			return;
 		}
-		else if (message[1] == READ_BUFF_1)
+		else if (message[1] == WRITE_BUFF_1)
 		{
 			for (int i = 0; i < BUFF_SIZE; i=+2)
 			{
@@ -108,12 +117,12 @@ void hps_read_sampels()
 			}
 
 			// Informing NIOS(2) that the buffer is filled
-			message[0] = BUFF_2_FILLED;
-			message[1] = BUFF_2_FILLED;
+			message[0] = BUFF_1_FILLED;
+			message[1] = BUFF_1_FILLED;
 
 			mailbox_send(message, 0);
 		}
-		else if (message[1] == READ_BUFF_2)
+		else if (message[1] == WRITE_BUFF_2)
 		{
 			for (int i = 0; i < BUFF_SIZE; i=+2)
 			{
