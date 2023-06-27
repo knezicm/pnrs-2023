@@ -152,6 +152,7 @@ int main()
 	unsigned short buttons;
 	short key_1 = 0;
 	short key_2 = 0;
+	unsigned int signal[2] = {0x00001111, 0};
 
 	/* Inicijalizacija mailboxa. */
 	mailbox_0 = altera_avalon_mailbox_open(MAILBOX_0_NAME, NULL, NULL);
@@ -180,14 +181,14 @@ int main()
 		{
 			usleep(70000);
 			key_1++;
-			if(mode != 3 && key_1 > 0)
-			{
-				mode = 3;
-				key_1 = 0;
-			}
-			else if(mode == 3 && key_1 > 0)
+			if(mode != 2 && key_1 > 0)
 			{
 				mode = 2;
+				key_1 = 0;
+			}
+			else if(mode == 2 && key_1 > 0)
+			{
+				mode = 3;
 				key_1 = 0;
 			}
 		}
@@ -209,6 +210,7 @@ int main()
 		display_mode(mode);
 
 		/* Slanje moda rada na HPS. */
-		altera_avalon_mailbox_send(mailbox_0, mode, 0, POLL);
+		signal[1] = mode;
+		altera_avalon_mailbox_send(mailbox_0, signal, 0, POLL);
 	}
 }
