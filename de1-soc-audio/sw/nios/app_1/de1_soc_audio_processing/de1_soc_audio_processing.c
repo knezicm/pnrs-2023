@@ -177,9 +177,27 @@ int main(void)
 				// code for playing recorded audio
 
 				/* Provjera koji buffer je spreman za preuzimanje podataka. */
-				altera_avalon_mailbox_retrieve_poll(mailbox_1, signal_hps, 100);
+				altera_avalon_mailbox_retrieve_poll(mailbox_0, message, 100);
+				
+				/* Provjeriti da li postoji zapis. */
+				if(message[1] == 99)
+				{
+					// Nije pronadjen zapis.
+					break;
+				}
+				
+				/* Ako je u pitanju prvo citanje semplova. */
+				if(play_flag == 2)
+				{
+					/* Signal da HPS puni lijevi bafer. */
+					signal_hps[1] = 6;
+					altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+				}
+				
+				/* Provjeri da li je bafer spreman za citanje. */
+				altera_avalon_mailbox_retrieve_poll(mailbox_0, message, 100);
 
-				if(signal_hps[1] == 3) //Spreman lijevi bafer.
+				if(message[1] == 9) //Spreman lijevi bafer.
 				{
 					buff_inx = 0;
 					/* Blokiranje ponovnog citanja lijevog bafera ukoliko desni jos nije spreman */
@@ -196,9 +214,13 @@ int main(void)
 						}
 
 						play_flag = 1;
+						
+						/* Signal da HPS puni desni bafer. */
+						signal_hps[1] = 7;
+						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 					}
 				}
-				else if(signal_hps[1] == 4) //Spreman desni bafer.
+				else if(message[1] == 10) //Spreman desni bafer.
 				{
 					buff_inx = 0;
 					/* Blokiranje ponovnog citanja desnog bafera ukoliko lijevi jos nije spreman. */
@@ -215,6 +237,10 @@ int main(void)
 						}
 
 						play_flag = 0;
+						
+						/* Signal da HPS puni lijevi bafer. */
+						signal_hps[1] = 6;
+						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 					}
 				}
 				break;
