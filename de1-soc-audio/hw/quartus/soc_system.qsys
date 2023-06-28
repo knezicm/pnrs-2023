@@ -443,6 +443,7 @@
    internal="leds_0.external_connection"
    type="conduit"
    dir="end" />
+ <interface name="pll_0_audio" internal="pll_0.outclk3" type="clock" dir="start" />
  <interface name="pll_0_sdram" internal="pll_0.outclk2" type="clock" dir="start" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
@@ -465,7 +466,7 @@
   <parameter name="audio_in" value="true" />
   <parameter name="audio_out" value="true" />
   <parameter name="avalon_bus_type" value="Memory Mapped" />
-  <parameter name="dw" value="32" />
+  <parameter name="dw" value="24" />
  </module>
  <module
    name="audio_and_video_config_0"
@@ -1181,8 +1182,8 @@
    kind="altera_nios2_gen2"
    version="20.1"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="7" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="7" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="8" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="8" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -1363,8 +1364,8 @@
    kind="altera_nios2_gen2"
    version="20.1"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="7" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="7" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="8" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="8" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -1657,7 +1658,7 @@
   <parameter name="gui_fractional_cout" value="32" />
   <parameter name="gui_mif_generate" value="false" />
   <parameter name="gui_multiply_factor" value="1" />
-  <parameter name="gui_number_of_clocks" value="3" />
+  <parameter name="gui_number_of_clocks" value="4" />
   <parameter name="gui_operation_mode" value="normal" />
   <parameter name="gui_output_clock_frequency0" value="50.0" />
   <parameter name="gui_output_clock_frequency1" value="100.0" />
@@ -1670,7 +1671,7 @@
   <parameter name="gui_output_clock_frequency16" value="100.0" />
   <parameter name="gui_output_clock_frequency17" value="100.0" />
   <parameter name="gui_output_clock_frequency2" value="100.0" />
-  <parameter name="gui_output_clock_frequency3" value="100.0" />
+  <parameter name="gui_output_clock_frequency3" value="12.0" />
   <parameter name="gui_output_clock_frequency4" value="100.0" />
   <parameter name="gui_output_clock_frequency5" value="100.0" />
   <parameter name="gui_output_clock_frequency6" value="100.0" />

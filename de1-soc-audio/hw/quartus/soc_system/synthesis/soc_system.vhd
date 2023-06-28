@@ -68,6 +68,7 @@ entity soc_system is
 		hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO53
 		hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO54
 		leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     --     leds_0_external_connection.export
+		pll_0_audio_clk                       : out   std_logic;                                        --                    pll_0_audio.clk
 		pll_0_sdram_clk                       : out   std_logic;                                        --                    pll_0_sdram.clk
 		reset_reset_n                         : in    std_logic                     := '0';             --                          reset.reset_n
 		sdram_controller_0_wire_addr          : out   std_logic_vector(12 downto 0);                    --        sdram_controller_0_wire.addr
@@ -391,6 +392,7 @@ architecture rtl of soc_system is
 			outclk_0 : out std_logic;        -- clk
 			outclk_1 : out std_logic;        -- clk
 			outclk_2 : out std_logic;        -- clk
+			outclk_3 : out std_logic;        -- clk
 			locked   : out std_logic         -- export
 		);
 	end component soc_system_pll_0;
@@ -1738,6 +1740,7 @@ begin
 			outclk_0 => pll_0_outclk0_clk,       -- outclk0.clk
 			outclk_1 => pll_0_outclk1_clk,       -- outclk1.clk
 			outclk_2 => pll_0_sdram_clk,         -- outclk2.clk
+			outclk_3 => pll_0_audio_clk,         -- outclk3.clk
 			locked   => open                     -- (terminated)
 		);
 

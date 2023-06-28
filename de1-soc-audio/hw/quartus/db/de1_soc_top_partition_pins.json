@@ -72,10 +72,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_DACDAT",
-					"strict" : false
-				},
-				{
 					"name" : "FPGA_I2C_SCLK",
 					"strict" : false
 				},
@@ -220,6 +216,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_ADDR[0]",
 					"strict" : false
 				},
@@ -304,10 +304,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_BCLK",
-					"strict" : false
-				},
-				{
 					"name" : "DRAM_DQ[0]",
 					"strict" : false
 				},
@@ -372,19 +368,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_ADCLRCK",
-					"strict" : false
-				},
-				{
-					"name" : "AUD_DACLRCK",
-					"strict" : false
-				},
-				{
 					"name" : "FPGA_I2C_SDAT",
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "AUD_ADCLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACLRCK",
 					"strict" : false
 				},
 				{

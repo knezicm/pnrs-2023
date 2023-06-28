@@ -13,6 +13,7 @@
 		.hex_2_external_connection_export      (<connected-to-hex_2_external_connection_export>),      //      hex_2_external_connection.export
 		.hex_3_external_connection_export      (<connected-to-hex_3_external_connection_export>),      //      hex_3_external_connection.export
 		.hex_4_external_connection_export      (<connected-to-hex_4_external_connection_export>),      //      hex_4_external_connection.export
+		.hex_5_external_connection_export      (<connected-to-hex_5_external_connection_export>),      //      hex_5_external_connection.export
 		.hps_0_ddr_mem_a                       (<connected-to-hps_0_ddr_mem_a>),                       //                      hps_0_ddr.mem_a
 		.hps_0_ddr_mem_ba                      (<connected-to-hps_0_ddr_mem_ba>),                      //                               .mem_ba
 		.hps_0_ddr_mem_ck                      (<connected-to-hps_0_ddr_mem_ck>),                      //                               .mem_ck
@@ -70,6 +71,6 @@
 		.sdram_controller_0_wire_ras_n         (<connected-to-sdram_controller_0_wire_ras_n>),         //                               .ras_n
 		.sdram_controller_0_wire_we_n          (<connected-to-sdram_controller_0_wire_we_n>),          //                               .we_n
 		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>), // switches_0_external_connection.export
-		.hex_5_external_connection_export      (<connected-to-hex_5_external_connection_export>)       //      hex_5_external_connection.export
+		.pll_0_audio_clk                       (<connected-to-pll_0_audio_clk>)                        //                    pll_0_audio.clk
 	);
 

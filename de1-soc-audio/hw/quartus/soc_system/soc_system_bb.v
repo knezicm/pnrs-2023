@@ -14,6 +14,7 @@ module soc_system (
 	hex_2_external_connection_export,
 	hex_3_external_connection_export,
 	hex_4_external_connection_export,
+	hex_5_external_connection_export,
 	hps_0_ddr_mem_a,
 	hps_0_ddr_mem_ba,
 	hps_0_ddr_mem_ck,
@@ -71,7 +72,7 @@ module soc_system (
 	sdram_controller_0_wire_ras_n,
 	sdram_controller_0_wire_we_n,
 	switches_0_external_connection_export,
-	hex_5_external_connection_export);	
+	pll_0_audio_clk);	
 
 	input		audio_0_external_interface_ADCDAT;
 	input		audio_0_external_interface_ADCLRCK;
@@ -87,6 +88,7 @@ module soc_system (
 	output	[6:0]	hex_2_external_connection_export;
 	output	[6:0]	hex_3_external_connection_export;
 	output	[6:0]	hex_4_external_connection_export;
+	output	[6:0]	hex_5_external_connection_export;
 	output	[14:0]	hps_0_ddr_mem_a;
 	output	[2:0]	hps_0_ddr_mem_ba;
 	output		hps_0_ddr_mem_ck;
@@ -144,5 +146,5 @@ module soc_system (
 	output		sdram_controller_0_wire_ras_n;
 	output		sdram_controller_0_wire_we_n;
 	input	[9:0]	switches_0_external_connection_export;
-	output	[6:0]	hex_5_external_connection_export;
+	output		pll_0_audio_clk;
 endmodule
