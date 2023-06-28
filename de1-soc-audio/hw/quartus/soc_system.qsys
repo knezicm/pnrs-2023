@@ -461,7 +461,7 @@
    kind="altera_up_avalon_audio"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="12000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="audio_in" value="true" />
   <parameter name="audio_out" value="true" />
@@ -1658,7 +1658,7 @@
   <parameter name="gui_fractional_cout" value="32" />
   <parameter name="gui_mif_generate" value="false" />
   <parameter name="gui_multiply_factor" value="1" />
-  <parameter name="gui_number_of_clocks" value="4" />
+  <parameter name="gui_number_of_clocks" value="5" />
   <parameter name="gui_operation_mode" value="normal" />
   <parameter name="gui_output_clock_frequency0" value="50.0" />
   <parameter name="gui_output_clock_frequency1" value="100.0" />
@@ -1672,7 +1672,7 @@
   <parameter name="gui_output_clock_frequency17" value="100.0" />
   <parameter name="gui_output_clock_frequency2" value="100.0" />
   <parameter name="gui_output_clock_frequency3" value="12.0" />
-  <parameter name="gui_output_clock_frequency4" value="100.0" />
+  <parameter name="gui_output_clock_frequency4" value="12.0" />
   <parameter name="gui_output_clock_frequency5" value="100.0" />
   <parameter name="gui_output_clock_frequency6" value="100.0" />
   <parameter name="gui_output_clock_frequency7" value="100.0" />
@@ -2156,7 +2156,6 @@
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="leds_0.clk" />
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="mailbox_0.clk" />
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="mailbox_1.clk" />
- <connection kind="clock" version="20.1" start="pll_0.outclk0" end="audio_0.clk" />
  <connection
    kind="clock"
    version="20.1"
@@ -2179,6 +2178,7 @@
    version="20.1"
    start="pll_0.outclk1"
    end="sdram_controller_0.clk" />
+ <connection kind="clock" version="20.1" start="pll_0.outclk4" end="audio_0.clk" />
  <connection
    kind="interrupt"
    version="20.1"
