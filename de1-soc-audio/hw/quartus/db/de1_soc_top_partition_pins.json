@@ -72,66 +72,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_DACDAT",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4_N[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4_N[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4_N[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4_N[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4_N[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4_N[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4_N[6]",
-					"strict" : false
-				},
-				{
 					"name" : "FPGA_I2C_SCLK",
 					"strict" : false
 				},
@@ -217,6 +157,66 @@
 				},
 				{
 					"name" : "HEX2_N[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4_N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4_N[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4_N[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACDAT",
 					"strict" : false
 				},
 				{
@@ -368,11 +368,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_ADCLRCK",
+					"name" : "FPGA_I2C_SDAT",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_I2C_SDAT",
+					"name" : "AUD_ADCLRCK",
 					"strict" : false
 				},
 				{
@@ -381,6 +381,10 @@
 				},
 				{
 					"name" : "AUD_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCDAT",
 					"strict" : false
 				},
 				{
@@ -437,10 +441,6 @@
 				},
 				{
 					"name" : "SW[9]",
-					"strict" : false
-				},
-				{
-					"name" : "AUD_ADCDAT",
 					"strict" : false
 				}
 			]

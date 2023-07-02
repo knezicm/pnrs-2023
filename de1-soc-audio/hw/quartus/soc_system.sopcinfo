@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
  <!-- Format version 20.1 720 (Future versions may contain additional information.) -->
- <!-- 2023.06.28.18:15:02 -->
+ <!-- 2023.06.30.21:24:41 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1687968901</value>
+  <value>1688153080</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -145,7 +145,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_CLOCK_RATE">
    <type>java.lang.Long</type>
-   <value>12000000</value>
+   <value>50000000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -216,7 +216,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>12000000</value>
+    <value>50000000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -92738,6 +92738,12 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
+    <moduleName>audio_0</moduleName>
+    <slaveName>clk</slaveName>
+    <name>audio_0.clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
     <moduleName>hps_0_bridges</moduleName>
     <slaveName>h2f_axi_clock</slaveName>
     <name>hps_0_bridges.h2f_axi_clock</name>
@@ -93030,12 +93036,6 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>clk</role>
    </port>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>audio_0</moduleName>
-    <slaveName>clk</slaveName>
-    <name>audio_0.clk</name>
-   </clockDomainMember>
   </interface>
  </module>
  <module
@@ -94746,7 +94746,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1687968901</value>
+   <value>1688153080</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -94766,7 +94766,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1687968901</value>
+   <value>1688153080</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -94782,7 +94782,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1687968901</value>
+   <value>1688153080</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -107137,6 +107137,33 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
+   name="pll_0.outclk0/audio_0.clk"
+   kind="clock"
+   version="20.1"
+   start="pll_0.outclk0"
+   end="audio_0.clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>pll_0</startModule>
+  <startConnectionPoint>outclk0</startConnectionPoint>
+  <endModule>audio_0</endModule>
+  <endConnectionPoint>clk</endConnectionPoint>
+ </connection>
+ <connection
    name="pll_0.outclk0/hps_0_bridges.h2f_axi_clock"
    kind="clock"
    version="20.1"
@@ -107215,33 +107242,6 @@ parameters are a RESULT of the module parameters. -->
   <startModule>pll_0</startModule>
   <startConnectionPoint>outclk1</startConnectionPoint>
   <endModule>sdram_controller_0</endModule>
-  <endConnectionPoint>clk</endConnectionPoint>
- </connection>
- <connection
-   name="pll_0.outclk4/audio_0.clk"
-   kind="clock"
-   version="20.1"
-   start="pll_0.outclk4"
-   end="audio_0.clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>pll_0</startModule>
-  <startConnectionPoint>outclk4</startConnectionPoint>
-  <endModule>audio_0</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection

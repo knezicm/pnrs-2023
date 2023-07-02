@@ -59,6 +59,7 @@
 		.hps_0_io_hps_io_gpio_inst_GPIO53      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO53>),      //                               .hps_io_gpio_inst_GPIO53
 		.hps_0_io_hps_io_gpio_inst_GPIO54      (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO54>),      //                               .hps_io_gpio_inst_GPIO54
 		.leds_0_external_connection_export     (<connected-to-leds_0_external_connection_export>),     //     leds_0_external_connection.export
+		.pll_0_audio_clk                       (<connected-to-pll_0_audio_clk>),                       //                    pll_0_audio.clk
 		.pll_0_sdram_clk                       (<connected-to-pll_0_sdram_clk>),                       //                    pll_0_sdram.clk
 		.reset_reset_n                         (<connected-to-reset_reset_n>),                         //                          reset.reset_n
 		.sdram_controller_0_wire_addr          (<connected-to-sdram_controller_0_wire_addr>),          //        sdram_controller_0_wire.addr
@@ -70,7 +71,6 @@
 		.sdram_controller_0_wire_dqm           (<connected-to-sdram_controller_0_wire_dqm>),           //                               .dqm
 		.sdram_controller_0_wire_ras_n         (<connected-to-sdram_controller_0_wire_ras_n>),         //                               .ras_n
 		.sdram_controller_0_wire_we_n          (<connected-to-sdram_controller_0_wire_we_n>),          //                               .we_n
-		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>), // switches_0_external_connection.export
-		.pll_0_audio_clk                       (<connected-to-pll_0_audio_clk>)                        //                    pll_0_audio.clk
+		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>)  // switches_0_external_connection.export
 	);
 
