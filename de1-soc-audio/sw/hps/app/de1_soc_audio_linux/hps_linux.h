@@ -15,7 +15,7 @@
 #define SAVE_AUDIO 11
 
 #define L_BUFFER_OFST 0x8600000
-#define R_BUFFER_OFST 0x8600000
+#define R_BUFFER_OFST 0x8800000
 
 /* Physical memory file descriptor */
 int fd_dev_mem = 0;

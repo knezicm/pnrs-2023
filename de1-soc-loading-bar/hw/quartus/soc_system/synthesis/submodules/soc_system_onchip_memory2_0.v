@@ -36,12 +36,12 @@ module soc_system_onchip_memory2_0 (
                                    )
 ;
 
-  parameter INIT_FILE = "soc_system_onchip_memory2_0.hex";
+  parameter INIT_FILE = "D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-loading-bar/sw/app/de1_soc_loading_bar/mem_init/soc_system_onchip_memory2_0.hex";
 
 
-  output  [ 31: 0] readdata;
-  input   [  9: 0] address;
-  input   [  3: 0] byteenable;
+  output  [255: 0] readdata;
+  input   [ 11: 0] address;
+  input   [ 31: 0] byteenable;
   input            chipselect;
   input            clk;
   input            clken;
@@ -49,11 +49,11 @@ module soc_system_onchip_memory2_0 (
   input            reset;
   input            reset_req;
   input            write;
-  input   [ 31: 0] writedata;
+  input   [255: 0] writedata;
 
 
 wire             clocken0;
-wire    [ 31: 0] readdata;
+wire    [255: 0] readdata;
 wire             wren;
   assign wren = chipselect & write;
   assign clocken0 = clken & ~reset_req;
@@ -71,16 +71,16 @@ wire             wren;
   defparam the_altsyncram.byte_size = 8,
            the_altsyncram.init_file = INIT_FILE,
            the_altsyncram.lpm_type = "altsyncram",
-           the_altsyncram.maximum_depth = 1024,
-           the_altsyncram.numwords_a = 1024,
+           the_altsyncram.maximum_depth = 4000,
+           the_altsyncram.numwords_a = 4000,
            the_altsyncram.operation_mode = "SINGLE_PORT",
            the_altsyncram.outdata_reg_a = "UNREGISTERED",
            the_altsyncram.ram_block_type = "AUTO",
            the_altsyncram.read_during_write_mode_mixed_ports = "DONT_CARE",
            the_altsyncram.read_during_write_mode_port_a = "DONT_CARE",
-           the_altsyncram.width_a = 32,
-           the_altsyncram.width_byteena_a = 4,
-           the_altsyncram.widthad_a = 10;
+           the_altsyncram.width_a = 256,
+           the_altsyncram.width_byteena_a = 32,
+           the_altsyncram.widthad_a = 12;
 
   //s1, which is an e_avalon_slave
   //s2, which is an e_avalon_slave

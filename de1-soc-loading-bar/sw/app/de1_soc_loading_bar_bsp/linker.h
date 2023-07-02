@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'soc_system'
- * SOPC Builder design path: d:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-loading-bar/hw/quartus/soc_system.sopcinfo
+ * SOPC Builder design path: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-loading-bar/hw/quartus/soc_system.sopcinfo
  *
- * Generated: Mon Jun 12 20:01:18 CEST 2023
+ * Generated: Fri Jun 30 13:04:57 CEST 2023
  */
 
 /*
@@ -65,9 +65,9 @@
  *
  */
 
-#define ONCHIP_MEMORY2_0_REGION_BASE 0x1020
-#define ONCHIP_MEMORY2_0_REGION_SPAN 4064
-#define RESET_REGION_BASE 0x1000
+#define ONCHIP_MEMORY2_0_REGION_BASE 0x20020
+#define ONCHIP_MEMORY2_0_REGION_SPAN 127968
+#define RESET_REGION_BASE 0x20000
 #define RESET_REGION_SPAN 32
 
 
@@ -96,6 +96,8 @@
  *
  */
 
+#define ALT_LOAD_COPY_EXCEPTIONS
+#define ALT_LOAD_COPY_RODATA
 #define ALT_LOAD_COPY_RWDATA
 
 #endif /* __LINKER_H_ */
