@@ -21,7 +21,7 @@
    {
       datum baseAddress
       {
-         value = "112";
+         value = "4240";
          type = "String";
       }
    }
@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "22";
+         value = "23";
          type = "int";
       }
    }
@@ -37,7 +37,7 @@
    {
       datum baseAddress
       {
-         value = "96";
+         value = "4224";
          type = "String";
       }
    }
@@ -53,7 +53,7 @@
    {
       datum baseAddress
       {
-         value = "64";
+         value = "4144";
          type = "String";
       }
    }
@@ -77,7 +77,7 @@
    {
       datum baseAddress
       {
-         value = "80";
+         value = "4160";
          type = "String";
       }
    }
@@ -93,7 +93,7 @@
    {
       datum baseAddress
       {
-         value = "96";
+         value = "4176";
          type = "String";
       }
    }
@@ -109,7 +109,7 @@
    {
       datum baseAddress
       {
-         value = "112";
+         value = "4192";
          type = "String";
       }
    }
@@ -125,7 +125,7 @@
    {
       datum baseAddress
       {
-         value = "128";
+         value = "4208";
          type = "String";
       }
    }
@@ -141,7 +141,7 @@
    {
       datum baseAddress
       {
-         value = "144";
+         value = "4224";
          type = "String";
       }
    }
@@ -157,7 +157,7 @@
    {
       datum baseAddress
       {
-         value = "16";
+         value = "4128";
          type = "String";
       }
    }
@@ -165,7 +165,7 @@
    {
       datum _sortIndex
       {
-         value = "21";
+         value = "22";
          type = "int";
       }
    }
@@ -181,7 +181,7 @@
    {
       datum baseAddress
       {
-         value = "200";
+         value = "4280";
          type = "String";
       }
    }
@@ -197,7 +197,7 @@
    {
       datum baseAddress
       {
-         value = "64";
+         value = "4176";
          type = "String";
       }
    }
@@ -213,7 +213,7 @@
    {
       datum baseAddress
       {
-         value = "80";
+         value = "4208";
          type = "String";
       }
    }
@@ -221,7 +221,7 @@
    {
       datum baseAddress
       {
-         value = "0";
+         value = "4256";
          type = "String";
       }
    }
@@ -245,7 +245,31 @@
    {
       datum baseAddress
       {
-         value = "176";
+         value = "4192";
+         type = "String";
+      }
+   }
+   element mailbox_2
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element mailbox_2.avmm_msg_receiver
+   {
+      datum baseAddress
+      {
+         value = "4160";
+         type = "String";
+      }
+   }
+   element mailbox_2.avmm_msg_sender
+   {
+      datum baseAddress
+      {
+         value = "0";
          type = "String";
       }
    }
@@ -261,7 +285,7 @@
    {
       datum baseAddress
       {
-         value = "4096";
+         value = "2048";
          type = "String";
       }
    }
@@ -277,7 +301,7 @@
    {
       datum baseAddress
       {
-         value = "4096";
+         value = "2048";
          type = "String";
       }
    }
@@ -299,6 +323,11 @@
    }
    element sdram_controller_0.s1
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
          value = "134217728";
@@ -317,7 +346,7 @@
    {
       datum baseAddress
       {
-         value = "160";
+         value = "4240";
          type = "String";
       }
    }
@@ -333,7 +362,7 @@
    {
       datum baseAddress
       {
-         value = "192";
+         value = "4272";
          type = "String";
       }
    }
@@ -349,7 +378,7 @@
    {
       datum baseAddress
       {
-         value = "32";
+         value = "4096";
          type = "String";
       }
    }
@@ -365,7 +394,7 @@
    {
       datum baseAddress
       {
-         value = "0";
+         value = "4096";
          type = "String";
       }
    }
@@ -1178,6 +1207,16 @@
   <parameter name="MSG_SPACE_NOTIFY" value="0" />
  </module>
  <module
+   name="mailbox_2"
+   kind="altera_avalon_mailbox_simple"
+   version="20.1"
+   enabled="1">
+  <parameter name="AWIDTH" value="2" />
+  <parameter name="DWIDTH" value="32" />
+  <parameter name="MSG_ARRIVAL_NOTIFY" value="0" />
+  <parameter name="MSG_SPACE_NOTIFY" value="0" />
+ </module>
+ <module
    name="nios2_gen2_0"
    kind="altera_nios2_gen2"
    version="20.1"
@@ -1201,7 +1240,7 @@
   <parameter name="dataAddrWidth" value="28" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='mailbox_0.avmm_msg_sender' start='0x0' end='0x10' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='hex_5.s1' start='0x10' end='0x20' type='altera_avalon_pio.s1' /><slave name='timer_0.s1' start='0x20' end='0x40' type='altera_avalon_timer.s1' /><slave name='button_0.s1' start='0x40' end='0x50' type='altera_avalon_pio.s1' /><slave name='hex_0.s1' start='0x50' end='0x60' type='altera_avalon_pio.s1' /><slave name='hex_1.s1' start='0x60' end='0x70' type='altera_avalon_pio.s1' /><slave name='hex_2.s1' start='0x70' end='0x80' type='altera_avalon_pio.s1' /><slave name='hex_3.s1' start='0x80' end='0x90' type='altera_avalon_pio.s1' /><slave name='hex_4.s1' start='0x90' end='0xA0' type='altera_avalon_pio.s1' /><slave name='switches_0.s1' start='0xA0' end='0xB0' type='altera_avalon_pio.s1' /><slave name='mailbox_1.avmm_msg_sender' start='0xB0' end='0xC0' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='sysid.control_slave' start='0xC0' end='0xC8' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0xC8' end='0xD0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_0.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x1000' end='0x1020' type='altera_avalon_timer.s1' /><slave name='hex_5.s1' start='0x1020' end='0x1030' type='altera_avalon_pio.s1' /><slave name='button_0.s1' start='0x1030' end='0x1040' type='altera_avalon_pio.s1' /><slave name='hex_0.s1' start='0x1040' end='0x1050' type='altera_avalon_pio.s1' /><slave name='hex_1.s1' start='0x1050' end='0x1060' type='altera_avalon_pio.s1' /><slave name='hex_2.s1' start='0x1060' end='0x1070' type='altera_avalon_pio.s1' /><slave name='hex_3.s1' start='0x1070' end='0x1080' type='altera_avalon_pio.s1' /><slave name='hex_4.s1' start='0x1080' end='0x1090' type='altera_avalon_pio.s1' /><slave name='switches_0.s1' start='0x1090' end='0x10A0' type='altera_avalon_pio.s1' /><slave name='mailbox_0.avmm_msg_sender' start='0x10A0' end='0x10B0' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='sysid.control_slave' start='0x10B0' end='0x10B8' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x10B8' end='0x10C0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -1240,7 +1279,7 @@
   <parameter name="icache_tagramBlockType" value="Automatic" />
   <parameter name="impl" value="Tiny" />
   <parameter name="instAddrWidth" value="28" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_0.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_0.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
   <parameter name="instructionMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="instructionMasterHighPerformanceMapParam" value="" />
   <parameter name="instruction_master_high_performance_paddr_base" value="0" />
@@ -1383,7 +1422,7 @@
   <parameter name="dataAddrWidth" value="28" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='timer_1.s1' start='0x0' end='0x20' type='altera_avalon_timer.s1' /><slave name='leds_0.s1' start='0x40' end='0x50' type='altera_avalon_pio.s1' /><slave name='mailbox_0.avmm_msg_receiver' start='0x50' end='0x60' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x60' end='0x70' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='audio_0.avalon_audio_slave' start='0x70' end='0x80' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='mailbox_1.avmm_msg_sender' start='0xB0' end='0xC0' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='sysid.control_slave' start='0xC0' end='0xC8' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0xC8' end='0xD0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='nios2_gen2_1.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_1.s1' start='0x1000' end='0x1020' type='altera_avalon_timer.s1' /><slave name='mailbox_2.avmm_msg_receiver' start='0x1040' end='0x1050' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /><slave name='leds_0.s1' start='0x1050' end='0x1060' type='altera_avalon_pio.s1' /><slave name='mailbox_1.avmm_msg_sender' start='0x1060' end='0x1070' type='altera_avalon_mailbox_simple.avmm_msg_sender' /><slave name='mailbox_0.avmm_msg_receiver' start='0x1070' end='0x1080' type='altera_avalon_mailbox_simple.avmm_msg_receiver' /><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x1080' end='0x1090' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='audio_0.avalon_audio_slave' start='0x1090' end='0x10A0' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='sysid.control_slave' start='0x10B0' end='0x10B8' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x10B8' end='0x10C0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -1422,7 +1461,7 @@
   <parameter name="icache_tagramBlockType" value="Automatic" />
   <parameter name="impl" value="Tiny" />
   <parameter name="instAddrWidth" value="28" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x60' end='0x70' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='audio_0.avalon_audio_slave' start='0x70' end='0x80' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='nios2_gen2_1.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='nios2_gen2_1.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='audio_and_video_config_0.avalon_av_config_slave' start='0x1080' end='0x1090' type='altera_up_avalon_audio_and_video_config.avalon_av_config_slave' /><slave name='audio_0.avalon_audio_slave' start='0x1090' end='0x10A0' type='altera_up_avalon_audio.avalon_audio_slave' /><slave name='sdram_controller_0.s1' start='0x8000000' end='0xC000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></parameter>
   <parameter name="instructionMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="instructionMasterHighPerformanceMapParam" value="" />
   <parameter name="instruction_master_high_performance_paddr_base" value="0" />
@@ -1824,7 +1863,7 @@
    start="nios2_gen2_1.data_master"
    end="audio_0.avalon_audio_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0070" />
+  <parameter name="baseAddress" value="0x1090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1833,7 +1872,7 @@
    start="nios2_gen2_1.data_master"
    end="audio_and_video_config_0.avalon_av_config_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0060" />
+  <parameter name="baseAddress" value="0x1080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1842,7 +1881,7 @@
    start="nios2_gen2_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00c8" />
+  <parameter name="baseAddress" value="0x10b8" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1851,7 +1890,7 @@
    start="nios2_gen2_1.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00c8" />
+  <parameter name="baseAddress" value="0x10b8" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1860,7 +1899,16 @@
    start="nios2_gen2_1.data_master"
    end="mailbox_0.avmm_msg_receiver">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0050" />
+  <parameter name="baseAddress" value="0x1070" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="20.1"
+   start="nios2_gen2_1.data_master"
+   end="mailbox_2.avmm_msg_receiver">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x1040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1869,7 +1917,7 @@
    start="nios2_gen2_0.data_master"
    end="mailbox_0.avmm_msg_sender">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x10a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1878,16 +1926,7 @@
    start="nios2_gen2_1.data_master"
    end="mailbox_1.avmm_msg_sender">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00b0" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="20.1"
-   start="nios2_gen2_0.data_master"
-   end="mailbox_1.avmm_msg_sender">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00b0" />
+  <parameter name="baseAddress" value="0x1060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1896,7 +1935,7 @@
    start="nios2_gen2_0.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00c0" />
+  <parameter name="baseAddress" value="0x10b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1905,7 +1944,7 @@
    start="nios2_gen2_1.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00c0" />
+  <parameter name="baseAddress" value="0x10b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1914,7 +1953,7 @@
    start="nios2_gen2_0.data_master"
    end="nios2_gen2_0.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000" />
+  <parameter name="baseAddress" value="0x0800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1923,7 +1962,7 @@
    start="nios2_gen2_1.data_master"
    end="nios2_gen2_1.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000" />
+  <parameter name="baseAddress" value="0x0800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1941,7 +1980,7 @@
    start="nios2_gen2_0.data_master"
    end="switches_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00a0" />
+  <parameter name="baseAddress" value="0x1090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1950,7 +1989,7 @@
    start="nios2_gen2_0.data_master"
    end="timer_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0020" />
+  <parameter name="baseAddress" value="0x1000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1968,7 +2007,7 @@
    start="nios2_gen2_1.data_master"
    end="timer_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x1000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1977,7 +2016,7 @@
    start="nios2_gen2_1.data_master"
    end="leds_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0040" />
+  <parameter name="baseAddress" value="0x1050" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1986,7 +2025,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_4.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0090" />
+  <parameter name="baseAddress" value="0x1080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1995,7 +2034,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_3.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0080" />
+  <parameter name="baseAddress" value="0x1070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2004,7 +2043,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_2.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0070" />
+  <parameter name="baseAddress" value="0x1060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2013,7 +2052,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0060" />
+  <parameter name="baseAddress" value="0x1050" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2022,7 +2061,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0050" />
+  <parameter name="baseAddress" value="0x1040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2031,7 +2070,7 @@
    start="nios2_gen2_0.data_master"
    end="button_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0040" />
+  <parameter name="baseAddress" value="0x1030" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2040,7 +2079,7 @@
    start="nios2_gen2_0.data_master"
    end="hex_5.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0010" />
+  <parameter name="baseAddress" value="0x1020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2065,7 +2104,7 @@
    kind="avalon"
    version="20.1"
    start="hps_0.h2f_lw_axi_master"
-   end="mailbox_0.avmm_msg_sender">
+   end="mailbox_2.avmm_msg_sender">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -2076,7 +2115,7 @@
    start="nios2_gen2_1.instruction_master"
    end="audio_0.avalon_audio_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0070" />
+  <parameter name="baseAddress" value="0x1090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2085,7 +2124,7 @@
    start="nios2_gen2_1.instruction_master"
    end="audio_and_video_config_0.avalon_av_config_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0060" />
+  <parameter name="baseAddress" value="0x1080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2094,7 +2133,7 @@
    start="nios2_gen2_0.instruction_master"
    end="nios2_gen2_0.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000" />
+  <parameter name="baseAddress" value="0x0800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2103,7 +2142,7 @@
    start="nios2_gen2_1.instruction_master"
    end="nios2_gen2_1.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000" />
+  <parameter name="baseAddress" value="0x0800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2164,6 +2203,7 @@
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="button_0.clk" />
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="hex_5.clk" />
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="audio_0.clk" />
+ <connection kind="clock" version="20.1" start="pll_0.outclk0" end="mailbox_2.clk" />
  <connection
    kind="clock"
    version="20.1"
@@ -2285,6 +2325,11 @@
  <connection
    kind="reset"
    version="20.1"
+   start="clk_0.clk_reset"
+   end="mailbox_2.rst_n" />
+ <connection
+   kind="reset"
+   version="20.1"
    start="nios2_gen2_0.debug_reset_request"
    end="nios2_gen2_0.reset" />
  <connection
@@ -2395,6 +2440,16 @@
  <connection
    kind="reset"
    version="20.1"
+   start="nios2_gen2_1.debug_reset_request"
+   end="mailbox_2.rst_n" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="nios2_gen2_0.debug_reset_request"
+   end="mailbox_2.rst_n" />
+ <connection
+   kind="reset"
+   version="20.1"
    start="hps_0.h2f_reset"
    end="sdram_controller_0.reset" />
  <connection
@@ -2407,6 +2462,11 @@
    version="20.1"
    start="hps_0.h2f_reset"
    end="mailbox_1.rst_n" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="hps_0.h2f_reset"
+   end="mailbox_2.rst_n" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

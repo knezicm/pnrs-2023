@@ -47,7 +47,7 @@ module soc_system_mm_interconnect_0_router_018_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 2 
+               DEFAULT_DESTID = 1 
    )
   (output [104 - 100 : 0] default_destination_id,
    output [22-1 : 0] default_wr_channel,
@@ -163,11 +163,6 @@ module soc_system_mm_interconnect_0_router_018
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     soc_system_mm_interconnect_0_router_018_default_decode the_default_decode(
@@ -189,12 +184,8 @@ module soc_system_mm_interconnect_0_router_018
 
 
 
-        if (destid == 2 ) begin
-            src_channel = 22'b01;
-        end
-
-        if (destid == 3  && read_transaction) begin
-            src_channel = 22'b10;
+        if (destid == 1 ) begin
+            src_channel = 22'b1;
         end
 
 

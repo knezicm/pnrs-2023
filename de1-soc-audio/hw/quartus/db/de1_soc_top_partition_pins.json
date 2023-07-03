@@ -376,11 +376,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_DACLRCK",
+					"name" : "AUD_BCLK",
 					"strict" : false
 				},
 				{
-					"name" : "AUD_BCLK",
+					"name" : "AUD_DACLRCK",
 					"strict" : false
 				},
 				{
@@ -412,11 +412,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[3]",
+					"name" : "KEY_N[3]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY_N[3]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
@@ -432,15 +432,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
 					"name" : "SW[9]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[8]",
 					"strict" : false
 				}
 			]

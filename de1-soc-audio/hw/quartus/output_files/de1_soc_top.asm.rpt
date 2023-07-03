@@ -1,5 +1,5 @@
 Assembler report for de1_soc_top
-Mon Jul 03 14:30:56 2023
+Mon Jul 03 17:26:45 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jul 03 14:30:56 2023 ;
+; Assembler Status      ; Successful - Mon Jul 03 17:26:45 2023 ;
 ; Revision Name         ; de1_soc_top                           ;
 ; Top-level Entity Name ; de1_soc_top                           ;
 ; Family                ; Cyclone V                             ;
@@ -78,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------------------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                                       ;
 +----------------+-------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x017A133A                                                                                                                    ;
-; Checksum       ; 0x017A133A                                                                                                                    ;
+; JTAG usercode  ; 0x017E5B0A                                                                                                                    ;
+; Checksum       ; 0x017E5B0A                                                                                                                    ;
 +----------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -89,13 +89,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Jul 03 14:30:42 2023
+    Info: Processing started: Mon Jul 03 17:26:31 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off de1_soc_top -c de1_soc_top
 Info (115030): Assembler is generating device programming files
 Info (11878): Hard Processor Subsystem configuration has not changed and a Preloader software update is not required
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4957 megabytes
-    Info: Processing ended: Mon Jul 03 14:30:56 2023
+    Info: Peak virtual memory: 4961 megabytes
+    Info: Processing ended: Mon Jul 03 17:26:45 2023
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:14
 
