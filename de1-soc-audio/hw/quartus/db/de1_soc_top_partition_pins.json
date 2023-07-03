@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
 					"name" : "LEDR[0]",
 					"strict" : false
 				},
@@ -216,10 +220,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_DACDAT",
-					"strict" : false
-				},
-				{
 					"name" : "DRAM_ADDR[0]",
 					"strict" : false
 				},
@@ -304,6 +304,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_DQ[0]",
 					"strict" : false
 				},
@@ -376,10 +380,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_BCLK",
-					"strict" : false
-				},
-				{
 					"name" : "AUD_DACLRCK",
 					"strict" : false
 				},
@@ -432,7 +432,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[7]",
+					"name" : "SW[9]",
 					"strict" : false
 				},
 				{
@@ -440,7 +440,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[9]",
+					"name" : "SW[7]",
 					"strict" : false
 				}
 			]
