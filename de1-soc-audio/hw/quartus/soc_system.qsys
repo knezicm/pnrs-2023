@@ -1658,7 +1658,7 @@
   <parameter name="gui_fractional_cout" value="32" />
   <parameter name="gui_mif_generate" value="false" />
   <parameter name="gui_multiply_factor" value="1" />
-  <parameter name="gui_number_of_clocks" value="5" />
+  <parameter name="gui_number_of_clocks" value="4" />
   <parameter name="gui_operation_mode" value="normal" />
   <parameter name="gui_output_clock_frequency0" value="50.0" />
   <parameter name="gui_output_clock_frequency1" value="100.0" />
@@ -1671,7 +1671,7 @@
   <parameter name="gui_output_clock_frequency16" value="100.0" />
   <parameter name="gui_output_clock_frequency17" value="100.0" />
   <parameter name="gui_output_clock_frequency2" value="100.0" />
-  <parameter name="gui_output_clock_frequency3" value="12.0" />
+  <parameter name="gui_output_clock_frequency3" value="18.432" />
   <parameter name="gui_output_clock_frequency4" value="12.0" />
   <parameter name="gui_output_clock_frequency5" value="100.0" />
   <parameter name="gui_output_clock_frequency6" value="100.0" />
@@ -2367,6 +2367,11 @@
    version="20.1"
    start="nios2_gen2_1.debug_reset_request"
    end="sdram_controller_0.reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="nios2_gen2_1.debug_reset_request"
+   end="audio_0.reset" />
  <connection
    kind="reset"
    version="20.1"

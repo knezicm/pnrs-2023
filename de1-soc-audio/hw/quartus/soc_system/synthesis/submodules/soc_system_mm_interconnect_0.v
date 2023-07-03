@@ -81,6 +81,7 @@ module soc_system_mm_interconnect_0 (
 		input  wire        hps_0_h2f_lw_axi_master_rready,                                   //                                                           .rready
 		input  wire        pll_0_outclk0_clk,                                                //                                              pll_0_outclk0.clk
 		input  wire        pll_0_outclk1_clk,                                                //                                              pll_0_outclk1.clk
+		input  wire        audio_0_reset_reset_bridge_in_reset_reset,                        //                        audio_0_reset_reset_bridge_in_reset.reset
 		input  wire        hex_4_reset_reset_bridge_in_reset_reset,                          //                          hex_4_reset_reset_bridge_in_reset.reset
 		input  wire        hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset, // hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
 		input  wire        jtag_uart_0_reset_reset_bridge_in_reset_reset,                    //                    jtag_uart_0_reset_reset_bridge_in_reset.reset
@@ -88,7 +89,6 @@ module soc_system_mm_interconnect_0 (
 		input  wire        nios2_gen2_0_reset_reset_bridge_in_reset_reset,                   //                   nios2_gen2_0_reset_reset_bridge_in_reset.reset
 		input  wire        nios2_gen2_1_reset_reset_bridge_in_reset_reset,                   //                   nios2_gen2_1_reset_reset_bridge_in_reset.reset
 		input  wire        sdram_controller_0_reset_reset_bridge_in_reset_reset,             //             sdram_controller_0_reset_reset_bridge_in_reset.reset
-		input  wire        timer_1_reset_reset_bridge_in_reset_reset,                        //                        timer_1_reset_reset_bridge_in_reset.reset
 		input  wire [27:0] nios2_gen2_0_data_master_address,                                 //                                   nios2_gen2_0_data_master.address
 		output wire        nios2_gen2_0_data_master_waitrequest,                             //                                                           .waitrequest
 		input  wire [3:0]  nios2_gen2_0_data_master_byteenable,                              //                                                           .byteenable
@@ -2308,7 +2308,7 @@ module soc_system_mm_interconnect_0 (
 		.AV_DATA_HOLD_CYCLES            (0)
 	) audio_0_avalon_audio_slave_translator (
 		.clk                    (pll_0_outclk0_clk),                                 //                      clk.clk
-		.reset                  (nios2_gen2_1_reset_reset_bridge_in_reset_reset),    //                    reset.reset
+		.reset                  (audio_0_reset_reset_bridge_in_reset_reset),         //                    reset.reset
 		.uav_address            (audio_0_avalon_audio_slave_agent_m0_address),       // avalon_universal_slave_0.address
 		.uav_burstcount         (audio_0_avalon_audio_slave_agent_m0_burstcount),    //                         .burstcount
 		.uav_read               (audio_0_avalon_audio_slave_agent_m0_read),          //                         .read
@@ -2820,7 +2820,7 @@ module soc_system_mm_interconnect_0 (
 		.AV_DATA_HOLD_CYCLES            (0)
 	) timer_1_s1_translator (
 		.clk                    (pll_0_outclk0_clk),                         //                      clk.clk
-		.reset                  (timer_1_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.reset                  (audio_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
 		.uav_address            (timer_1_s1_agent_m0_address),               // avalon_universal_slave_0.address
 		.uav_burstcount         (timer_1_s1_agent_m0_burstcount),            //                         .burstcount
 		.uav_read               (timer_1_s1_agent_m0_read),                  //                         .read
@@ -2884,7 +2884,7 @@ module soc_system_mm_interconnect_0 (
 		.AV_DATA_HOLD_CYCLES            (0)
 	) leds_0_s1_translator (
 		.clk                    (pll_0_outclk0_clk),                         //                      clk.clk
-		.reset                  (timer_1_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.reset                  (audio_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
 		.uav_address            (leds_0_s1_agent_m0_address),                // avalon_universal_slave_0.address
 		.uav_burstcount         (leds_0_s1_agent_m0_burstcount),             //                         .burstcount
 		.uav_read               (leds_0_s1_agent_m0_read),                   //                         .read
@@ -4308,7 +4308,7 @@ module soc_system_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) audio_0_avalon_audio_slave_agent (
 		.clk                     (pll_0_outclk0_clk),                                           //             clk.clk
-		.reset                   (nios2_gen2_1_reset_reset_bridge_in_reset_reset),              //       clk_reset.reset
+		.reset                   (audio_0_reset_reset_bridge_in_reset_reset),                   //       clk_reset.reset
 		.m0_address              (audio_0_avalon_audio_slave_agent_m0_address),                 //              m0.address
 		.m0_burstcount           (audio_0_avalon_audio_slave_agent_m0_burstcount),              //                .burstcount
 		.m0_byteenable           (audio_0_avalon_audio_slave_agent_m0_byteenable),              //                .byteenable
@@ -4367,7 +4367,7 @@ module soc_system_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) audio_0_avalon_audio_slave_agent_rsp_fifo (
 		.clk               (pll_0_outclk0_clk),                                           //       clk.clk
-		.reset             (nios2_gen2_1_reset_reset_bridge_in_reset_reset),              // clk_reset.reset
+		.reset             (audio_0_reset_reset_bridge_in_reset_reset),                   // clk_reset.reset
 		.in_data           (audio_0_avalon_audio_slave_agent_rf_source_data),             //        in.data
 		.in_valid          (audio_0_avalon_audio_slave_agent_rf_source_valid),            //          .valid
 		.in_ready          (audio_0_avalon_audio_slave_agent_rf_source_ready),            //          .ready
@@ -4408,7 +4408,7 @@ module soc_system_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) audio_0_avalon_audio_slave_agent_rdata_fifo (
 		.clk               (pll_0_outclk0_clk),                                     //       clk.clk
-		.reset             (nios2_gen2_1_reset_reset_bridge_in_reset_reset),        // clk_reset.reset
+		.reset             (audio_0_reset_reset_bridge_in_reset_reset),             // clk_reset.reset
 		.in_data           (audio_0_avalon_audio_slave_agent_rdata_fifo_src_data),  //        in.data
 		.in_valid          (audio_0_avalon_audio_slave_agent_rdata_fifo_src_valid), //          .valid
 		.in_ready          (audio_0_avalon_audio_slave_agent_rdata_fifo_src_ready), //          .ready
@@ -5636,7 +5636,7 @@ module soc_system_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) timer_1_s1_agent (
 		.clk                     (pll_0_outclk0_clk),                           //             clk.clk
-		.reset                   (timer_1_reset_reset_bridge_in_reset_reset),   //       clk_reset.reset
+		.reset                   (audio_0_reset_reset_bridge_in_reset_reset),   //       clk_reset.reset
 		.m0_address              (timer_1_s1_agent_m0_address),                 //              m0.address
 		.m0_burstcount           (timer_1_s1_agent_m0_burstcount),              //                .burstcount
 		.m0_byteenable           (timer_1_s1_agent_m0_byteenable),              //                .byteenable
@@ -5695,7 +5695,7 @@ module soc_system_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) timer_1_s1_agent_rsp_fifo (
 		.clk               (pll_0_outclk0_clk),                           //       clk.clk
-		.reset             (timer_1_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
+		.reset             (audio_0_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
 		.in_data           (timer_1_s1_agent_rf_source_data),             //        in.data
 		.in_valid          (timer_1_s1_agent_rf_source_valid),            //          .valid
 		.in_ready          (timer_1_s1_agent_rf_source_ready),            //          .ready
@@ -5736,7 +5736,7 @@ module soc_system_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) timer_1_s1_agent_rdata_fifo (
 		.clk               (pll_0_outclk0_clk),                         //       clk.clk
-		.reset             (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset             (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.in_data           (timer_1_s1_agent_rdata_fifo_src_data),      //        in.data
 		.in_valid          (timer_1_s1_agent_rdata_fifo_src_valid),     //          .valid
 		.in_ready          (timer_1_s1_agent_rdata_fifo_src_ready),     //          .ready
@@ -5802,7 +5802,7 @@ module soc_system_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) leds_0_s1_agent (
 		.clk                     (pll_0_outclk0_clk),                          //             clk.clk
-		.reset                   (timer_1_reset_reset_bridge_in_reset_reset),  //       clk_reset.reset
+		.reset                   (audio_0_reset_reset_bridge_in_reset_reset),  //       clk_reset.reset
 		.m0_address              (leds_0_s1_agent_m0_address),                 //              m0.address
 		.m0_burstcount           (leds_0_s1_agent_m0_burstcount),              //                .burstcount
 		.m0_byteenable           (leds_0_s1_agent_m0_byteenable),              //                .byteenable
@@ -5861,7 +5861,7 @@ module soc_system_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) leds_0_s1_agent_rsp_fifo (
 		.clk               (pll_0_outclk0_clk),                          //       clk.clk
-		.reset             (timer_1_reset_reset_bridge_in_reset_reset),  // clk_reset.reset
+		.reset             (audio_0_reset_reset_bridge_in_reset_reset),  // clk_reset.reset
 		.in_data           (leds_0_s1_agent_rf_source_data),             //        in.data
 		.in_valid          (leds_0_s1_agent_rf_source_valid),            //          .valid
 		.in_ready          (leds_0_s1_agent_rf_source_ready),            //          .ready
@@ -5902,7 +5902,7 @@ module soc_system_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) leds_0_s1_agent_rdata_fifo (
 		.clk               (pll_0_outclk0_clk),                         //       clk.clk
-		.reset             (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset             (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.in_data           (leds_0_s1_agent_rdata_fifo_src_data),       //        in.data
 		.in_valid          (leds_0_s1_agent_rdata_fifo_src_valid),      //          .valid
 		.in_ready          (leds_0_s1_agent_rdata_fifo_src_ready),      //          .ready
@@ -8055,7 +8055,7 @@ module soc_system_mm_interconnect_0 (
 		.sink_startofpacket (audio_0_avalon_audio_slave_agent_rp_startofpacket), //          .startofpacket
 		.sink_endofpacket   (audio_0_avalon_audio_slave_agent_rp_endofpacket),   //          .endofpacket
 		.clk                (pll_0_outclk0_clk),                                 //       clk.clk
-		.reset              (nios2_gen2_1_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.reset              (audio_0_reset_reset_bridge_in_reset_reset),         // clk_reset.reset
 		.src_ready          (router_008_src_ready),                              //       src.ready
 		.src_valid          (router_008_src_valid),                              //          .valid
 		.src_data           (router_008_src_data),                               //          .data
@@ -8183,7 +8183,7 @@ module soc_system_mm_interconnect_0 (
 		.sink_startofpacket (timer_1_s1_agent_rp_startofpacket),         //          .startofpacket
 		.sink_endofpacket   (timer_1_s1_agent_rp_endofpacket),           //          .endofpacket
 		.clk                (pll_0_outclk0_clk),                         //       clk.clk
-		.reset              (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset              (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_016_src_ready),                      //       src.ready
 		.src_valid          (router_016_src_valid),                      //          .valid
 		.src_data           (router_016_src_data),                       //          .data
@@ -8199,7 +8199,7 @@ module soc_system_mm_interconnect_0 (
 		.sink_startofpacket (leds_0_s1_agent_rp_startofpacket),          //          .startofpacket
 		.sink_endofpacket   (leds_0_s1_agent_rp_endofpacket),            //          .endofpacket
 		.clk                (pll_0_outclk0_clk),                         //       clk.clk
-		.reset              (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset              (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_017_src_ready),                      //       src.ready
 		.src_valid          (router_017_src_valid),                      //          .valid
 		.src_data           (router_017_src_data),                       //          .data
@@ -8961,26 +8961,26 @@ module soc_system_mm_interconnect_0 (
 	);
 
 	soc_system_mm_interconnect_0_cmd_mux cmd_mux (
-		.clk                 (pll_0_outclk0_clk),                              //       clk.clk
-		.reset               (nios2_gen2_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_src_ready),                              //       src.ready
-		.src_valid           (cmd_mux_src_valid),                              //          .valid
-		.src_data            (cmd_mux_src_data),                               //          .data
-		.src_channel         (cmd_mux_src_channel),                            //          .channel
-		.src_startofpacket   (cmd_mux_src_startofpacket),                      //          .startofpacket
-		.src_endofpacket     (cmd_mux_src_endofpacket),                        //          .endofpacket
-		.sink0_ready         (cmd_demux_src0_ready),                           //     sink0.ready
-		.sink0_valid         (cmd_demux_src0_valid),                           //          .valid
-		.sink0_channel       (cmd_demux_src0_channel),                         //          .channel
-		.sink0_data          (cmd_demux_src0_data),                            //          .data
-		.sink0_startofpacket (cmd_demux_src0_startofpacket),                   //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src0_endofpacket),                     //          .endofpacket
-		.sink1_ready         (cmd_demux_001_src0_ready),                       //     sink1.ready
-		.sink1_valid         (cmd_demux_001_src0_valid),                       //          .valid
-		.sink1_channel       (cmd_demux_001_src0_channel),                     //          .channel
-		.sink1_data          (cmd_demux_001_src0_data),                        //          .data
-		.sink1_startofpacket (cmd_demux_001_src0_startofpacket),               //          .startofpacket
-		.sink1_endofpacket   (cmd_demux_001_src0_endofpacket)                  //          .endofpacket
+		.clk                 (pll_0_outclk0_clk),                         //       clk.clk
+		.reset               (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_src_ready),                         //       src.ready
+		.src_valid           (cmd_mux_src_valid),                         //          .valid
+		.src_data            (cmd_mux_src_data),                          //          .data
+		.src_channel         (cmd_mux_src_channel),                       //          .channel
+		.src_startofpacket   (cmd_mux_src_startofpacket),                 //          .startofpacket
+		.src_endofpacket     (cmd_mux_src_endofpacket),                   //          .endofpacket
+		.sink0_ready         (cmd_demux_src0_ready),                      //     sink0.ready
+		.sink0_valid         (cmd_demux_src0_valid),                      //          .valid
+		.sink0_channel       (cmd_demux_src0_channel),                    //          .channel
+		.sink0_data          (cmd_demux_src0_data),                       //          .data
+		.sink0_startofpacket (cmd_demux_src0_startofpacket),              //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src0_endofpacket),                //          .endofpacket
+		.sink1_ready         (cmd_demux_001_src0_ready),                  //     sink1.ready
+		.sink1_valid         (cmd_demux_001_src0_valid),                  //          .valid
+		.sink1_channel       (cmd_demux_001_src0_channel),                //          .channel
+		.sink1_data          (cmd_demux_001_src0_data),                   //          .data
+		.sink1_startofpacket (cmd_demux_001_src0_startofpacket),          //          .startofpacket
+		.sink1_endofpacket   (cmd_demux_001_src0_endofpacket)             //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_cmd_mux cmd_mux_001 (
@@ -9164,7 +9164,7 @@ module soc_system_mm_interconnect_0 (
 
 	soc_system_mm_interconnect_0_cmd_mux_003 cmd_mux_008 (
 		.clk                 (pll_0_outclk0_clk),                         //       clk.clk
-		.reset               (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset               (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (cmd_mux_008_src_ready),                     //       src.ready
 		.src_valid           (cmd_mux_008_src_valid),                     //          .valid
 		.src_data            (cmd_mux_008_src_data),                      //          .data
@@ -9181,7 +9181,7 @@ module soc_system_mm_interconnect_0 (
 
 	soc_system_mm_interconnect_0_cmd_mux_003 cmd_mux_009 (
 		.clk                 (pll_0_outclk0_clk),                         //       clk.clk
-		.reset               (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset               (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (cmd_mux_009_src_ready),                     //       src.ready
 		.src_valid           (cmd_mux_009_src_valid),                     //          .valid
 		.src_data            (cmd_mux_009_src_data),                      //          .data
@@ -9425,26 +9425,26 @@ module soc_system_mm_interconnect_0 (
 	);
 
 	soc_system_mm_interconnect_0_cmd_demux_005 rsp_demux (
-		.clk                (pll_0_outclk0_clk),                              //       clk.clk
-		.reset              (nios2_gen2_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.sink_ready         (router_008_src_ready),                           //      sink.ready
-		.sink_channel       (router_008_src_channel),                         //          .channel
-		.sink_data          (router_008_src_data),                            //          .data
-		.sink_startofpacket (router_008_src_startofpacket),                   //          .startofpacket
-		.sink_endofpacket   (router_008_src_endofpacket),                     //          .endofpacket
-		.sink_valid         (router_008_src_valid),                           //          .valid
-		.src0_ready         (rsp_demux_src0_ready),                           //      src0.ready
-		.src0_valid         (rsp_demux_src0_valid),                           //          .valid
-		.src0_data          (rsp_demux_src0_data),                            //          .data
-		.src0_channel       (rsp_demux_src0_channel),                         //          .channel
-		.src0_startofpacket (rsp_demux_src0_startofpacket),                   //          .startofpacket
-		.src0_endofpacket   (rsp_demux_src0_endofpacket),                     //          .endofpacket
-		.src1_ready         (rsp_demux_src1_ready),                           //      src1.ready
-		.src1_valid         (rsp_demux_src1_valid),                           //          .valid
-		.src1_data          (rsp_demux_src1_data),                            //          .data
-		.src1_channel       (rsp_demux_src1_channel),                         //          .channel
-		.src1_startofpacket (rsp_demux_src1_startofpacket),                   //          .startofpacket
-		.src1_endofpacket   (rsp_demux_src1_endofpacket)                      //          .endofpacket
+		.clk                (pll_0_outclk0_clk),                         //       clk.clk
+		.reset              (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.sink_ready         (router_008_src_ready),                      //      sink.ready
+		.sink_channel       (router_008_src_channel),                    //          .channel
+		.sink_data          (router_008_src_data),                       //          .data
+		.sink_startofpacket (router_008_src_startofpacket),              //          .startofpacket
+		.sink_endofpacket   (router_008_src_endofpacket),                //          .endofpacket
+		.sink_valid         (router_008_src_valid),                      //          .valid
+		.src0_ready         (rsp_demux_src0_ready),                      //      src0.ready
+		.src0_valid         (rsp_demux_src0_valid),                      //          .valid
+		.src0_data          (rsp_demux_src0_data),                       //          .data
+		.src0_channel       (rsp_demux_src0_channel),                    //          .channel
+		.src0_startofpacket (rsp_demux_src0_startofpacket),              //          .startofpacket
+		.src0_endofpacket   (rsp_demux_src0_endofpacket),                //          .endofpacket
+		.src1_ready         (rsp_demux_src1_ready),                      //      src1.ready
+		.src1_valid         (rsp_demux_src1_valid),                      //          .valid
+		.src1_data          (rsp_demux_src1_data),                       //          .data
+		.src1_channel       (rsp_demux_src1_channel),                    //          .channel
+		.src1_startofpacket (rsp_demux_src1_startofpacket),              //          .startofpacket
+		.src1_endofpacket   (rsp_demux_src1_endofpacket)                 //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_cmd_demux_005 rsp_demux_001 (
@@ -9628,7 +9628,7 @@ module soc_system_mm_interconnect_0 (
 
 	soc_system_mm_interconnect_0_cmd_demux_002 rsp_demux_008 (
 		.clk                (pll_0_outclk0_clk),                         //       clk.clk
-		.reset              (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset              (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_016_src_ready),                      //      sink.ready
 		.sink_channel       (router_016_src_channel),                    //          .channel
 		.sink_data          (router_016_src_data),                       //          .data
@@ -9645,7 +9645,7 @@ module soc_system_mm_interconnect_0 (
 
 	soc_system_mm_interconnect_0_cmd_demux_002 rsp_demux_009 (
 		.clk                (pll_0_outclk0_clk),                         //       clk.clk
-		.reset              (timer_1_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset              (audio_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_017_src_ready),                      //      sink.ready
 		.sink_channel       (router_017_src_channel),                    //          .channel
 		.sink_data          (router_017_src_data),                       //          .data
@@ -10757,7 +10757,7 @@ module soc_system_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter (
 		.in_clk_0_clk   (pll_0_outclk0_clk),                                     // in_clk_0.clk
-		.in_rst_0_reset (nios2_gen2_1_reset_reset_bridge_in_reset_reset),        // in_rst_0.reset
+		.in_rst_0_reset (audio_0_reset_reset_bridge_in_reset_reset),             // in_rst_0.reset
 		.in_0_data      (audio_0_avalon_audio_slave_agent_rdata_fifo_out_data),  //     in_0.data
 		.in_0_valid     (audio_0_avalon_audio_slave_agent_rdata_fifo_out_valid), //         .valid
 		.in_0_ready     (audio_0_avalon_audio_slave_agent_rdata_fifo_out_ready), //         .ready
@@ -10989,7 +10989,7 @@ module soc_system_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter_008 (
 		.in_clk_0_clk   (pll_0_outclk0_clk),                         // in_clk_0.clk
-		.in_rst_0_reset (timer_1_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_rst_0_reset (audio_0_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
 		.in_0_data      (timer_1_s1_agent_rdata_fifo_out_data),      //     in_0.data
 		.in_0_valid     (timer_1_s1_agent_rdata_fifo_out_valid),     //         .valid
 		.in_0_ready     (timer_1_s1_agent_rdata_fifo_out_ready),     //         .ready
@@ -11018,7 +11018,7 @@ module soc_system_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter_009 (
 		.in_clk_0_clk   (pll_0_outclk0_clk),                         // in_clk_0.clk
-		.in_rst_0_reset (timer_1_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_rst_0_reset (audio_0_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
 		.in_0_data      (leds_0_s1_agent_rdata_fifo_out_data),       //     in_0.data
 		.in_0_valid     (leds_0_s1_agent_rdata_fifo_out_valid),      //         .valid
 		.in_0_ready     (leds_0_s1_agent_rdata_fifo_out_ready),      //         .ready
