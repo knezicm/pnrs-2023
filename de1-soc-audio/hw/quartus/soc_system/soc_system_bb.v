@@ -7,6 +7,7 @@ module soc_system (
 	audio_0_external_interface_DACLRCK,
 	audio_i2c_config_SDAT,
 	audio_i2c_config_SCLK,
+	audio_pll_0_audio_clk_clk,
 	button_0_external_connection_export,
 	clk_clk,
 	hex_0_external_connection_export,
@@ -71,8 +72,7 @@ module soc_system (
 	sdram_controller_0_wire_dqm,
 	sdram_controller_0_wire_ras_n,
 	sdram_controller_0_wire_we_n,
-	switches_0_external_connection_export,
-	audio_pll_0_audio_clk_clk);	
+	switches_0_external_connection_export);	
 
 	input		audio_0_external_interface_ADCDAT;
 	input		audio_0_external_interface_ADCLRCK;
@@ -81,6 +81,7 @@ module soc_system (
 	input		audio_0_external_interface_DACLRCK;
 	inout		audio_i2c_config_SDAT;
 	output		audio_i2c_config_SCLK;
+	output		audio_pll_0_audio_clk_clk;
 	input	[3:0]	button_0_external_connection_export;
 	input		clk_clk;
 	output	[6:0]	hex_0_external_connection_export;
@@ -146,5 +147,4 @@ module soc_system (
 	output		sdram_controller_0_wire_ras_n;
 	output		sdram_controller_0_wire_we_n;
 	input	[9:0]	switches_0_external_connection_export;
-	output		audio_pll_0_audio_clk_clk;
 endmodule

@@ -2505,7 +2505,7 @@
    kind="reset"
    version="20.1"
    start="audio_pll_0.reset_source"
-   end="pll_0.reset" />
+   end="audio_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

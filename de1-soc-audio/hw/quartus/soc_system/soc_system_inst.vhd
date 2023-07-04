@@ -7,6 +7,7 @@
 			audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X';             -- DACLRCK
 			audio_i2c_config_SDAT                 : inout std_logic                     := 'X';             -- SDAT
 			audio_i2c_config_SCLK                 : out   std_logic;                                        -- SCLK
+			audio_pll_0_audio_clk_clk             : out   std_logic;                                        -- clk
 			button_0_external_connection_export   : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			clk_clk                               : in    std_logic                     := 'X';             -- clk
 			hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     -- export
@@ -71,8 +72,7 @@
 			sdram_controller_0_wire_dqm           : out   std_logic_vector(1 downto 0);                     -- dqm
 			sdram_controller_0_wire_ras_n         : out   std_logic;                                        -- ras_n
 			sdram_controller_0_wire_we_n          : out   std_logic;                                        -- we_n
-			switches_0_external_connection_export : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
-			audio_pll_0_audio_clk_clk             : out   std_logic                                         -- clk
+			switches_0_external_connection_export : in    std_logic_vector(9 downto 0)  := (others => 'X')  -- export
 		);
 	end component soc_system;
 
@@ -85,6 +85,7 @@
 			audio_0_external_interface_DACLRCK    => CONNECTED_TO_audio_0_external_interface_DACLRCK,    --                               .DACLRCK
 			audio_i2c_config_SDAT                 => CONNECTED_TO_audio_i2c_config_SDAT,                 --               audio_i2c_config.SDAT
 			audio_i2c_config_SCLK                 => CONNECTED_TO_audio_i2c_config_SCLK,                 --                               .SCLK
+			audio_pll_0_audio_clk_clk             => CONNECTED_TO_audio_pll_0_audio_clk_clk,             --          audio_pll_0_audio_clk.clk
 			button_0_external_connection_export   => CONNECTED_TO_button_0_external_connection_export,   --   button_0_external_connection.export
 			clk_clk                               => CONNECTED_TO_clk_clk,                               --                            clk.clk
 			hex_0_external_connection_export      => CONNECTED_TO_hex_0_external_connection_export,      --      hex_0_external_connection.export
@@ -149,7 +150,6 @@
 			sdram_controller_0_wire_dqm           => CONNECTED_TO_sdram_controller_0_wire_dqm,           --                               .dqm
 			sdram_controller_0_wire_ras_n         => CONNECTED_TO_sdram_controller_0_wire_ras_n,         --                               .ras_n
 			sdram_controller_0_wire_we_n          => CONNECTED_TO_sdram_controller_0_wire_we_n,          --                               .we_n
-			switches_0_external_connection_export => CONNECTED_TO_switches_0_external_connection_export, -- switches_0_external_connection.export
-			audio_pll_0_audio_clk_clk             => CONNECTED_TO_audio_pll_0_audio_clk_clk              --          audio_pll_0_audio_clk.clk
+			switches_0_external_connection_export => CONNECTED_TO_switches_0_external_connection_export  -- switches_0_external_connection.export
 		);
 

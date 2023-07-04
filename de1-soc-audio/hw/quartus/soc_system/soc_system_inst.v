@@ -6,6 +6,7 @@
 		.audio_0_external_interface_DACLRCK    (<connected-to-audio_0_external_interface_DACLRCK>),    //                               .DACLRCK
 		.audio_i2c_config_SDAT                 (<connected-to-audio_i2c_config_SDAT>),                 //               audio_i2c_config.SDAT
 		.audio_i2c_config_SCLK                 (<connected-to-audio_i2c_config_SCLK>),                 //                               .SCLK
+		.audio_pll_0_audio_clk_clk             (<connected-to-audio_pll_0_audio_clk_clk>),             //          audio_pll_0_audio_clk.clk
 		.button_0_external_connection_export   (<connected-to-button_0_external_connection_export>),   //   button_0_external_connection.export
 		.clk_clk                               (<connected-to-clk_clk>),                               //                            clk.clk
 		.hex_0_external_connection_export      (<connected-to-hex_0_external_connection_export>),      //      hex_0_external_connection.export
@@ -70,7 +71,6 @@
 		.sdram_controller_0_wire_dqm           (<connected-to-sdram_controller_0_wire_dqm>),           //                               .dqm
 		.sdram_controller_0_wire_ras_n         (<connected-to-sdram_controller_0_wire_ras_n>),         //                               .ras_n
 		.sdram_controller_0_wire_we_n          (<connected-to-sdram_controller_0_wire_we_n>),          //                               .we_n
-		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>), // switches_0_external_connection.export
-		.audio_pll_0_audio_clk_clk             (<connected-to-audio_pll_0_audio_clk_clk>)              //          audio_pll_0_audio_clk.clk
+		.switches_0_external_connection_export (<connected-to-switches_0_external_connection_export>)  // switches_0_external_connection.export
 	);
 

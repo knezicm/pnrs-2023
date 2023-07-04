@@ -76,118 +76,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX0_N[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0_N[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0_N[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0_N[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0_N[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0_N[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0_N[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1_N[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1_N[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1_N[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1_N[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1_N[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1_N[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1_N[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2_N[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2_N[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2_N[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2_N[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2_N[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2_N[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2_N[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3_N[6]",
-					"strict" : false
-				},
-				{
 					"name" : "HEX4_N[0]",
 					"strict" : false
 				},
@@ -304,6 +192,118 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX0_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_N[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_N[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_N[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_N[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_N[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_N[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_N[6]",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_DQ[0]",
 					"strict" : false
 				},
@@ -368,15 +368,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
 					"name" : "FPGA_I2C_SDAT",
 					"strict" : false
 				},
 				{
 					"name" : "AUD_ADCLRCK",
-					"strict" : false
-				},
-				{
-					"name" : "AUD_BCLK",
 					"strict" : false
 				},
 				{
@@ -388,19 +388,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY_N[0]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
+					"name" : "KEY_N[0]",
 					"strict" : false
 				},
 				{
 					"name" : "KEY_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{
