@@ -45,8 +45,8 @@ alt_u8 blink = 0;
 alt_u8 signal1 = 0;
 
 /* Sheared memory*/
-uint32_t __attribute__((section (".l_buffer"))) l_buffer[262143];
-uint32_t __attribute__((section (".r_buffer"))) r_buffer[262143];
+uint32_t __attribute__((section (".l_buffer"))) l_buffer[262016];
+uint32_t __attribute__((section (".r_buffer"))) r_buffer[262016];
 int buff_inx = 0, left_right = 1;
 
 int numSamples = SAMPLE_RATE * DURATION;
@@ -180,21 +180,28 @@ int main(void)
 					signal_hps[1] = 11; // SAVE_AUDIO
 					altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 				}
-				if (alt_up_audio_read_fifo_avail(audio_dev, ALT_UP_AUDIO_RIGHT) > 0) // check if data is available
+				if (alt_up_audio_read_fifo_avail(audio_dev, ALT_UP_AUDIO_RIGHT) >= 127) // check if data is available
 				{
 					// read audio buffer
-					alt_up_audio_read_fifo(audio_dev, &(r_buf), 1, ALT_UP_AUDIO_RIGHT);
-					alt_up_audio_read_fifo(audio_dev, &(l_buf), 1, ALT_UP_AUDIO_LEFT);
+					alt_up_audio_read_fifo(audio_dev, r_buf1, 128, ALT_UP_AUDIO_RIGHT);
+					alt_up_audio_read_fifo(audio_dev, l_buf1, 128, ALT_UP_AUDIO_LEFT);
 
-					// write to share memory
-					if(left_right)
-						r_buffer[buff_inx] = r_buf;
-					else
-						l_buffer[buff_inx] = r_buf;
+
+					for(int i = 0; i < 128; i++){
+						r_buf1[i] &= 0x00ffffff;
+						l_buf1[i] &= 0x00ffffff;
+					}
+
+					for(int i = 0; i < 128; i++, buff_inx++){
+						// write to share memory
+						if(left_right)
+							r_buffer[buff_inx] = r_buf1[i];
+						else
+							l_buffer[buff_inx] = r_buf1[i];
+					}
 
 					//printf("Sample: %d, %d\n", r_buffer[buff_inx], l_buffer[buff_inx]);
-					buff_inx++;
-					if(buff_inx >= 262143){
+					if(buff_inx >= 262016){
 						buff_inx = 0;
 						if(left_right)
 							signal_hps[1] = 4;
@@ -211,6 +218,15 @@ int main(void)
 				play_flag = 2;
 				break;
 			case REC_STOP_STATE:
+				if(left_right)
+					signal_hps[1] = 4;
+				else
+					signal_hps[1] = 3;
+
+				left_right = (left_right+1)%2;
+				// signalize HPS that buffer is ready (3 -> left buff, 4 -> right buff)
+				altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+
 				IOWR_ALTERA_AVALON_PIO_DATA(LEDS_0_BASE, 0);
 				start_stop_timer(0); // stop timer
 				reset_variables();
@@ -259,14 +275,18 @@ int main(void)
 
 				if(message_hps[1] == 9) //Spreman lijevi bafer.
 				{
+					/* Signal da HPS puni desni bafer. */
+					signal_hps[1] = 7;
+					altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+
 					buff_inx = 0;
 					/* Blokiranje ponovnog citanja lijevog bafera ukoliko desni jos nije spreman */
 					if(play_flag != 1)
 					{
 						for(buff_inx = 0; buff_inx < sizeof(l_buffer); buff_inx+=2)
 						{
-							r_buf = l_buffer[buff_inx];
-							l_buf = l_buffer[buff_inx + 1];
+							r_buf1[buff_inx] = l_buffer[buff_inx];
+							l_buf[buff_inx] = l_buffer[buff_inx + 1];
 							//vometer(r_buf);
 
 							alt_up_audio_write_fifo(audio_dev, &(r_buf), 1, ALT_UP_AUDIO_RIGHT);
@@ -276,13 +296,17 @@ int main(void)
 						play_flag = 1;
 
 						/* Signal da HPS puni desni bafer. */
-						signal_hps[1] = 7;
-						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
-						usleep(10);
+//						signal_hps[1] = 7;
+//						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+//						usleep(10);
 					}
 				}
 				else if(message_hps[1] == 10) //Spreman desni bafer.
 				{
+					/* Signal da HPS puni lijevi bafer. */
+					signal_hps[1] = 6;
+					altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+
 					buff_inx = 0;
 					/* Blokiranje ponovnog citanja desnog bafera ukoliko lijevi jos nije spreman. */
 					if(play_flag != 0)
@@ -301,9 +325,9 @@ int main(void)
 						play_flag = 0;
 
 						/* Signal da HPS puni lijevi bafer. */
-						signal_hps[1] = 6;
-						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
-						usleep(10);
+						//signal_hps[1] = 6;
+						//altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
+						//usleep(10);
 					}
 				}
 				break;
