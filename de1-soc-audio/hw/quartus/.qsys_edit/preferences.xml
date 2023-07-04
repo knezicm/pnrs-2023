@@ -3,12 +3,13 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces" showResetDomains="0" showClockDomains="0">
   <columns>
-   <connections preferredWidth="351" />
+   <connections preferredWidth="383" />
    <irq preferredWidth="47" />
    <name preferredWidth="210" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
+ <library
+   expandedCategories="Library/University Program,Library/University Program/Audio &amp; Video,Library/University Program/Clock,Library/Interface Protocols/Audio &amp; Video,Library/Interface Protocols,Library/University Program/Audio &amp; Video/Video,Project,Library" />
  <window width="1920" height="1030" x="0" y="0" />
  <generation synthesis="VHDL" block_symbol_file="0" />
  <hdlexample language="VHDL" />

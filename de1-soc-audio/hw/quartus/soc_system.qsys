@@ -13,7 +13,7 @@
    {
       datum _sortIndex
       {
-         value = "15";
+         value = "16";
          type = "int";
       }
    }
@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "24";
+         value = "25";
          type = "int";
       }
    }
@@ -46,6 +46,14 @@
       datum _sortIndex
       {
          value = "14";
+         type = "int";
+      }
+   }
+   element audio_pll_1
+   {
+      datum _sortIndex
+      {
+         value = "15";
          type = "int";
       }
    }
@@ -173,7 +181,7 @@
    {
       datum _sortIndex
       {
-         value = "23";
+         value = "24";
          type = "int";
       }
    }
@@ -181,7 +189,7 @@
    {
       datum _sortIndex
       {
-         value = "19";
+         value = "20";
          type = "int";
       }
    }
@@ -197,7 +205,7 @@
    {
       datum _sortIndex
       {
-         value = "17";
+         value = "18";
          type = "int";
       }
    }
@@ -213,7 +221,7 @@
    {
       datum _sortIndex
       {
-         value = "20";
+         value = "21";
          type = "int";
       }
    }
@@ -237,7 +245,7 @@
    {
       datum _sortIndex
       {
-         value = "21";
+         value = "22";
          type = "int";
       }
    }
@@ -261,7 +269,7 @@
    {
       datum _sortIndex
       {
-         value = "22";
+         value = "23";
          type = "int";
       }
    }
@@ -362,7 +370,7 @@
    {
       datum _sortIndex
       {
-         value = "18";
+         value = "19";
          type = "int";
       }
    }
@@ -394,7 +402,7 @@
    {
       datum _sortIndex
       {
-         value = "16";
+         value = "17";
          type = "int";
       }
    }
@@ -503,7 +511,7 @@
    kind="altera_up_avalon_audio"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="18432203" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="audio_in" value="true" />
   <parameter name="audio_out" value="true" />
@@ -534,6 +542,17 @@
  </module>
  <module
    name="audio_pll_0"
+   kind="altera_up_avalon_audio_pll"
+   version="18.0"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="audio_clk_freq" value="18.432" />
+  <parameter name="device_family" value="Cyclone V" />
+  <parameter name="gui_refclk" value="50.0" />
+ </module>
+ <module
+   name="audio_pll_1"
    kind="altera_up_avalon_audio_pll"
    version="18.0"
    enabled="1">
@@ -1245,8 +1264,8 @@
    kind="altera_nios2_gen2"
    version="20.1"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="9" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="9" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="11" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="11" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -1427,8 +1446,8 @@
    kind="altera_nios2_gen2"
    version="20.1"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="9" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="9" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="11" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="11" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -2187,6 +2206,11 @@
   <parameter name="baseAddress" value="0x08000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection
+   kind="clock"
+   version="20.1"
+   start="audio_pll_1.audio_clk"
+   end="audio_0.clk" />
  <connection kind="clock" version="20.1" start="clk_0.clk" end="pll_0.refclk" />
  <connection
    kind="clock"
@@ -2227,7 +2251,6 @@
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="button_0.clk" />
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="hex_5.clk" />
  <connection kind="clock" version="20.1" start="pll_0.outclk0" end="mailbox_2.clk" />
- <connection kind="clock" version="20.1" start="pll_0.outclk0" end="audio_0.clk" />
  <connection
    kind="clock"
    version="20.1"
@@ -2243,6 +2266,11 @@
    version="20.1"
    start="pll_0.outclk0"
    end="audio_pll_0.ref_clk" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="pll_0.outclk0"
+   end="audio_pll_1.ref_clk" />
  <connection
    kind="clock"
    version="20.1"
@@ -2288,6 +2316,11 @@
    version="20.1"
    start="clk_0.clk_reset"
    end="audio_pll_0.ref_reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="clk_0.clk_reset"
+   end="audio_pll_1.ref_reset" />
  <connection kind="reset" version="20.1" start="clk_0.clk_reset" end="pll_0.reset" />
  <connection
    kind="reset"
@@ -2505,6 +2538,11 @@
    kind="reset"
    version="20.1"
    start="audio_pll_0.reset_source"
+   end="audio_0.reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="audio_pll_1.reset_source"
    end="audio_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />

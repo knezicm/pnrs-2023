@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2023.07.04.12:43:27</td>
+    <td class="l">2023.07.04.13:04:54</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -1916,7 +1916,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_nios2_gen2_1">nios2_gen2_1</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="17">audio_0</td>
+      <td class="main" rowspan="19">audio_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_audio_slave</td>
@@ -1943,13 +1943,19 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
      </tr>
      <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_pll_0">pll_0</a>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_audio_pll_1">audio_pll_1</a>
       </td>
-      <td class="from">outclk0&#160;&#160;</td>
+      <td class="from">audio_clk&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">reset_source&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -2006,7 +2012,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_RATE</td>
-        <td class="parametervalue">50000000</td>
+        <td class="parametervalue">18432203</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2210,6 +2216,110 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="neighbor" rowspan="2">
        <a href="#module_audio_0">audio_0</a>
       </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">gui_refclk</td>
+        <td class="parametervalue">50.0</td>
+       </tr>
+       <tr>
+        <td class="parametername">refclk</td>
+        <td class="parametervalue">50.0</td>
+       </tr>
+       <tr>
+        <td class="parametername">audio_clk_freq</td>
+        <td class="parametervalue">18.432</td>
+       </tr>
+       <tr>
+        <td class="parametername">device_family</td>
+        <td class="parametervalue">CYCLONEV</td>
+       </tr>
+       <tr>
+        <td class="parametername">AUTO_DEVICE</td>
+        <td class="parametervalue">5CSEMA5F31C6</td>
+       </tr>
+       <tr>
+        <td class="parametername">AUTO_DEVICE_SPEEDGRADE</td>
+        <td class="parametervalue">6</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_audio_pll_1"> </a>
+  <div>
+   <hr/>
+   <h2>audio_pll_1</h2>altera_up_avalon_audio_pll v18.0
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_pll_0">pll_0</a>
+      </td>
+      <td class="from">outclk0&#160;&#160;</td>
+      <td class="main" rowspan="9">audio_pll_1</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;ref_clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_clk_0">clk_0</a>
+      </td>
+      <td class="from">clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;ref_reset</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">audio_clk&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_audio_0">audio_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">reset_source&#160;&#160;</td>
      </tr>
      <tr>
       <td></td>
@@ -32106,11 +32216,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_DOMAIN</td>
-        <td class="parametervalue">7</td>
+        <td class="parametervalue">9</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_RESET_DOMAIN</td>
-        <td class="parametervalue">7</td>
+        <td class="parametervalue">9</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -33365,11 +33475,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_DOMAIN</td>
-        <td class="parametervalue">7</td>
+        <td class="parametervalue">9</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_RESET_DOMAIN</td>
-        <td class="parametervalue">7</td>
+        <td class="parametervalue">9</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -33836,22 +33946,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">outclk0&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_audio_0">audio_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">outclk0&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
        <a href="#module_hps_0_bridges">hps_0_bridges</a>
       </td>
@@ -33880,6 +33974,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">outclk0&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_audio_pll_0">audio_pll_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;ref_clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">outclk0&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_audio_pll_1">audio_pll_1</a>
       </td>
      </tr>
      <tr>
@@ -36439,7 +36549,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1688467405</td>
+        <td class="parametervalue">1688468692</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -36464,7 +36574,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1688467405</td>
+        <td class="parametervalue">1688468692</td>
        </tr>
       </table>
      </td>
@@ -36873,8 +36983,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.03 seconds</td>
-    <td class="r">rendering took 0.39 seconds</td>
+    <td class="l">generation took 0.02 seconds</td>
+    <td class="r">rendering took 0.50 seconds</td>
    </tr>
   </table>
  </body>
