@@ -217,20 +217,20 @@ module soc_system_mm_interconnect_0_router
 
     // ( 0x1040 .. 0x1050 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 28'h1040   ) begin
-            src_channel = 22'b00000010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 14;
-    end
-
-    // ( 0x1050 .. 0x1060 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 28'h1050   ) begin
             src_channel = 22'b10000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
     end
 
-    // ( 0x1060 .. 0x1070 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 28'h1060   ) begin
+    // ( 0x1050 .. 0x1060 )
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 28'h1050   ) begin
             src_channel = 22'b00000100000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 13;
+    end
+
+    // ( 0x1060 .. 0x1070 )
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 28'h1060   ) begin
+            src_channel = 22'b00000010000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 14;
     end
 
     // ( 0x1070 .. 0x1080 )

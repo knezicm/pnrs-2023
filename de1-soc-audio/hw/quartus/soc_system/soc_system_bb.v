@@ -60,7 +60,6 @@ module soc_system (
 	hps_0_io_hps_io_gpio_inst_GPIO53,
 	hps_0_io_hps_io_gpio_inst_GPIO54,
 	leds_0_external_connection_export,
-	pll_0_audio_clk,
 	pll_0_sdram_clk,
 	reset_reset_n,
 	sdram_controller_0_wire_addr,
@@ -72,7 +71,8 @@ module soc_system (
 	sdram_controller_0_wire_dqm,
 	sdram_controller_0_wire_ras_n,
 	sdram_controller_0_wire_we_n,
-	switches_0_external_connection_export);	
+	switches_0_external_connection_export,
+	audio_pll_0_audio_clk_clk);	
 
 	input		audio_0_external_interface_ADCDAT;
 	input		audio_0_external_interface_ADCLRCK;
@@ -134,7 +134,6 @@ module soc_system (
 	inout		hps_0_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO54;
 	output	[9:0]	leds_0_external_connection_export;
-	output		pll_0_audio_clk;
 	output		pll_0_sdram_clk;
 	input		reset_reset_n;
 	output	[12:0]	sdram_controller_0_wire_addr;
@@ -147,4 +146,5 @@ module soc_system (
 	output		sdram_controller_0_wire_ras_n;
 	output		sdram_controller_0_wire_we_n;
 	input	[9:0]	switches_0_external_connection_export;
+	output		audio_pll_0_audio_clk_clk;
 endmodule

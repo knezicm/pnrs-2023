@@ -15,6 +15,7 @@ entity soc_system is
 		audio_0_external_interface_DACLRCK    : in    std_logic                     := '0';             --                               .DACLRCK
 		audio_i2c_config_SDAT                 : inout std_logic                     := '0';             --               audio_i2c_config.SDAT
 		audio_i2c_config_SCLK                 : out   std_logic;                                        --                               .SCLK
+		audio_pll_0_audio_clk_clk             : out   std_logic;                                        --          audio_pll_0_audio_clk.clk
 		button_0_external_connection_export   : in    std_logic_vector(3 downto 0)  := (others => '0'); --   button_0_external_connection.export
 		clk_clk                               : in    std_logic                     := '0';             --                            clk.clk
 		hex_0_external_connection_export      : out   std_logic_vector(6 downto 0);                     --      hex_0_external_connection.export
@@ -68,7 +69,6 @@ entity soc_system is
 		hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO53
 		hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := '0';             --                               .hps_io_gpio_inst_GPIO54
 		leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     --     leds_0_external_connection.export
-		pll_0_audio_clk                       : out   std_logic;                                        --                    pll_0_audio.clk
 		pll_0_sdram_clk                       : out   std_logic;                                        --                    pll_0_sdram.clk
 		reset_reset_n                         : in    std_logic                     := '0';             --                          reset.reset_n
 		sdram_controller_0_wire_addr          : out   std_logic_vector(12 downto 0);                    --        sdram_controller_0_wire.addr
@@ -119,6 +119,15 @@ architecture rtl of soc_system is
 			I2C_SCLK    : out   std_logic                                         -- export
 		);
 	end component soc_system_audio_and_video_config_0;
+
+	component soc_system_audio_pll_0 is
+		port (
+			ref_clk_clk        : in  std_logic := 'X'; -- clk
+			ref_reset_reset    : in  std_logic := 'X'; -- reset
+			audio_clk_clk      : out std_logic;        -- clk
+			reset_source_reset : out std_logic         -- reset
+		);
+	end component soc_system_audio_pll_0;
 
 	component soc_system_button_0 is
 		port (
@@ -392,7 +401,6 @@ architecture rtl of soc_system is
 			outclk_0 : out std_logic;        -- clk
 			outclk_1 : out std_logic;        -- clk
 			outclk_2 : out std_logic;        -- clk
-			outclk_3 : out std_logic;        -- clk
 			locked   : out std_logic         -- export
 		);
 	end component soc_system_pll_0;
@@ -1053,7 +1061,7 @@ architecture rtl of soc_system is
 		);
 	end component soc_system_rst_controller_004;
 
-	component soc_system_rst_controller_006 is
+	component soc_system_rst_controller_007 is
 		generic (
 			NUM_RESET_INPUTS          : integer := 6;
 			OUTPUT_RESET_SYNC_EDGES   : string  := "deassert";
@@ -1117,11 +1125,11 @@ architecture rtl of soc_system is
 			reset_req_in8  : in  std_logic := 'X';
 			reset_req_in9  : in  std_logic := 'X'
 		);
-	end component soc_system_rst_controller_006;
+	end component soc_system_rst_controller_007;
 
-	signal pll_0_outclk0_clk                                                             : std_logic;                     -- pll_0:outclk_0 -> [audio_0:clk, audio_and_video_config_0:clk, button_0:clk, hex_0:clk, hex_1:clk, hex_2:clk, hex_3:clk, hex_4:clk, hex_5:clk, hps_0:h2f_axi_clk, hps_0:h2f_lw_axi_clk, irq_mapper:clk, irq_mapper_001:clk, jtag_uart_0:clk, leds_0:clk, mailbox_0:clk, mailbox_1:clk, mailbox_2:clk, mm_interconnect_0:pll_0_outclk0_clk, mm_interconnect_1:pll_0_outclk0_clk, nios2_gen2_0:clk, nios2_gen2_1:clk, rst_controller:clk, rst_controller_001:clk, rst_controller_002:clk, rst_controller_003:clk, rst_controller_004:clk, rst_controller_006:clk, switches_0:clk, sysid:clock, timer_0:clk, timer_1:clk]
-	signal pll_0_outclk1_clk                                                             : std_logic;                     -- pll_0:outclk_1 -> [mm_interconnect_0:pll_0_outclk1_clk, rst_controller_005:clk, sdram_controller_0:clk]
-	signal nios2_gen2_0_debug_reset_request_reset                                        : std_logic;                     -- nios2_gen2_0:debug_reset_request -> [mm_interconnect_0:hex_4_reset_reset_bridge_in_reset_reset, nios2_gen2_0_debug_reset_request_reset:in, rst_controller_002:reset_in1, rst_controller_003:reset_in1, rst_controller_004:reset_in1, rst_controller_005:reset_in1]
+	signal pll_0_outclk0_clk                                                             : std_logic;                     -- pll_0:outclk_0 -> [audio_0:clk, audio_and_video_config_0:clk, audio_pll_0:ref_clk_clk, button_0:clk, hex_0:clk, hex_1:clk, hex_2:clk, hex_3:clk, hex_4:clk, hex_5:clk, hps_0:h2f_axi_clk, hps_0:h2f_lw_axi_clk, irq_mapper:clk, irq_mapper_001:clk, jtag_uart_0:clk, leds_0:clk, mailbox_0:clk, mailbox_1:clk, mailbox_2:clk, mm_interconnect_0:pll_0_outclk0_clk, mm_interconnect_1:pll_0_outclk0_clk, nios2_gen2_0:clk, nios2_gen2_1:clk, rst_controller:clk, rst_controller_001:clk, rst_controller_002:clk, rst_controller_003:clk, rst_controller_004:clk, rst_controller_007:clk, switches_0:clk, sysid:clock, timer_0:clk, timer_1:clk]
+	signal pll_0_outclk1_clk                                                             : std_logic;                     -- pll_0:outclk_1 -> [mm_interconnect_0:pll_0_outclk1_clk, rst_controller_006:clk, sdram_controller_0:clk]
+	signal nios2_gen2_0_debug_reset_request_reset                                        : std_logic;                     -- nios2_gen2_0:debug_reset_request -> [mm_interconnect_0:hex_4_reset_reset_bridge_in_reset_reset, nios2_gen2_0_debug_reset_request_reset:in, rst_controller_002:reset_in1, rst_controller_003:reset_in1, rst_controller_004:reset_in1, rst_controller_006:reset_in1]
 	signal nios2_gen2_1_data_master_readdata                                             : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2_gen2_1_data_master_readdata -> nios2_gen2_1:d_readdata
 	signal nios2_gen2_1_data_master_waitrequest                                          : std_logic;                     -- mm_interconnect_0:nios2_gen2_1_data_master_waitrequest -> nios2_gen2_1:d_waitrequest
 	signal nios2_gen2_1_data_master_debugaccess                                          : std_logic;                     -- nios2_gen2_1:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_gen2_1_data_master_debugaccess
@@ -1354,7 +1362,7 @@ architecture rtl of soc_system is
 	signal nios2_gen2_1_irq_irq                                                          : std_logic_vector(31 downto 0); -- irq_mapper_001:sender_irq -> nios2_gen2_1:irq
 	signal irq_mapper_receiver0_irq                                                      : std_logic;                     -- jtag_uart_0:av_irq -> [irq_mapper:receiver0_irq, irq_mapper_001:receiver2_irq]
 	signal rst_controller_reset_out_reset                                                : std_logic;                     -- rst_controller:reset_out -> [audio_0:reset, mm_interconnect_0:audio_0_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in]
-	signal nios2_gen2_1_debug_reset_request_reset                                        : std_logic;                     -- nios2_gen2_1:debug_reset_request -> [rst_controller:reset_in1, rst_controller_003:reset_in2, rst_controller_004:reset_in2, rst_controller_005:reset_in2]
+	signal nios2_gen2_1_debug_reset_request_reset                                        : std_logic;                     -- nios2_gen2_1:debug_reset_request -> [rst_controller:reset_in1, rst_controller_003:reset_in2, rst_controller_004:reset_in2, rst_controller_006:reset_in2]
 	signal rst_controller_001_reset_out_reset                                            : std_logic;                     -- rst_controller_001:reset_out -> [audio_and_video_config_0:reset, irq_mapper_001:reset, mm_interconnect_0:nios2_gen2_1_reset_reset_bridge_in_reset_reset, rst_controller_001_reset_out_reset:in, rst_translator:in_reset]
 	signal rst_controller_001_reset_out_reset_req                                        : std_logic;                     -- rst_controller_001:reset_req -> [nios2_gen2_1:reset_req, rst_translator:reset_req_in]
 	signal rst_controller_002_reset_out_reset                                            : std_logic;                     -- rst_controller_002:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, rst_controller_002_reset_out_reset:in, rst_translator_001:in_reset]
@@ -1362,9 +1370,11 @@ architecture rtl of soc_system is
 	signal rst_controller_003_reset_out_reset                                            : std_logic;                     -- rst_controller_003:reset_out -> [mm_interconnect_0:jtag_uart_0_reset_reset_bridge_in_reset_reset, rst_controller_003_reset_out_reset:in]
 	signal rst_controller_004_reset_out_reset                                            : std_logic;                     -- rst_controller_004:reset_out -> [mm_interconnect_0:mailbox_0_rst_n_reset_bridge_in_reset_reset, mm_interconnect_1:mailbox_1_rst_n_reset_bridge_in_reset_reset, rst_controller_004_reset_out_reset:in]
 	signal hps_0_h2f_reset_reset                                                         : std_logic;                     -- hps_0:h2f_rst_n -> hps_0_h2f_reset_reset:in
-	signal rst_controller_005_reset_out_reset                                            : std_logic;                     -- rst_controller_005:reset_out -> [mm_interconnect_0:sdram_controller_0_reset_reset_bridge_in_reset_reset, rst_controller_005_reset_out_reset:in]
-	signal rst_controller_006_reset_out_reset                                            : std_logic;                     -- rst_controller_006:reset_out -> [mm_interconnect_0:hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset]
-	signal reset_reset_n_ports_inv                                                       : std_logic;                     -- reset_reset_n:inv -> [pll_0:rst, rst_controller:reset_in0, rst_controller_001:reset_in0, rst_controller_002:reset_in0, rst_controller_003:reset_in0, rst_controller_004:reset_in0, rst_controller_005:reset_in0]
+	signal rst_controller_005_reset_out_reset                                            : std_logic;                     -- rst_controller_005:reset_out -> pll_0:rst
+	signal audio_pll_0_reset_source_reset                                                : std_logic;                     -- audio_pll_0:reset_source_reset -> rst_controller_005:reset_in1
+	signal rst_controller_006_reset_out_reset                                            : std_logic;                     -- rst_controller_006:reset_out -> [mm_interconnect_0:sdram_controller_0_reset_reset_bridge_in_reset_reset, rst_controller_006_reset_out_reset:in]
+	signal rst_controller_007_reset_out_reset                                            : std_logic;                     -- rst_controller_007:reset_out -> [mm_interconnect_0:hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset]
+	signal reset_reset_n_ports_inv                                                       : std_logic;                     -- reset_reset_n:inv -> [audio_pll_0:ref_reset_reset, rst_controller:reset_in0, rst_controller_001:reset_in0, rst_controller_002:reset_in0, rst_controller_003:reset_in0, rst_controller_004:reset_in0, rst_controller_005:reset_in0, rst_controller_006:reset_in0]
 	signal nios2_gen2_0_debug_reset_request_reset_ports_inv                              : std_logic;                     -- nios2_gen2_0_debug_reset_request_reset:inv -> [hex_0:reset_n, hex_1:reset_n, hex_2:reset_n, hex_3:reset_n, hex_4:reset_n]
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read_ports_inv                : std_logic;                     -- mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read:inv -> jtag_uart_0:av_read_n
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write_ports_inv               : std_logic;                     -- mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write:inv -> jtag_uart_0:av_write_n
@@ -1385,8 +1395,8 @@ architecture rtl of soc_system is
 	signal rst_controller_002_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_002_reset_out_reset:inv -> [hex_5:reset_n, nios2_gen2_0:reset_n, switches_0:reset_n, timer_0:reset_n]
 	signal rst_controller_003_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_003_reset_out_reset:inv -> [jtag_uart_0:rst_n, sysid:reset_n]
 	signal rst_controller_004_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_004_reset_out_reset:inv -> [mailbox_0:rst_n, mailbox_1:rst_n, mailbox_2:rst_n]
-	signal hps_0_h2f_reset_reset_ports_inv                                               : std_logic;                     -- hps_0_h2f_reset_reset:inv -> [rst_controller_004:reset_in3, rst_controller_005:reset_in3, rst_controller_006:reset_in0]
-	signal rst_controller_005_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_005_reset_out_reset:inv -> sdram_controller_0:reset_n
+	signal hps_0_h2f_reset_reset_ports_inv                                               : std_logic;                     -- hps_0_h2f_reset_reset:inv -> [rst_controller_004:reset_in3, rst_controller_006:reset_in3, rst_controller_007:reset_in0]
+	signal rst_controller_006_reset_out_reset_ports_inv                                  : std_logic;                     -- rst_controller_006_reset_out_reset:inv -> sdram_controller_0:reset_n
 
 begin
 
@@ -1421,6 +1431,14 @@ begin
 			waitrequest => mm_interconnect_0_audio_and_video_config_0_avalon_av_config_slave_waitrequest, --                       .waitrequest
 			I2C_SDAT    => audio_i2c_config_SDAT,                                                         --     external_interface.export
 			I2C_SCLK    => audio_i2c_config_SCLK                                                          --                       .export
+		);
+
+	audio_pll_0 : component soc_system_audio_pll_0
+		port map (
+			ref_clk_clk        => pll_0_outclk0_clk,              --      ref_clk.clk
+			ref_reset_reset    => reset_reset_n_ports_inv,        --    ref_reset.reset
+			audio_clk_clk      => audio_pll_0_audio_clk_clk,      --    audio_clk.clk
+			reset_source_reset => audio_pll_0_reset_source_reset  -- reset_source.reset
 		);
 
 	button_0 : component soc_system_button_0
@@ -1788,19 +1806,18 @@ begin
 
 	pll_0 : component soc_system_pll_0
 		port map (
-			refclk   => clk_clk,                 --  refclk.clk
-			rst      => reset_reset_n_ports_inv, --   reset.reset
-			outclk_0 => pll_0_outclk0_clk,       -- outclk0.clk
-			outclk_1 => pll_0_outclk1_clk,       -- outclk1.clk
-			outclk_2 => pll_0_sdram_clk,         -- outclk2.clk
-			outclk_3 => pll_0_audio_clk,         -- outclk3.clk
-			locked   => open                     -- (terminated)
+			refclk   => clk_clk,                            --  refclk.clk
+			rst      => rst_controller_005_reset_out_reset, --   reset.reset
+			outclk_0 => pll_0_outclk0_clk,                  -- outclk0.clk
+			outclk_1 => pll_0_outclk1_clk,                  -- outclk1.clk
+			outclk_2 => pll_0_sdram_clk,                    -- outclk2.clk
+			locked   => open                                -- (terminated)
 		);
 
 	sdram_controller_0 : component soc_system_sdram_controller_0
 		port map (
 			clk            => pll_0_outclk1_clk,                                            --   clk.clk
-			reset_n        => rst_controller_005_reset_out_reset_ports_inv,                 -- reset.reset_n
+			reset_n        => rst_controller_006_reset_out_reset_ports_inv,                 -- reset.reset_n
 			az_addr        => mm_interconnect_0_sdram_controller_0_s1_address,              --    s1.address
 			az_be_n        => mm_interconnect_0_sdram_controller_0_s1_byteenable_ports_inv, --      .byteenable_n
 			az_cs          => mm_interconnect_0_sdram_controller_0_s1_chipselect,           --      .chipselect
@@ -1904,12 +1921,12 @@ begin
 			pll_0_outclk1_clk                                                => pll_0_outclk1_clk,                                                             --                                              pll_0_outclk1.clk
 			audio_0_reset_reset_bridge_in_reset_reset                        => rst_controller_reset_out_reset,                                                --                        audio_0_reset_reset_bridge_in_reset.reset
 			hex_4_reset_reset_bridge_in_reset_reset                          => nios2_gen2_0_debug_reset_request_reset,                                        --                          hex_4_reset_reset_bridge_in_reset.reset
-			hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset => rst_controller_006_reset_out_reset,                                            -- hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
+			hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset => rst_controller_007_reset_out_reset,                                            -- hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
 			jtag_uart_0_reset_reset_bridge_in_reset_reset                    => rst_controller_003_reset_out_reset,                                            --                    jtag_uart_0_reset_reset_bridge_in_reset.reset
 			mailbox_0_rst_n_reset_bridge_in_reset_reset                      => rst_controller_004_reset_out_reset,                                            --                      mailbox_0_rst_n_reset_bridge_in_reset.reset
 			nios2_gen2_0_reset_reset_bridge_in_reset_reset                   => rst_controller_002_reset_out_reset,                                            --                   nios2_gen2_0_reset_reset_bridge_in_reset.reset
 			nios2_gen2_1_reset_reset_bridge_in_reset_reset                   => rst_controller_001_reset_out_reset,                                            --                   nios2_gen2_1_reset_reset_bridge_in_reset.reset
-			sdram_controller_0_reset_reset_bridge_in_reset_reset             => rst_controller_005_reset_out_reset,                                            --             sdram_controller_0_reset_reset_bridge_in_reset.reset
+			sdram_controller_0_reset_reset_bridge_in_reset_reset             => rst_controller_006_reset_out_reset,                                            --             sdram_controller_0_reset_reset_bridge_in_reset.reset
 			nios2_gen2_0_data_master_address                                 => nios2_gen2_0_data_master_address,                                              --                                   nios2_gen2_0_data_master.address
 			nios2_gen2_0_data_master_waitrequest                             => nios2_gen2_0_data_master_waitrequest,                                          --                                                           .waitrequest
 			nios2_gen2_0_data_master_byteenable                              => nios2_gen2_0_data_master_byteenable,                                           --                                                           .byteenable
@@ -2093,7 +2110,7 @@ begin
 			hps_0_h2f_lw_axi_master_rvalid                                      => hps_0_h2f_lw_axi_master_rvalid,                          --                                                              .rvalid
 			hps_0_h2f_lw_axi_master_rready                                      => hps_0_h2f_lw_axi_master_rready,                          --                                                              .rready
 			pll_0_outclk0_clk                                                   => pll_0_outclk0_clk,                                       --                                                 pll_0_outclk0.clk
-			hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset => rst_controller_006_reset_out_reset,                      -- hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
+			hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset => rst_controller_007_reset_out_reset,                      -- hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
 			mailbox_1_rst_n_reset_bridge_in_reset_reset                         => rst_controller_004_reset_out_reset,                      --                         mailbox_1_rst_n_reset_bridge_in_reset.reset
 			mailbox_1_avmm_msg_receiver_address                                 => mm_interconnect_1_mailbox_1_avmm_msg_receiver_address,   --                                   mailbox_1_avmm_msg_receiver.address
 			mailbox_1_avmm_msg_receiver_write                                   => mm_interconnect_1_mailbox_1_avmm_msg_receiver_write,     --                                                              .write
@@ -2452,7 +2469,72 @@ begin
 			reset_req_in15 => '0'                                     -- (terminated)
 		);
 
-	rst_controller_005 : component soc_system_rst_controller_004
+	rst_controller_005 : component soc_system_rst_controller
+		generic map (
+			NUM_RESET_INPUTS          => 2,
+			OUTPUT_RESET_SYNC_EDGES   => "none",
+			SYNC_DEPTH                => 2,
+			RESET_REQUEST_PRESENT     => 0,
+			RESET_REQ_WAIT_TIME       => 1,
+			MIN_RST_ASSERTION_TIME    => 3,
+			RESET_REQ_EARLY_DSRT_TIME => 1,
+			USE_RESET_REQUEST_IN0     => 0,
+			USE_RESET_REQUEST_IN1     => 0,
+			USE_RESET_REQUEST_IN2     => 0,
+			USE_RESET_REQUEST_IN3     => 0,
+			USE_RESET_REQUEST_IN4     => 0,
+			USE_RESET_REQUEST_IN5     => 0,
+			USE_RESET_REQUEST_IN6     => 0,
+			USE_RESET_REQUEST_IN7     => 0,
+			USE_RESET_REQUEST_IN8     => 0,
+			USE_RESET_REQUEST_IN9     => 0,
+			USE_RESET_REQUEST_IN10    => 0,
+			USE_RESET_REQUEST_IN11    => 0,
+			USE_RESET_REQUEST_IN12    => 0,
+			USE_RESET_REQUEST_IN13    => 0,
+			USE_RESET_REQUEST_IN14    => 0,
+			USE_RESET_REQUEST_IN15    => 0,
+			ADAPT_RESET_REQUEST       => 0
+		)
+		port map (
+			reset_in0      => reset_reset_n_ports_inv,            -- reset_in0.reset
+			reset_in1      => audio_pll_0_reset_source_reset,     -- reset_in1.reset
+			clk            => open,                               --       clk.clk
+			reset_out      => rst_controller_005_reset_out_reset, -- reset_out.reset
+			reset_req      => open,                               -- (terminated)
+			reset_req_in0  => '0',                                -- (terminated)
+			reset_req_in1  => '0',                                -- (terminated)
+			reset_in2      => '0',                                -- (terminated)
+			reset_req_in2  => '0',                                -- (terminated)
+			reset_in3      => '0',                                -- (terminated)
+			reset_req_in3  => '0',                                -- (terminated)
+			reset_in4      => '0',                                -- (terminated)
+			reset_req_in4  => '0',                                -- (terminated)
+			reset_in5      => '0',                                -- (terminated)
+			reset_req_in5  => '0',                                -- (terminated)
+			reset_in6      => '0',                                -- (terminated)
+			reset_req_in6  => '0',                                -- (terminated)
+			reset_in7      => '0',                                -- (terminated)
+			reset_req_in7  => '0',                                -- (terminated)
+			reset_in8      => '0',                                -- (terminated)
+			reset_req_in8  => '0',                                -- (terminated)
+			reset_in9      => '0',                                -- (terminated)
+			reset_req_in9  => '0',                                -- (terminated)
+			reset_in10     => '0',                                -- (terminated)
+			reset_req_in10 => '0',                                -- (terminated)
+			reset_in11     => '0',                                -- (terminated)
+			reset_req_in11 => '0',                                -- (terminated)
+			reset_in12     => '0',                                -- (terminated)
+			reset_req_in12 => '0',                                -- (terminated)
+			reset_in13     => '0',                                -- (terminated)
+			reset_req_in13 => '0',                                -- (terminated)
+			reset_in14     => '0',                                -- (terminated)
+			reset_req_in14 => '0',                                -- (terminated)
+			reset_in15     => '0',                                -- (terminated)
+			reset_req_in15 => '0'                                 -- (terminated)
+		);
+
+	rst_controller_006 : component soc_system_rst_controller_004
 		generic map (
 			NUM_RESET_INPUTS          => 4,
 			OUTPUT_RESET_SYNC_EDGES   => "deassert",
@@ -2485,7 +2567,7 @@ begin
 			reset_in2      => nios2_gen2_1_debug_reset_request_reset, -- reset_in2.reset
 			reset_in3      => hps_0_h2f_reset_reset_ports_inv,        -- reset_in3.reset
 			clk            => pll_0_outclk1_clk,                      --       clk.clk
-			reset_out      => rst_controller_005_reset_out_reset,     -- reset_out.reset
+			reset_out      => rst_controller_006_reset_out_reset,     -- reset_out.reset
 			reset_req      => open,                                   -- (terminated)
 			reset_req_in0  => '0',                                    -- (terminated)
 			reset_req_in1  => '0',                                    -- (terminated)
@@ -2517,7 +2599,7 @@ begin
 			reset_req_in15 => '0'                                     -- (terminated)
 		);
 
-	rst_controller_006 : component soc_system_rst_controller_006
+	rst_controller_007 : component soc_system_rst_controller_007
 		generic map (
 			NUM_RESET_INPUTS          => 1,
 			OUTPUT_RESET_SYNC_EDGES   => "deassert",
@@ -2547,7 +2629,7 @@ begin
 		port map (
 			reset_in0      => hps_0_h2f_reset_reset_ports_inv,    -- reset_in0.reset
 			clk            => pll_0_outclk0_clk,                  --       clk.clk
-			reset_out      => rst_controller_006_reset_out_reset, -- reset_out.reset
+			reset_out      => rst_controller_007_reset_out_reset, -- reset_out.reset
 			reset_req      => open,                               -- (terminated)
 			reset_req_in0  => '0',                                -- (terminated)
 			reset_in1      => '0',                                -- (terminated)
@@ -2626,6 +2708,6 @@ begin
 
 	hps_0_h2f_reset_reset_ports_inv <= not hps_0_h2f_reset_reset;
 
-	rst_controller_005_reset_out_reset_ports_inv <= not rst_controller_005_reset_out_reset;
+	rst_controller_006_reset_out_reset_ports_inv <= not rst_controller_006_reset_out_reset;
 
 end architecture rtl; -- of soc_system

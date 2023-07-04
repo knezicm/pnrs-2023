@@ -60,7 +60,6 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54      : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			leds_0_external_connection_export     : out   std_logic_vector(9 downto 0);                     -- export
-			pll_0_audio_clk                       : out   std_logic;                                        -- clk
 			pll_0_sdram_clk                       : out   std_logic;                                        -- clk
 			reset_reset_n                         : in    std_logic                     := 'X';             -- reset_n
 			sdram_controller_0_wire_addr          : out   std_logic_vector(12 downto 0);                    -- addr
@@ -72,7 +71,8 @@
 			sdram_controller_0_wire_dqm           : out   std_logic_vector(1 downto 0);                     -- dqm
 			sdram_controller_0_wire_ras_n         : out   std_logic;                                        -- ras_n
 			sdram_controller_0_wire_we_n          : out   std_logic;                                        -- we_n
-			switches_0_external_connection_export : in    std_logic_vector(9 downto 0)  := (others => 'X')  -- export
+			switches_0_external_connection_export : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
+			audio_pll_0_audio_clk_clk             : out   std_logic                                         -- clk
 		);
 	end component soc_system;
 
@@ -138,7 +138,6 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO53,      --                               .hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54      => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO54,      --                               .hps_io_gpio_inst_GPIO54
 			leds_0_external_connection_export     => CONNECTED_TO_leds_0_external_connection_export,     --     leds_0_external_connection.export
-			pll_0_audio_clk                       => CONNECTED_TO_pll_0_audio_clk,                       --                    pll_0_audio.clk
 			pll_0_sdram_clk                       => CONNECTED_TO_pll_0_sdram_clk,                       --                    pll_0_sdram.clk
 			reset_reset_n                         => CONNECTED_TO_reset_reset_n,                         --                          reset.reset_n
 			sdram_controller_0_wire_addr          => CONNECTED_TO_sdram_controller_0_wire_addr,          --        sdram_controller_0_wire.addr
@@ -150,6 +149,7 @@
 			sdram_controller_0_wire_dqm           => CONNECTED_TO_sdram_controller_0_wire_dqm,           --                               .dqm
 			sdram_controller_0_wire_ras_n         => CONNECTED_TO_sdram_controller_0_wire_ras_n,         --                               .ras_n
 			sdram_controller_0_wire_we_n          => CONNECTED_TO_sdram_controller_0_wire_we_n,          --                               .we_n
-			switches_0_external_connection_export => CONNECTED_TO_switches_0_external_connection_export  -- switches_0_external_connection.export
+			switches_0_external_connection_export => CONNECTED_TO_switches_0_external_connection_export, -- switches_0_external_connection.export
+			audio_pll_0_audio_clk_clk             => CONNECTED_TO_audio_pll_0_audio_clk_clk              --          audio_pll_0_audio_clk.clk
 		);
 

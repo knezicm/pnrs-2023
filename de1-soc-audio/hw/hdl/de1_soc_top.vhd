@@ -239,7 +239,7 @@ architecture rtl of de1_soc_top is
 		  audio_0_external_interface_DACDAT     : out   std_logic;                                        -- DACDAT
 		  audio_0_external_interface_DACLRCK    : in    std_logic                     := 'X';             -- DACLRCK
 		  button_0_external_connection_export   : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
-        pll_0_audio_clk                       : out   std_logic
+		  audio_pll_0_audio_clk_clk             : out   std_logic
 		  );
     end component soc_system;
 
@@ -321,7 +321,8 @@ begin
 			   audio_0_external_interface_DACDAT      => AUD_DACDAT,     --                               .DACDAT
 			   audio_0_external_interface_DACLRCK     => AUD_DACLRCK,     --                               .DACLRCK 
 				button_0_external_connection_export    => KEY_N,   --   button_0_external_connection.export
-			   pll_0_audio_clk                        => AUD_XCK                        --                    pll_0_audio.clk
-        );
+			   audio_pll_0_audio_clk_clk              => AUD_XCK                        --                    pll_0_audio.clk
+				
+  );
 
 end;
