@@ -2343,7 +2343,7 @@ defparam soc_system_nios2_gen2_0_cpu_ociram_sp_ram.lpm_file = "soc_system_nios2_
     (MonAReg[4 : 2] == 3'd2)? 32'h00040000 :
     (MonAReg[4 : 2] == 3'd3)? 32'h00000100 :
     (MonAReg[4 : 2] == 3'd4)? 32'h20000000 :
-    (MonAReg[4 : 2] == 3'd5)? 32'h08000000 :
+    (MonAReg[4 : 2] == 3'd5)? 32'h00020000 :
     (MonAReg[4 : 2] == 3'd6)? 32'h00000000 :
     32'h00000000;
 
@@ -3863,7 +3863,7 @@ reg              wait_for_one_post_bret_inst;
     2'b11;
 
   assign F_pc_no_crst_nxt = (F_pc_sel_nxt == 2'b00)? 33554440 :
-    (F_pc_sel_nxt == 2'b01)? 520 :
+    (F_pc_sel_nxt == 2'b01)? 66056 :
     (F_pc_sel_nxt == 2'b10)? E_arith_result[27 : 2] :
     F_pc_plus_one;
 
@@ -3874,7 +3874,7 @@ reg              wait_for_one_post_bret_inst;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          F_pc <= 33554432;
+          F_pc <= 32768;
       else if (F_pc_en)
           F_pc <= F_pc_nxt;
     end

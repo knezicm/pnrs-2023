@@ -49,21 +49,21 @@ module soc_system_mm_interconnect_0_router_014_default_decode
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 3 
    )
-  (output [86 - 82 : 0] default_destination_id,
-   output [22-1 : 0] default_wr_channel,
-   output [22-1 : 0] default_rd_channel,
-   output [22-1 : 0] default_src_channel
+  (output [89 - 85 : 0] default_destination_id,
+   output [24-1 : 0] default_wr_channel,
+   output [24-1 : 0] default_rd_channel,
+   output [24-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[86 - 82 : 0];
+    DEFAULT_DESTID[89 - 85 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 22'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 24'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module soc_system_mm_interconnect_0_router_014_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 22'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 22'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 24'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 24'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -93,7 +93,7 @@ module soc_system_mm_interconnect_0_router_014
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [111-1 : 0]    sink_data,
+    input  [114-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,8 +102,8 @@ module soc_system_mm_interconnect_0_router_014
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [111-1    : 0] src_data,
-    output reg [22-1 : 0] src_channel,
+    output reg [114-1    : 0] src_data,
+    output reg [24-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -114,12 +114,12 @@ module soc_system_mm_interconnect_0_router_014
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 47;
     localparam PKT_ADDR_L = 18;
-    localparam PKT_DEST_ID_H = 86;
-    localparam PKT_DEST_ID_L = 82;
-    localparam PKT_PROTECTION_H = 101;
-    localparam PKT_PROTECTION_L = 99;
-    localparam ST_DATA_W = 111;
-    localparam ST_CHANNEL_W = 22;
+    localparam PKT_DEST_ID_H = 89;
+    localparam PKT_DEST_ID_L = 85;
+    localparam PKT_PROTECTION_H = 104;
+    localparam PKT_PROTECTION_L = 102;
+    localparam ST_DATA_W = 114;
+    localparam ST_CHANNEL_W = 24;
     localparam DECODER_TYPE = 1;
 
     localparam PKT_TRANS_WRITE = 50;
@@ -158,7 +158,7 @@ module soc_system_mm_interconnect_0_router_014
     assign src_valid         = sink_valid;
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
-    wire [22-1 : 0] default_src_channel;
+    wire [24-1 : 0] default_src_channel;
 
 
 
@@ -192,27 +192,27 @@ module soc_system_mm_interconnect_0_router_014
 
 
         if (destid == 3 ) begin
-            src_channel = 22'b000001;
+            src_channel = 24'b000001;
         end
 
         if (destid == 4  && read_transaction) begin
-            src_channel = 22'b000010;
+            src_channel = 24'b000010;
         end
 
         if (destid == 0  && write_transaction) begin
-            src_channel = 22'b000100;
+            src_channel = 24'b000100;
         end
 
         if (destid == 0  && read_transaction) begin
-            src_channel = 22'b001000;
+            src_channel = 24'b001000;
         end
 
         if (destid == 1 ) begin
-            src_channel = 22'b010000;
+            src_channel = 24'b010000;
         end
 
         if (destid == 2  && read_transaction) begin
-            src_channel = 22'b100000;
+            src_channel = 24'b100000;
         end
 
 
