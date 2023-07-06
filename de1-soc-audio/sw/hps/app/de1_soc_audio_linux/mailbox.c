@@ -23,6 +23,19 @@ uint32_t mailbox_status(int sts){
     return mailbox_sts;
 }
 
+uint32_t mailbox_status_r(int sts){
+	uint32_t mailbox_sts = 0;
+	mailbox_sts = (alt_read_word(send_mailbox + 8) & (0x00000003));
+	if(sts == 0){
+		mailbox_sts = mailbox_sts & (0x00000001);
+	}
+	else{
+		mailbox_sts = (mailbox_sts & (0x00000002)) >> 1;
+	}
+
+    return mailbox_sts;
+}
+
 int receive_message(uint32_t *message, uint32_t timeout)
 {
     uint32_t status = 0;
@@ -87,13 +100,13 @@ int mailbox_send( void *message, int timeout)
 	{
 		do
 		{
-			mbox_status = mailbox_status(1);
+			mbox_status = mailbox_status_r(1);
 		} while (mbox_status);
 	} else
 	{
 		do
 		{
-			mbox_status = mailbox_status(1);
+			mbox_status = mailbox_status_r(1);
 			timeout--;
 		} while (mbox_status && (timeout != 0));
 		if (timeout == 0)

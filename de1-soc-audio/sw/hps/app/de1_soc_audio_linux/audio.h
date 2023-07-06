@@ -29,13 +29,14 @@
 #define BUFF_2_FILLED 10
 #define NO_RECORDING 99
 
-#define BUFF_SIZE 262143
+#define BUFF_SIZE 262016
 #define FILE_NAME "saved_samples.txt"
 
 extern void* rec_mailbox;
 extern void* send_mailbox;
 extern void* l_buffer;
 extern void* r_buffer;
+
 
 
 void hps_save_sampels();

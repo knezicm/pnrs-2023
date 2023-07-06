@@ -8,6 +8,8 @@
 
 #include "audio.h"
 
+
+uint32_t block_saved = 0;
 /**
  * @brief When recording was started this function is started,
  * it saves samples to a file from two buffer. Depending on what buffer is full
@@ -24,6 +26,8 @@ void hps_save_sampels()
 	uint32_t left_chn, right_chn;
 	uint32_t message[2];
 	FILE *file = fopen(FILE_NAME, "w");
+
+	block_saved = 0;
 
 	/* Can't create a recording*/
 	if (file == NULL)
@@ -50,25 +54,29 @@ void hps_save_sampels()
 		}
 		else if (message[1] == READ_BUFF_1)
 		{
-			for (int i = 0; i < BUFF_SIZE; i=+2)
+			for (int i = 0; i < BUFF_SIZE; i+=2)
 			{
 				/* Getting left and right channels and writing them to a file */
 				left_chn = sampels_buff1[i];
 				right_chn = sampels_buff1[i + 1];
 
-				fprintf(file, "%d %d\n", left_chn, right_chn);
+				fprintf(file, "%u %u\n", left_chn, right_chn);
 			}
+
+			block_saved++;
 		}
 		else if (message[1] == READ_BUFF_2)
 		{
-			for (int i = 0; i < BUFF_SIZE; i=+2)
+			for (int i = 0; i < BUFF_SIZE; i+=2)
 			{
 				/* Getting left and right channels and writing them to a file */
 				left_chn = sampels_buff2[i];
 				right_chn = sampels_buff2[i + 1];
 
-				fprintf(file, "%d %d\n", left_chn, right_chn);
+				fprintf(file, "%u %u\n", left_chn, right_chn);
 			}
+
+			block_saved++;
 		}
 	}
 
@@ -80,6 +88,7 @@ void hps_read_sampels()
 	uint32_t *sampels_buff2 = (uint32_t*) r_buffer;
 	uint32_t left_chn, right_chn;
 	uint32_t message[2];
+	uint32_t blocks_read = 0;
 	FILE *file = fopen(FILE_NAME, "r");
 
 	/* No recording was found*/
@@ -106,32 +115,48 @@ void hps_read_sampels()
 		}
 		else if (message[1] == WRITE_BUFF_1)
 		{
-			for (int i = 0; i < BUFF_SIZE; i=+2)
+			for (int i = 0; i < BUFF_SIZE / 2; i+=2)
 			{
 				/* Reading left and right channels from the file and putting them into buff 1*/
-				fscanf(file, "%d %d\n", &left_chn, &right_chn);
+				fscanf(file, "%u %u\n", &left_chn, &right_chn);
 
-				sampels_buff1[i] = left_chn;
-				sampels_buff1[i + 1] = right_chn;
+				sampels_buff1[2 * i] = left_chn;
+				sampels_buff1[2 * i + 1] = right_chn;
+
+				/* If we reach EOF, we start from the beginning*/
+				if(feof(file) || left_chn == 0 || right_chn == 0)
+				{
+					rewind(file);
+				}
 
 			}
 
+			blocks_read++;
+
 			// Informing NIOS(2) that the buffer is filled
-			message[0] = BUFF_1_FILLED;
-			message[1] = BUFF_1_FILLED;
+			message[0] = 9;
+			message[1] = 9;
 
 			mailbox_send(message, 0);
 		}
 		else if (message[1] == WRITE_BUFF_2)
 		{
-			for (int i = 0; i < BUFF_SIZE; i=+2)
+			for (int i = 0; i < BUFF_SIZE / 2 ; i+=2)
 			{
 				/* Reading left and right channels from the file and putting them into buff 2*/
-				fscanf(file, "%d %d\n", &left_chn, &right_chn);
+				fscanf(file, "%u %u\n", &left_chn, &right_chn);
 
-				sampels_buff2[i] = left_chn;
-				sampels_buff2[i + 1] = right_chn;
+				sampels_buff2[2 * i] = left_chn;
+				sampels_buff2[2 * i + 1] = right_chn;
+
+				/* If we reach EOF, we start from the beginning*/
+				if(feof(file) || left_chn == 0 || right_chn == 0)
+				{
+					rewind(file);
+				}
+
 			}
+			blocks_read++;
 
 			// Informing NIOS(2) that the buffer is filled
 			message[0] = BUFF_2_FILLED;
@@ -139,7 +164,13 @@ void hps_read_sampels()
 
 			mailbox_send(message, 0);
 		}
+
+		/* If read more the we saved we start from the beginning*/
+		if (blocks_read == block_saved || feof(file))
+		{
+			blocks_read = 0;
+			rewind(file);
+		}
 	}
 
 }
-

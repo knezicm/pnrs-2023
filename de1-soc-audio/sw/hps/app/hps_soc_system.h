@@ -21,15 +21,15 @@
  */
 
 /*
- * Macros for device 'mailbox_0', class 'altera_avalon_mailbox_simple'
- * The macros are prefixed with 'MAILBOX_0_'.
+ * Macros for device 'mailbox_2', class 'altera_avalon_mailbox_simple'
+ * The macros are prefixed with 'MAILBOX_2_'.
  * The prefix is the slave descriptor.
  */
-#define MAILBOX_0_COMPONENT_TYPE altera_avalon_mailbox_simple
-#define MAILBOX_0_COMPONENT_NAME mailbox_0
-#define MAILBOX_0_BASE 0x0
-#define MAILBOX_0_SPAN 16
-#define MAILBOX_0_END 0xf
+#define MAILBOX_2_COMPONENT_TYPE altera_avalon_mailbox_simple
+#define MAILBOX_2_COMPONENT_NAME mailbox_2
+#define MAILBOX_2_BASE 0x0
+#define MAILBOX_2_SPAN 16
+#define MAILBOX_2_END 0xf
 
 /*
  * Macros for device 'mailbox_1', class 'altera_avalon_mailbox_simple'

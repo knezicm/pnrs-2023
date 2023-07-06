@@ -70,8 +70,8 @@ void mmap_fpga_peripherals()
 		exit(EXIT_FAILURE);
 	}
 
-	send_mailbox = h2f_lw_axi_master + MAILBOX_0_BASE;
 	rec_mailbox = h2f_lw_axi_master + MAILBOX_1_BASE;
+	send_mailbox = h2f_lw_axi_master + MAILBOX_2_BASE;
 
 	l_buffer = h2f_axi_master + L_BUFFER_OFST;
 	r_buffer = h2f_axi_master + R_BUFFER_OFST;
