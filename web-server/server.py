@@ -1,10 +1,17 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import urllib.parse
+import threading
+import subprocess
 
 VALID_FREQ = ['8', '32', '48', '96']
 DEFAULT_FREQ = '48'
 VALID_WORD_LENGTH = ['16', '20', '24', '32']
 DEFAULT_WORD_LENGTH = '24'
+
+subprocess.call(['sh','/root/pass_through.sh'])
+
+def c_function():
+	subprocess.run(["/root/de1_soc_audio_linux"])
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -58,7 +65,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             word_length = DEFAULT_WORD_LENGTH
 
         # Write the data to a file
-        with open('audio_config.txt', 'w') as file:
+        with open('/root/audio_config.txt', 'w') as file:
             file.write(freq + '\n')
             file.write(word_length + '\n')
 
@@ -70,12 +77,18 @@ class RequestHandler(BaseHTTPRequestHandler):
         #quit()
 
 # Host IP
-IP = '192.168.23.100'
+IP = '10.42.0.2'
 
-def run_server(port):
+def run_server():
+    port=8000
     server_address = (IP, port) # Now it's set up as http://localhost:8000/
     httpd = HTTPServer(server_address, RequestHandler)
     print(f'Starting server on port {port}...')
     httpd.serve_forever()
 
-run_server(8000)
+thread2 = threading.Thread(target=c_function)
+thread2.start()
+
+thread = threading.Thread(target=run_server)
+thread.start()
+#run_server(8000)
