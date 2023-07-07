@@ -148,15 +148,81 @@ void display_mode(int mode)
 	}
 }
 
-int main()
+static void button_isr(void* isr_context, alt_u32 id)
 {
+	IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_0_BASE);
+	printf("int\n");
 	unsigned short buttons;
 	short key_1 = 0;
 	short key_2 = 0;
+	buttons = IORD_ALTERA_AVALON_PIO_DATA(BUTTON_0_BASE);
+
+	/*
+	 * 0xE - pritisnut KEY_0
+	 * 0xD - pritisnut KEY_1
+	 * 0xB - pritisnut KEY_2
+	 */
+
+	/* Citanje vrijednosti buttona. */
+	if(buttons == 0xE)
+	{
+		mode = 1;
+	}
+	else if(buttons == 0xD)
+	{
+		usleep(150000);
+		key_1++;
+		if(mode != 2 && key_1 > 0)
+		{
+			mode = 2;
+			key_1 = 0;
+		}
+		else if(mode == 2 && key_1 > 0)
+		{
+			mode = 3;
+			key_1 = 0;
+		}
+	}
+	else if(buttons == 0xB)
+	{
+		usleep(150000);
+		key_2++;
+		if(mode != 4 && key_2 > 0)
+		{
+			mode = 4;
+		}
+		else if(mode == 4 && key_2 > 0)
+		{
+			mode = 5;
+		}
+	}
+
+	//Write to edge capture register to reset it
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_0_BASE,0);
+}
+
+
+static void init_interrupt_pio()
+{
+    // Enable a single interrupt input by writing a one to the corresponding interruptmask bit locations
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_0_BASE,0x7);
+
+    // Reset the edge capture register
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_0_BASE,0);
+
+    alt_ic_isr_register(BUTTON_0_IRQ_INTERRUPT_CONTROLLER_ID, BUTTON_0_IRQ, button_isr, NULL, 0x0);
+
+}
+
+int main()
+{
 	unsigned int signal[2] = {0x00001111, 0};
 
 	/* Inicijalizacija mailboxa. */
 	mailbox_0 = altera_avalon_mailbox_open(MAILBOX_0_NAME, NULL, NULL);
+
+	/* Registrovanje interapta za dugmice */
+	init_interrupt_pio();
 
 	clear_display();
 	display_start();
@@ -164,49 +230,6 @@ int main()
 	mode = 1;
 	while(1)
 	{
-//		clear_display();
-
-		/* Citanje vrijednosti buttona. */
-		buttons = IORD_ALTERA_AVALON_PIO_DATA(BUTTON_0_BASE);
-
-		/*
-		 * 0xE - pritisnut KEY_0
-		 * 0xD - pritisnut KEY_1
-		 * 0xB - pritisnut KEY_2
-		 */
-		if(buttons == 0xE)
-		{
-			mode = 1;
-		}
-		else if(buttons == 0xD)
-		{
-			usleep(150000);
-			key_1++;
-			if(mode != 2 && key_1 > 0)
-			{
-				mode = 2;
-				key_1 = 0;
-			}
-			else if(mode == 2 && key_1 > 0)
-			{
-				mode = 3;
-				key_1 = 0;
-			}
-		}
-		else if(buttons == 0xB)
-		{
-			usleep(150000);
-			key_2++;
-			if(mode != 4 && key_2 > 0)
-			{
-				mode = 4;
-			}
-			else if(mode == 4 && key_2 > 0)
-			{
-				mode = 5;
-			}
-		}
-
 		clear_display();
 		display_mode(mode);
 
