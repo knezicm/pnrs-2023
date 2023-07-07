@@ -14,7 +14,7 @@
 #include "altera_up_avalon_audio.h"
 #include <math.h>
 
-#define BUFF_MAX_VALUE 16777216/2 // 2^24 --> audio data buff width 32 bit 4294967296
+#define BUFF_MAX_VALUE 16777216/2 // 2^24 --> audio data buff width 32 bit 4294967296  8263182
 #define LEDS_NUM 10 // number of LEDs
 #define THD (BUFF_MAX_VALUE-1)/(LEDS_NUM+1) // LEDS_NUM+1 intervals
 
@@ -28,6 +28,8 @@
 #define SAMPLE_RATE 48000
 #define DURATION 1.0
 #define FREQUENCY 1000.0
+
+#define BOARD_FEELING 10
 
 altera_avalon_mailbox_dev* mailbox_0; // NIOSII_0 mailbox
 altera_avalon_mailbox_dev* mailbox_1; // HPS mailbox
@@ -241,10 +243,13 @@ int main(void)
 						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 
 						buff_inx = 0;
-						for(buff_inx = 0; buff_inx < sizeof(l_buffer)/sizeof(l_buffer[0]); buff_inx+=2)
+						for(buff_inx = 0; buff_inx < sizeof(l_buffer)/sizeof(l_buffer[0]); buff_inx++)
 						{
-							r_buf = l_buffer[buff_inx];
-							l_buf = l_buffer[buff_inx];
+							for(int i = 0; i < BOARD_FEELING; i++)
+							{
+								r_buf1[i] = l_buffer[buff_inx];
+								l_buf1[i] = l_buffer[buff_inx];
+							}
 
 							altera_avalon_mailbox_retrieve_poll(mailbox_0, message, 100);
 							if(message[1] != PLAY_STATE)
@@ -253,8 +258,8 @@ int main(void)
 //							vometer(r_buf);
 //							vometer(buf_avg(r_buf1, 3));
 
-							alt_up_audio_write_fifo(audio_dev, &r_buf, 1, ALT_UP_AUDIO_RIGHT);
-							alt_up_audio_write_fifo(audio_dev, &l_buf, 1, ALT_UP_AUDIO_LEFT);
+							alt_up_audio_write_fifo(audio_dev, r_buf1, BOARD_FEELING, ALT_UP_AUDIO_RIGHT);
+							alt_up_audio_write_fifo(audio_dev, l_buf1, BOARD_FEELING, ALT_UP_AUDIO_LEFT);
 						}
 
 						play_flag = 1;
@@ -270,10 +275,13 @@ int main(void)
 						altera_avalon_mailbox_send(mailbox_1, signal_hps, 0, POLL);
 
 						buff_inx = 0;
-						for(buff_inx = 0; buff_inx < sizeof(l_buffer)/sizeof(l_buffer[0]); buff_inx+=2)
+						for(buff_inx = 0; buff_inx < sizeof(l_buffer)/sizeof(l_buffer[0]); buff_inx++)
 						{
-							r_buf = l_buffer[buff_inx];
-							l_buf = l_buffer[buff_inx];
+							for(int i = 0; i < BOARD_FEELING; i++)
+							{
+								r_buf1[i] = l_buffer[buff_inx];
+								l_buf1[i] = l_buffer[buff_inx];
+							}
 
 							altera_avalon_mailbox_retrieve_poll(mailbox_0, message, 100);
 							if(message[1] != PLAY_STATE)
@@ -282,8 +290,8 @@ int main(void)
 //							vometer(buf_avg(r_buf1, 3));
 //							vometer(r_buf);
 
-							alt_up_audio_write_fifo(audio_dev, &r_buf, 1, ALT_UP_AUDIO_RIGHT);
-							alt_up_audio_write_fifo(audio_dev, &l_buf, 1, ALT_UP_AUDIO_LEFT);
+							alt_up_audio_write_fifo(audio_dev, r_buf1, BOARD_FEELING, ALT_UP_AUDIO_RIGHT);
+							alt_up_audio_write_fifo(audio_dev, l_buf1, BOARD_FEELING, ALT_UP_AUDIO_LEFT);
 						}
 
 						play_flag = 0;

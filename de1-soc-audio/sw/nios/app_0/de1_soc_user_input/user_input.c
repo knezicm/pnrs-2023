@@ -151,7 +151,6 @@ void display_mode(int mode)
 static void button_isr(void* isr_context, alt_u32 id)
 {
 	IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_0_BASE);
-	printf("int\n");
 	unsigned short buttons;
 	short key_1 = 0;
 	short key_2 = 0;
