@@ -232,7 +232,7 @@ module soc_system_mm_interconnect_0_router_004
     end
 
     // ( 0x41030 .. 0x41040 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 28'h41030  && read_transaction  ) begin
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 28'h41030   ) begin
             src_channel = 24'b010000000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end

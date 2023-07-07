@@ -1,19 +1,19 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
 preplace inst soc_system.timer_1 -pg 1 -lvl 6 -y 420
-preplace inst soc_system.sysid -pg 1 -lvl 5 -y 1410
+preplace inst soc_system.sysid -pg 1 -lvl 5 -y 1450
 preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 590
 preplace inst soc_system.hps_0.clk_0 -pg 1
 preplace inst soc_system.nios2_gen2_0.cpu -pg 1
 preplace inst soc_system.pll_0 -pg 1 -lvl 2 -y 710
-preplace inst soc_system.leds_0 -pg 1 -lvl 5 -y 1490
-preplace inst soc_system.mailbox_0 -pg 1 -lvl 5 -y 1310
+preplace inst soc_system.leds_0 -pg 1 -lvl 5 -y 1530
+preplace inst soc_system.mailbox_0 -pg 1 -lvl 5 -y 1350
 preplace inst soc_system.hps_0.axi_sdram -pg 1
 preplace inst soc_system -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst soc_system.nios2_gen2_1.reset_bridge -pg 1
-preplace inst soc_system.mailbox_1 -pg 1 -lvl 5 -y 1010
+preplace inst soc_system.mailbox_1 -pg 1 -lvl 5 -y 1050
 preplace inst soc_system.nios2_gen2_0.reset_bridge -pg 1
-preplace inst soc_system.mailbox_2 -pg 1 -lvl 3 -y 860
+preplace inst soc_system.mailbox_2 -pg 1 -lvl 3 -y 830
 preplace inst soc_system.hps_0.timer0 -pg 1
 preplace inst soc_system.hps_0.timer1 -pg 1
 preplace inst soc_system.hps_0.i2c0 -pg 1
@@ -21,24 +21,26 @@ preplace inst soc_system.hps_0.timer2 -pg 1
 preplace inst soc_system.hps_0.wd_timer0 -pg 1
 preplace inst soc_system.hps_0.i2c1 -pg 1
 preplace inst soc_system.hps_0.timer3 -pg 1
-preplace inst soc_system.audio_pll_0 -pg 1 -lvl 3 -y 370
+preplace inst soc_system.audio_pll_0 -pg 1 -lvl 3 -y 330
 preplace inst soc_system.hps_0.wd_timer1 -pg 1
 preplace inst soc_system.hps_0.i2c2 -pg 1
 preplace inst soc_system.hps_0.qspi -pg 1
 preplace inst soc_system.nios2_gen2_1.cpu -pg 1
-preplace inst soc_system.audio_pll_1 -pg 1 -lvl 4 -y 610
+preplace inst soc_system.audio_pll_1 -pg 1 -lvl 4 -y 600
 preplace inst soc_system.hps_0.gpio0 -pg 1
 preplace inst soc_system.hps_0.i2c3 -pg 1
 preplace inst soc_system.hps_0.clkmgr -pg 1
 preplace inst soc_system.hps_0.gpio1 -pg 1
 preplace inst soc_system.hps_0.arm_a9_0 -pg 1
 preplace inst soc_system.hps_0.L2 -pg 1
+preplace inst soc_system.onchip_memory2_0 -pg 1 -lvl 4 -y 450
 preplace inst soc_system.nios2_gen2_1.clock_bridge -pg 1
 preplace inst soc_system.hps_0.gpio2 -pg 1
 preplace inst soc_system.hps_0.arm_a9_1 -pg 1
 preplace inst soc_system.button_0 -pg 1 -lvl 5 -y 30
 preplace inst soc_system.hps_0.uart0 -pg 1
-preplace inst soc_system.audio_0 -pg 1 -lvl 5 -y 520
+preplace inst soc_system.onchip_memory2_1 -pg 1 -lvl 4 -y 690
+preplace inst soc_system.audio_0 -pg 1 -lvl 5 -y 510
 preplace inst soc_system.hps_0.uart1 -pg 1
 preplace inst soc_system.hps_0.spim0 -pg 1
 preplace inst soc_system.hps_0.spim1 -pg 1
@@ -49,27 +51,27 @@ preplace inst soc_system.hps_0.l3regs -pg 1
 preplace inst soc_system.hps_0.sdmmc -pg 1
 preplace inst soc_system.hps_0.axi_ocram -pg 1
 preplace inst soc_system.nios2_gen2_0.clock_bridge -pg 1
-preplace inst soc_system.nios2_gen2_0 -pg 1 -lvl 3 -y 630
-preplace inst soc_system.nios2_gen2_1 -pg 1 -lvl 5 -y 290
-preplace inst soc_system.sdram_controller_0 -pg 1 -lvl 5 -y 770
+preplace inst soc_system.nios2_gen2_0 -pg 1 -lvl 3 -y 620
+preplace inst soc_system.nios2_gen2_1 -pg 1 -lvl 5 -y 300
+preplace inst soc_system.sdram_controller_0 -pg 1 -lvl 5 -y 850
 preplace inst soc_system.hps_0.arm_gic_0 -pg 1
 preplace inst soc_system.hps_0.rstmgr -pg 1
 preplace inst soc_system.hps_0.usb0 -pg 1
 preplace inst soc_system.hps_0.scu -pg 1
 preplace inst soc_system.hps_0.usb1 -pg 1
-preplace inst soc_system.hex_0 -pg 1 -lvl 3 -y 960
+preplace inst soc_system.hex_0 -pg 1 -lvl 3 -y 970
 preplace inst soc_system.audio_pll_0.audio_pll -pg 1
 preplace inst soc_system.hps_0.hps_io -pg 1
-preplace inst soc_system.hex_1 -pg 1 -lvl 3 -y 1080
+preplace inst soc_system.hex_1 -pg 1 -lvl 3 -y 1090
 preplace inst soc_system.audio_pll_1.reset_from_locked -pg 1
 preplace inst soc_system.hex_2 -pg 1 -lvl 3 -y 1240
 preplace inst soc_system.hps_0.nand0 -pg 1
 preplace inst soc_system.hex_3 -pg 1 -lvl 3 -y 1520
-preplace inst soc_system.jtag_uart_0 -pg 1 -lvl 5 -y 1110
+preplace inst soc_system.jtag_uart_0 -pg 1 -lvl 5 -y 1150
 preplace inst soc_system.hex_4 -pg 1 -lvl 3 -y 1340
-preplace inst soc_system.hex_5 -pg 1 -lvl 3 -y 460
+preplace inst soc_system.hex_5 -pg 1 -lvl 3 -y 410
 preplace inst soc_system.hps_0.gmac0 -pg 1
-preplace inst soc_system.hps_0 -pg 1 -lvl 1 -y 340
+preplace inst soc_system.hps_0 -pg 1 -lvl 1 -y 320
 preplace inst soc_system.audio_pll_0.reset_from_locked -pg 1
 preplace inst soc_system.hps_0.hps_io.border -pg 1
 preplace inst soc_system.hps_0.gmac1 -pg 1
@@ -80,38 +82,38 @@ preplace inst soc_system.hps_0.eosc2 -pg 1
 preplace inst soc_system.hps_0.fpga_interfaces -pg 1
 preplace inst soc_system.hps_0.dcan1 -pg 1
 preplace inst soc_system.hps_0.f2s_sdram_ref_clk -pg 1
-preplace inst soc_system.switches_0 -pg 1 -lvl 5 -y 1210
+preplace inst soc_system.switches_0 -pg 1 -lvl 5 -y 1250
 preplace inst soc_system.hps_0.dma -pg 1
 preplace inst soc_system.hps_0.sdrctl -pg 1
-preplace inst soc_system.audio_and_video_config_0 -pg 1 -lvl 5 -y 130
+preplace inst soc_system.audio_and_video_config_0 -pg 1 -lvl 5 -y 150
 preplace inst soc_system.audio_pll_1.audio_pll -pg 1
 preplace inst soc_system.hps_0.bridges -pg 1
-preplace inst soc_system.timer_0 -pg 1 -lvl 5 -y 870
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hex_3.external_connection,(SLAVE)soc_system.hex_3_external_connection) 1 0 3 NJ 1550 NJ 1550 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_2_external_connection,(SLAVE)hex_2.external_connection) 1 0 3 NJ 1270 NJ 1270 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)pll_0.outclk2,(MASTER)soc_system.pll_0_sdram) 1 2 5 NJ 790 NJ 760 NJ 760 NJ 760 NJ
+preplace inst soc_system.timer_0 -pg 1 -lvl 5 -y 950
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)soc_system.reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)soc_system.clk) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)audio_and_video_config_0.avalon_av_config_slave,(SLAVE)audio_0.avalon_audio_slave,(SLAVE)hex_0.s1,(SLAVE)button_0.s1,(SLAVE)sysid.control_slave,(SLAVE)hex_5.s1,(SLAVE)mailbox_0.avmm_msg_receiver,(SLAVE)nios2_gen2_1.debug_mem_slave,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)mailbox_2.avmm_msg_receiver,(MASTER)nios2_gen2_1.data_master,(SLAVE)mailbox_1.avmm_msg_sender,(SLAVE)hex_1.s1,(SLAVE)sdram_controller_0.s1,(SLAVE)mailbox_0.avmm_msg_sender,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)hex_3.s1,(SLAVE)hex_4.s1,(SLAVE)hex_2.s1,(MASTER)hps_0.h2f_axi_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(MASTER)nios2_gen2_0.data_master,(SLAVE)switches_0.s1,(MASTER)nios2_gen2_1.instruction_master,(SLAVE)timer_0.s1,(SLAVE)leds_0.s1,(SLAVE)timer_1.s1) 1 1 5 600 590 840 850 1320 700 1800 450 2180
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)button_0.clk,(SLAVE)mailbox_1.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)nios2_gen2_0.clk,(SLAVE)onchip_memory2_1.clk1,(MASTER)pll_0.outclk0,(SLAVE)sysid.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)timer_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)jtag_uart_0.clk,(SLAVE)hex_3.clk,(SLAVE)audio_pll_1.ref_clk,(SLAVE)hex_4.clk,(SLAVE)hex_0.clk,(SLAVE)mailbox_0.clk,(SLAVE)switches_0.clk,(SLAVE)nios2_gen2_1.clk,(SLAVE)hex_5.clk,(SLAVE)audio_and_video_config_0.clk,(SLAVE)leds_0.clk,(SLAVE)hex_1.clk,(SLAVE)timer_1.clk,(SLAVE)audio_pll_0.ref_clk,(SLAVE)mailbox_2.clk,(SLAVE)hex_2.clk) 1 0 6 230 580 NJ 580 840 760 1340 800 1760 440 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)pll_0.outclk1,(SLAVE)sdram_controller_0.clk) 1 2 3 820 1450 NJ 1450 NJ
 preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)clk_0.clk,(SLAVE)pll_0.refclk) 1 1 1 560
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.memory,(SLAVE)soc_system.hps_0_ddr) 1 0 1 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_5_external_connection,(SLAVE)hex_5.external_connection) 1 0 3 NJ 490 NJ 490 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_4_external_connection,(SLAVE)hex_4.external_connection) 1 0 3 NJ 1370 NJ 1370 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)audio_and_video_config_0.external_interface,(SLAVE)soc_system.audio_i2c_config) 1 0 5 NJ 180 NJ 180 NJ 180 NJ 180 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.switches_0_external_connection,(SLAVE)switches_0.external_connection) 1 0 5 NJ 1230 NJ 1230 NJ 1230 NJ 1240 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_5_external_connection,(SLAVE)hex_5.external_connection) 1 0 3 NJ 440 NJ 440 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_3_external_connection,(SLAVE)hex_3.external_connection) 1 0 3 NJ 1550 NJ 1550 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hex_0.external_connection,(SLAVE)soc_system.hex_0_external_connection) 1 0 3 NJ 1000 NJ 1000 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)audio_and_video_config_0.external_interface,(SLAVE)soc_system.audio_i2c_config) 1 0 5 NJ 200 NJ 200 NJ 200 NJ 200 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.switches_0_external_connection,(SLAVE)switches_0.external_connection) 1 0 5 NJ 1230 NJ 1230 NJ 1230 NJ 1280 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.button_0_external_connection,(SLAVE)button_0.external_connection) 1 0 5 NJ 60 NJ 60 NJ 60 NJ 60 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)audio_0.external_interface,(SLAVE)soc_system.audio_0_external_interface) 1 0 5 NJ 570 NJ 570 NJ 570 NJ 570 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.audio_pll_0_audio_clk,(MASTER)audio_pll_0.audio_clk) 1 3 4 NJ 250 NJ 250 NJ 250 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)nios2_gen2_0.reset,(SLAVE)hex_4.reset,(MASTER)audio_pll_0.reset_source,(SLAVE)nios2_gen2_1.reset,(MASTER)clk_0.clk_reset,(SLAVE)timer_1.reset,(SLAVE)audio_pll_0.ref_reset,(SLAVE)audio_0.reset,(SLAVE)mailbox_1.rst_n,(MASTER)audio_pll_1.reset_source,(MASTER)hps_0.h2f_reset,(SLAVE)mailbox_2.rst_n,(SLAVE)sysid.reset,(SLAVE)button_0.reset,(SLAVE)hex_1.reset,(SLAVE)pll_0.reset,(SLAVE)mailbox_0.rst_n,(SLAVE)switches_0.reset,(SLAVE)audio_pll_1.ref_reset,(SLAVE)audio_and_video_config_0.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)sdram_controller_0.reset,(SLAVE)hex_5.reset,(MASTER)nios2_gen2_1.debug_reset_request,(SLAVE)leds_0.reset,(SLAVE)hex_2.reset,(SLAVE)hex_0.reset,(SLAVE)hex_3.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)timer_0.reset) 1 1 5 540 1570 820 770 1300 720 1780 470 2220
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)button_0.clk,(SLAVE)nios2_gen2_1.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)hex_0.clk,(MASTER)pll_0.outclk0,(SLAVE)hex_2.clk,(SLAVE)switches_0.clk,(SLAVE)hex_4.clk,(SLAVE)timer_0.clk,(SLAVE)leds_0.clk,(SLAVE)timer_1.clk,(SLAVE)sysid.clk,(SLAVE)hex_5.clk,(SLAVE)hex_3.clk,(SLAVE)audio_and_video_config_0.clk,(SLAVE)audio_pll_0.ref_clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)mailbox_0.clk,(SLAVE)mailbox_2.clk,(SLAVE)hex_1.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)mailbox_1.clk,(SLAVE)audio_pll_1.ref_clk) 1 0 6 230 300 NJ 380 880 590 1320 550 1740 430 N
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)sdram_controller_0.clk,(MASTER)pll_0.outclk1) 1 2 3 860 810 NJ 810 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)sdram_controller_0.wire,(SLAVE)soc_system.sdram_controller_0_wire) 1 0 5 NJ 830 NJ 830 NJ 830 NJ 840 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.leds_0_external_connection,(SLAVE)leds_0.external_connection) 1 0 5 NJ 1510 NJ 1510 NJ 1510 NJ 1520 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)nios2_gen2_1.irq,(SLAVE)jtag_uart_0.irq,(SLAVE)timer_1.irq,(SLAVE)audio_0.interrupt,(MASTER)nios2_gen2_0.irq,(SLAVE)timer_0.irq) 1 3 3 NJ 740 1820 490 2200
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)audio_0.clk,(MASTER)audio_pll_1.audio_clk) 1 4 1 1760
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_1_external_connection,(SLAVE)hex_1.external_connection) 1 0 3 NJ 1110 NJ 1110 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)mailbox_1.avmm_msg_receiver,(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)mailbox_2.avmm_msg_sender) 1 1 4 580 890 860 1070 NJ 1020 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_0_external_connection,(SLAVE)hex_0.external_connection) 1 0 3 NJ 990 NJ 990 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.hps_io,(SLAVE)soc_system.hps_0_io) 1 0 1 NJ
-levelinfo -pg 1 0 200 2490
-levelinfo -hier soc_system 210 350 670 1040 1580 1940 2250 2330
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)audio_0.external_interface,(SLAVE)soc_system.audio_0_external_interface) 1 0 5 NJ 560 NJ 560 NJ 560 NJ 560 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.audio_pll_0_audio_clk,(MASTER)audio_pll_0.audio_clk) 1 3 4 NJ 260 NJ 260 NJ 260 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hex_4.external_connection,(SLAVE)soc_system.hex_4_external_connection) 1 0 3 NJ 1370 NJ 1370 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)mailbox_1.avmm_msg_receiver,(SLAVE)mailbox_2.avmm_msg_sender) 1 1 4 580 890 800 1080 NJ 1060 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)sdram_controller_0.wire,(SLAVE)soc_system.sdram_controller_0_wire) 1 0 5 NJ 940 NJ 940 NJ 940 NJ 920 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)leds_0.external_connection,(SLAVE)soc_system.leds_0_external_connection) 1 0 5 NJ 1510 NJ 1510 NJ 1510 NJ 1560 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)audio_0.clk,(MASTER)audio_pll_1.audio_clk) 1 4 1 1740
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hex_1_external_connection,(SLAVE)hex_1.external_connection) 1 0 3 NJ 1120 NJ 1120 NJ
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)timer_1.s1,(MASTER)nios2_gen2_1.data_master,(MASTER)nios2_gen2_1.instruction_master,(SLAVE)onchip_memory2_1.s1,(SLAVE)onchip_memory2_0.s1,(MASTER)hps_0.h2f_axi_master,(SLAVE)timer_0.s1,(SLAVE)audio_and_video_config_0.avalon_av_config_slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)sdram_controller_0.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)mailbox_0.avmm_msg_sender,(SLAVE)hex_0.s1,(SLAVE)button_0.s1,(SLAVE)hex_1.s1,(SLAVE)sysid.control_slave,(SLAVE)hex_5.s1,(SLAVE)mailbox_2.avmm_msg_receiver,(SLAVE)leds_0.s1,(SLAVE)hex_2.s1,(SLAVE)switches_0.s1,(SLAVE)hex_4.s1,(SLAVE)mailbox_0.avmm_msg_receiver,(SLAVE)mailbox_1.avmm_msg_sender,(SLAVE)hex_3.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)audio_0.avalon_audio_slave,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_1.debug_mem_slave) 1 1 5 600 600 880 800 1300 780 1800 500 2240
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)nios2_gen2_1.irq,(SLAVE)timer_1.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)timer_0.irq,(SLAVE)audio_0.interrupt,(SLAVE)jtag_uart_0.irq) 1 3 3 NJ 680 1820 460 2200
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_reset,(SLAVE)sdram_controller_0.reset,(SLAVE)mailbox_1.rst_n,(SLAVE)jtag_uart_0.reset,(MASTER)audio_pll_1.reset_source,(MASTER)audio_pll_0.reset_source,(SLAVE)nios2_gen2_1.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)nios2_gen2_1.debug_reset_request,(SLAVE)hex_2.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)pll_0.reset,(SLAVE)audio_0.reset,(SLAVE)leds_0.reset,(SLAVE)audio_and_video_config_0.reset,(SLAVE)hex_3.reset,(MASTER)clk_0.clk_reset,(SLAVE)hex_4.reset,(SLAVE)hex_5.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)mailbox_0.rst_n,(SLAVE)switches_0.reset,(SLAVE)mailbox_2.rst_n,(SLAVE)button_0.reset,(SLAVE)hex_0.reset,(SLAVE)timer_1.reset,(SLAVE)sysid.reset,(SLAVE)audio_pll_1.ref_reset,(SLAVE)onchip_memory2_1.reset1,(SLAVE)hex_1.reset,(SLAVE)timer_0.reset,(SLAVE)audio_pll_0.ref_reset) 1 1 5 540 1390 860 780 1280 840 1780 480 2220
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_io,(SLAVE)hps_0.hps_io) 1 0 1 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hex_2.external_connection,(SLAVE)soc_system.hex_2_external_connection) 1 0 3 NJ 1250 NJ 1210 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.pll_0_sdram,(MASTER)pll_0.outclk2) 1 2 5 NJ 820 NJ 820 NJ 820 NJ 820 NJ
+levelinfo -pg 1 0 200 2510
+levelinfo -hier soc_system 210 350 670 1040 1580 1940 2270 2350

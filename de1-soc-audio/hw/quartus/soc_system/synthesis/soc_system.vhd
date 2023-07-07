@@ -131,11 +131,15 @@ architecture rtl of soc_system is
 
 	component soc_system_button_0 is
 		port (
-			clk      : in  std_logic                     := 'X';             -- clk
-			reset_n  : in  std_logic                     := 'X';             -- reset_n
-			address  : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			readdata : out std_logic_vector(31 downto 0);                    -- readdata
-			in_port  : in  std_logic_vector(3 downto 0)  := (others => 'X')  -- export
+			clk        : in  std_logic                     := 'X';             -- clk
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
+			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			write_n    : in  std_logic                     := 'X';             -- write_n
+			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
+			in_port    : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- export
+			irq        : out std_logic                                         -- irq
 		);
 	end component soc_system_button_0;
 
@@ -584,7 +588,10 @@ architecture rtl of soc_system is
 			audio_and_video_config_0_avalon_av_config_slave_byteenable       : out std_logic_vector(3 downto 0);                      -- byteenable
 			audio_and_video_config_0_avalon_av_config_slave_waitrequest      : in  std_logic                      := 'X';             -- waitrequest
 			button_0_s1_address                                              : out std_logic_vector(1 downto 0);                      -- address
+			button_0_s1_write                                                : out std_logic;                                         -- write
 			button_0_s1_readdata                                             : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- readdata
+			button_0_s1_writedata                                            : out std_logic_vector(31 downto 0);                     -- writedata
+			button_0_s1_chipselect                                           : out std_logic;                                         -- chipselect
 			hex_0_s1_address                                                 : out std_logic_vector(1 downto 0);                      -- address
 			hex_0_s1_write                                                   : out std_logic;                                         -- write
 			hex_0_s1_readdata                                                : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- readdata
@@ -768,20 +775,10 @@ architecture rtl of soc_system is
 			reset         : in  std_logic                     := 'X'; -- reset
 			receiver0_irq : in  std_logic                     := 'X'; -- irq
 			receiver1_irq : in  std_logic                     := 'X'; -- irq
-			sender_irq    : out std_logic_vector(31 downto 0)         -- irq
-		);
-	end component soc_system_irq_mapper;
-
-	component soc_system_irq_mapper_001 is
-		port (
-			clk           : in  std_logic                     := 'X'; -- clk
-			reset         : in  std_logic                     := 'X'; -- reset
-			receiver0_irq : in  std_logic                     := 'X'; -- irq
-			receiver1_irq : in  std_logic                     := 'X'; -- irq
 			receiver2_irq : in  std_logic                     := 'X'; -- irq
 			sender_irq    : out std_logic_vector(31 downto 0)         -- irq
 		);
-	end component soc_system_irq_mapper_001;
+	end component soc_system_irq_mapper;
 
 	component altera_irq_clock_crosser is
 		generic (
@@ -1318,8 +1315,11 @@ architecture rtl of soc_system is
 	signal mm_interconnect_0_hex_0_s1_address                                            : std_logic_vector(1 downto 0);   -- mm_interconnect_0:hex_0_s1_address -> hex_0:address
 	signal mm_interconnect_0_hex_0_s1_write                                              : std_logic;                      -- mm_interconnect_0:hex_0_s1_write -> mm_interconnect_0_hex_0_s1_write:in
 	signal mm_interconnect_0_hex_0_s1_writedata                                          : std_logic_vector(31 downto 0);  -- mm_interconnect_0:hex_0_s1_writedata -> hex_0:writedata
+	signal mm_interconnect_0_button_0_s1_chipselect                                      : std_logic;                      -- mm_interconnect_0:button_0_s1_chipselect -> button_0:chipselect
 	signal mm_interconnect_0_button_0_s1_readdata                                        : std_logic_vector(31 downto 0);  -- button_0:readdata -> mm_interconnect_0:button_0_s1_readdata
 	signal mm_interconnect_0_button_0_s1_address                                         : std_logic_vector(1 downto 0);   -- mm_interconnect_0:button_0_s1_address -> button_0:address
+	signal mm_interconnect_0_button_0_s1_write                                           : std_logic;                      -- mm_interconnect_0:button_0_s1_write -> mm_interconnect_0_button_0_s1_write:in
+	signal mm_interconnect_0_button_0_s1_writedata                                       : std_logic_vector(31 downto 0);  -- mm_interconnect_0:button_0_s1_writedata -> button_0:writedata
 	signal mm_interconnect_0_hex_5_s1_chipselect                                         : std_logic;                      -- mm_interconnect_0:hex_5_s1_chipselect -> hex_5:chipselect
 	signal mm_interconnect_0_hex_5_s1_readdata                                           : std_logic_vector(31 downto 0);  -- hex_5:readdata -> mm_interconnect_0:hex_5_s1_readdata
 	signal mm_interconnect_0_hex_5_s1_address                                            : std_logic_vector(1 downto 0);   -- mm_interconnect_0:hex_5_s1_address -> hex_5:address
@@ -1373,6 +1373,7 @@ architecture rtl of soc_system is
 	signal mm_interconnect_1_mailbox_2_avmm_msg_sender_write                             : std_logic;                      -- mm_interconnect_1:mailbox_2_avmm_msg_sender_write -> mailbox_2:avmm_snd_write
 	signal mm_interconnect_1_mailbox_2_avmm_msg_sender_writedata                         : std_logic_vector(31 downto 0);  -- mm_interconnect_1:mailbox_2_avmm_msg_sender_writedata -> mailbox_2:avmm_snd_writedata
 	signal irq_mapper_receiver1_irq                                                      : std_logic;                      -- timer_0:irq -> irq_mapper:receiver1_irq
+	signal irq_mapper_receiver2_irq                                                      : std_logic;                      -- button_0:irq -> irq_mapper:receiver2_irq
 	signal nios2_gen2_0_irq_irq                                                          : std_logic_vector(31 downto 0);  -- irq_mapper:sender_irq -> nios2_gen2_0:irq
 	signal irq_mapper_001_receiver1_irq                                                  : std_logic;                      -- timer_1:irq -> irq_mapper_001:receiver1_irq
 	signal nios2_gen2_1_irq_irq                                                          : std_logic_vector(31 downto 0);  -- irq_mapper_001:sender_irq -> nios2_gen2_1:irq
@@ -1409,6 +1410,7 @@ architecture rtl of soc_system is
 	signal mm_interconnect_0_hex_2_s1_write_ports_inv                                    : std_logic;                      -- mm_interconnect_0_hex_2_s1_write:inv -> hex_2:write_n
 	signal mm_interconnect_0_hex_1_s1_write_ports_inv                                    : std_logic;                      -- mm_interconnect_0_hex_1_s1_write:inv -> hex_1:write_n
 	signal mm_interconnect_0_hex_0_s1_write_ports_inv                                    : std_logic;                      -- mm_interconnect_0_hex_0_s1_write:inv -> hex_0:write_n
+	signal mm_interconnect_0_button_0_s1_write_ports_inv                                 : std_logic;                      -- mm_interconnect_0_button_0_s1_write:inv -> button_0:write_n
 	signal mm_interconnect_0_hex_5_s1_write_ports_inv                                    : std_logic;                      -- mm_interconnect_0_hex_5_s1_write:inv -> hex_5:write_n
 	signal rst_controller_001_reset_out_reset_ports_inv                                  : std_logic;                      -- rst_controller_001_reset_out_reset:inv -> [button_0:reset_n, nios2_gen2_1:reset_n]
 	signal rst_controller_002_reset_out_reset_ports_inv                                  : std_logic;                      -- rst_controller_002_reset_out_reset:inv -> [hex_5:reset_n, nios2_gen2_0:reset_n, switches_0:reset_n, timer_0:reset_n]
@@ -1471,11 +1473,15 @@ begin
 
 	button_0 : component soc_system_button_0
 		port map (
-			clk      => pll_0_outclk0_clk,                            --                 clk.clk
-			reset_n  => rst_controller_001_reset_out_reset_ports_inv, --               reset.reset_n
-			address  => mm_interconnect_0_button_0_s1_address,        --                  s1.address
-			readdata => mm_interconnect_0_button_0_s1_readdata,       --                    .readdata
-			in_port  => button_0_external_connection_export           -- external_connection.export
+			clk        => pll_0_outclk0_clk,                             --                 clk.clk
+			reset_n    => rst_controller_001_reset_out_reset_ports_inv,  --               reset.reset_n
+			address    => mm_interconnect_0_button_0_s1_address,         --                  s1.address
+			write_n    => mm_interconnect_0_button_0_s1_write_ports_inv, --                    .write_n
+			writedata  => mm_interconnect_0_button_0_s1_writedata,       --                    .writedata
+			chipselect => mm_interconnect_0_button_0_s1_chipselect,      --                    .chipselect
+			readdata   => mm_interconnect_0_button_0_s1_readdata,        --                    .readdata
+			in_port    => button_0_external_connection_export,           -- external_connection.export
+			irq        => irq_mapper_receiver2_irq                       --                 irq.irq
 		);
 
 	hex_0 : component soc_system_hex_0
@@ -2027,7 +2033,10 @@ begin
 			audio_and_video_config_0_avalon_av_config_slave_byteenable       => mm_interconnect_0_audio_and_video_config_0_avalon_av_config_slave_byteenable,  --                                                           .byteenable
 			audio_and_video_config_0_avalon_av_config_slave_waitrequest      => mm_interconnect_0_audio_and_video_config_0_avalon_av_config_slave_waitrequest, --                                                           .waitrequest
 			button_0_s1_address                                              => mm_interconnect_0_button_0_s1_address,                                         --                                                button_0_s1.address
+			button_0_s1_write                                                => mm_interconnect_0_button_0_s1_write,                                           --                                                           .write
 			button_0_s1_readdata                                             => mm_interconnect_0_button_0_s1_readdata,                                        --                                                           .readdata
+			button_0_s1_writedata                                            => mm_interconnect_0_button_0_s1_writedata,                                       --                                                           .writedata
+			button_0_s1_chipselect                                           => mm_interconnect_0_button_0_s1_chipselect,                                      --                                                           .chipselect
 			hex_0_s1_address                                                 => mm_interconnect_0_hex_0_s1_address,                                            --                                                   hex_0_s1.address
 			hex_0_s1_write                                                   => mm_interconnect_0_hex_0_s1_write,                                              --                                                           .write
 			hex_0_s1_readdata                                                => mm_interconnect_0_hex_0_s1_readdata,                                           --                                                           .readdata
@@ -2209,10 +2218,11 @@ begin
 			reset         => rst_controller_002_reset_out_reset, -- clk_reset.reset
 			receiver0_irq => irq_mapper_receiver0_irq,           -- receiver0.irq
 			receiver1_irq => irq_mapper_receiver1_irq,           -- receiver1.irq
+			receiver2_irq => irq_mapper_receiver2_irq,           -- receiver2.irq
 			sender_irq    => nios2_gen2_0_irq_irq                --    sender.irq
 		);
 
-	irq_mapper_001 : component soc_system_irq_mapper_001
+	irq_mapper_001 : component soc_system_irq_mapper
 		port map (
 			clk           => pll_0_outclk0_clk,                  --       clk.clk
 			reset         => rst_controller_001_reset_out_reset, -- clk_reset.reset
@@ -2784,6 +2794,8 @@ begin
 	mm_interconnect_0_hex_1_s1_write_ports_inv <= not mm_interconnect_0_hex_1_s1_write;
 
 	mm_interconnect_0_hex_0_s1_write_ports_inv <= not mm_interconnect_0_hex_0_s1_write;
+
+	mm_interconnect_0_button_0_s1_write_ports_inv <= not mm_interconnect_0_button_0_s1_write;
 
 	mm_interconnect_0_hex_5_s1_write_ports_inv <= not mm_interconnect_0_hex_5_s1_write;
 

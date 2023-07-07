@@ -1,0 +1,82 @@
+MIF/HEX Update report for de1_soc_top
+Thu Jul 06 16:22:07 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Thu Jul 06 16:22:07 2023 ;
+; Revision Name         ; de1_soc_top                           ;
+; Top-level Entity Name ; de1_soc_top                           ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CSEMA5F31C6                          ;
++-----------------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                                                                         ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                                              ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_AC_ROM.hex                 ;
+; D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_inst_ROM.hex               ;
+; D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_0/de1_soc_user_input/mem_init/user_input_init.hex             ;
+; D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing/mem_init/audio_processing_init.hex ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Jul 06 16:21:40 2023
+Info: Command: quartus_cdb de1_soc_top -c de1_soc_top --update_mif
+Warning (113006): Word addressed memory initialization file "audio_processing_init.hex" was read in the byte-addressed format File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing/mem_init/audio_processing_init.hex Line: 1
+Warning (113006): Word addressed memory initialization file "user_input_init.hex" was read in the byte-addressed format File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_0/de1_soc_user_input/mem_init/user_input_init.hex Line: 1
+Warning (113006): Word addressed memory initialization file "hps_AC_ROM.hex" was read in the byte-addressed format File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_AC_ROM.hex Line: 1
+Warning (113006): Word addressed memory initialization file "hps_inst_ROM.hex" was read in the byte-addressed format File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_inst_ROM.hex Line: 1
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_AC_ROM.hex File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_AC_ROM.hex Line: 0
+    Info (39025): Processed Memory Initialization File D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_inst_ROM.hex File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/hw/quartus/soc_system/synthesis/submodules/hps_inst_ROM.hex Line: 0
+    Info (39025): Processed Memory Initialization File D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_0/de1_soc_user_input/mem_init/user_input_init.hex File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_0/de1_soc_user_input/mem_init/user_input_init.hex Line: 0
+    Info (39025): Processed Memory Initialization File D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing/mem_init/audio_processing_init.hex File: D:/Fax/projektovanje_namjenskih_racunarski_struktura/pnrs-2023/de1-soc-audio/sw/nios/app_1/de1_soc_audio_processing/mem_init/audio_processing_init.hex Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 5012 megabytes
+    Info: Processing ended: Thu Jul 06 16:22:07 2023
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:28
+
+
