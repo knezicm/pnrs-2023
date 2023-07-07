@@ -11,6 +11,7 @@
 #include "altera_avalon_pio_regs.h"
 #include "altera_avalon_mailbox_simple.h"
 #include <io.h>
+#include <unistd.h>
 
 altera_avalon_mailbox_dev* mailbox_0;
 volatile int mode = 0;
@@ -18,11 +19,11 @@ volatile int mode = 0;
 void clear_display()
 {
 	/* Clear Hex 0 to 4 */
-	IOWR(HEX_0_BASE, 0, 0x000000FF);
-	IOWR(HEX_1_BASE, 0, 0x000000FF);
-	IOWR(HEX_2_BASE, 0, 0x000000FF);
-	IOWR(HEX_3_BASE, 0, 0x000000FF);
-	IOWR(HEX_4_BASE, 0, 0x000000FF);
+	IOWR(HEX_0_BASE, 0, 0x001000FF);
+	IOWR(HEX_1_BASE, 0, 0x010000FF);
+	IOWR(HEX_2_BASE, 0, 0x010000FF);
+	IOWR(HEX_3_BASE, 0, 0x010000FF);
+	IOWR(HEX_4_BASE, 0, 0x001000FF);
 }
 
 void display_start()
@@ -160,10 +161,10 @@ int main()
 	clear_display();
 	display_start();
 	usleep(1000000);
-
+	mode = 1;
 	while(1)
 	{
-		clear_display();
+//		clear_display();
 
 		/* Citanje vrijednosti buttona. */
 		buttons = IORD_ALTERA_AVALON_PIO_DATA(BUTTON_0_BASE);
@@ -179,7 +180,7 @@ int main()
 		}
 		else if(buttons == 0xD)
 		{
-			usleep(70000);
+			usleep(150000);
 			key_1++;
 			if(mode != 2 && key_1 > 0)
 			{
@@ -194,7 +195,7 @@ int main()
 		}
 		else if(buttons == 0xB)
 		{
-			usleep(70000);
+			usleep(150000);
 			key_2++;
 			if(mode != 4 && key_2 > 0)
 			{
