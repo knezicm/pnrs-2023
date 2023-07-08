@@ -4,7 +4,7 @@ import threading
 import subprocess
 
 VALID_FREQ = ['8', '32', '48', '96']
-DEFAULT_FREQ = '48'
+DEFAULT_FREQ = '8'
 VALID_WORD_LENGTH = ['16', '20', '24', '32']
 DEFAULT_WORD_LENGTH = '24'
 
@@ -32,6 +32,17 @@ class RequestHandler(BaseHTTPRequestHandler):
         <input type="text" id="freq" name="freq"><br><br>
         <label for="word_length">Enter the word Length: 16/20/24/32 bit :</label><br>
         <input type="text" id="word_length" name="word_length"><br><br>
+        <label for="l_volume">Left channel volume</label><br>
+        <input type="range" id="l_volume" name="l_volume" min="0" max="9"><br>
+        <label for="r_volume">Right channel volume</label><br>
+        <input type="range" id="r_volume" name="r_volume" min="0" max="9"><br><br>
+        <fieldset style="width:230px">
+            <legend>Please select your input source:</legend>
+            <input type="radio" id="sourceMic" name="sorce" value="sourceMic" checked/>
+            <label for="contactChoice2">Microphone Input</label><br>
+            <input type="radio" id="sourceLine" name="sorce" value="sourceLine" />
+            <label for="contactChoice3">Line Input</label>
+        </fieldset><br>
         <input type="submit" value="Submit">
         </form>
         </body>
@@ -55,6 +66,10 @@ class RequestHandler(BaseHTTPRequestHandler):
         form_data = urllib.parse.parse_qs(post_data)
         freq = form_data.get('freq', [''])[0]
         word_length = form_data.get('word_length', [''])[0]
+        l_vol = form_data.get('l_volume', [''])[0]
+        r_vol = form_data.get('r_volume', [''])[0]
+        source = form_data.get('sorce', [''])[0]
+        
 
         # Check for validity
         if (freq not in VALID_FREQ):
@@ -64,10 +79,20 @@ class RequestHandler(BaseHTTPRequestHandler):
         if (word_length not in VALID_WORD_LENGTH):
             word_length = DEFAULT_WORD_LENGTH
 
+        # 
+        if(source == 'sourceMic'):
+            input_source = '1'
+        else:
+            input_source = '2'
+
+
         # Write the data to a file
-        with open('/root/audio_config.txt', 'w') as file:
+        with open('audio_config.txt', 'w') as file:
             file.write(freq + '\n')
             file.write(word_length + '\n')
+            file.write(l_vol + '\n')
+            file.write(r_vol + '\n')
+            file.write(input_source + '\n')
 
         # Send a response message
         response_message = 'Configuration was saved'

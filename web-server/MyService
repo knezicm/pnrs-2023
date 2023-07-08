@@ -7,4 +7,4 @@
 # Short-Description: Starts a web server
 ### END INIT INFO
 
-/home/root/Startup.sh
+/root/Startup.sh
