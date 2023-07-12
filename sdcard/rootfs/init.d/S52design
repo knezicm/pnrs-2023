@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Programming FPGA using device tree....
+#
+mkdir /sys/kernel/config/device-tree/overlays/main_design_overlay
+
+case "$1" in
+  start)
+        printf "Starting fpga programming\n "
+		./root/audio_config_8k.sh
+        cat /lib/firmware/main_design.dtbo > /sys/kernel/config/device-tree/overlays/main_design_overlay/dtbo
+        ;;
+  stop)
+	printf "Stopping custom init script "
+	;;
+  restart|reload)
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

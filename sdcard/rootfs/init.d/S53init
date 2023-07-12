@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Start init....
+#
+
+case "$1" in
+  start)
+	printf "Starting custom init script "
+	ifconfig eth0 10.42.0.2 netmask 255.255.255.0
+	/root/de1_soc_audio_linux &
+	python3 /root/server.py
+	;;
+  stop)
+	printf "Stopping custom init script "
+	;;
+  restart|reload)
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

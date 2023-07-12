@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# GPIO 48 mux....
+#
+
+case "$1" in
+  start)
+        printf "Pin muxing 48 as GPIO\n"
+		./lib/i2c_conf/i2c_mux.sh
+        ;;
+  stop)
+	printf "Stopping pin muxing "
+	;;
+  restart|reload)
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

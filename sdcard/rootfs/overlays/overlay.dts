@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+/ {
+	fragment@0 {
+		target-path = "/sopc@0/base-fpga-region";
+		__overlay__ {
+
+			firmware-name = "main_design.rbf";
+			config-complete-timeout-us = <30000000>;
+		};
+	};
+};
